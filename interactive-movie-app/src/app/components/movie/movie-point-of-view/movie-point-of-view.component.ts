@@ -16,9 +16,11 @@ export class MoviePointOfViewComponent implements OnInit {
   constructor(private interactionService: InteractionService) { }
 
   ngOnInit() {
-    console.log(this.id);
     this.interactions = this.interactionService.getInteractions(this.id);
-    console.log(this.interactions);
+  }
+
+  getImageUrl() {
+    return "assets/pictures/room/room-" + this.id + ".jpg";
   }
 
 }

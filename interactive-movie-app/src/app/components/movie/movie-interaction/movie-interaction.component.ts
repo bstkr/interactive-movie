@@ -13,13 +13,12 @@ export class MovieInteractionComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.interaction);
   }
 
   setInteractionStyle() {
     return {
-      'top': this.interaction.positionY + "px",
-      'left': this.interaction.positionX + "px",
+      'top': this.interaction.positionY + "vh",
+      'left': this.interaction.positionX + "vw",
       'width': this.interaction.width + "px",
       'height': this.interaction.height + "px"
     }

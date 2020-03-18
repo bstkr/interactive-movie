@@ -1,3 +1,4 @@
 <div class="movie-point-of-view-container">
+    <img [src]="getImageUrl()" width="100%" alt="">
     <app-movie-interaction *ngFor="let i of interactions" [interaction]="i"></app-movie-interaction>
 </div>

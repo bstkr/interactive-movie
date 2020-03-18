@@ -13,7 +13,6 @@ export class InteractionService {
   }
 
   getInteractions(povType: PovType): Interaction[] {
-    console.log(povType);
     return this.interactions.find(p => p.id === povType).interactions;
   }
 

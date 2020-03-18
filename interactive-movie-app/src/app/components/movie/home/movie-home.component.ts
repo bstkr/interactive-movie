@@ -16,4 +16,20 @@ export class MovieHomeComponent implements OnInit {
     this.currentPov = "pov1";
   }
 
+  rightNavigation() {
+    if (this.currentPov === "pov1") {
+      this.currentPov = "pov2";
+    } else if (this.currentPov === "pov2") {
+      this.currentPov = "pov3";
+    }
+  }
+
+  leftNavigation() {
+    if (this.currentPov === "pov2") {
+      this.currentPov = "pov1";
+    } else if (this.currentPov === "pov3") {
+      this.currentPov = "pov2";
+    }
+  }
+
 }

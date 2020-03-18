@@ -13,14 +13,14 @@
     ". Menu ."
     ". . .";
 
-    .headline-container {
+    .headline {
         grid-area: Headline;
         
         justify-self: center;
         align-self: center;
     }
 
-    .menu-container {
+    .menu {
         grid-area: Menu;
         
         justify-self: center;
