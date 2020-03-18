@@ -8,6 +8,8 @@ import { ImpressumComponent } from './components/impressum/impressum.component';
 import { CreditsComponent } from './components/credits/credits.component';
 import { TimelineComponent } from './components/movie/timeline/timeline.component';
 import { MovieHomeComponent } from './components/movie/home/movie-home.component';
+import { MovieInteractionComponent } from './components/movie/movie-interaction/movie-interaction.component';
+import { MoviePointOfViewComponent } from './components/movie/movie-point-of-view/movie-point-of-view.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { MovieHomeComponent } from './components/movie/home/movie-home.component
     ImpressumComponent,
     CreditsComponent,
     MovieHomeComponent,
-    TimelineComponent
+    TimelineComponent,
+    MovieInteractionComponent,
+    MoviePointOfViewComponent
   ],
   imports: [
     BrowserModule,

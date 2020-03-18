@@ -1,1 +1,5 @@
-<p>movie-home works!</p>
+<div class="movie-home-container">
+    <app-movie-point-of-view *ngIf="currentPov === 'pov1'" [id]="currentPov"></app-movie-point-of-view>
+    <app-movie-point-of-view *ngIf="currentPov === 'pov2'" [id]="currentPov"></app-movie-point-of-view>
+    <app-movie-point-of-view *ngIf="currentPov === 'pov3'" [id]="currentPov"></app-movie-point-of-view>
+</div>
