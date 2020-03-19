@@ -10,6 +10,9 @@ export class MovieInteractionComponent implements OnInit {
 
   @Input() interaction: Interaction;
 
+  private intervals: []
+  private pictureParts = ["top", "right", "bottom", "left", "middle"];
+
   constructor() { }
 
   ngOnInit() {
@@ -24,9 +27,13 @@ export class MovieInteractionComponent implements OnInit {
     }
   }
 
-  setPictureStyleClass(pictureType: string) {
-    if (pictureType === "top") {
-
+  getStyleClass(styleClass: string, visible: boolean) {
+    let classes = styleClass;
+    if (!visible) {
+      classes += " invisible";
+    } else {
+      classes += " visible";
     }
+    return classes;
   }
 }

@@ -10,21 +10,85 @@
         width: 64%;
         left: 16%;
         top: 0;
+        opacity: 1;
     }
 
     .right {
         width: 32%;
         left: 64%;
         top: 16%;
+        opacity: 1;
+
+        animation-delay: 1s;
     }
 
     .bottom {
         width: 64%;
         left: 16%;
         top: 64%;
+        opacity: 1;
+
+        animation-delay: 3s;
     }
 
-    .left {width: 32%; left: 0; top: 16%;}
+    .left {
+        width: 32%;
+        left: 0;
+        top: 16%;
+        opacity: 1;
 
-    .middle {width: 32%; left: 32%; top: 32%;}
+        animation-delay: 5s;
+    }
+
+    .middle {
+        width: 32%;
+        left: 32%;
+        top: 32%;
+        opacity: 1;
+
+        animation-delay: 7s;
+    }
+
+    .visible {
+        animation-name: startingVisible;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+
+    .invisible {
+        opacity: 0;
+        animation-name: startingInvisible;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes startingVisible {
+        25% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    @keyframes startingInvisible {
+        25% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
 }
