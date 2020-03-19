@@ -1,1 +1,3 @@
-<div class="interaction" [ngStyle]="setInteractionStyle()"></div>
+<div class="interaction" [ngStyle]="setInteractionStyle()">
+    <img *ngFor="let p of interaction.pictureParts" [src]="p.path" alt="" [ngClass]="p.styleClass">
+</div>

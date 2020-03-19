@@ -23,4 +23,10 @@ export class MovieInteractionComponent implements OnInit {
       'height': this.interaction.height + "px"
     }
   }
+
+  setPictureStyleClass(pictureType: string) {
+    if (pictureType === "top") {
+
+    }
+  }
 }

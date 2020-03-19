@@ -1,8 +1,30 @@
 .interaction {
     position: relative;
 
-    width: 100px;
-    height: 100px;
-    
-    background-color: gray;
+    img {
+        position: absolute;
+        width: 75%;
+    }
+
+    .top {
+        width: 64%;
+        left: 16%;
+        top: 0;
+    }
+
+    .right {
+        width: 32%;
+        left: 64%;
+        top: 16%;
+    }
+
+    .bottom {
+        width: 64%;
+        left: 16%;
+        top: 64%;
+    }
+
+    .left {width: 32%; left: 0; top: 16%;}
+
+    .middle {width: 32%; left: 32%; top: 32%;}
 }
