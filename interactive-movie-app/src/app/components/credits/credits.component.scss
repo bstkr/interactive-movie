@@ -1,0 +1,105 @@
+body{
+    padding:0;
+    margin:0;
+
+    overflow-y: scroll;
+}
+
+h1{
+    display: inline;   
+}
+
+
+  /* Global */
+.container{
+    width:100%;
+    margin:auto;
+
+    border-style: none;
+}
+  
+  /* Boxes */
+#team{
+    margin-top:100px;
+    text-align: center;
+}
+  
+#team .team-member{
+    float:left;
+    text-align: center;
+    width:20%;
+    padding:10px;
+    margin-top: 20px;
+
+    border-style: none;
+}
+  
+#team .team-member img{
+    width:90px;
+}
+  
+  /* Sidebar */
+aside#sidebar{
+    float:right;
+    width:30%;
+    margin-top:10px;
+}
+  
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+    width:90%;
+    padding:5px;
+}
+  
+  /* Main-col */
+article#main-col{
+    float:left;
+    width:65%;
+}
+
+#credits-title{
+    padding:15px;
+    text-align: center;
+    margin-top:50px;
+
+    min-height:100px;
+
+}
+  
+#docent{
+    padding:15px;
+    text-align: center;
+    margin-top:200px;
+  
+    min-height:100px;
+  
+} 
+
+#docent .docent-member{
+    margin-top: 50px;
+    border-style: none;
+}   
+
+#actors{
+    padding:15px;
+    text-align: center;
+    margin-top:50px;
+    
+    min-height:100px;
+    } 
+#actors .actors-member{
+    margin-top: 50px;
+    border-style: none;  
+} 
+
+/* Media Queries */
+@media(max-width: 768px){
+    #team .team-member,
+    article#main-col,
+    aside#sidebar{
+      float:none;
+      text-align:center;
+      width:100%;
+    }
+}
+  
+
