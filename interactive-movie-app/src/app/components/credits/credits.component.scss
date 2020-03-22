@@ -17,6 +17,20 @@ h1{
 
     border-style: none;
 }
+
+ul{
+  margin:0;
+  padding:0;
+}
+    
+ul#services li{
+  list-style: none;
+  padding:20px;
+  border: #cccccc solid 1px;
+  margin-bottom:5px;
+  background:#e6e6e6;
+}  
+
   /* Header */
 
 header{
@@ -96,7 +110,9 @@ article#main-col{
     min-height:100px;
 
 }
-  
+ 
+/* Section Docent */
+
 #docent{
     padding:15px;
     text-align: center;
@@ -109,19 +125,27 @@ article#main-col{
 #docent .docent-member{
     margin-top: 50px;
     border-style: none;
-}   
+}
 
-#actors{
+/* Sections */
+
+#sectors{
     padding:15px;
     text-align: center;
     margin-top:50px;
     
     min-height:100px;
     } 
-#actors .actors-member{
-    margin-top: 50px;
+#sectors .sectors-member{
+    margin-top: 25px;
     border-style: none;  
 } 
+
+#sectors h3{
+  margin-top: 50px;
+  border-style: none;  
+} 
+
 
 /* Media Queries */
 @media(max-width: 768px){
@@ -135,17 +159,3 @@ article#main-col{
       width:100%;
     }
 }
-
-ul{
-    margin:0;
-    padding:0;
-  }
-      
-ul#services li{
-    list-style: none;
-    padding:20px;
-    border: #cccccc solid 1px;
-    margin-bottom:5px;
-    background:#e6e6e6;
-}  
-
