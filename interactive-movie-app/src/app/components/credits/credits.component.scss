@@ -17,6 +17,38 @@ h1{
 
     border-style: none;
 }
+  /* Header */
+
+header{
+    padding-top:30px;
+    min-height:70px;
+    border-bottom:#000000 1px solid;
+  }
+  
+header a{
+    text-decoration:none;
+    text-transform: uppercase;
+  }
+  
+header li{
+    display:inline;
+    padding: 0 20px 0 20px;
+  }
+  
+header nav{
+    float:left;
+    margin-top:10px;
+  }
+  
+header .current a{
+    color:#000000;
+    font-weight:bold;
+  }
+  
+header .current a:hover{
+    color:#4d4d4d;
+    font-weight:bold;
+  }
   
   /* Boxes */
 #team{
@@ -94,6 +126,8 @@ article#main-col{
 /* Media Queries */
 @media(max-width: 768px){
     #team .team-member,
+    header nav,
+    header nav li,
     article#main-col,
     aside#sidebar{
       float:none;
@@ -101,5 +135,17 @@ article#main-col{
       width:100%;
     }
 }
-  
+
+ul{
+    margin:0;
+    padding:0;
+  }
+      
+ul#services li{
+    list-style: none;
+    padding:20px;
+    border: #cccccc solid 1px;
+    margin-bottom:5px;
+    background:#e6e6e6;
+}  
 
