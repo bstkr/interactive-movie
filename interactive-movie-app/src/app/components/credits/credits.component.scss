@@ -5,6 +5,10 @@ body{
     overflow-y: scroll;
 }
 
+.credits-container {
+  overflow-y: scroll;
+}
+
 h1{
     display: inline;   
 }
@@ -37,31 +41,31 @@ header{
     padding-top:30px;
     min-height:70px;
     border-bottom:#000000 1px solid;
-  }
-  
-header a{
-    text-decoration:none;
-    text-transform: uppercase;
-  }
-  
-header li{
-    display:inline;
-    padding: 0 20px 0 20px;
-  }
-  
-header nav{
-    float:left;
-    margin-top:10px;
-  }
-  
-header .current a{
-    color:#000000;
-    font-weight:bold;
-  }
-  
-header .current a:hover{
-    color:#4d4d4d;
-    font-weight:bold;
+
+    a{
+      text-decoration:none;
+      text-transform: uppercase;
+    }
+
+    li{
+      display:inline;
+      padding: 0 20px 0 20px;
+    }
+
+    nav{
+      float:left;
+      margin-top:10px;
+    }
+
+    .current a{
+      color:#000000;
+      font-weight:bold;
+    }
+
+    .current a:hover{
+      color:#4d4d4d;
+      font-weight:bold;
+    }
   }
   
   /* Boxes */
