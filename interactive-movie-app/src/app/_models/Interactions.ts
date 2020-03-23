@@ -40,21 +40,19 @@ export const Interactions: POV[] = [
                 {path: "assets/pictures/room/pov1/object2/bottom.png", styleClass: "bottom", visible: false},
                 {path: "assets/pictures/room/pov1/object2/left.png", styleClass: "left", visible: false},
                 {path: "assets/pictures/room/pov1/object2/middle.png", styleClass: "middle", visible: true}
-            ], sceneToOpenPath: ""}/*,
-            {positionX: 10, positionY: 10, width:100, height: 75, interactionId: "pov1_interaction2", pictureParts: [
-                "assets/pictures/room/pov1/object1/top.png",
-                "assets/pictures/room/pov1/object1/right.png",
-                "assets/pictures/room/pov1/object1/bottom.png",
-                "assets/pictures/room/pov1/object1/left.png",
-                "assets/pictures/room/pov1/object1/middle.png"
             ], sceneToOpenPath: ""},
-            {positionX: 20, positionY: 20, width:100, height: 75, interactionId: "pov1_interaction3", pictureParts: [
-                "assets/pictures/room/pov1/object1/top.png",
-                "assets/pictures/room/pov1/object1/right.png",
-                "assets/pictures/room/pov1/object1/bottom.png",
-                "assets/pictures/room/pov1/object1/left.png",
-                "assets/pictures/room/pov1/object1/middle.png"
-            ], sceneToOpenPath: ""}*/
+            {positionX: 0, positionY: 0, width:180, height: 200, interactionId: "pov1_interaction1", pictureParts: [
+                {path: "assets/pictures/room/pov1/object3/top.png", styleClass: "top", visible: true},
+                {path: "assets/pictures/room/pov1/object3/right.png", styleClass: "right", visible: true},
+                {path: "assets/pictures/room/pov1/object3/bottom.png", styleClass: "bottom", visible: true},
+                {path: "assets/pictures/room/pov1/object3/left.png", styleClass: "left", visible: true},
+                {path: "assets/pictures/room/pov1/object3/middle.png", styleClass: "middle", visible: true},/*
+                {path: "assets/pictures/room/pov1/object4/top.png", styleClass: "top", visible: false},
+                {path: "assets/pictures/room/pov1/object4/right.png", styleClass: "right", visible: false},
+                {path: "assets/pictures/room/pov1/object4/bottom.png", styleClass: "bottom", visible: false},
+                {path: "assets/pictures/room/pov1/object4/left.png", styleClass: "left", visible: false},
+                {path: "assets/pictures/room/pov1/object4/middle.png", styleClass: "middle", visible: false}*/
+            ], sceneToOpenPath: ""}
         ]
     },
     {
