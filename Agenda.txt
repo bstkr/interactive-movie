@@ -1,0 +1,69 @@
+Agenda Angular intro:
+
+0. Team meeting:
+	- Plan die nächsten Wochen
+	- Arbeitsaufteilung
+	- Deadlines
+
+	- Woche 6.4: Drehen der verbleibenden Szenen:
+		- Auto: Daniel & ein Fahrer + Kamera
+		- 2. Knockout = 1. Knockout (notfall)
+
+
+
+1. APPS
+	- Visual studio code
+	- Sourcetree
+	- Chrome devtools
+
+2. Angular architecture:
+	- components
+		- https://angular.io/guide/lifecycle-hooks
+	- services
+		- https://angular.io/guide/architecture-services
+	- models
+	- routing
+		- https://angular.io/guide/router
+	- CLI
+		- https://angular.io/cli
+	- linting
+		- ng l --fix
+
+3. Techinques:
+	- SCSS
+		- https://sass-lang.com/guide
+	- Typescript
+
+4. Workflow:
+	- 1 issue at a time
+	- branch issues
+	- pull request when finsished [review @Benedikt]
+
+
+
+
+
+Aufgaben OutOfIt
+
+INTRO:
+	Ton:
+	-Rucksack
+	-Tür
+	-Klingeln Handy
+
+	Animationen:
+	-Textnachricht 
+	-Name des Films
+
+	Sonstiges:
+	-Flashback Schnippsel 
+
+Vorglühen:
+	Ton:
+	-Bier öffnen
+	-Bier Aufschlag
+
+Party:
+	Ton:
+	-Cheer/Atmosphere
+
