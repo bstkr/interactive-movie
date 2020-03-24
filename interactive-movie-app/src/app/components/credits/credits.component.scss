@@ -1,165 +1,192 @@
-body{
+.credits-container{
+  width:100%;
+  margin:auto;
+
+  /* Global */
+
+  body{
     padding:0;
     margin:0;
 
     overflow-y: scroll;
-}
 
-.credits-container {
-  overflow-y: scroll;
-}
-
-h1{
-    display: inline;   
-}
-
-
-  /* Global */
-.container{
-    width:100%;
-    margin:auto;
-
-    border-style: none;
-}
-
-ul{
-  margin:0;
-  padding:0;
-}
+    ul{
+      margin:0;
+      padding:0;
     
-ul#services li{
-  list-style: none;
-  padding:20px;
-  border: #cccccc solid 1px;
-  margin-bottom:5px;
-  background:#e6e6e6;
-}  
-
-  /* Header */
-
-header{
-    padding-top:30px;
-    min-height:70px;
-    border-bottom:#000000 1px solid;
-
-    a{
-      text-decoration:none;
-      text-transform: uppercase;
+      #services {
+        li {
+          list-style: none;
+          padding:20px;
+          border: #cccccc solid 1px;
+          margin-bottom:5px;
+          background:#e6e6e6;
+        }
+      }  
     }
 
-    li{
-      display:inline;
-      padding: 0 20px 0 20px;
-    }
-
-    nav{
-      float:left;
-      margin-top:10px;
-    }
-
-    .current a{
-      color:#000000;
-      font-weight:bold;
-    }
-
-    .current a:hover{
-      color:#4d4d4d;
-      font-weight:bold;
-    }
-  }
+    /* Header */
+    
+    header{
+      padding-top:30px;
+      min-height:70px;
+      border-bottom:#000000 1px solid;
   
+      a{
+        text-decoration:none;
+        text-transform: uppercase;
+      }
+  
+      li{
+        display:inline;
+        padding: 0 20px 0 20px;
+      }
+  
+      nav{
+        float:left;
+        margin-top:10px;
+      }
+  
+      .current {
+        a {
+          color:#000000;
+          font-weight:bold;
+          font-size: 30px;
+
+          &:hover {
+            color:#4d4d4d;
+          font-weight:bold;
+          }
+        }
+      }
+  }
+
+  #credits-title{
+    padding:15px;
+    text-align: center;
+    margin-top:50px;
+
+    min-height:100px;
+
+  }
+
   /* Boxes */
-#team{
+  #team{
     margin-top:100px;
     text-align: center;
-}
+
+    .team-member{
+      float:left;
+      text-align: center;
+      width:20%;
+      padding:10px;
+      margin-top: 20px;
   
-#team .team-member{
-    float:left;
-    text-align: center;
-    width:20%;
-    padding:10px;
-    margin-top: 20px;
+      border-style: none;
 
-    border-style: none;
-}
-  
-#team .team-member img{
-    width:90px;
-}
-  
-  /* Sidebar */
-aside#sidebar{
-    float:right;
-    width:30%;
-    margin-top:10px;
-}
-  
-aside#sidebar .quote input, aside#sidebar .quote textarea{
-    width:90%;
-    padding:5px;
-}
-  
-  /* Main-col */
-article#main-col{
-    float:left;
-    width:65%;
-}
-
-#credits-title{
-    padding:15px;
-    text-align: center;
-    margin-top:50px;
-
-    min-height:100px;
-
-}
- 
-/* Section Docent */
-
-#docent{
-    padding:15px;
-    text-align: center;
-    margin-top:200px;
-  
-    min-height:100px;
-  
-} 
-
-#docent .docent-member{
-    margin-top: 50px;
-    border-style: none;
-}
-
-/* Sections */
-
-#sectors{
-    padding:15px;
-    text-align: center;
-    margin-top:50px;
-    
-    min-height:100px;
-    } 
-#sectors .sectors-member{
-    margin-top: 25px;
-    border-style: none;  
-} 
-
-#sectors h3{
-  margin-top: 50px;
-  border-style: none;  
-} 
-
-
-/* Media Queries */
-@media(max-width: 768px){
-    #team .team-member,
-    header nav,
-    header nav li,
-    article#main-col,
-    aside#sidebar{
-      float:none;
-      text-align:center;
-      width:100%;
+      img{
+        width:90px;
+      }
     }
+  }
+
+    /* Section Docent */
+    
+    #docent{
+      padding:15px;
+      text-align: center;
+      margin-top:200px;
+    
+      min-height:100px;
+    
+      .docent-member{
+        margin-top: 50px;
+        border-style: none;
+      }
+    } 
+
+    /* Sections headlines */
+
+    section {
+      h1{
+        display: inline;
+
+        border-style: solid;
+        border-width: 1px;
+        font-size:  60px;
+      }
+
+      h2 {
+        border-style: solid;
+        border-width: 1px;
+      }
+  
+      h3{
+        margin-top: 50px;
+        border-style: none; 
+      }
+    }
+
+    /* Sectors */
+    
+    .sectors{
+      padding:15px;
+      text-align: center;
+      margin-top:50px;
+      
+      min-height:100px;
+  
+      .sectors-member{
+        margin-top: 25px;
+        border-style: none;  
+      } 
+  
+      .sectors-member{
+        margin-top: 25px;
+        border-style: none;  
+      } 
+    }
+      
+    /* Sidebar */
+    aside{
+      #sidebar{
+        float:right;
+        width:30%;
+        margin-top:10px;
+
+        .quote {
+          input{
+            width:90%;
+            padding:5px;
+          }
+
+          textarea{
+            width:90%;
+            padding:5px;
+          }
+        }
+      }
+    }
+      
+    /* Main-col */
+    article {
+      #main-col{
+        float:left;
+        width:65%;
+      }
+    }
+        
+    /* Media Queries */
+    @media(max-width: 768px){
+        #team .team-member,
+        header nav,
+        header nav li,
+        article#main-col,
+        aside#sidebar{
+          float:none;
+          text-align:center;
+          width:100%;
+        }
+    }
+  }
 }
