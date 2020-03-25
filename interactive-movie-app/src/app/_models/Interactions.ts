@@ -53,7 +53,7 @@ export const Interactions: POV[] = [
                 {path: "assets/pictures/room/pov1/object4/left.png", styleClass: "left", visible: false},
                 {path: "assets/pictures/room/pov1/object4/middle.png", styleClass: "middle", visible: false}
             ], sceneToOpenPath: ''}*/,
-            {positionX: 54, positionY: 16, width: 945, height: 855, interactionId: 'pov1_interaction2', pictureParts: [
+            {positionX: 54, positionY: 16, width: 945, height: 860, interactionId: 'pov1_interaction2', pictureParts: [
                 {path: 'assets/pictures/room/pov1/object5/top.png', styleClass: 'top', visible: true},
                 {path: 'assets/pictures/room/pov1/object5/right.png', styleClass: 'right', visible: true},
                 {path: 'assets/pictures/room/pov1/object5/bottom.png', styleClass: 'bottom', visible: true},
