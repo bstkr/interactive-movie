@@ -12,6 +12,7 @@ import { MovieInteractionComponent } from './components/movie/movie-interaction/
 import { MoviePointOfViewComponent } from './components/movie/movie-point-of-view/movie-point-of-view.component';
 import { MovieSceneComponent } from './components/movie/movie-scene/movie-scene.component';
 import { MovieVideoComponent } from './components/movie/movie-video/movie-video.component';
+import { MovieDecisionComponent } from './components/movie/movie-decision/movie-decision.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MovieVideoComponent } from './components/movie/movie-video/movie-video.
     MovieInteractionComponent,
     MoviePointOfViewComponent,
     MovieSceneComponent,
-    MovieVideoComponent
+    MovieVideoComponent,
+    MovieDecisionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit, Output, EventEmitter } from '@angular/core';
 import { videoSequence, Interaction } from 'src/app/_models/Interactions';
 
 @Component({
@@ -10,6 +10,8 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
 
   @Input() interaction: Interaction;
   @Input() video: videoSequence;
+
+  @Output() endedVideo = new EventEmitter<videoSequence>();
 
   @ViewChild('videoPlayer', {static: false})
   videoPlayer: ElementRef;
@@ -39,17 +41,7 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
   }
 
   videoEnded() {
-    let introElement = document.getElementById(this.interaction.sceneId + '-intro');
-    let alt1Element = document.getElementById(this.interaction.sceneId + '-alt-1');
-    let alt2Element = document.getElementById(this.interaction.sceneId + '-alt-2');
-    let outroElement = document.getElementById(this.interaction.sceneId + '-outro');
-    if (this.video.sequencePosition === 'intro') {
-      introElement.classList.replace('currentVideo', 'hiddenVideo');
-      alt1Element.classList.replace('hiddenVideo', 'currentVideo');
-    } else if (this.video.sequencePosition === 'alt-1') {
-      alt1Element.classList.replace('currentVideo', 'hiddenVideo');
-      outroElement.classList.replace('hiddenVideo', 'currentVideo');
-    }
+    this.endedVideo.emit(this.video);
   }
 
 }

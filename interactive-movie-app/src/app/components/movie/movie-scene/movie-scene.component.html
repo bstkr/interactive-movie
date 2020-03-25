@@ -1,8 +1,6 @@
 <div class="movie-scene-container">
-    <div id="{{ interaction.sceneId }}" class="hidden" (click)="click($event)">
-        <app-movie-video *ngFor="let video of interaction.videoSequence" [interaction]="interaction" [video]="video"></app-movie-video>
-        <!-- This will be the first video - id="{{ interaction.sceneId + '-video' }}" -->
-        <!-- Add the two decision options as videos - id="{{ interaction.sceneId + '-decision1' }}" & id="{{ interaction.sceneId + '-decision1' }}" -->
-        <!-- Add the decision component to make the decision -->
+    <div id="{{ interaction.sceneId }}" class="hidden">
+        <app-movie-video *ngFor="let video of interaction.videoSequence" [interaction]="interaction" [video]="video" (endedVideo)="onVideoEnded($event)"></app-movie-video>
+        <app-movie-decision [interaction]="interaction" (decisionClick)="onDecisionClick($event)"></app-movie-decision>
     </div>
 </div>

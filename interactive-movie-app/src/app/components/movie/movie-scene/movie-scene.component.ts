@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ElementRef } from '@angular/core';
-import { Interaction } from 'src/app/_models/Interactions';
+import { Interaction, videoSequence } from 'src/app/_models/Interactions';
 
 @Component({
   selector: 'app-movie-scene',
@@ -21,8 +21,39 @@ export class MovieSceneComponent implements OnInit {
     target.classList.add('hidden');
   }
 
-  videoClick(e: Event) {
-    console.log(e.target);
+  onVideoEnded(video: videoSequence) {
+    let introElement = document.getElementById(this.interaction.sceneId + '-intro');
+    let alt1Element = document.getElementById(this.interaction.sceneId + '-alt-1');
+    let alt2Element = document.getElementById(this.interaction.sceneId + '-alt-2');
+    let outroElement = document.getElementById(this.interaction.sceneId + '-outro');
+    let decisionContainer = document.getElementById(this.interaction.sceneId + '-decision');
+
+    if (video.sequencePosition === 'intro') {
+      introElement.classList.replace('currentVideo', 'hiddenVideo');
+      decisionContainer.classList.replace('hiddenVideo', 'currentVideo');
+    } else if (video.sequencePosition === 'alt-1') {
+      alt1Element.classList.replace('currentVideo', 'hiddenVideo');
+      outroElement.classList.replace('hiddenVideo', 'currentVideo');
+    } else if (video.sequencePosition === 'alt-2') {
+      alt2Element.classList.replace('currentVideo', 'hiddenVideo');
+      outroElement.classList.replace('hiddenVideo', 'currentVideo');
+    } else {
+      outroElement.classList.replace('currentVideo', 'hiddenVideo');
+    }
+  }
+
+  onDecisionClick(dec: number) {
+    let alt1Element = document.getElementById(this.interaction.sceneId + '-alt-1');
+    let alt2Element = document.getElementById(this.interaction.sceneId + '-alt-2');
+    let decisionContainer = document.getElementById(this.interaction.sceneId + '-decision');
+
+    decisionContainer.classList.replace('currentVideo', 'hiddenVideo');
+
+    if (dec === 1) {
+      alt1Element.classList.replace('hiddenVideo', 'currentVideo');
+    } else {
+      alt2Element.classList.replace('hiddenVideo', 'currentVideo');
+    }
   }
 
 }
