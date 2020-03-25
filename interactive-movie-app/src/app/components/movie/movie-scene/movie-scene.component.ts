@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 import { Interaction } from 'src/app/_models/Interactions';
 
 @Component({
@@ -19,6 +19,10 @@ export class MovieSceneComponent implements OnInit {
     let target = e.target as Element;
     target.classList.remove('show');
     target.classList.add('hidden');
+  }
+
+  videoClick(e: Event) {
+    console.log(e.target);
   }
 
 }
