@@ -1,0 +1,134 @@
+.credits-container{
+  width:100%;
+  margin:auto;
+  
+  overflow-y: scroll;
+
+  ul{
+    margin:0;
+    padding:0;
+  
+    #services {
+      li {
+        list-style: none;
+        padding:20px;
+        border: #cccccc solid 1px;
+        margin-bottom:5px;
+        background:#e6e6e6;
+      }
+    }  
+  }
+    
+  header{
+    padding-top:30px;
+    min-height:70px;
+    border-bottom:#000000 1px solid;
+
+    a{
+      text-decoration:none;
+      text-transform: uppercase;
+    }
+
+    li{
+      display:inline;
+      padding: 0 20px 0 20px;
+    }
+
+    nav{
+      float:left;
+      margin-top:10px;
+    }
+
+    .current {
+      a {
+        color:#000000;
+        font-weight:bold;
+        font-size: 30px;
+
+        &:hover {
+          color:#4d4d4d;
+        font-weight:bold;
+        }
+      }
+    }
+  }
+
+  #credits-title{
+    padding:15px;
+    text-align: center;
+    margin-top:50px;
+
+    min-height:100px;
+
+  }
+
+  #team{
+    margin-top:100px;
+    text-align: center;
+
+    .team-member{
+      float:left;
+      text-align: center;
+      width:20%;
+      padding:10px;
+      margin-top: 20px;
+
+      border-style: none;
+
+      img{
+        width:90px;
+      }
+    }
+  }
+    
+  #docent{
+    padding:15px;
+    text-align: center;
+    margin-top:200px;
+
+    min-height:100px;
+
+    .docent-member{
+      margin-top: 50px;
+      border-style: none;
+    }
+  }
+
+  section {
+    h1{
+      display: inline;
+
+      border-style: solid;
+      border-width: 1px;
+      font-size:  60px;
+    }
+
+    h2 {
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    h3{
+      margin-top: 50px;
+      border-style: none; 
+    }
+  }
+    
+  .sectors{
+    padding:15px;
+    text-align: center;
+    margin-top:50px;
+    
+    min-height:100px;
+
+    .sectors-member{
+      margin-top: 25px;
+      border-style: none;  
+    } 
+
+    .sectors-member{
+      margin-top: 25px;
+      border-style: none;  
+    } 
+  }
+}
