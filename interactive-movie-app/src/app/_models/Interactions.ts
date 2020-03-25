@@ -13,8 +13,10 @@ export interface Interaction {
     interactionId: string;
     // path to the svg animation
     pictureParts: PicturePart[];
+    // id for the scene
+    sceneId: string;
     // path to the video to open
-    sceneToOpenPath: string;
+    pathToScene: string;
 }
 
 export interface PicturePart {
@@ -40,7 +42,7 @@ export const Interactions: POV[] = [
                 {path: 'assets/pictures/room/pov1/object2/bottom.png', styleClass: 'bottom', visible: false},
                 {path: 'assets/pictures/room/pov1/object2/left.png', styleClass: 'left', visible: false},
                 {path: 'assets/pictures/room/pov1/object2/middle.png', styleClass: 'middle', visible: true}
-            ], sceneToOpenPath: ''}/*,
+            ], sceneId: 'pov1_interaction1_scene', pathToScene: ""}/*,
             {positionX: 0, positionY: 0, width: 180, height: 200, interactionId: 'pov1_interaction1', pictureParts: [
                 {path: 'assets/pictures/room/pov1/object3/top.png', styleClass: 'top', visible: true},
                 {path: 'assets/pictures/room/pov1/object3/right.png', styleClass: 'right', visible: true},
@@ -64,7 +66,7 @@ export const Interactions: POV[] = [
                 {path: 'assets/pictures/room/pov1/object6/bottom.png', styleClass: 'bottom', visible: false},
                 {path: 'assets/pictures/room/pov1/object6/left.png', styleClass: 'left', visible: false},
                 {path: 'assets/pictures/room/pov1/object6/middle.png', styleClass: 'middle', visible: false}
-            ], sceneToOpenPath: ''}
+            ], sceneId: 'pov1_interaction1_scene', pathToScene: ""}
         ]
     },
     {
@@ -80,7 +82,7 @@ export const Interactions: POV[] = [
                 {path: 'assets/pictures/room/pov1/object2/bottom.png', styleClass: 'bottom', visible: false},
                 {path: 'assets/pictures/room/pov1/object2/left.png', styleClass: 'left', visible: false},
                 {path: 'assets/pictures/room/pov1/object2/middle.png', styleClass: 'middle', visible: true}
-            ], sceneToOpenPath: ''}
+            ], sceneId: 'pov1_interaction1_scene', pathToScene: ""}
         ]
     },
     {
@@ -96,7 +98,7 @@ export const Interactions: POV[] = [
                 {path: 'assets/pictures/room/pov1/object2/bottom.png', styleClass: 'bottom', visible: true},
                 {path: 'assets/pictures/room/pov1/object2/left.png', styleClass: 'left', visible: true},
                 {path: 'assets/pictures/room/pov1/object2/middle.png', styleClass: 'middle', visible: true}
-            ], sceneToOpenPath: ''}
+            ], sceneId: 'pov1_interaction1_scene', pathToScene: ""}
         ]
     }
 ];

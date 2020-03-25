@@ -10,6 +10,7 @@ import { TimelineComponent } from './components/movie/timeline/timeline.componen
 import { MovieHomeComponent } from './components/movie/home/movie-home.component';
 import { MovieInteractionComponent } from './components/movie/movie-interaction/movie-interaction.component';
 import { MoviePointOfViewComponent } from './components/movie/movie-point-of-view/movie-point-of-view.component';
+import { MovieSceneComponent } from './components/movie/movie-scene/movie-scene.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MoviePointOfViewComponent } from './components/movie/movie-point-of-vie
     MovieHomeComponent,
     TimelineComponent,
     MovieInteractionComponent,
-    MoviePointOfViewComponent
+    MoviePointOfViewComponent,
+    MovieSceneComponent
   ],
   imports: [
     BrowserModule,
