@@ -20,7 +20,7 @@ export class MoviePointOfViewComponent implements OnInit {
   }
 
   getImageUrl() {
-    return "assets/pictures/room/room-" + this.id + ".jpg";
+    return 'assets/pictures/room/room-' + this.id + '.jpg';
   }
 
 }

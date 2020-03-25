@@ -10,8 +10,8 @@ export class MovieInteractionComponent implements OnInit {
 
   @Input() interaction: Interaction;
 
-  private intervals: []
-  private pictureParts = ["top", "right", "bottom", "left", "middle"];
+  private intervals: [];
+  private pictureParts = ['top', 'right', 'bottom', 'left', 'middle'];
 
   constructor() { }
 
@@ -20,19 +20,19 @@ export class MovieInteractionComponent implements OnInit {
 
   setInteractionStyle() {
     return {
-      'top': this.interaction.positionY + "vh",
-      'left': this.interaction.positionX + "vw",
-      'width': this.interaction.width + "px",
-      'height': this.interaction.height + "px"
-    }
+      top: this.interaction.positionY + 'vh',
+      left: this.interaction.positionX + 'vw',
+      width: this.interaction.width + 'px',
+      height: this.interaction.height + 'px'
+    };
   }
 
   getStyleClass(styleClass: string, visible: boolean) {
     let classes = styleClass;
     if (!visible) {
-      classes += " invisible";
+      classes += ' invisible';
     } else {
-      classes += " visible";
+      classes += ' visible';
     }
     return classes;
   }

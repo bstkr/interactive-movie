@@ -8,7 +8,7 @@ export class InteractionService {
 
   private interactions: POV[];
 
-  constructor() { 
+  constructor() {
     this.interactions = Interactions;
   }
 
