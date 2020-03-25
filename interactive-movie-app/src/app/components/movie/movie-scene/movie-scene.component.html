@@ -1,0 +1,6 @@
+<div class="movie-scene-container">
+    <div id="{{ interaction.sceneId }}" class="hidden">
+        <app-movie-video *ngFor="let video of interaction.videoSequence" [interaction]="interaction" [video]="video" (endedVideo)="onVideoEnded($event)"></app-movie-video>
+        <app-movie-decision [interaction]="interaction" (decisionClick)="onDecisionClick($event)"></app-movie-decision>
+    </div>
+</div>

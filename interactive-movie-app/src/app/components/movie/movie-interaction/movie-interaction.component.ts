@@ -10,9 +10,6 @@ export class MovieInteractionComponent implements OnInit {
 
   @Input() interaction: Interaction;
 
-  private intervals: [];
-  private pictureParts = ['top', 'right', 'bottom', 'left', 'middle'];
-
   constructor() { }
 
   ngOnInit() {
@@ -35,5 +32,11 @@ export class MovieInteractionComponent implements OnInit {
       classes += ' visible';
     }
     return classes;
+  }
+
+  clickedInteraction() {
+    const videoElement = document.getElementById(this.interaction.sceneId);
+    videoElement.classList.remove('hidden');
+    videoElement.classList.add('show');
   }
 }

@@ -1,0 +1,36 @@
+[id$=-decision] {
+    position: absolute;
+
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    transition: all 2s;
+
+    #decision-1 {
+        float: left;
+
+        height: 100%;
+        width: 50%;
+
+        background-color: red;
+    }
+
+    #decision-2 {
+        float: left;
+
+        height: 100%;
+        width: 50%;
+
+        background-color: red;
+    }
+}
+
+.currentVideo {
+    top: 0;
+}
+
+.hiddenVideo {
+    top: 100vh;
+}
