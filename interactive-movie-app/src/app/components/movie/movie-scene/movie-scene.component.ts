@@ -18,6 +18,7 @@ export class MovieSceneComponent implements OnInit {
   click(e: Event) {
     let target = e.target as Element;
     target.classList.remove('show');
+    target.classList.add('hidden');
   }
 
 }

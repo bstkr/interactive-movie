@@ -36,7 +36,7 @@ export class MovieInteractionComponent implements OnInit {
 
   clickedInteraction() {
     let videoElement = document.getElementById(this.interaction.sceneId + '-video');
-    console.log(videoElement);
+    videoElement.classList.remove('hidden');
     videoElement.classList.add('show');
   }
 }
