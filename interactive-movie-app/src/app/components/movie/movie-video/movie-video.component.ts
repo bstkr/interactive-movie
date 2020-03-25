@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit, Output, EventEmitter } from '@angular/core';
-import { videoSequence, Interaction } from 'src/app/_models/Interactions';
+import { VideoSequence, Interaction } from 'src/app/_models/Interactions';
 
 @Component({
   selector: 'app-movie-video',
@@ -9,9 +9,9 @@ import { videoSequence, Interaction } from 'src/app/_models/Interactions';
 export class MovieVideoComponent implements OnInit, AfterViewInit {
 
   @Input() interaction: Interaction;
-  @Input() video: videoSequence;
+  @Input() video: VideoSequence;
 
-  @Output() endedVideo = new EventEmitter<videoSequence>();
+  @Output() endedVideo = new EventEmitter<VideoSequence>();
 
   @ViewChild('videoPlayer', {static: false})
   videoPlayer: ElementRef;
@@ -25,10 +25,10 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
   }
 
   getVideoClass(pos: string) {
-    if (pos === "intro") {
-      return "currentVideo";
+    if (pos === 'intro') {
+      return 'currentVideo';
     } else {
-      return "hiddenVideo";
+      return 'hiddenVideo';
     }
   }
 
