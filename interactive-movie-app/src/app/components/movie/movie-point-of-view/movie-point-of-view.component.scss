@@ -1,3 +1,9 @@
 img {
     object-fit: contain;
 }
+
+.interaction-anchor {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
