@@ -36,17 +36,17 @@ export const Interactions: POV[] = [
     {
         // POV 1
         id: 'pov1', interactions: [
-            {positionX: 42, positionY: 85, width: 180, height: 95, interactionId: 'pov1_interaction1', pictureParts: [
-                {path: 'assets/pictures/room/pov1/object1/top.png', styleClass: 'top', visible: false},
-                {path: 'assets/pictures/room/pov1/object1/right.png', styleClass: 'right', visible: false},
+            {positionX: 42, positionY: 85, width: 175, height: 97, interactionId: 'pov1_interaction1', pictureParts: [
+                {path: 'assets/pictures/room/pov1/object1/top.png', styleClass: 'top', visible: true},
+                {path: 'assets/pictures/room/pov1/object1/right.png', styleClass: 'right', visible: true},
                 {path: 'assets/pictures/room/pov1/object1/bottom.png', styleClass: 'bottom', visible: true},
                 {path: 'assets/pictures/room/pov1/object1/left.png', styleClass: 'left', visible: true},
-                {path: 'assets/pictures/room/pov1/object1/middle.png', styleClass: 'middle', visible: false},
-                {path: 'assets/pictures/room/pov1/object2/top.png', styleClass: 'top', visible: true},
-                {path: 'assets/pictures/room/pov1/object2/right.png', styleClass: 'right', visible: true},
+                {path: 'assets/pictures/room/pov1/object1/middle.png', styleClass: 'middle', visible: true},
+                {path: 'assets/pictures/room/pov1/object2/top.png', styleClass: 'top', visible: false},
+                {path: 'assets/pictures/room/pov1/object2/right.png', styleClass: 'right', visible: false},
                 {path: 'assets/pictures/room/pov1/object2/bottom.png', styleClass: 'bottom', visible: false},
                 {path: 'assets/pictures/room/pov1/object2/left.png', styleClass: 'left', visible: false},
-                {path: 'assets/pictures/room/pov1/object2/middle.png', styleClass: 'middle', visible: true}
+                {path: 'assets/pictures/room/pov1/object2/middle.png', styleClass: 'middle', visible: false}
             ], sceneId: 'pov1_interaction1_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
@@ -55,16 +55,16 @@ export const Interactions: POV[] = [
             ]
         },
             {positionX: 29.5, positionY: 65, width: 156, height: 119, interactionId: 'pov1_interaction2', pictureParts: [
-                {path: 'assets/pictures/room/pov1/object3/top.png', styleClass: 'top', visible: false},
-                {path: 'assets/pictures/room/pov1/object3/right.png', styleClass: 'right', visible: false},
+                {path: 'assets/pictures/room/pov1/object3/top.png', styleClass: 'top', visible: true},
+                {path: 'assets/pictures/room/pov1/object3/right.png', styleClass: 'right', visible: true},
                 {path: 'assets/pictures/room/pov1/object3/bottom.png', styleClass: 'bottom', visible: true},
                 {path: 'assets/pictures/room/pov1/object3/left.png', styleClass: 'left', visible: true},
-                {path: 'assets/pictures/room/pov1/object3/middle.png', styleClass: 'middle', visible: false},
-                {path: 'assets/pictures/room/pov1/object4/top.png', styleClass: 'top', visible: true},
-                {path: 'assets/pictures/room/pov1/object4/right.png', styleClass: 'right', visible: true},
+                {path: 'assets/pictures/room/pov1/object3/middle.png', styleClass: 'middle', visible: true},
+                {path: 'assets/pictures/room/pov1/object4/top.png', styleClass: 'top', visible: false},
+                {path: 'assets/pictures/room/pov1/object4/right.png', styleClass: 'right', visible: false},
                 {path: 'assets/pictures/room/pov1/object4/bottom.png', styleClass: 'bottom', visible: false},
                 {path: 'assets/pictures/room/pov1/object4/left.png', styleClass: 'left', visible: false},
-                {path: 'assets/pictures/room/pov1/object4/middle.png', styleClass: 'middle', visible: true}
+                {path: 'assets/pictures/room/pov1/object4/middle.png', styleClass: 'middle', visible: false}
             ], sceneId: 'pov1_interaction2_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
@@ -72,16 +72,16 @@ export const Interactions: POV[] = [
                 {sequencePosition: 'outro', pathToVideo: 'assets/video/tester/video-2.mp4'}
             ]},
             {positionX: 54, positionY: 25, width: 945, height: 860, interactionId: 'pov1_interaction3', pictureParts: [
-                {path: 'assets/pictures/room/pov1/object5/top.png', styleClass: 'top', visible: false},
-                {path: 'assets/pictures/room/pov1/object5/right.png', styleClass: 'right', visible: false},
+                {path: 'assets/pictures/room/pov1/object5/top.png', styleClass: 'top', visible: true},
+                {path: 'assets/pictures/room/pov1/object5/right.png', styleClass: 'right', visible: true},
                 {path: 'assets/pictures/room/pov1/object5/bottom.png', styleClass: 'bottom', visible: true},
                 {path: 'assets/pictures/room/pov1/object5/left.png', styleClass: 'left', visible: true},
-                {path: 'assets/pictures/room/pov1/object5/middle.png', styleClass: 'middle', visible: false},
-                {path: 'assets/pictures/room/pov1/object6/top.png', styleClass: 'top', visible: true},
-                {path: 'assets/pictures/room/pov1/object6/right.png', styleClass: 'right', visible: true},
+                {path: 'assets/pictures/room/pov1/object5/middle.png', styleClass: 'middle', visible: true},
+                {path: 'assets/pictures/room/pov1/object6/top.png', styleClass: 'top', visible: false},
+                {path: 'assets/pictures/room/pov1/object6/right.png', styleClass: 'right', visible: false},
                 {path: 'assets/pictures/room/pov1/object6/bottom.png', styleClass: 'bottom', visible: false},
                 {path: 'assets/pictures/room/pov1/object6/left.png', styleClass: 'left', visible: false},
-                {path: 'assets/pictures/room/pov1/object6/middle.png', styleClass: 'middle', visible: true}
+                {path: 'assets/pictures/room/pov1/object6/middle.png', styleClass: 'middle', visible: false}
             ], sceneId: 'pov1_interaction3_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
@@ -89,12 +89,29 @@ export const Interactions: POV[] = [
                 {sequencePosition: 'outro', pathToVideo: 'assets/video/tester/video-2.mp4'}
             ]},
             {positionX: 53.5, positionY: 54, width: 76, height: 33, interactionId: 'pov1_interaction4', pictureParts: [
-                {path: 'assets/pictures/room/pov1/object7/top.png', styleClass: 'top', visible: false},
-                {path: 'assets/pictures/room/pov1/object7/right.png', styleClass: 'right', visible: false},
+                {path: 'assets/pictures/room/pov1/object7/top.png', styleClass: 'top', visible: true},
+                {path: 'assets/pictures/room/pov1/object7/right.png', styleClass: 'right', visible: true},
                 {path: 'assets/pictures/room/pov1/object7/bottom.png', styleClass: 'bottom', visible: true},
                 {path: 'assets/pictures/room/pov1/object7/left.png', styleClass: 'left', visible: true},
-                {path: 'assets/pictures/room/pov1/object7/middle.png', styleClass: 'middle', visible: false}
+                {path: 'assets/pictures/room/pov1/object7/middle.png', styleClass: 'middle', visible: true}
             ], sceneId: 'pov1_interaction4_scene', videoSequence: [
+                {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
+                {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
+                {sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4'},
+                {sequencePosition: 'outro', pathToVideo: 'assets/video/tester/video-2.mp4'}
+            ]},
+            {positionX: 42.3, positionY: 39.2, width: 138, height: 87, interactionId: 'pov1_interaction3', pictureParts: [
+                {path: 'assets/pictures/room/pov1/object8/top.png', styleClass: 'top', visible: true},
+                {path: 'assets/pictures/room/pov1/object8/right.png', styleClass: 'right', visible: true},
+                {path: 'assets/pictures/room/pov1/object8/bottom.png', styleClass: 'bottom', visible: true},
+                {path: 'assets/pictures/room/pov1/object8/left.png', styleClass: 'left', visible: true},
+                {path: 'assets/pictures/room/pov1/object8/middle.png', styleClass: 'middle', visible: true},
+                {path: 'assets/pictures/room/pov1/object9/top.png', styleClass: 'top', visible: false},
+                {path: 'assets/pictures/room/pov1/object9/right.png', styleClass: 'right', visible: false},
+                {path: 'assets/pictures/room/pov1/object9/bottom.png', styleClass: 'bottom', visible: false},
+                {path: 'assets/pictures/room/pov1/object9/left.png', styleClass: 'left', visible: false},
+                {path: 'assets/pictures/room/pov1/object9/middle.png', styleClass: 'middle', visible: false}
+            ], sceneId: 'pov1_interaction3_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
                 {sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4'},
@@ -125,17 +142,34 @@ export const Interactions: POV[] = [
     },
     {
         id: 'pov3', interactions: [
-            {positionX: 40, positionY: 80, width: 270, height: 180, interactionId: 'pov3_interaction1', pictureParts: [
-                {path: 'assets/pictures/room/pov1/object1/top.png', styleClass: 'top', visible: true},
-                {path: 'assets/pictures/room/pov1/object1/right.png', styleClass: 'right', visible: true},
-                {path: 'assets/pictures/room/pov1/object1/bottom.png', styleClass: 'bottom', visible: true},
-                {path: 'assets/pictures/room/pov1/object1/left.png', styleClass: 'left', visible: true},
-                {path: 'assets/pictures/room/pov1/object1/middle.png', styleClass: 'middle', visible: true},
-                {path: 'assets/pictures/room/pov1/object2/top.png', styleClass: 'top', visible: true},
-                {path: 'assets/pictures/room/pov1/object2/right.png', styleClass: 'right', visible: true},
-                {path: 'assets/pictures/room/pov1/object2/bottom.png', styleClass: 'bottom', visible: true},
-                {path: 'assets/pictures/room/pov1/object2/left.png', styleClass: 'left', visible: true},
-                {path: 'assets/pictures/room/pov1/object2/middle.png', styleClass: 'middle', visible: true}
+            {positionX: 73, positionY: 66, width: 292, height: 204, interactionId: 'pov3_interaction1', pictureParts: [
+                {path: 'assets/pictures/room/pov3/object1/top.png', styleClass: 'top', visible: true},
+                {path: 'assets/pictures/room/pov3/object1/right.png', styleClass: 'right', visible: true},
+                {path: 'assets/pictures/room/pov3/object1/bottom.png', styleClass: 'bottom', visible: true},
+                {path: 'assets/pictures/room/pov3/object1/left.png', styleClass: 'left', visible: true},
+                {path: 'assets/pictures/room/pov3/object1/middle.png', styleClass: 'middle', visible: true},
+                {path: 'assets/pictures/room/pov3/object2/top.png', styleClass: 'top', visible: false},
+                {path: 'assets/pictures/room/pov3/object2/right.png', styleClass: 'right', visible: false},
+                {path: 'assets/pictures/room/pov3/object2/bottom.png', styleClass: 'bottom', visible: false},
+                {path: 'assets/pictures/room/pov3/object2/left.png', styleClass: 'left', visible: false},
+                {path: 'assets/pictures/room/pov3/object2/middle.png', styleClass: 'middle', visible: false}
+            ], sceneId: 'pov3_interaction1_scene', videoSequence: [
+                {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
+                {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
+                {sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4'},
+                {sequencePosition: 'outro', pathToVideo: 'assets/video/tester/video-2.mp4'}
+            ]},
+            {positionX: 16, positionY: 76, width: 262, height: 173, interactionId: 'pov3_interaction1', pictureParts: [
+                {path: 'assets/pictures/room/pov3/object3/top.png', styleClass: 'top', visible: true},
+                {path: 'assets/pictures/room/pov3/object3/right.png', styleClass: 'right', visible: true},
+                {path: 'assets/pictures/room/pov3/object3/bottom.png', styleClass: 'bottom', visible: true},
+                {path: 'assets/pictures/room/pov3/object3/left.png', styleClass: 'left', visible: true},
+                {path: 'assets/pictures/room/pov3/object3/middle.png', styleClass: 'middle', visible: true},
+                {path: 'assets/pictures/room/pov3/object4/top.png', styleClass: 'top', visible: false},
+                {path: 'assets/pictures/room/pov3/object4/right.png', styleClass: 'right', visible: false},
+                {path: 'assets/pictures/room/pov3/object4/bottom.png', styleClass: 'bottom', visible: false},
+                {path: 'assets/pictures/room/pov3/object4/left.png', styleClass: 'left', visible: false},
+                {path: 'assets/pictures/room/pov3/object4/middle.png', styleClass: 'middle', visible: false}
             ], sceneId: 'pov3_interaction1_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},

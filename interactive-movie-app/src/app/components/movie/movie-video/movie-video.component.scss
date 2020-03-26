@@ -1,18 +1,33 @@
 video {
     position: absolute;
 
+    top: 0;
     left: 0;
 
     width: 100%;
     height: 100%;
 
-    transition: all 2s;
+    transition: transform 2s ease-out, opacity 1s ease-in-out;
 }
 
-.currentVideo {
-    top: 0;
+.intro, .outro {
+    &.hiddenVideo {
+        transform: translateY(100%);
+    }
 }
 
-.hiddenVideo {
-    top: 100vh;
+.alt-1 {
+    &.hiddenVideo {
+        transform: translateX(-100%);
+    }
+}
+
+.alt-2 {
+    &.hiddenVideo {
+        transform: translateX(100%);
+    }
+}
+
+.closeVideo {
+    opacity: 0;
 }
