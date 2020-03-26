@@ -29,29 +29,40 @@ export class MovieSceneComponent implements OnInit {
     const decisionContainer = document.getElementById(this.interaction.sceneId + '-decision');
 
     if (video.sequencePosition === 'intro') {
-      introElement.classList.replace('currentVideo', 'hiddenVideo');
-      decisionContainer.classList.replace('hiddenVideo', 'currentVideo');
+      //introElement.classList.replace('currentVideo', 'hiddenVideo');
+      decisionContainer.classList.remove('hidden');
+      for (let i = 0; i < decisionContainer.children.length; i++) {
+        decisionContainer.children[i].classList.remove('hidden');
+      }
+      //decisionContainer.classList.remove('hidden');
     } else if (video.sequencePosition === 'alt-1') {
-      alt1Element.classList.replace('currentVideo', 'hiddenVideo');
+      alt1Element.classList.replace('currentVideo', 'closeVideo');
       outroElement.classList.replace('hiddenVideo', 'currentVideo');
     } else if (video.sequencePosition === 'alt-2') {
-      alt2Element.classList.replace('currentVideo', 'hiddenVideo');
+      alt2Element.classList.replace('currentVideo', 'closeVideo');
       outroElement.classList.replace('hiddenVideo', 'currentVideo');
     } else {
-      outroElement.classList.replace('currentVideo', 'hiddenVideo');
+      outroElement.classList.replace('currentVideo', 'closeVideo');
     }
   }
 
   onDecisionClick(dec: number) {
+    const introElement = document.getElementById(this.interaction.sceneId + '-intro');
     const alt1Element = document.getElementById(this.interaction.sceneId + '-alt-1');
     const alt2Element = document.getElementById(this.interaction.sceneId + '-alt-2');
-    const decisionContainer = document.getElementById(this.interaction.sceneId + '-decision');
+    const decisionContainer = document.getElementById(this.interaction.sceneId + '-decision').children;
 
-    decisionContainer.classList.replace('currentVideo', 'hiddenVideo');
+    introElement.classList.replace('currentVideo', 'closeVideo');
 
     if (dec === 1) {
+      for (let i = 0; i < decisionContainer.length; i++) {
+        decisionContainer[i].classList.add('close-right');
+      }
       alt1Element.classList.replace('hiddenVideo', 'currentVideo');
     } else {
+      for (let i = 0; i < decisionContainer.length; i++) {
+        decisionContainer[i].classList.add('close-left');
+      }
       alt2Element.classList.replace('hiddenVideo', 'currentVideo');
     }
   }

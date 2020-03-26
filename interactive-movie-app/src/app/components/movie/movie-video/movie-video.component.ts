@@ -26,9 +26,9 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
 
   getVideoClass(pos: string) {
     if (pos === 'intro') {
-      return 'currentVideo';
+      return pos + ' currentVideo';
     } else {
-      return 'hiddenVideo';
+      return pos + ' hiddenVideo';
     }
   }
 
