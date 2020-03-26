@@ -22,19 +22,16 @@ export class MovieSceneComponent implements OnInit {
   }
 
   onVideoEnded(video: VideoSequence) {
-    const introElement = document.getElementById(this.interaction.sceneId + '-intro');
     const alt1Element = document.getElementById(this.interaction.sceneId + '-alt-1');
     const alt2Element = document.getElementById(this.interaction.sceneId + '-alt-2');
     const outroElement = document.getElementById(this.interaction.sceneId + '-outro');
     const decisionContainer = document.getElementById(this.interaction.sceneId + '-decision');
 
     if (video.sequencePosition === 'intro') {
-      //introElement.classList.replace('currentVideo', 'hiddenVideo');
       decisionContainer.classList.remove('hidden');
       for (let i = 0; i < decisionContainer.children.length; i++) {
         decisionContainer.children[i].classList.remove('hidden');
       }
-      //decisionContainer.classList.remove('hidden');
     } else if (video.sequencePosition === 'alt-1') {
       alt1Element.classList.replace('currentVideo', 'closeVideo');
       outroElement.classList.replace('hiddenVideo', 'currentVideo');
@@ -50,7 +47,7 @@ export class MovieSceneComponent implements OnInit {
     const introElement = document.getElementById(this.interaction.sceneId + '-intro');
     const alt1Element = document.getElementById(this.interaction.sceneId + '-alt-1');
     const alt2Element = document.getElementById(this.interaction.sceneId + '-alt-2');
-    const decisionContainer = document.getElementById(this.interaction.sceneId + '-decision').children;
+    const decisionContainer = document.getElementById(this.interaction.sceneId + '-decision').children as HTMLCollection;
 
     introElement.classList.replace('currentVideo', 'closeVideo');
 
@@ -61,7 +58,7 @@ export class MovieSceneComponent implements OnInit {
       alt1Element.classList.replace('hiddenVideo', 'currentVideo');
     } else {
       for (let i = 0; i < decisionContainer.length; i++) {
-        decisionContainer[i].classList.add('close-left');
+        decisionContainer[i].classList.add('close-right');
       }
       alt2Element.classList.replace('hiddenVideo', 'currentVideo');
     }
