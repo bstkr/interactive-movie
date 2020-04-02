@@ -9,6 +9,12 @@ Tobias:
 Daniel:
 
 Benny:
+    . Schnitt fertig
+    . Ton bis ~ 5.4
+    . Color grading bis ~ 8.4
+    . Videosequennzen MIT / OHNE outro
+    . ! Ausnahme: Vorglühen -> Entscheidung in Entscheidung
+
 
 1 - Organisational
 
@@ -25,11 +31,34 @@ Benny:
 
 2 - Style of the application
     . Color (y/n), Colorpalette
+        . Benny-(aus dem Hintergrund)
+        . Farbpalette aus den Bildern 
     . Font(s)
+        . Bebas Headline
+        . Tomorrow body
     . Style for interactions (Currently not "showy" enough)
+        . Hover & evt. highlight
     . Style for POV switch
-    . Style for impressum
-    . Style for credits
+        . Gradient mit pfeil
+    . Style for impressum / credits / Homepage
+        . Negative, Boxen springen
     . Style for decision screen
+        . Visuell in Film oder in Anwendung
+        . Zeitlich begrenzen mit vorgegebener Richtung
     . Style for timeline
     . Animations
+
+
+TODO:
+- Benne:
+    . create Style guide
+
+- Benny:
+    . Ton
+    . Colorgrading
+    . Bilder hochladen
+
+- Tobias:
+    . update impressum
+    . Check deployment problems on webserver
+    . Logo
