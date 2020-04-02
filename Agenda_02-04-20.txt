@@ -3,10 +3,14 @@ Meeting Agenda 2. april 2020
 0 - Update round:
 
 Jan:
+    . Objekte in POV2 eingefügt
+    . Back to menu button
 
 Tobias:
 
 Daniel:
+    . Timeline design 
+    . Anfang zu implementieren
 
 Benny:
     . Schnitt fertig
@@ -62,3 +66,9 @@ TODO:
     . update impressum
     . Check deployment problems on webserver
     . Logo
+
+- Daniel
+    . Timeline
+
+- Jan
+    . Exit button
