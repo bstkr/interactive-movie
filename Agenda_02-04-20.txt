@@ -1,0 +1,35 @@
+Meeting Agenda 2. april 2020
+
+0 - Update round:
+
+Jan:
+
+Tobias:
+
+Daniel:
+
+Benny:
+
+1 - Organisational
+
+- Deadlines:
+    . Close First Milestone
+    . Open new Milestone
+
+- Quarantine:
+    . Is there an End date?
+    . What happens if there is no end until may?
+    . Possibility of not shooting new Scenes
+    . Possibility of shooting with only two persons
+
+
+2 - Style of the application
+    . Color (y/n), Colorpalette
+    . Font(s)
+    . Style for interactions (Currently not "showy" enough)
+    . Style for POV switch
+    . Style for impressum
+    . Style for credits
+    . Style for decision screen
+    . Style for timeline
+    . Animations
