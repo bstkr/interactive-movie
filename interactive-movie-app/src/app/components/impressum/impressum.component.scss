@@ -4,15 +4,16 @@ nav{
   ul{
     margin: 0;
     padding: 0;
-    list-style: none;
 
     li{
-      display: inline-block;
-      margin-left: 100px;
+      padding:20px;
+      border: white solid 1px;
+      margin-bottom:5px;
+      background: white;
 
       a{
         font-size: 30px;
-        color: #636262 ;
+        color:white;
       }
     }
 
@@ -20,12 +21,13 @@ nav{
 
 }
 
+
 section {
   h1{
     display: inline;
     border-style: solid;
     border-width: 1px;
-    font-size:  60px;
+    font-size:  80px;
   }
   h2{
     border-style: solid;
@@ -35,27 +37,46 @@ section {
     border: none;
     text-decoration: underline;
   }
+  h4{
+    display: inline;
+    border-style: solid;
+    border-width: 1px;
+    font-size:  40px;
+    color: white;
+  }
 }
 
 .impressum-container{
 width: 100%;
 margin: auto;
 overflow-y: scroll;
+color: white;
+background-color: black;
 }
 
 #title-impressum{
   padding: 20px;
-  text-align: center;
+  text-align: right;
   margin-top: 50px;
+  margin-right: 5%;
+}
+
+#home-button{
+  padding: 20px;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 #operators{
   margin-top: 100px;
   text-align: center;
+  color: white;
 
   .op-name{
       margin-top: 30px;
-
+      color: white;
+      border-color: white;
     p{
       font-size: 20px;
     }
@@ -63,15 +84,25 @@ overflow-y: scroll;
 
 }
 
+#site{
+  margin-top: 100px;
+  margin-right: 5%;
+  margin-left: 25%;
+  text-align: center;
+  color: white;
+}
+
+
 #contact{
   margin-top: 100px;
   text-align: center;
 
   .op-mail{
       margin-top: 30px;
-
+      border-color: white;
     p{
       font-size: 18px;
+      color: white;
     }
   }
 
@@ -81,13 +112,16 @@ overflow-y: scroll;
   margin-top: 100px;
   text-align: center;
 
+
   .laws{
     margin-top: 30px;
+    border-color: white;
 
     p{
       margin: 15px;
       text-align: left;
       font-size: 20px;
+      text-align: justify;
     }
   }
 
