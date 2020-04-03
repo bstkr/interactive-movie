@@ -16,9 +16,10 @@ export class MovieInteractionComponent implements OnInit {
   }
 
   setInteractionStyle() {
+    // TODO: Make the width & height in percent aswell to improve relative positioning
     return {
-      top: this.interaction.positionY + 'vh',
-      left: this.interaction.positionX + 'vw',
+      top: this.interaction.positionY + '%',
+      left: this.interaction.positionX + '%',
       width: this.interaction.width + 'px',
       height: this.interaction.height + 'px'
     };

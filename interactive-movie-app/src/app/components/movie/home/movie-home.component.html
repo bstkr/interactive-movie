@@ -1,7 +1,9 @@
 <div class="movie-home-container">
+    <div class="movie-pov-wrapper">
+        <app-movie-point-of-view *ngIf="currentPov === 'pov1'" [id]="currentPov"></app-movie-point-of-view>
+        <app-movie-point-of-view *ngIf="currentPov === 'pov2'" [id]="currentPov"></app-movie-point-of-view>
+        <app-movie-point-of-view *ngIf="currentPov === 'pov3'" [id]="currentPov"></app-movie-point-of-view>
+    </div>
     <div *ngIf="currentPov === 'pov1' || currentPov === 'pov2'" class="right-navigation" (click)="rightNavigation()"></div>
     <div *ngIf="currentPov === 'pov2' || currentPov === 'pov3'" class="left-navigation" (click)="leftNavigation()"></div>
-    <app-movie-point-of-view *ngIf="currentPov === 'pov1'" [id]="currentPov"></app-movie-point-of-view>
-    <app-movie-point-of-view *ngIf="currentPov === 'pov2'" [id]="currentPov"></app-movie-point-of-view>
-    <app-movie-point-of-view *ngIf="currentPov === 'pov3'" [id]="currentPov"></app-movie-point-of-view>
 </div>

@@ -10,27 +10,7 @@
         left: 16%;
         top: 0;
 
-        &.visible {
-            animation-name: startingVisibleTop;
-        }
-
-        &.invisible {
-            animation-name: startingInvisibleTop;
-        }
-    }
-
-    @keyframes startingVisibleTop {
-        5% { opacity: 1; }
-        10% { opacity: 0; }
-        55% { opacity: 0; }
-        60% { opacity: 1; }
-    }
-
-    @keyframes startingInvisibleTop {
-        5% { opacity: 0; }
-        10% { opacity: 1; }
-        55% { opacity: 1; }
-        60% { opacity: 0; }
+        animation-delay: 0s;
     }
 
     .right {
@@ -38,27 +18,7 @@
         left: 64%;
         top: 16%;
 
-        &.visible {
-            animation-name: startingVisibleRight;
-        }
-
-        &.invisible {
-            animation-name: startingInvisibleRight;
-        }
-    }
-
-    @keyframes startingVisibleRight {
-        15% { opacity: 1; }
-        20% { opacity: 0; }
-        65% { opacity: 0; }
-        70% { opacity: 1; }
-    }
-
-    @keyframes startingInvisibleRight {
-        15% { opacity: 0; }
-        20% { opacity: 1; }
-        65% { opacity: 1; }
-        70% { opacity: 0; }
+        animation-delay: 1s;
     }
 
     .bottom {
@@ -66,27 +26,7 @@
         left: 16%;
         top: 64%;
 
-        &.visible {
-            animation-name: startingVisibleBottom;
-        }
-
-        &.invisible {
-            animation-name: startingInvisibleBottom;
-        }
-    }
-
-    @keyframes startingVisibleBottom {
-        25% { opacity: 1; }
-        30% { opacity: 0; }
-        75% { opacity: 0; }
-        80% { opacity: 1; }
-    }
-
-    @keyframes startingInvisibleBottom {
-        25% { opacity: 0; }
-        30% { opacity: 1; }
-        75% { opacity: 1; }
-        80% { opacity: 0; }
+        animation-delay: 2s;
     }
 
     .left {
@@ -94,27 +34,7 @@
         left: 0;
         top: 16%;
 
-        &.visible {
-            animation-name: startingVisibleLeft;
-        }
-
-        &.invisible {
-            animation-name: startingInvisibleLeft;
-        }
-    }
-
-    @keyframes startingVisibleLeft {
-        35% { opacity: 1; }
-        40% { opacity: 0; }
-        85% { opacity: 0; }
-        90% { opacity: 1; }
-    }
-
-    @keyframes startingInvisibleLeft {
-        35% { opacity: 0; }
-        40% { opacity: 1; }
-        85% { opacity: 1; }
-        90% { opacity: 0; }
+        animation-delay: 3s;
     }
 
     .middle {
@@ -122,38 +42,34 @@
         left: 32%;
         top: 32%;
 
-        &.visible {
-            animation-name: startingVisibleMiddle;
-        }
-
-        &.invisible {
-            animation-name: startingInvisibleMiddle;
-        }
-    }
-
-    @keyframes startingVisibleMiddle {
-        45% { opacity: 1; }
-        50% { opacity: 0; }
-        95% { opacity: 0; }
-        100% { opacity: 1; }
-    }
-
-    @keyframes startingInvisibleMiddle {
-        45% { opacity: 0; }
-        50% { opacity: 1; }
-        95% { opacity: 1; }
-        100% { opacity: 0; }
+        animation-delay: 4s;
     }
 
     .visible {
         opacity: 1;
+        //animation-name: startingVisible;
         animation-duration: 10s;
         animation-iteration-count: infinite;
     }
 
     .invisible {
         opacity: 0;
+        //animation-name: startingInvisible;
         animation-duration: 10s;
         animation-iteration-count: infinite;
+    }
+
+    @keyframes startingVisible {
+        5% { opacity: 1; }
+        10% { opacity: 0; }
+        55% { opacity: 0; }
+        60% { opacity: 1; }
+    }
+
+    @keyframes startingInvisible {
+        5% { opacity: 0; }
+        10% { opacity: 1; }
+        55% { opacity: 1; }
+        60% { opacity: 0; }
     }
 }

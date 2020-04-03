@@ -1,0 +1,23 @@
+@import "../../../style/palette.scss";
+
+.loading-screen-container {
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: $black;
+    }
+
+    .content-container {
+        position: relative;
+
+        h1 {
+            color: $white;
+        }
+    }
+}
