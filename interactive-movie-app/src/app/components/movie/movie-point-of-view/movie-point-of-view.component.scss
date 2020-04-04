@@ -1,9 +1,25 @@
-img {
-    object-fit: contain;
-}
 
-.interaction-anchor {
-    position: absolute;
-    width: 0;
-    height: 0;
+.movie-point-of-view-container {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    
+    grid-template-columns: 100%;
+    grid-template-rows: 100% ;
+
+    grid-template-areas: 
+    "content";
+
+    img {
+        grid-area: content;
+
+        object-fit: contain;
+    }
+
+    .interaction-wrapper {
+        grid-area: content;
+
+        position: relative;
+    }
 }

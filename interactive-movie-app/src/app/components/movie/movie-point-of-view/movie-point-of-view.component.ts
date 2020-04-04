@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Interaction, PovType } from 'src/app/_models/Interactions';
 import { InteractionService } from 'src/app/_services/interaction.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-point-of-view',
@@ -13,7 +14,9 @@ export class MoviePointOfViewComponent implements OnInit {
 
   interactions: Interaction[];
 
-  constructor(private interactionService: InteractionService) { }
+  constructor(
+    private interactionService: InteractionService
+    ) { }
 
   ngOnInit() {
     this.interactions = this.interactionService.getInteractions(this.id);
