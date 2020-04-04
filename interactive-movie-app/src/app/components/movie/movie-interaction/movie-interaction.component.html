@@ -1,3 +1,11 @@
-<div class="interaction" id="interaction" [ngStyle]="setInteractionStyle()" (click)="clickedInteraction()">
-    <img *ngFor="let p of interaction.pictureParts" [src]="p.path" alt="" [ngClass]="getStyleClass(p.styleClass, p.visible)">
+<div class="interaction" [id]="interaction.interactionId" [ngStyle]="setInteractionStyle()"
+    (click)="clickedInteraction()">
+    <!--Hover Layer-->
+    <img [id]="interaction.interactionId + '_hoverLayer'" class="hoverLayerElement" [src]="interaction.hoverLayerElementPath">
+    <img *ngFor="let p of interaction.pictureParts" [src]="p.path" alt=""
+        [ngClass]="getStyleClass(p.styleClass, p.visible)">
+    <!--Click Layer-->
+    <div *ngFor="let cle of interaction.clickLayerElements; index as i" class="clickLayerElement"
+        [id]="interaction.interactionId + '_clickLayer_Object' + i" [ngStyle]="getClickLayerStyle(i)"
+        (click)="clickedInteraction()" (mouseover)="mouseOver()"></div>
 </div>
