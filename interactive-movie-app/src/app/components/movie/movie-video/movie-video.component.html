@@ -1,4 +1,4 @@
-<div>
+<div class="video-container">
     <video [id]="interaction.sceneId + '-' + video.sequencePosition" [class]="getVideoClass(video.sequencePosition)" (click)="videoClick($event)" (ended)="videoEnded()" #videoPlayer>
         <source [src]="video.pathToVideo" type="video/mp4">
     </video>

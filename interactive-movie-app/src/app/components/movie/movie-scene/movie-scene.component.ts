@@ -40,6 +40,7 @@ export class MovieSceneComponent implements OnInit {
       outroElement.classList.replace('hiddenVideo', 'currentVideo');
     } else {
       outroElement.classList.replace('currentVideo', 'closeVideo');
+      this.closeVideo();
     }
   }
 
@@ -47,21 +48,37 @@ export class MovieSceneComponent implements OnInit {
     const introElement = document.getElementById(this.interaction.sceneId + '-intro');
     const alt1Element = document.getElementById(this.interaction.sceneId + '-alt-1');
     const alt2Element = document.getElementById(this.interaction.sceneId + '-alt-2');
-    const decisionContainer = document.getElementById(this.interaction.sceneId + '-decision').children as HTMLCollection;
+    const decisionContainer = document.getElementById(this.interaction.sceneId + '-decision');
+    const decisionContainerChildren = document.getElementById(this.interaction.sceneId + '-decision').children as HTMLCollection;
 
     introElement.classList.replace('currentVideo', 'closeVideo');
 
     if (dec === 1) {
-      for (let i = 0; i < decisionContainer.length; i++) {
-        decisionContainer[i].classList.add('close-right');
+      for (let i = 0; i < decisionContainerChildren.length; i++) {
+        decisionContainerChildren[i].classList.add('close-left');
       }
       alt1Element.classList.replace('hiddenVideo', 'currentVideo');
     } else {
-      for (let i = 0; i < decisionContainer.length; i++) {
-        decisionContainer[i].classList.add('close-right');
+      for (let i = 0; i < decisionContainerChildren.length; i++) {
+        decisionContainerChildren[i].classList.add('close-right');
       }
       alt2Element.classList.replace('hiddenVideo', 'currentVideo');
     }
+
+    setTimeout(() => {
+      decisionContainer.classList.add('hidden');
+    }, 2000);
+  }
+
+  closeVideo() {
+    const videoElement = document.getElementById(this.interaction.sceneId);
+    const rightNavElement = document.getElementById('rightNav');
+    const leftNavElement = document.getElementById('leftNav');
+
+    if (rightNavElement) { rightNavElement.classList.remove('hidden'); }
+    if (leftNavElement) { leftNavElement.classList.remove('hidden'); }
+
+    videoElement.classList.replace('show', 'hidden');
   }
 
 }

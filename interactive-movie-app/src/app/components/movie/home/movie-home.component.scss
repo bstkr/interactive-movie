@@ -24,11 +24,19 @@
         grid-area: leftNav;
 
         background-color: orange;
+
+        &.hidden {
+            opacity: 0;
+        }
     }
 
     .right-navigation {
         grid-area: rightNav;
 
         background-color: orange;
+
+        &.hidden {
+            opacity: 0;
+        }
     }
 }

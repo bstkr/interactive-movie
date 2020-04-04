@@ -4,6 +4,6 @@
         <app-movie-point-of-view *ngIf="currentPov === 'pov2'" [id]="currentPov"></app-movie-point-of-view>
         <app-movie-point-of-view *ngIf="currentPov === 'pov3'" [id]="currentPov"></app-movie-point-of-view>
     </div>
-    <div *ngIf="currentPov === 'pov1' || currentPov === 'pov2'" class="right-navigation" (click)="rightNavigation()"></div>
-    <div *ngIf="currentPov === 'pov2' || currentPov === 'pov3'" class="left-navigation" (click)="leftNavigation()"></div>
+    <div *ngIf="currentPov === 'pov1' || currentPov === 'pov2'" id="rightNav" class="right-navigation" (click)="rightNavigation()"></div>
+    <div *ngIf="currentPov === 'pov2' || currentPov === 'pov3'" id="leftNav" class="left-navigation" (click)="leftNavigation()"></div>
 </div>

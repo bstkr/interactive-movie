@@ -42,7 +42,7 @@ export interface ClickLayerElement {
     posY: number;
 
     width: number;
-    height: number
+    height: number;
 }
 
 export type PovType = 'pov1' | 'pov2' | 'pov3';
