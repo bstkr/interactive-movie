@@ -53,10 +53,14 @@ export class MovieInteractionComponent implements OnInit {
   }
 
   clickedInteraction() {
-    console.log('HELLO');
-    /*
     const videoElement = document.getElementById(this.interaction.sceneId);
+    const rightNavElement = document.getElementById('rightNav');
+    const leftNavElement = document.getElementById('leftNav');
+
+    if (rightNavElement) rightNavElement.classList.add('hidden');
+    if (leftNavElement) leftNavElement.classList.add('hidden');
+
     videoElement.classList.remove('hidden');
-    videoElement.classList.add('show');*/
+    videoElement.classList.add('show');
   }
 }

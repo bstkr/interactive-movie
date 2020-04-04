@@ -34,7 +34,8 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
 
   videoClick(e: Event) {
     if (this.videoPlayer.nativeElement.paused) {
-      this.videoPlayer.nativeElement.play();
+      this.videoEnded();
+      //this.videoPlayer.nativeElement.play();
     } else {
       this.videoPlayer.nativeElement.pause();
     }

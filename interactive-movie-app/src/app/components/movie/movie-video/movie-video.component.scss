@@ -1,33 +1,39 @@
-video {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
+.video-container {
     width: 100%;
     height: 100%;
-
-    transition: transform 2s ease-out, opacity 1s ease-in-out;
-}
-
-.intro, .outro {
-    &.hiddenVideo {
-        transform: translateY(100%);
+    
+    video {
+        position: absolute;
+    
+        top: 0;
+        left: 0;
+    
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    
+        transition: transform 2s ease-out, opacity 1s ease-in-out;
     }
-}
-
-.alt-1 {
-    &.hiddenVideo {
-        transform: translateX(-100%);
+    
+    .intro, .outro {
+        &.hiddenVideo {
+            transform: translateY(120%);
+        }
     }
-}
-
-.alt-2 {
-    &.hiddenVideo {
-        transform: translateX(100%);
+    
+    .alt-1 {
+        &.hiddenVideo {
+            transform: translateX(120%);
+        }
     }
-}
-
-.closeVideo {
-    opacity: 0;
+    
+    .alt-2 {
+        &.hiddenVideo {
+            transform: translateX(-120%);
+        }
+    }
+    
+    .closeVideo {
+        opacity: 0;
+    }
 }
