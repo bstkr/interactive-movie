@@ -64,7 +64,7 @@ export const Interactions: POV[] = [
                 {path: 'assets/pictures/room/pov1/object2/middle.png', styleClass: 'middle', visible: false}
             ], clickLayerElements: [
                 { posX: 0, posY: 0, width: 100, height: 100 }
-            ], hoverLayerElementPath: 'assets/pictures/room/pov1', sceneId: 'pov1_interaction1_scene', videoSequence: [
+            ], hoverLayerElementPath: 'assets/pictures/room/pov1/Object_1_2.svg', sceneId: 'pov1_interaction1_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
                 {sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4'},
@@ -160,7 +160,7 @@ export const Interactions: POV[] = [
                 {path: 'assets/pictures/room/pov2/object11/middle.png', styleClass: 'middle', visible: false}
             ], clickLayerElements: [
                 { posX: 0, posY: 0, width: 100, height: 100 }
-            ], hoverLayerElementPath: 'assets/pictures/room/pov1', sceneId: 'pov2_interaction1_scene', videoSequence: [
+            ], hoverLayerElementPath: 'assets/pictures/room/pov2/Object_10_11.svg', sceneId: 'pov2_interaction1_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
                 {sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4'},
@@ -179,7 +179,7 @@ export const Interactions: POV[] = [
                 {path: 'assets/pictures/room/pov2/object6/middle.png', styleClass: 'middle', visible: false}
             ], clickLayerElements: [
                 { posX: 0, posY: 0, width: 100, height: 100 }
-            ], hoverLayerElementPath: 'assets/pictures/room/pov1', sceneId: 'pov2_interaction1_scene', videoSequence: [
+            ], hoverLayerElementPath: 'assets/pictures/room/pov2/Object_5_6.svg', sceneId: 'pov2_interaction1_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
                 {sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4'},
@@ -198,7 +198,7 @@ export const Interactions: POV[] = [
                 {path: 'assets/pictures/room/pov2/object2/middle.png', styleClass: 'middle', visible: false}
             ], clickLayerElements: [
                 { posX: 4, posY: 16, width: 78, height: 80 }
-            ], hoverLayerElementPath: 'assets/pictures/room/pov1', sceneId: 'pov2_interaction1_scene', videoSequence: [
+            ], hoverLayerElementPath: 'assets/pictures/room/pov2/Object_1_2.svg', sceneId: 'pov2_interaction1_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
                 {sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4'},
@@ -217,7 +217,7 @@ export const Interactions: POV[] = [
                 {path: 'assets/pictures/room/pov2/object4/middle.png', styleClass: 'middle', visible: false}
             ], clickLayerElements: [
                 { posX: 0, posY: 0, width: 100, height: 100 }
-            ], hoverLayerElementPath: 'assets/pictures/room/pov1', sceneId: 'pov2_interaction1_scene', videoSequence: [
+            ], hoverLayerElementPath: 'assets/pictures/room/pov2/Object_3_4.svg', sceneId: 'pov2_interaction1_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
                 {sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4'},
@@ -231,7 +231,7 @@ export const Interactions: POV[] = [
                 {path: 'assets/pictures/room/pov2/object7/middle.png', styleClass: 'middle', visible: true},
             ], clickLayerElements: [
                 { posX: -15, posY: -10, width: 130, height: 120 }
-            ], hoverLayerElementPath: 'assets/pictures/room/pov1', sceneId: 'pov2_interaction1_scene', videoSequence: [
+            ], hoverLayerElementPath: 'assets/pictures/room/pov2/Object_7.svg', sceneId: 'pov2_interaction1_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
                 {sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4'},
@@ -250,7 +250,7 @@ export const Interactions: POV[] = [
                 {path: 'assets/pictures/room/pov2/object9/middle.png', styleClass: 'middle', visible: false}
             ], clickLayerElements: [
                 { posX: 0, posY: 0, width: 100, height: 100 }
-            ], hoverLayerElementPath: 'assets/pictures/room/pov1', sceneId: 'pov2_interaction1_scene', videoSequence: [
+            ], hoverLayerElementPath: 'assets/pictures/room/pov2/Object_8_9.svg', sceneId: 'pov2_interaction1_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
                 {sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4'},
@@ -270,7 +270,7 @@ export const Interactions: POV[] = [
             ], clickLayerElements: [
                 { posX: 26, posY: 14, width: 59, height: 32 },
                 { posX: 11, posY: 52, width: 34, height: 32 }
-            ], hoverLayerElementPath: 'assets/pictures/room/pov1', sceneId: 'pov2_interaction1_scene', videoSequence: [
+            ], hoverLayerElementPath: 'assets/pictures/room/pov2/Object_12_13.svg', sceneId: 'pov2_interaction1_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
                 {sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4'},
@@ -293,7 +293,7 @@ export const Interactions: POV[] = [
                 {path: 'assets/pictures/room/pov3/object2/middle.png', styleClass: 'middle', visible: false}
             ], clickLayerElements: [
                 { posX: 0, posY: 0, width: 100, height: 100 }
-            ], hoverLayerElementPath: 'assets/pictures/room/pov1', sceneId: 'pov3_interaction1_scene', videoSequence: [
+            ], hoverLayerElementPath: 'assets/pictures/room/pov3/Object_1_2.svg', sceneId: 'pov3_interaction1_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
                 {sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4'},
@@ -312,7 +312,7 @@ export const Interactions: POV[] = [
                 {path: 'assets/pictures/room/pov3/object4/middle.png', styleClass: 'middle', visible: false}
             ], clickLayerElements: [
                 { posX: 0, posY: 0, width: 100, height: 100 }
-            ], hoverLayerElementPath: 'assets/pictures/room/pov1', sceneId: 'pov3_interaction1_scene', videoSequence: [
+            ], hoverLayerElementPath: 'assets/pictures/room/pov3/Object_3_4.svg', sceneId: 'pov3_interaction1_scene', videoSequence: [
                 {sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4'},
                 {sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4'},
                 {sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4'},
