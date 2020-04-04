@@ -16,13 +16,30 @@ export class MovieInteractionComponent implements OnInit {
   }
 
   setInteractionStyle() {
-    // TODO: Make the width & height in percent aswell to improve relative positioning
     return {
       top: this.interaction.positionY + '%',
       left: this.interaction.positionX + '%',
       width: this.interaction.width + '%',
       height: this.interaction.height + '%'
     };
+  }
+
+  getClickLayerStyle(objectIndex: number) {
+    return {
+      left: this.interaction.clickLayerElements[objectIndex].posX + '%',
+      top: this.interaction.clickLayerElements[objectIndex].posY + '%',
+      width: this.interaction.clickLayerElements[objectIndex].width + '%',
+      height: this.interaction.clickLayerElements[objectIndex].height + '%'
+    };
+  }
+
+  mouseOver() {
+    let hoverElement = document.getElementById(this.interaction.interactionId + '_hoverLayer');
+    hoverElement.classList.remove('showHoverAnimation');
+    
+    void hoverElement.offsetWidth;
+
+    hoverElement.classList.add('showHoverAnimation');
   }
 
   getStyleClass(styleClass: string, visible: boolean) {
@@ -36,8 +53,10 @@ export class MovieInteractionComponent implements OnInit {
   }
 
   clickedInteraction() {
+    console.log('HELLO');
+    /*
     const videoElement = document.getElementById(this.interaction.sceneId);
     videoElement.classList.remove('hidden');
-    videoElement.classList.add('show');
+    videoElement.classList.add('show');*/
   }
 }
