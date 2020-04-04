@@ -25,6 +25,8 @@
 
         background-color: orange;
 
+        cursor: pointer;
+
         &.hidden {
             opacity: 0;
         }
@@ -34,6 +36,8 @@
         grid-area: rightNav;
 
         background-color: orange;
+
+        cursor: pointer;
 
         &.hidden {
             opacity: 0;
