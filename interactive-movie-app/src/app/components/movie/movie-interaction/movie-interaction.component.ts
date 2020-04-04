@@ -34,10 +34,13 @@ export class MovieInteractionComponent implements OnInit {
   }
 
   mouseOver() {
-    let hoverElement = document.getElementById(this.interaction.interactionId + '_hoverLayer');
+    const hoverElement = document.getElementById(this.interaction.interactionId + '_hoverLayer');
     hoverElement.classList.remove('showHoverAnimation');
-    
+
+    /* tslint:disable */
+    // disbale linting for this line. It needs to be here
     void hoverElement.offsetWidth;
+    /* tslint:enable */
 
     hoverElement.classList.add('showHoverAnimation');
   }
@@ -57,8 +60,8 @@ export class MovieInteractionComponent implements OnInit {
     const rightNavElement = document.getElementById('rightNav');
     const leftNavElement = document.getElementById('leftNav');
 
-    if (rightNavElement) rightNavElement.classList.add('hidden');
-    if (leftNavElement) leftNavElement.classList.add('hidden');
+    if (rightNavElement) { rightNavElement.classList.add('hidden'); }
+    if (leftNavElement) { leftNavElement.classList.add('hidden'); }
 
     videoElement.classList.remove('hidden');
     videoElement.classList.add('show');

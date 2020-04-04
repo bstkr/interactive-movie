@@ -21,26 +21,25 @@ export class MovieHomeComponent implements OnInit {
 
   ngOnInit() {
     this.currentPov = this.route.snapshot.paramMap.get('pov');
-    console.log(this.currentPov);
   }
 
   rightNavigation() {
     if (this.currentPov === 'pov1') {
       this.router.navigate(['/movie', 'pov2']);
-      this.currentPov = 'pov2'
+      this.currentPov = 'pov2';
     } else if (this.currentPov === 'pov2') {
       this.router.navigate(['/movie', 'pov3']);
-      this.currentPov = 'pov3'
+      this.currentPov = 'pov3';
     }
   }
 
   leftNavigation() {
     if (this.currentPov === 'pov2') {
       this.router.navigate(['/movie', 'pov1']);
-      this.currentPov = 'pov1'
+      this.currentPov = 'pov1';
     } else if (this.currentPov === 'pov3') {
       this.router.navigate(['/movie', 'pov2']);
-      this.currentPov = 'pov2'
+      this.currentPov = 'pov2';
     }
   }
 
