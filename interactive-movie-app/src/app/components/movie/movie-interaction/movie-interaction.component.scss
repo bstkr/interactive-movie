@@ -47,14 +47,14 @@
 
     .visible {
         opacity: 1;
-        //animation-name: startingVisible;
+        animation-name: startingVisible;
         animation-duration: 10s;
         animation-iteration-count: infinite;
     }
 
     .invisible {
         opacity: 0;
-        //animation-name: startingInvisible;
+        animation-name: startingInvisible;
         animation-duration: 10s;
         animation-iteration-count: infinite;
     }

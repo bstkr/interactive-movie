@@ -20,8 +20,8 @@ export class MovieInteractionComponent implements OnInit {
     return {
       top: this.interaction.positionY + '%',
       left: this.interaction.positionX + '%',
-      width: this.interaction.width + 'px',
-      height: this.interaction.height + 'px'
+      width: this.interaction.width + '%',
+      height: this.interaction.height + '%'
     };
   }
 
