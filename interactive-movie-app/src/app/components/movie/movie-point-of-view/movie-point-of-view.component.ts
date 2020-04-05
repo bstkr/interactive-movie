@@ -15,7 +15,7 @@ export class MoviePointOfViewComponent implements OnInit {
   interactions: Interaction[];
 
   constructor(
-    private interactionService: InteractionService
+    public interactionService: InteractionService
     ) { }
 
   ngOnInit() {

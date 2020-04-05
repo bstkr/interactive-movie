@@ -23,4 +23,15 @@
         </div>
         <div class="background"></div>
     </div>
+    <div [id]="interaction.sceneId + '-decision-completed'" class="decision-complete hidden">
+        <div class="headline-container">
+            <h1 *ngIf="decision === 'a'">Decision A</h1>
+            <h1 *ngIf="decision === 'b'">Decision B</h1>
+        </div>
+        <div class="content-container">
+            <p *ngIf="decision === 'a'">Explain decision A</p>
+            <p *ngIf="decision === 'b'">Explain decision B</p>
+        </div>
+        <div class="background"></div>
+    </div>
 </div>

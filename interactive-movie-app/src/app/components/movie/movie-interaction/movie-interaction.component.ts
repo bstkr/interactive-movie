@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Interaction } from 'src/app/_models/Interactions';
+import { InteractionService, InteractionObservable } from 'src/app/_services/interaction.service';
 
 @Component({
   selector: 'app-movie-interaction',
@@ -10,9 +11,22 @@ export class MovieInteractionComponent implements OnInit {
 
   @Input() interaction: Interaction;
 
-  constructor() { }
+  interactionClicked: boolean;
+  interactionDecision: string;
+
+  constructor(
+    public interactionService: InteractionService
+  ) { }
 
   ngOnInit() {
+    this.interactionService.getInteractionState(this.interaction.interactionName)
+      .clicked.subscribe( s => {
+        this.interactionClicked = s
+      });
+    this.interactionService.getInteractionState(this.interaction.interactionName)
+      .decision.subscribe ( s => {
+        this.interactionDecision = s
+      });
   }
 
   setInteractionStyle() {
