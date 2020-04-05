@@ -33,12 +33,13 @@ section {
     padding-right: 20px;
   }
   h2{
-    border-style: solid;
+    border: none;
     border-width: 1px;
   }
   h3{
     border: none;
-    text-decoration: underline;
+    text-decoration: unset;
+    font-size: 20px;
   }
   h4{
     display: inline;
@@ -46,6 +47,10 @@ section {
     border-width: 1px;
     font-size:  40px;
     color: white;
+    font-style: normal;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 
@@ -60,72 +65,55 @@ background-color: rgba(46, 53, 50, 1);
 #title-impressum{
   padding: 20px;
   text-align: right;
-  margin-top: 50px;
+  margin-top: 5px;
   margin-right: 5%;
 }
 
 #home-button{
   padding: 20px;
   text-align: left;
-  margin-top: 20px;
-  margin-left: 20px;
 }
 
 #operators{
   margin-top: 100px;
   text-align: center;
   color: white;
-
-  .op-name{
-      margin-top: 30px;
-      color: white;
-      border-color: white;
-    p{
-      font-size: 20px;
-    }
-  }
-
+  border-style: solid;
 }
 
 #site{
-  margin-top: 100px;
+  margin-top: 50px;
   margin-right: 5%;
   margin-left: 25%;
   text-align: center;
   color: white;
-}
-
-
-#contact{
-  margin-top: 100px;
-  text-align: center;
-
-  .op-mail{
-      margin-top: 30px;
-      border-color: white;
-    p{
-      font-size: 18px;
-      color: white;
-    }
+  border-style: solid;
+  border-width: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+  .op-name{
+    margin-top: 10px;
+    border: none;
+  p{
+    font-size: 18px;
   }
-
 }
-
-#disclaimer{
-  margin-top: 100px;
-  text-align: center;
-
-
-  .laws{
-    margin-top: 30px;
-    border-color: white;
-
-    p{
-      margin: 15px;
-      text-align: left;
-      font-size: 20px;
-      text-align: justify;
-    }
-  }
-
+.op-tp{
+  margin-top: 15px;
+  border: none;
+p{
+  font-size: 18px;
+  color: white;
+  font-style: normal;
+}
+}
+.op-disc{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+p{
+  font-size: 15px;
+  text-align: justify;
+}
+}
 }
