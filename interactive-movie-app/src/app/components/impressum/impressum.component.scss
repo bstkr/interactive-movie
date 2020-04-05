@@ -1,36 +1,12 @@
-nav{
-  text-align: center;
-  padding-right: 100px;
-  ul{
-    margin: 0;
-    padding: 0;
-
-    li{
-      padding:20px;
-      border: white solid 1px;
-      margin-bottom:5px;
-      background: white;
-
-      a{
-        font-size: 30px;
-        color:white;
-      }
-    }
-
-  }
-
-}
-
-
 section {
   h1{
     display: inline;
     border-style: solid;
     border-width: 1px;
     font-size:  80px;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   h2{
     border: none;
@@ -48,7 +24,7 @@ section {
     font-size:  40px;
     color: white;
     font-style: normal;
-    padding: 10px;
+    padding: 25px;
     padding-top: 5px;
     padding-bottom: 5px;
   }
@@ -61,19 +37,19 @@ overflow-y: scroll;
 color: white;
 background-color: rgba(46, 53, 50, 1);
 background-image: url("watermark.svg");
-background-size: 75%;
+background-size: 66%;
 background-repeat: no-repeat;
 }
 
 #title-impressum{
-  padding: 20px;
+  padding-right: 10%;
+  margin-top: 0px;
   text-align: right;
-  margin-top: 5px;
-  margin-right: 5%;
 }
 
 #home-button{
-  padding: 20px;
+  padding-top: 3%;
+  padding-left: 5%;
   text-align: left;
 }
 
@@ -85,9 +61,10 @@ background-repeat: no-repeat;
 }
 
 #site{
-  margin-top: 50px;
+  margin-top: 10%;
   margin-right: 5%;
   margin-left: 25%;
+  margin-bottom: 2%;
   text-align: center;
   color: white;
   border-style: solid;
@@ -98,14 +75,14 @@ background-repeat: no-repeat;
     margin-top: 10px;
     border: none;
   p{
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 .op-tp{
   margin-top: 15px;
   border: none;
 p{
-  font-size: 18px;
+  font-size: 15px;
   color: white;
   font-style: normal;
 }
@@ -115,7 +92,7 @@ p{
   margin-bottom: 15px;
   border: none;
 p{
-  font-size: 15px;
+  font-size: 12px;
   text-align: justify;
 }
 }
