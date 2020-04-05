@@ -13,22 +13,19 @@ export class MovieDecisionComponent implements OnInit {
 
   @Output() decisionClick = new EventEmitter<number>();
 
+  decision: string
+
   constructor(
     public interactionService: InteractionService
   ) { }
 
   ngOnInit() {
+    this.interactionService.getInteractionState(this.interaction.interactionName)
+    .decision.subscribe( s => this.decision = s);
   }
 
   clickDecision(dec: number) {
     this.decisionClick.emit(dec);
-    let decision: string
-    if (dec === 1) {
-      decision = 'a';
-    } else {
-      decision = 'b';
-    }
-    this.interactionService.setDecisionOfInteractionState(this.interaction.interactionName, decision);
   }
 
 }

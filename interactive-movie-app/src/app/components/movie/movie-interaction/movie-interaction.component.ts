@@ -21,12 +21,10 @@ export class MovieInteractionComponent implements OnInit {
   ngOnInit() {
     this.interactionService.getInteractionState(this.interaction.interactionName)
       .clicked.subscribe( s => {
-        console.log(s);
         this.interactionClicked = s
       });
     this.interactionService.getInteractionState(this.interaction.interactionName)
       .decision.subscribe ( s => {
-        console.log(s);
         this.interactionDecision = s
       });
   }

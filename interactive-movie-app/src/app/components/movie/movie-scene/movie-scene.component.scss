@@ -19,6 +19,10 @@
         transition: transform 2s ease-out, opacity 1s ease-out;
     }
 
+    .fade {
+        opacity: 0.1;
+    }
+
     .hidden {
         transform: translateY(100%);
 
