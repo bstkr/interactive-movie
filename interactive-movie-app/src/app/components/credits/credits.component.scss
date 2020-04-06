@@ -35,7 +35,7 @@
   .side-bar {
     grid-area: side-bar;
     border-style: none;
-    position: relative;
+    padding-top: 5vh;
 
     .logo {
       border-style: none;
@@ -45,8 +45,8 @@
   .home-button {
     grid-area: home;
 
-    padding-top: 25vh;
-    padding-left: 15vw;
+    padding-top: 26vh;
+    padding-left: 10vw;
     border-style: none;
 
     a{
@@ -54,7 +54,7 @@
       text-transform: uppercase;
       border-style: solid;
       border-width: 1px;
-      padding: 2%;
+      padding: 0.25% 1% 0.25% 1%;
 
       color: $pureWhite;
       font-weight:bold;
