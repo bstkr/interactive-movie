@@ -1,74 +1,82 @@
 @import "../../style/palette.scss";
 
 .credits-container{
-  width:100%;
-  margin:auto;
-  border-style: none;
-  
   overflow-y: scroll;
-
-  display: flex;
-  flex-direction: row;
 
   background-color: $darkGreen;
 
-  .content {
-    margin-top: 2%;
-    margin-left: 2%;
-    margin-right: 33%;
-    width: 100%;
-    border-style: none;
-  }
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  
+  grid-template-columns: auto 60.625vw 9.375vw 25vw;
+  grid-template-rows: 3.125vw 8.75vw 16.25vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw;
+
+  grid-template-areas:
+  " . . . . "
+  " . creditstitle . side-bar "
+  " . . . home "
+  " . team . . "
+  " . . . . "
+  " . docent . . "
+  " . . . . "
+  " . actors . . "
+  " . . . . "
+  " . camera . . "
+  " . . . . "
+  " . sound . . "
+  " . . . . "
+  " . video . . "
+  " . . . . "
+  " . app . . "
+  " . . . . ";
 
   .side-bar {
-    width: 20%;
-    margin-left: 79%;
-    position: fixed;
+    grid-area: side-bar;
     border-style: none;
-    margin-top: 3%;
+    position: relative;
 
     .logo {
       border-style: none;
     }
+  }
 
-    .home-button {
-      width: 100%;
-      min-height: 10%;
-      text-align: right;;
-      float: right;
-      border-style: none;
-      padding-top: 50%;
-  
-      a{
-        text-decoration:none;
-        text-transform: uppercase;
-        border-style: solid;
-        border-width: 1px;
-        padding: 2%;
-  
-        color: $pureWhite;
-          font-weight:bold;
-          font-size: 30px;
-  
-          &:hover {
-            color: $white;
-            font-weight:bold;
-          }
+  .home-button {
+    grid-area: home;
+
+    padding-top: 25vh;
+    padding-left: 15vw;
+    border-style: none;
+
+    a{
+      text-decoration:none;
+      text-transform: uppercase;
+      border-style: solid;
+      border-width: 1px;
+      padding: 2%;
+
+      color: $pureWhite;
+      font-weight:bold;
+      font-size: 1.875vw;
+
+      &:hover {
+        color: $white;
+        font-weight:bold;
       }
     }
   }
 
   #credits-title{
-    padding: 0px;
-    text-align: left;
-    border-style: none;
+    grid-area: creditstitle;
 
-    min-height:100px;
+    border-style: none;
 
     h1 {
       border-style: solid;
       border-width: 1px;
-      padding: 1%;
+      padding: 0.625vw 4.375vw 0.625vw 4.375vw;
+      font-size: 10.9375vh;
     }
 
   }
@@ -79,55 +87,66 @@
     border-style: none;
   }
 
+  .column {
+    border-style: none;
+  }
+
   #team{
-    margin-top: 15%;
-    padding: 15px;
-    text-align: center;
+    grid-area: team;
+
     border-style: solid;
     display: flex;
     flex-direction: column;
 
     .team-member{
-      float:left;
+      align-items: center;
       text-align: center;
       
-      margin-top: 20px;
-      align-items: center;
+      margin-top: 10vh;
       width: 20%;
       border-style: none;
-      padding:15px;
+
+      p {
+        width: 60%;
+      }
 
       img{
-        align-items: center;
-        width: 50%;
-        height: 50%;
+        width: 6.25vw;
+        height: 6.25vw;
       }
     }
   }
     
   #docent{
-    padding:15px;
-    margin-top: 20px;
-    text-align: center;
+    grid-area: docent;
+
+    text-align: left;
     border-style: solid;
     display: flex;
     flex-direction: column;
 
     .docent-member{
-      border-style: none;
-      padding:15px;
-      float: left;
+      float:left;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-      align-items: center;
+      
+      margin-top: 10vh;
       width: 20%;
+      border-style: none;
+    }
+
+    p {
+      width: 60%;
     }
 
     img{
-      width: 50%;
-      height: 50%;
+      width: 6.25vw;
+      height: 6.25vw;
+    }
+
+    p {
+      font-size:  0.9375vw;
+    padding-top: 0.625vw;
+    padding-left: 2.6vw;
     }
   }
 
@@ -135,36 +154,65 @@
     border-style: solid;
     border-color: $gray;
     border-width: 1px;
+  }
 
-    h1{
-      display: inline;
+  h1{
+    display: inline;
 
-      border-style: solid;
-      border-width: 1px;
-      font-size:  60px;
-    }
+    border-style: solid;
+    border-width: 1px;
+    font-size: 1.875vw;
+  }
 
-    h2 {
-      border-style: none;
-      border-width: 1px;
-    }
+  h2 {
+      padding-top: 0.625vw;
+      padding-left: 2.6vw;
+      font-size: 1.875vw;
+  }
 
-    h3{
-      margin-top: 50px;
-      border-style: none; 
-    }
+  h3{
+    padding-top: 0.625vw;
+    padding-left: 2.6vw;
+    font-size: 1.40625vw;
+  }
+
+  p {
+    font-size:  0.9375vw;
+    padding-top: 0.625vw;
+    padding-left: 2.6vw;
+  }
+
+  #actors {
+    grid-area: actors;
+  }
+
+  #camera {
+    grid-area: camera;
+  }
+
+  #sound {
+    grid-area: sound;
+  }
+
+  #video {
+    grid-area: video;
+  }
+
+  #app {
+    grid-area: app;
   }
     
   .sectors{
-    padding:15px;
-    text-align: center;
-    margin-top:20px;
-    
-    min-height:100px;
+
+    padding: 0.78125vw;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 
     .sectors-member{
-      margin-top: 25px;
-      border-style: none;  
+      margin-top: 1.25vw;
+      border-style: none;
+      float: left;  
     } 
   }
 }
