@@ -132,7 +132,7 @@ export const Interactions: POV[] = [
                 ]
             },
             {
-                positionX: 14.58, positionY: 88.16, width: 6.63, height: 11.78, interactionName: 'Handy', interactionId: 'pov1_interaction6', pictureParts: [
+                positionX: 14.58, positionY: 88.46, width: 6.63, height: 11.78, interactionName: 'Handy', interactionId: 'pov1_interaction6', pictureParts: [
                     { path: 'assets/pictures/room/pov1/object10/top.png', styleClass: 'top', visible: true },
                     { path: 'assets/pictures/room/pov1/object10/right.png', styleClass: 'right', visible: true },
                     { path: 'assets/pictures/room/pov1/object10/bottom.png', styleClass: 'bottom', visible: true },
