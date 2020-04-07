@@ -1,5 +1,28 @@
+Ist
+
 Jan:
+    . Credits fertig
 
 Tobias:
+    . Impressum fertig
 
 Daniel:
+    . Homepage fertig
+
+
+Wird:
+
+Tobias:
+    . Handy interaction
+    . Item component
+    . routing bug
+
+Jan:
+    . Back button
+    . Nav state bug
+    . hilft beim ausschneiden
+
+Daniel:
+    . Timeline
+    . local storage / user state
+    . hilft beim ausschneiden
