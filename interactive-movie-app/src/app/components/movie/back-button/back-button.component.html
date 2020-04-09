@@ -1,3 +1,24 @@
 <div class="back-button-container">
-    <a class="home-button">Home</a>
+    <div id="test">
+        <div class="home-button">
+            <button (click)="popup()" class="button" id="123">
+                <p>&lt; Back</p>
+            </button>
+        </div>
+        <div class="popup">
+            <div class="popup-content">
+                <p>Soll der Fortschritt</p>
+                <p>gespeichert werden?</p>
+                <button (click)="close()" class="close">
+                    <p></p>
+                </button>
+                <button routerLink="/" class="button">
+                    <p>Ja</p>
+                </button>
+                <button routerLink="/" class="button">
+                    <p>Nein</p>
+                </button>
+            </div>
+        </div>
+    </div>
 </div>

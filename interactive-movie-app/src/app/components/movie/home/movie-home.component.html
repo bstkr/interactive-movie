@@ -3,10 +3,8 @@
         <app-movie-point-of-view *ngIf="currentPov === 'pov1'" [id]="currentPov"></app-movie-point-of-view>
         <app-movie-point-of-view *ngIf="currentPov === 'pov2'" [id]="currentPov"></app-movie-point-of-view>
         <app-movie-point-of-view *ngIf="currentPov === 'pov3'" [id]="currentPov"></app-movie-point-of-view>
+        <app-back-button></app-back-button>
     </div>
     <div *ngIf="currentPov === 'pov1' || currentPov === 'pov2'" id="rightNav" class="right-navigation" (click)="rightNavigation()"></div>
     <div *ngIf="currentPov === 'pov2' || currentPov === 'pov3'" id="leftNav" class="left-navigation" (click)="leftNavigation()"></div>
-    <div style="z-index: 1" class="movie-pov-wrapper">
-        <app-back-button></app-back-button>
-    </div>
 </div>

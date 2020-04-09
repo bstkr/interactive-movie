@@ -5,11 +5,20 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './back-button.component.html',
   styleUrls: ['./back-button.component.scss']
 })
+
 export class BackButtonComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
   }
 
+  popup() {
+     document.querySelector(".popup").style.display = "flex";
+  }
+
+  close(){
+    document.querySelector(".popup").style.display = "none";
+  }
 }
