@@ -151,6 +151,22 @@ export const Interactions: POV[] = [
                     { sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4' },
                     { sequencePosition: 'outro', pathToVideo: 'assets/video/tester/video-2.mp4' }
                 ]
+            },
+            {
+                positionX: 14.58, positionY: 88.46, width: 6.63, height: 11.78, interactionName: 'Handy', interactionId: 'pov1_interaction6', pictureParts: [
+                    { path: 'assets/pictures/room/pov1/object10/top.png', styleClass: 'top', visible: true },
+                    { path: 'assets/pictures/room/pov1/object10/right.png', styleClass: 'right', visible: true },
+                    { path: 'assets/pictures/room/pov1/object10/bottom.png', styleClass: 'bottom', visible: true },
+                    { path: 'assets/pictures/room/pov1/object10/left.png', styleClass: 'left', visible: true },
+                    { path: 'assets/pictures/room/pov1/object10/middle.png', styleClass: 'middle', visible: true }
+                ], clickLayerElements: [
+                    { posX: 0, posY: 0, width: 100, height: 100 }
+                ], hoverLayerElementPath: 'assets/pictures/room/pov1/Object_10.svg', sceneId: 'pov1_interaction6_scene', videoSequence: [
+                    { sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4' },
+                    { sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4' },
+                    { sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4' },
+                    { sequencePosition: 'outro', pathToVideo: 'assets/video/tester/video-2.mp4' }
+                ]
             }
         ]
     },

@@ -1,39 +1,32 @@
-nav{
-  text-align: center;
-  padding-right: 100px;
-  ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    li{
-      display: inline-block;
-      margin-left: 100px;
-
-      a{
-        font-size: 30px;
-        color: #636262 ;
-      }
-    }
-
-  }
-
-}
-
 section {
   h1{
     display: inline;
     border-style: solid;
     border-width: 1px;
-    font-size:  60px;
+    font-size:  80px;
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   h2{
-    border-style: solid;
+    border: none;
     border-width: 1px;
   }
   h3{
     border: none;
-    text-decoration: underline;
+    text-decoration: unset;
+    font-size: 20px;
+  }
+  h4{
+    display: inline;
+    border-style: solid;
+    border-width: 1px;
+    font-size:  40px;
+    color: white;
+    font-style: normal;
+    padding: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 
@@ -41,54 +34,66 @@ section {
 width: 100%;
 margin: auto;
 overflow-y: scroll;
+color: white;
+background-color: rgba(46, 53, 50, 1);
+background-image: url("watermark.svg");
+background-size: 66%;
+background-repeat: no-repeat;
 }
 
 #title-impressum{
-  padding: 20px;
-  text-align: center;
-  margin-top: 50px;
+  padding-right: 10%;
+  margin-top: 0px;
+  text-align: right;
+}
+
+#home-button{
+  padding-top: 3%;
+  padding-left: 5%;
+  text-align: left;
 }
 
 #operators{
   margin-top: 100px;
   text-align: center;
+  color: white;
+  border-style: solid;
+}
 
+#site{
+  margin-top: 10%;
+  margin-right: 5%;
+  margin-left: 25%;
+  margin-bottom: 2%;
+  text-align: center;
+  color: white;
+  border-style: solid;
+  border-width: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
   .op-name{
-      margin-top: 30px;
-
-    p{
-      font-size: 20px;
-    }
+    margin-top: 10px;
+    border: none;
+  p{
+    font-size: 15px;
   }
-
 }
-
-#contact{
-  margin-top: 100px;
-  text-align: center;
-
-  .op-mail{
-      margin-top: 30px;
-
-    p{
-      font-size: 18px;
-    }
-  }
-
+.op-tp{
+  margin-top: 15px;
+  border: none;
+p{
+  font-size: 15px;
+  color: white;
+  font-style: normal;
 }
-
-#disclaimer{
-  margin-top: 100px;
-  text-align: center;
-
-  .laws{
-    margin-top: 30px;
-
-    p{
-      margin: 15px;
-      text-align: left;
-      font-size: 20px;
-    }
-  }
-
+}
+.op-disc{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+p{
+  font-size: 12px;
+  text-align: justify;
+}
+}
 }

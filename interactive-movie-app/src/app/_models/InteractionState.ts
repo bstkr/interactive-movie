@@ -88,6 +88,17 @@ export const InteractionStateArray: InteractionState[] = [
             }
         ], clicked: false, decision: 'x'
     }, {
+        name: 'Handy', Interactions: [
+            { 
+                interactionId: 'pov1_interaction6', 
+                pathToCompleteObjectImage: 
+                { 
+                    a:'assets/pictures/room/pov1/object10/complete.png', 
+                    b:'assets/pictures/room/pov1/object10/complete2.png' 
+                }
+            },
+        ], clicked: false, decision: 'x'
+    }, {
         name: 'Computer', Interactions: [
             { 
                 interactionId: 'pov1_interaction5', 

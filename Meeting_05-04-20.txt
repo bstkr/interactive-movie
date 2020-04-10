@@ -1,0 +1,43 @@
+Meeting 5.4.20
+
+Agenda:
+
+0 - Update on progress
+
+Tobias:
+    - Macht heute das impressum fertig
+
+Jan:
+    - entwurf fertig
+
+Daniel:
+    - entwurf fertig
+
+(Benny:)
+
+Benne:
+
+1 - Next steps:
+
+Tobias: 
+    . Impressum fertig
+    . Add Handy interaction
+    (. Add Item component)
+
+Jan:
+    . grid layout
+    . angpassungen an credits
+    . Back to Menu button
+    . Interaction über der schallplatte -> Credits 
+
+Daniel:
+    . kleine Änderungen
+    . Timeline UI
+    . User state in storage mit interactionState speichern
+
+Benne:
+    . Redesign Timeline ?
+    . Redesign 'Back' button
+
+2 - 
+    . nav ist clickable bei video

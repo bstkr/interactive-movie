@@ -33,8 +33,16 @@
         justify-self: center;
         align-self: center;
         h1{
-            font-size: 120px;  
+            font-size: 120px;
         }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    .headline:hover{
+        background-color: #98A9AE;
     }
 
     .menu {
@@ -51,13 +59,17 @@
 
         a {
             text-decoration: none;
-            font-style: normal;
             color: white;
 
             p {
                 padding: 20px;
                 font-size: 35px;
             }
+
+            p:hover{
+                background-color: #98A9AE;
+            }
         }
+
     }
 }
