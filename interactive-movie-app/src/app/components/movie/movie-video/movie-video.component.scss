@@ -12,24 +12,30 @@
         height: 100%;
         z-index: 2;
     
-        transition: transform 2s ease-out, opacity 1s ease-in-out;
+        transition: /*transform 2s ease-out, */opacity 1.5s ease-in-out;
     }
     
     .intro, .outro {
         &.hiddenVideo {
-            transform: translateY(120%);
+            //transform: translateY(120%);
+            z-index: 0;
+            opacity: 0;
         }
     }
     
     .alt-1 {
         &.hiddenVideo {
-            transform: translateX(120%);
+            //transform: translateX(120%);
+            z-index: 0;
+            opacity: 0;
         }
     }
     
     .alt-2 {
         &.hiddenVideo {
-            transform: translateX(-120%);
+            //transform: translateX(-120%);
+            z-index: 0;
+            opacity: 0;
         }
     }
     

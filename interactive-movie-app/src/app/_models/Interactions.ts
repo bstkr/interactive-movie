@@ -162,10 +162,9 @@ export const Interactions: POV[] = [
                 ], clickLayerElements: [
                     { posX: 0, posY: 0, width: 100, height: 100 }
                 ], hoverLayerElementPath: 'assets/pictures/room/pov1/Object_10.svg', sceneId: 'pov1_interaction6_scene', videoSequence: [
-                    { sequencePosition: 'intro', pathToVideo: 'assets/video/tester/video-1.mp4' },
-                    { sequencePosition: 'alt-1', pathToVideo: 'assets/video/tester/alt-1.mp4' },
-                    { sequencePosition: 'alt-2', pathToVideo: 'assets/video/tester/alt-2.mp4' },
-                    { sequencePosition: 'outro', pathToVideo: 'assets/video/tester/video-2.mp4' }
+                    { sequencePosition: 'intro', pathToVideo: 'assets/video/handy/video-1.mp4' },
+                    { sequencePosition: 'alt-1', pathToVideo: 'assets/video/handy/alt-1.mp4' },
+                    { sequencePosition: 'alt-2', pathToVideo: 'assets/video/handy/alt-2.mp4' }
                 ]
             }
         ]
