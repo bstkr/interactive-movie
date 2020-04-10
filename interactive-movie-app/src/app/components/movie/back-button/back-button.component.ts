@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class BackButtonComponent implements OnInit {
 
+  showPopup = false;
+
   constructor() { 
   }
 
@@ -15,10 +17,12 @@ export class BackButtonComponent implements OnInit {
   }
 
   popup() {
-     document.querySelector(".popup").style.display = "flex";
+     const popupElement = document.getElementById('popup');
+     popupElement.style.display = 'flex';
   }
 
   close(){
-    document.querySelector(".popup").style.display = "none";
+    const popupElement = document.getElementById('popup');
+     popupElement.style.display = 'none';
   }
 }
