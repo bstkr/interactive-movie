@@ -1,22 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-movie-loading-screen',
-  templateUrl: './movie-loading-screen.component.html',
-  styleUrls: ['./movie-loading-screen.component.scss']
+  selector: "app-movie-loading-screen",
+  templateUrl: "./movie-loading-screen.component.html",
+  styleUrls: ["./movie-loading-screen.component.scss"],
 })
 export class MovieLoadingScreenComponent implements OnInit {
+  constructor(public router: Router) {}
 
-  constructor(
-    public router: Router
-  ) { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   continue() {
-    this.router.navigate(['/movie', 'pov1']);
+    this.router.navigate(["/movie", "pov1"]);
   }
-
 }

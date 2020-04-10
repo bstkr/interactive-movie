@@ -1,6 +1,6 @@
 @import "../../style/palette.scss";
 
-.credits-container{
+.credits-container {
   overflow-y: scroll;
 
   background-color: $black;
@@ -9,28 +9,28 @@
   height: 100vh;
 
   display: grid;
-  
+
   grid-template-columns: auto 60.625vw 9.375vw 25vw;
   grid-template-rows: 3.125vw 8.75vw 16.25vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw;
 
   grid-template-areas:
-  " . . . . "
-  " . creditstitle . side-bar "
-  " . . . home "
-  " . team . . "
-  " . . . . "
-  " . docent . . "
-  " . . . . "
-  " . actors . . "
-  " . . . . "
-  " . camera . . "
-  " . . . . "
-  " . sound . . "
-  " . . . . "
-  " . video . . "
-  " . . . . "
-  " . app . . "
-  " . nothing . . ";
+    " . . . . "
+    " . creditstitle . side-bar "
+    " . . . home "
+    " . team . . "
+    " . . . . "
+    " . docent . . "
+    " . . . . "
+    " . actors . . "
+    " . . . . "
+    " . camera . . "
+    " . . . . "
+    " . sound . . "
+    " . . . . "
+    " . video . . "
+    " . . . . "
+    " . app . . "
+    " . nothing . . ";
 
   .side-bar {
     grid-area: side-bar;
@@ -56,26 +56,26 @@
     -webkit-position: sticky;
     top: 12vw;
 
-    a{
-      text-decoration:none;
+    a {
+      text-decoration: none;
       text-transform: uppercase;
       border-style: solid;
       border-width: 1px;
       padding: 2% 10% 5% 12.5%;
 
       color: $pureWhite;
-      font-weight:bold;
+      font-weight: bold;
       font-size: 1.875vw;
       font-style: normal;
 
       &:hover {
         color: $white;
-        font-weight:bold;
+        font-weight: bold;
       }
     }
   }
 
-  #credits-title{
+  #credits-title {
     grid-area: creditstitle;
 
     border-style: none;
@@ -86,7 +86,6 @@
       padding: 0.625vw 4.375vw 0.625vw 4.375vw;
       font-size: 10.9375vh;
     }
-
   }
 
   .row {
@@ -99,17 +98,17 @@
     border-style: none;
   }
 
-  #team{
+  #team {
     grid-area: team;
 
     border-style: solid;
     display: flex;
     flex-direction: column;
 
-    .team-member{
+    .team-member {
       align-items: center;
       text-align: center;
-      
+
       margin-top: 10vh;
       width: 20%;
       border-style: none;
@@ -118,14 +117,14 @@
         width: 60%;
       }
 
-      img{
+      img {
         width: 6.25vw;
         height: 6.25vw;
       }
     }
   }
-    
-  #docent{
+
+  #docent {
     grid-area: docent;
 
     text-align: left;
@@ -133,10 +132,10 @@
     display: flex;
     flex-direction: column;
 
-    .docent-member{
-      float:left;
+    .docent-member {
+      float: left;
       text-align: center;
-      
+
       margin-top: 10vh;
       width: 20%;
       border-style: none;
@@ -146,15 +145,15 @@
       width: 60%;
     }
 
-    img{
+    img {
       width: 6.25vw;
       height: 6.25vw;
     }
 
     p {
-      font-size:  0.9375vw;
-    padding-top: 0.625vw;
-    padding-left: 2.6vw;
+      font-size: 0.9375vw;
+      padding-top: 0.625vw;
+      padding-left: 2.6vw;
     }
   }
 
@@ -164,7 +163,7 @@
     border-width: 1px;
   }
 
-  h1{
+  h1 {
     display: inline;
 
     border-style: solid;
@@ -173,19 +172,19 @@
   }
 
   h2 {
-      padding-top: 0.625vw;
-      padding-left: 2.6vw;
-      font-size: 1.875vw;
+    padding-top: 0.625vw;
+    padding-left: 2.6vw;
+    font-size: 1.875vw;
   }
 
-  h3{
+  h3 {
     padding-top: 0.625vw;
     padding-left: 2.6vw;
     font-size: 1.40625vw;
   }
 
   p {
-    font-size:  0.9375vw;
+    font-size: 0.9375vw;
     padding-top: 0.625vw;
     padding-left: 2.6vw;
   }
@@ -215,18 +214,17 @@
 
     border-style: none;
   }
-    
-  .sectors{
 
+  .sectors {
     padding: 0.78125vw;
     text-align: left;
     display: flex;
     flex-direction: column;
 
-    .sectors-member{
+    .sectors-member {
       margin-top: 1.25vw;
       border-style: none;
-      float: left;  
-    } 
+      float: left;
+    }
   }
 }

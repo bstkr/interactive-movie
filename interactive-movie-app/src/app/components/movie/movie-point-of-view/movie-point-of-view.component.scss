@@ -1,25 +1,23 @@
-
 .movie-point-of-view-container {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    display: grid;
-    
-    grid-template-columns: 100%;
-    grid-template-rows: 100% ;
+  display: grid;
 
-    grid-template-areas: 
-    "content";
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
 
-    img {
-        grid-area: content;
+  grid-template-areas: "content";
 
-        object-fit: contain;
-    }
+  img {
+    grid-area: content;
 
-    .interaction-wrapper {
-        grid-area: content;
+    object-fit: contain;
+  }
 
-        position: relative;
-    }
+  .interaction-wrapper {
+    grid-area: content;
+
+    position: relative;
+  }
 }
