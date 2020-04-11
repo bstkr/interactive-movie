@@ -1,0 +1,16 @@
+.item-container {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    width: 100px;
+    height: 100px;
+
+    transform: translateX(-50%) translateY(-50%);
+    background-color: yellow;
+
+    transition: opacity 1.5s ease-in-out;
+
+    &.hidden {
+        opacity: 0;
+    }
+}

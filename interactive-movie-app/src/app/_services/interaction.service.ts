@@ -45,6 +45,10 @@ export class InteractionService {
     return this.interactions.find((p) => p.id === povType).interactions;
   }
 
+  getInteractionStateArray(): InteractionState[] {
+    return this.interactionStateArray;
+  }
+
   getInteractionState(interactionName: string) {
     return this.interactionStateObservableArray.find(
       (interactionObs) => interactionObs.interactionName === interactionName

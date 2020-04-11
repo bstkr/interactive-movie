@@ -7,6 +7,9 @@ export interface InteractionState {
   clicked: boolean;
   // Contains decision the user has made ('a' / 'b') ['x' = no decision]
   decision: string;
+  // Path to item image
+  pathToItemImageA: string;
+  pathToItemImageB: string
 }
 
 export interface InteractionLink {
@@ -35,6 +38,8 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    pathToItemImageA: "assets/pictures/room/Objects/Unterhose_nass.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Unterhose_trocken.png"
   },
   {
     name: "Bier",
@@ -56,6 +61,8 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    pathToItemImageA: "",
+    pathToItemImageB: ""
   },
   {
     name: "Jacke",
@@ -77,6 +84,8 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    pathToItemImageA: "assets/pictures/room/Objects/Jacke.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Jacke.png"
   },
   {
     name: "Einkaufszettel",
@@ -98,6 +107,8 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    pathToItemImageA: "",
+    pathToItemImageB: ""
   },
   {
     name: "Handy",
@@ -112,6 +123,8 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    pathToItemImageA: "",
+    pathToItemImageB: ""
   },
   {
     name: "Computer",
@@ -133,6 +146,8 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    pathToItemImageA: "",
+    pathToItemImageB: ""
   },
   {
     name: "Zeitung",
@@ -154,6 +169,8 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    pathToItemImageA: "assets/pictures/room/Objects/Zeitung.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Vorladung.png"
   },
   {
     name: "Nummer",
@@ -175,5 +192,7 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    pathToItemImageA: "assets/pictures/room/Objects/Nummer_Serviette.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Nummer_Zettel.png"
   },
 ];
