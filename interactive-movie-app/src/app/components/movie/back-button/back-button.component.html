@@ -7,17 +7,22 @@
         </div>
         <div id="popup" class="popup">
             <div class="popup-content">
-                <p>Soll der Fortschritt</p>
-                <p>gespeichert werden?</p>
+                <p>Soll der Fortschritt<br /> gespeichert werden?</p>
                 <button (click)="close()" class="close">
                     <p></p>
                 </button>
-                <button routerLink="/" class="button">
-                    <p>Ja</p>
-                </button>
-                <button routerLink="/" class="button">
-                    <p>Nein</p>
-                </button>
+                <div id="yesno">
+                    <div id="yes">
+                        <button routerLink="/" class="button">
+                            <p>Ja</p>
+                        </button>
+                    </div>
+                    <div id="no">
+                        <button routerLink="/" class="button">
+                            <p>Nein</p>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
