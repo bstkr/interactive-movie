@@ -3,8 +3,8 @@ import { PovType } from "src/app/_models/Interactions";
 import { ActivatedRoute, Router, ParamMap } from "@angular/router";
 import { Observable } from "rxjs";
 import { switchMap } from "rxjs/operators";
-import { InteractionService } from 'src/app/_services/interaction.service';
-import { InteractionState } from 'src/app/_models/InteractionState';
+import { InteractionService } from "src/app/_services/interaction.service";
+import { InteractionState } from "src/app/_models/InteractionState";
 
 @Component({
   selector: "app-movie-home",
@@ -17,8 +17,11 @@ export class MovieHomeComponent implements OnInit {
 
   interactionStateArray: InteractionState[];
 
-  constructor(public route: ActivatedRoute, public router: Router, 
-    public interactionService: InteractionService) {}
+  constructor(
+    public route: ActivatedRoute,
+    public router: Router,
+    public interactionService: InteractionService
+  ) {}
 
   ngOnInit() {
     this.currentPov = this.route.snapshot.paramMap.get("pov");

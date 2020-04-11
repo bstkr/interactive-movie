@@ -12,7 +12,10 @@
       *ngIf="currentPov === 'pov3'"
       [id]="currentPov"
     ></app-movie-point-of-view>
-    <app-movie-item *ngFor="let interactionState of interactionStateArray" [interactionState]=interactionState></app-movie-item>
+    <app-movie-item
+      *ngFor="let interactionState of interactionStateArray"
+      [interactionState]="interactionState"
+    ></app-movie-item>
   </div>
   <div
     *ngIf="currentPov === 'pov1' || currentPov === 'pov2'"

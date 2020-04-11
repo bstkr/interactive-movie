@@ -9,7 +9,7 @@ export interface InteractionState {
   decision: string;
   // Path to item image
   pathToItemImageA: string;
-  pathToItemImageB: string
+  pathToItemImageB: string;
 }
 
 export interface InteractionLink {
@@ -39,7 +39,7 @@ export const InteractionStateArray: InteractionState[] = [
     clicked: false,
     decision: "x",
     pathToItemImageA: "assets/pictures/room/Objects/Unterhose_nass.png",
-    pathToItemImageB: "assets/pictures/room/Objects/Unterhose_trocken.png"
+    pathToItemImageB: "assets/pictures/room/Objects/Unterhose_trocken.png",
   },
   {
     name: "Bier",
@@ -62,7 +62,7 @@ export const InteractionStateArray: InteractionState[] = [
     clicked: false,
     decision: "x",
     pathToItemImageA: "",
-    pathToItemImageB: ""
+    pathToItemImageB: "",
   },
   {
     name: "Jacke",
@@ -85,7 +85,7 @@ export const InteractionStateArray: InteractionState[] = [
     clicked: false,
     decision: "x",
     pathToItemImageA: "assets/pictures/room/Objects/Jacke.png",
-    pathToItemImageB: "assets/pictures/room/Objects/Jacke.png"
+    pathToItemImageB: "assets/pictures/room/Objects/Jacke.png",
   },
   {
     name: "Einkaufszettel",
@@ -108,7 +108,7 @@ export const InteractionStateArray: InteractionState[] = [
     clicked: false,
     decision: "x",
     pathToItemImageA: "",
-    pathToItemImageB: ""
+    pathToItemImageB: "",
   },
   {
     name: "Handy",
@@ -124,7 +124,7 @@ export const InteractionStateArray: InteractionState[] = [
     clicked: false,
     decision: "x",
     pathToItemImageA: "",
-    pathToItemImageB: ""
+    pathToItemImageB: "",
   },
   {
     name: "Computer",
@@ -147,7 +147,7 @@ export const InteractionStateArray: InteractionState[] = [
     clicked: false,
     decision: "x",
     pathToItemImageA: "",
-    pathToItemImageB: ""
+    pathToItemImageB: "",
   },
   {
     name: "Zeitung",
@@ -170,7 +170,7 @@ export const InteractionStateArray: InteractionState[] = [
     clicked: false,
     decision: "x",
     pathToItemImageA: "assets/pictures/room/Objects/Zeitung.png",
-    pathToItemImageB: "assets/pictures/room/Objects/Vorladung.png"
+    pathToItemImageB: "assets/pictures/room/Objects/Vorladung.png",
   },
   {
     name: "Nummer",
@@ -193,6 +193,6 @@ export const InteractionStateArray: InteractionState[] = [
     clicked: false,
     decision: "x",
     pathToItemImageA: "assets/pictures/room/Objects/Nummer_Serviette.png",
-    pathToItemImageB: "assets/pictures/room/Objects/Nummer_Zettel.png"
+    pathToItemImageB: "assets/pictures/room/Objects/Nummer_Zettel.png",
   },
 ];

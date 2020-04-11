@@ -169,7 +169,9 @@ export class MovieSceneComponent implements OnInit {
     const videoElement = document.getElementById(this.interaction.sceneId);
     const rightNavElement = document.getElementById("rightNav");
     const leftNavElement = document.getElementById("leftNav");
-    const itemContainerElement = document.getElementById(this.interaction.interactionName);
+    const itemContainerElement = document.getElementById(
+      this.interaction.interactionName
+    );
 
     if (rightNavElement) {
       rightNavElement.classList.remove("hidden");
