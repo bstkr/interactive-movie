@@ -38,7 +38,7 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
-    pathToItemImageA: "assets/pictures/room/Objects/Unterhose_nass.png",
+    pathToItemImageA: "assets/pictures/room/Objects/Unterhose_Nass.png",
     pathToItemImageB: "assets/pictures/room/Objects/Unterhose_trocken.png",
   },
   {
@@ -107,8 +107,8 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
-    pathToItemImageA: "",
-    pathToItemImageB: "",
+    pathToItemImageA: "assets/pictures/room/Objects/Einkaufszettel.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Einkaufszettel.png",
   },
   {
     name: "Handy",
@@ -123,8 +123,8 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
-    pathToItemImageA: "",
-    pathToItemImageB: "",
+    pathToItemImageA: "assets/pictures/room/Objects/Handy.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Handy.png",
   },
   {
     name: "Computer",
@@ -146,8 +146,8 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
-    pathToItemImageA: "",
-    pathToItemImageB: "",
+    pathToItemImageA: "assets/pictures/room/Objects/Laptop_1.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Laptop_2.png",
   },
   {
     name: "Zeitung",
@@ -192,7 +192,7 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
-    pathToItemImageA: "assets/pictures/room/Objects/Nummer_Serviette.png",
-    pathToItemImageB: "assets/pictures/room/Objects/Nummer_Zettel.png",
+    pathToItemImageA: "assets/pictures/room/Objects/Nummer_2.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Nummer_1.png",
   },
 ];
