@@ -4,31 +4,24 @@
   width: 100vw;
   height: 100vh;
 
-<<<<<<< HEAD
-  display: grid;
-
-  grid-template-columns: auto 960px auto;
-  grid-template-rows: auto 150px 390px auto;
-=======
     background-color: $black;
 
 
-.water {
-    width: 100vw;
-    height: 100vh;
+    .water {
+        width: 100vw;
+        height: 100vh;
 
-    display: grid;
+        display: grid;
 
-    grid-template-columns: auto 960px auto;
-    grid-template-rows: auto 390px 390px auto;
->>>>>>> 017a79d0b2db14d126e8e17fa9810bc1ebaffe19
+        grid-template-columns: auto 960px auto;
+        grid-template-rows: auto 390px 390px auto;
 
-  grid-template-areas:
-    ". . ."
-    ". Headline ."
-    ". Menu ."
-    ". . .";
-}
+    grid-template-areas:
+        ". . ."
+        ". Headline ."
+        ". Menu ."
+        ". . .";
+    }
 
     .headline, .menu {
         .background {
@@ -54,20 +47,6 @@
     }
 
 
-<<<<<<< HEAD
-  .headline {
-    grid-area: Headline;
-
-    justify-self: center;
-    align-self: center;
-  }
-
-  .menu {
-    grid-area: Menu;
-
-    justify-self: center;
-    align-self: center;
-=======
     .headline {
         position: relative;
         grid-area: Headline;
@@ -95,20 +74,9 @@
         
         justify-self: center;
         align-self: center;
->>>>>>> 017a79d0b2db14d126e8e17fa9810bc1ebaffe19
 
     text-align: center;
 
-<<<<<<< HEAD
-    a {
-      text-decoration: none;
-      font-style: normal;
-      color: black;
-
-      p {
-        padding: 20px;
-      }
-=======
         .credits, .impressum {
             position: relative;
             width: 15vw;
@@ -146,7 +114,5 @@
         .credits {
             margin-bottom: 20px;
         }
->>>>>>> 017a79d0b2db14d126e8e17fa9810bc1ebaffe19
     }
-  }
 }
