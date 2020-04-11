@@ -8,63 +8,69 @@
     top: 0;
     left: 0;
     border-style: none;
+    overflow: hidden;
 
     div{
        border-style: none;
     }
 
     #a{
+        height: 100%;
         width: calc(100%/8);
         position: absolute;
         top: 0;
         left: 0;
     }
     #b{
+        height: 100%;
         width: calc(100%/8);
         position: absolute;
         top: 0;
         left: calc(100%/8);
     }
     #c{
+        height: 100%;
         width: calc(100%/8);
         position: absolute;
         top: 0;
         left: calc(2*100%/8);
     }
     #d{
+        height: 100%;
         width: calc(100%/8);
         position: absolute;
         top: 0;
         left: calc(3*100%/8);
     }
     #e{
+        height: 100%;
         width: calc(100%/8);
         position: absolute;
         top: 0;
         left: calc(4*100%/8);
     }
     #f{
+        height: 100%;
         width: calc(100%/8);
         position: absolute;
         top: 0;
         left: calc(5*100%/8);
     }
     #g{
+        height: 100%;
         width: calc(100%/8);
         position: absolute;
         top: 0;
         left: calc(6*100%/8);
     }
     #h{
+        height: 100%;
         width: calc(100%/8);
         position: absolute;
         top: 0;
         left: calc(7*100%/8);
     }
     
-    img{
-        height: 0;
-    }
 
   .timeline-wrapper{
     position: relative;
@@ -80,11 +86,17 @@
 
     .objects{
         position: relative;
-        height: 0;
+        height: 80%;
         background-color: rgba($color: $white, $alpha: 0.2);
         visibility: hidden;
         opacity: 0;
     }
+    /*:hover{
+        
+        .bar{
+            display: flex;
+        }
+    }*/
     
   }
 
@@ -100,12 +112,6 @@
         visibility: visible;
         opacity: 1;
         transition: visibility 0s, opacity 1s linear;
-        height: 80%;
-        transition: height 1s;
-    }
-    img{
-        height: 100%;
-        transition: height 1s;
     }
   }
 
