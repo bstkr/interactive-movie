@@ -88,6 +88,10 @@ export class InteractionService {
     }
   }
 
+  getSceneIdFromInteractionName(interactionName: string) {
+    // return die scene id von der interaction mit interactionName = interactionName
+  }
+
   private initializeObservableArray() {
     for (const interactionState of this.interactionStateArray) {
       const arrayObject = new InteractionObservable(
