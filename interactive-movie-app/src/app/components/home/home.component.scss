@@ -1,41 +1,118 @@
+@import "../../style/palette.scss";
+
 .home-container {
   width: 100vw;
   height: 100vh;
 
-  display: grid;
+    background-color: $black;
 
-  grid-template-columns: auto 960px auto;
-  grid-template-rows: auto 150px 390px auto;
 
-  grid-template-areas:
-    ". . ."
-    ". Headline ."
-    ". Menu ."
-    ". . .";
+    .water {
+        width: 100vw;
+        height: 100vh;
 
-  .headline {
-    grid-area: Headline;
+        display: grid;
 
-    justify-self: center;
-    align-self: center;
-  }
+        grid-template-columns: auto 960px auto;
+        grid-template-rows: auto 390px 390px auto;
 
-  .menu {
-    grid-area: Menu;
+    grid-template-areas:
+        ". . ."
+        ". Headline ."
+        ". Menu ."
+        ". . .";
+    }
 
-    justify-self: center;
-    align-self: center;
+    .headline, .menu {
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            opacity: 0.6;
+            z-index: 0;
+        }
+        h1, h2{
+            position: relative;
+            z-index: 1;
+            font-size: 150px;
+            letter-spacing: 30px;
+            color: $black
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+
+
+    .headline {
+        position: relative;
+        grid-area: Headline;
+        border: $white;
+        border-style: solid;
+        border-width: 5px;
+        padding: 0 50px;
+        justify-self: center;
+        align-self: center;
+
+        &:hover{
+            .background {
+                background-color: $black;
+                opacity: 1;
+            }
+            h1 {
+                color: $white;
+            }
+        }
+    }
+
+    .menu {
+        position: relative;
+        grid-area: Menu;
+        
+        justify-self: center;
+        align-self: center;
 
     text-align: center;
 
-    a {
-      text-decoration: none;
-      font-style: normal;
-      color: black;
+        .credits, .impressum {
+            position: relative;
+            width: 15vw;
+            height: 5vh;
 
-      p {
-        padding: 20px;
-      }
+            border: 3px solid $white;
+
+            .background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                z-index: 0;
+                background-color: $white;
+            }
+
+            h2 {
+                font-size: 35px;
+                letter-spacing: 8px;
+                color: $white;
+            }
+            
+            &:hover {
+                .background {
+                    opacity: 0.6;
+                }
+                h2 {
+                    color: $black;
+                }
+            }
+        }
+
+        .credits {
+            margin-bottom: 20px;
+        }
     }
-  }
 }

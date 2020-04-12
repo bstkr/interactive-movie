@@ -105,8 +105,8 @@ export const InteractionStateArray: InteractionState[] = [
       {
         interactionId: "pov1_interaction6",
         pathToCompleteObjectImage: {
-          a: "assets/pictures/room/pov1/object10/complete.png",
-          b: "assets/pictures/room/pov1/object10/complete2.png",
+          a: "assets/pictures/room/pov1/object10/complete2.png",
+          b: "assets/pictures/room/pov1/object10/complete.png",
         },
       },
     ],

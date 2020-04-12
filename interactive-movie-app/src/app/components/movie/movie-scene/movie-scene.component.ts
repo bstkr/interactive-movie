@@ -45,27 +45,13 @@ export class MovieSceneComponent implements OnInit {
     );
 
     if (this.decision !== "x") {
-      const decisionElement = document.getElementById(
-        this.interaction.sceneId + "-decision-completed"
+      this.handleVideoEndWithNoDecision(
+        video,
+        introElement,
+        alt1Element,
+        alt2Element,
+        decisionContainer
       );
-
-      if (video.sequencePosition === "intro") {
-        decisionContainer.classList.remove("hidden");
-        decisionElement.classList.remove("hidden");
-        setTimeout(() => {
-          decisionElement.classList.add("fade");
-          introElement.classList.replace("currentVideo", "closeVideo");
-          if (this.decision === "a") {
-            alt1Element.classList.replace("hiddenVideo", "currentVideo");
-          } else {
-            alt2Element.classList.replace("hiddenVideo", "currentVideo");
-          }
-        }, 3000);
-        setTimeout(() => {
-          decisionElement.classList.replace("fade", "hidden");
-          decisionContainer.classList.add("hidden");
-        }, 6000);
-      }
     } else {
       if (video.sequencePosition === "intro") {
         decisionContainer.classList.remove("hidden");
@@ -77,16 +63,60 @@ export class MovieSceneComponent implements OnInit {
 
     if (video.sequencePosition === "alt-1") {
       alt1Element.classList.replace("currentVideo", "closeVideo");
-      outroElement.classList.replace("hiddenVideo", "currentVideo");
+      if (outroElement) {
+        outroElement.classList.replace("hiddenVideo", "currentVideo");
+      } else {
+        videoElement.classList.replace("show", "fade");
+        setTimeout(() => {
+          this.closeVideo();
+        }, 2000);
+      }
     } else if (video.sequencePosition === "alt-2") {
       alt2Element.classList.replace("currentVideo", "closeVideo");
-      outroElement.classList.replace("hiddenVideo", "currentVideo");
+      if (outroElement) {
+        outroElement.classList.replace("hiddenVideo", "currentVideo");
+      } else {
+        videoElement.classList.replace("show", "fade");
+        setTimeout(() => {
+          this.closeVideo();
+        }, 2000);
+      }
     } else if (video.sequencePosition === "outro") {
       outroElement.classList.replace("currentVideo", "closeVideo");
       videoElement.classList.replace("show", "fade");
       setTimeout(() => {
         this.closeVideo();
       }, 2000);
+    }
+  }
+
+  handleVideoEndWithNoDecision(
+    video: VideoSequence,
+    introElement: HTMLElement,
+    alt1Element: HTMLElement,
+    alt2Element: HTMLElement,
+    decisionContainer: HTMLElement
+  ) {
+    const decisionElement = document.getElementById(
+      this.interaction.sceneId + "-decision-completed"
+    );
+
+    if (video.sequencePosition === "intro") {
+      decisionContainer.classList.remove("hidden");
+      decisionElement.classList.remove("hidden");
+      setTimeout(() => {
+        decisionElement.classList.add("fade");
+        introElement.classList.replace("currentVideo", "closeVideo");
+        if (this.decision === "a") {
+          alt1Element.classList.replace("hiddenVideo", "currentVideo");
+        } else {
+          alt2Element.classList.replace("hiddenVideo", "currentVideo");
+        }
+      }, 3000);
+      setTimeout(() => {
+        decisionElement.classList.replace("fade", "hidden");
+        decisionContainer.classList.add("hidden");
+      }, 6000);
     }
   }
 
@@ -170,10 +200,14 @@ export class MovieSceneComponent implements OnInit {
     );
 
     introElement.classList.replace("closeVideo", "currentVideo");
-    if (this.decision === "a")
+    if (this.decision === "a") {
       alt1Element.classList.replace("closeVideo", "hiddenVideo");
-    if (this.decision === "b")
+    }
+    if (this.decision === "b") {
       alt2Element.classList.replace("closeVideo", "hiddenVideo");
-    outroElement.classList.replace("closeVideo", "hiddenVideo");
+    }
+    if (outroElement) {
+      outroElement.classList.replace("closeVideo", "hiddenVideo");
+    }
   }
 }

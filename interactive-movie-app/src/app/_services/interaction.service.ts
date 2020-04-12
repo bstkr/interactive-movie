@@ -58,7 +58,7 @@ export class InteractionService {
   }
 
   setDecisionOfInteractionState(interactionName: string, decision: string) {
-    for (let interactionState of this.interactionStateObservableArray) {
+    for (const interactionState of this.interactionStateObservableArray) {
       if (interactionState.interactionName === interactionName) {
         interactionState.clicked.next(true);
         interactionState.decision.next(decision);
@@ -89,8 +89,8 @@ export class InteractionService {
   }
 
   private initializeObservableArray() {
-    for (let interactionState of this.interactionStateArray) {
-      let arrayObject = new InteractionObservable(
+    for (const interactionState of this.interactionStateArray) {
+      const arrayObject = new InteractionObservable(
         interactionState.name,
         interactionState.clicked,
         interactionState.decision
