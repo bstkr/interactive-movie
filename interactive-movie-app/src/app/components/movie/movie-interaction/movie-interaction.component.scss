@@ -1,109 +1,131 @@
 .interaction {
+  position: absolute;
+  pointer-events: none;
+
+  img {
     position: absolute;
-    pointer-events: none;
+  }
 
-    img {
-        position: absolute;
+  .clickLayerElement {
+    position: absolute;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .hoverLayerElement {
+    position: absolute;
+    opacity: 0;
+    top: -1%;
+    left: -2%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .showHoverAnimation {
+    animation: showOutline 4s;
+  }
+
+  .complete {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .top {
+    width: 64%;
+    left: 16%;
+    top: 0;
+
+    animation-delay: 0s;
+  }
+
+  .right {
+    width: 32%;
+    left: 64%;
+    top: 16%;
+
+    animation-delay: 1s;
+  }
+
+  .bottom {
+    width: 64%;
+    left: 16%;
+    top: 64%;
+
+    animation-delay: 2s;
+  }
+
+  .left {
+    width: 32%;
+    left: 0;
+    top: 16%;
+
+    animation-delay: 3s;
+  }
+
+  .middle {
+    width: 32%;
+    left: 32%;
+    top: 32%;
+
+    animation-delay: 4s;
+  }
+
+  .visible {
+    opacity: 1;
+    animation-name: startingVisible;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+  .invisible {
+    opacity: 0;
+    animation-name: startingInvisible;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes startingVisible {
+    5% {
+      opacity: 1;
     }
-
-    .clickLayerElement {
-        position: absolute;
-        pointer-events: auto;
-        cursor: pointer;
-        z-index: 1;
+    10% {
+      opacity: 0;
     }
-
-    .hoverLayerElement {
-        position: absolute;
-        opacity: 0;
-        top: -1%;
-        left: -2%;
-        width: 100%;
-        height: 100%;
+    55% {
+      opacity: 0;
     }
-
-    .showHoverAnimation {
-        animation: showOutline 4s;
+    60% {
+      opacity: 1;
     }
+  }
 
-    .complete {
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
+  @keyframes startingInvisible {
+    5% {
+      opacity: 0;
     }
-
-    .top {
-        width: 64%;
-        left: 16%;
-        top: 0;
-
-        animation-delay: 0s;
+    10% {
+      opacity: 1;
     }
-
-    .right {
-        width: 32%;
-        left: 64%;
-        top: 16%;
-
-        animation-delay: 1s;
+    55% {
+      opacity: 1;
     }
-
-    .bottom {
-        width: 64%;
-        left: 16%;
-        top: 64%;
-
-        animation-delay: 2s;
+    60% {
+      opacity: 0;
     }
+  }
 
-    .left {
-        width: 32%;
-        left: 0;
-        top: 16%;
-
-        animation-delay: 3s;
+  @keyframes showOutline {
+    20% {
+      opacity: 1;
     }
-
-    .middle {
-        width: 32%;
-        left: 32%;
-        top: 32%;
-
-        animation-delay: 4s;
+    70% {
+      opacity: 1;
     }
-
-    .visible {
-        opacity: 1;
-        animation-name: startingVisible;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
+    100% {
+      opacity: 0;
     }
-
-    .invisible {
-        opacity: 0;
-        animation-name: startingInvisible;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-    }
-
-    @keyframes startingVisible {
-        5% { opacity: 1; }
-        10% { opacity: 0; }
-        55% { opacity: 0; }
-        60% { opacity: 1; }
-    }
-
-    @keyframes startingInvisible {
-        5% { opacity: 0; }
-        10% { opacity: 1; }
-        55% { opacity: 1; }
-        60% { opacity: 0; }
-    }
-
-    @keyframes showOutline {
-        20% { opacity: 1;}
-        70% { opacity: 1;}
-        100% {opacity: 0;}
-    }
+  }
 }

@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { MovieInteractionComponent } from './movie-interaction.component';
+import { MovieInteractionComponent } from "./movie-interaction.component";
 
-describe('MovieInteractionComponent', () => {
+describe("MovieInteractionComponent", () => {
   let component: MovieInteractionComponent;
   let fixture: ComponentFixture<MovieInteractionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MovieInteractionComponent ]
-    })
-    .compileComponents();
+      declarations: [MovieInteractionComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('MovieInteractionComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

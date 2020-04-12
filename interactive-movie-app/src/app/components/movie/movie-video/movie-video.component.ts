@@ -1,34 +1,40 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit, Output, EventEmitter } from '@angular/core';
-import { VideoSequence, Interaction } from 'src/app/_models/Interactions';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+  Output,
+  EventEmitter,
+} from "@angular/core";
+import { VideoSequence, Interaction } from "src/app/_models/Interactions";
 
 @Component({
-  selector: 'app-movie-video',
-  templateUrl: './movie-video.component.html',
-  styleUrls: ['./movie-video.component.scss']
+  selector: "app-movie-video",
+  templateUrl: "./movie-video.component.html",
+  styleUrls: ["./movie-video.component.scss"],
 })
 export class MovieVideoComponent implements OnInit, AfterViewInit {
-
   @Input() interaction: Interaction;
   @Input() video: VideoSequence;
 
   @Output() endedVideo = new EventEmitter<VideoSequence>();
 
-  @ViewChild('videoPlayer', {static: false})
+  @ViewChild("videoPlayer", { static: false })
   videoPlayer: ElementRef;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  ngAfterViewInit() {
-  }
+  ngAfterViewInit() {}
 
   getVideoClass(pos: string) {
-    if (pos === 'intro') {
-      return pos + ' currentVideo';
+    if (pos === "intro") {
+      return pos + " currentVideo";
     } else {
-      return pos + ' hiddenVideo';
+      return pos + " hiddenVideo";
     }
   }
 
@@ -44,5 +50,4 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
   videoEnded() {
     this.endedVideo.emit(this.video);
   }
-
 }
