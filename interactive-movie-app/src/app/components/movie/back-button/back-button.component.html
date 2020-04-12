@@ -1,27 +1,25 @@
 <div class="back-button-container">
-    <div id="test">
-        <div class="home-button">
-            <button (click)="popup()" class="button" id="123">
-                <p>&lt; Back</p>
-            </button>
-        </div>
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <p>Soll der Fortschritt<br /> gespeichert werden?</p>
-                <button (click)="close()" class="close">
-                    <p></p>
-                </button>
-                <div id="yesno">
-                    <div id="yes">
-                        <button routerLink="/" class="button">
-                            <p>Ja</p>
-                        </button>
-                    </div>
-                    <div id="no">
-                        <button routerLink="/" class="button">
-                            <p>Nein</p>
-                        </button>
-                    </div>
+    <div class="home-button">
+        <button (click)="popup()" class="button" id="123">
+            <p>&lt; Back</p>
+        </button>
+    </div>
+    <div id="popup" class="popup">
+        <button (click)="close()" class="close">
+            TEST
+        </button>
+        <div class="popup-content">
+            <p>Soll der Fortschritt<br /> gespeichert werden?</p>
+            <div id="yesno">
+                <div id="yes">
+                    <button routerLink="/" class="button">
+                        <p>Ja</p>
+                    </button>
+                </div>
+                <div id="no">
+                    <button routerLink="/" class="button">
+                        <p>Nein</p>
+                    </button>
                 </div>
             </div>
         </div>
