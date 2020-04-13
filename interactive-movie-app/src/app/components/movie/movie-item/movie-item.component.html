@@ -2,4 +2,8 @@
   *ngIf="interactionClicked"
   [id]="interactionState.name"
   class="item-container hidden"
-></div>
+  (click)="clicked()"
+>
+  <div class="test"></div>
+  <img class="resize" [src]="interactionState.pathToItemImageA" />
+</div>

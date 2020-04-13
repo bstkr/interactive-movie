@@ -2,15 +2,22 @@
   position: absolute;
   top: 50vh;
   left: 50vw;
-  width: 100px;
-  height: 100px;
+  width: 70%;
+  height: 70%;
 
   transform: translateX(-50%) translateY(-50%);
-  background-color: yellow;
+  background-color: rgba(46, 53, 50, 0.8);
 
   transition: opacity 1.5s ease-in-out;
 
   &.hidden {
     opacity: 0;
+  }
+  img.resize {
+    max-width: auto;
+    max-height: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
