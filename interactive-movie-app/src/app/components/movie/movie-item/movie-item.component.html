@@ -1,8 +1,21 @@
-<div class="click-background hidden" (click)="clicked()"></div>
+<div
+  *ngIf="interactionClicked"
+  class="click-background hidden"
+  (click)="clicked()"
+></div>
 <div
   *ngIf="interactionClicked"
   [id]="interactionState.name"
   class="item-container hidden"
 >
-  <img class="resize" [src]="interactionState.pathToItemImageA" />
+  <img
+    *ngIf="interactionState.decision == 'a'"
+    class="resize"
+    [src]="interactionState.pathToItemImageA"
+  />
+  <img
+    *ngIf="interactionState.decision == 'b'"
+    class="resize"
+    [src]="interactionState.pathToItemImageB"
+  />
 </div>

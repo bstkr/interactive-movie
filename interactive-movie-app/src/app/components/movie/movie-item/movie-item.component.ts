@@ -9,8 +9,8 @@ import { Interaction } from "src/app/_models/Interactions";
   styleUrls: ["./movie-item.component.scss"],
 })
 export class MovieItemComponent implements OnInit {
-  @Input() interaction: Interaction;
   @Input() interactionState: InteractionState;
+  @Input() interaction: Interaction;
 
   interactionClicked: boolean;
 
@@ -23,6 +23,9 @@ export class MovieItemComponent implements OnInit {
   }
   clicked() {
     console.log("Dings Klicked");
+    console.log(this.interactionState.decision);
+    console.log(this.interactionState.clicked);
+    console.log(this.interactionState.name);
 
     //.classList.replace("show", "hidden");
   }
