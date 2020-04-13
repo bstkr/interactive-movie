@@ -61,52 +61,52 @@ export const Interactions: POV[] = [
         interactionId: "pov1_interaction1",
         pictureParts: [
           {
-            path: "assets/pictures/room/pov1/object1/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object1/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object1/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object1/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object1/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-          {
             path: "assets/pictures/room/pov1/object2/top.png",
             styleClass: "top",
-            visible: false,
+            visible: true,
           },
           {
             path: "assets/pictures/room/pov1/object2/right.png",
             styleClass: "right",
-            visible: false,
+            visible: true,
           },
           {
             path: "assets/pictures/room/pov1/object2/bottom.png",
             styleClass: "bottom",
-            visible: false,
+            visible: true,
           },
           {
             path: "assets/pictures/room/pov1/object2/left.png",
             styleClass: "left",
-            visible: false,
+            visible: true,
           },
           {
             path: "assets/pictures/room/pov1/object2/middle.png",
+            styleClass: "middle",
+            visible: true,
+          },
+          {
+            path: "assets/pictures/room/pov1/object1/top.png",
+            styleClass: "top",
+            visible: false,
+          },
+          {
+            path: "assets/pictures/room/pov1/object1/right.png",
+            styleClass: "right",
+            visible: false,
+          },
+          {
+            path: "assets/pictures/room/pov1/object1/bottom.png",
+            styleClass: "bottom",
+            visible: false,
+          },
+          {
+            path: "assets/pictures/room/pov1/object1/left.png",
+            styleClass: "left",
+            visible: false,
+          },
+          {
+            path: "assets/pictures/room/pov1/object1/middle.png",
             styleClass: "middle",
             visible: false,
           },
@@ -634,7 +634,7 @@ export const Interactions: POV[] = [
         ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov2/Object_5_6.svg",
-        sceneId: "pov2_interaction1_scene",
+        sceneId: "pov2_interaction2_scene",
         videoSequence: [
           {
             sequencePosition: "intro",
@@ -715,7 +715,7 @@ export const Interactions: POV[] = [
         ],
         clickLayerElements: [{ posX: 4, posY: 16, width: 78, height: 80 }],
         hoverLayerElementPath: "assets/pictures/room/pov2/Object_1_2.svg",
-        sceneId: "pov2_interaction1_scene",
+        sceneId: "pov2_interaction3_scene",
         videoSequence: [
           {
             sequencePosition: "intro",
@@ -796,7 +796,7 @@ export const Interactions: POV[] = [
         ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov2/Object_3_4.svg",
-        sceneId: "pov2_interaction1_scene",
+        sceneId: "pov2_interaction4_scene",
         videoSequence: [
           {
             sequencePosition: "intro",
@@ -852,7 +852,7 @@ export const Interactions: POV[] = [
         ],
         clickLayerElements: [{ posX: -15, posY: -10, width: 130, height: 120 }],
         hoverLayerElementPath: "assets/pictures/room/pov2/Object_7.svg",
-        sceneId: "pov2_interaction1_scene",
+        sceneId: "pov2_interaction5_scene",
         videoSequence: [
           {
             sequencePosition: "intro",
@@ -933,7 +933,7 @@ export const Interactions: POV[] = [
         ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov2/Object_8_9.svg",
-        sceneId: "pov2_interaction1_scene",
+        sceneId: "pov2_interaction6_scene",
         videoSequence: [
           {
             sequencePosition: "intro",
@@ -1017,7 +1017,7 @@ export const Interactions: POV[] = [
           { posX: 11, posY: 52, width: 34, height: 32 },
         ],
         hoverLayerElementPath: "assets/pictures/room/pov2/Object_12_13.svg",
-        sceneId: "pov2_interaction1_scene",
+        sceneId: "pov2_interaction7_scene",
         videoSequence: [
           {
             sequencePosition: "intro",
@@ -1184,7 +1184,7 @@ export const Interactions: POV[] = [
         ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov3/Object_3_4.svg",
-        sceneId: "pov3_interaction1_scene",
+        sceneId: "pov3_interaction2_scene",
         videoSequence: [
           {
             sequencePosition: "intro",
