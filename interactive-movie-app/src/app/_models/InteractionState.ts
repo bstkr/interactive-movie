@@ -38,8 +38,8 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
-    pathToItemImageA: "assets/pictures/room/Objects/Unterhose_Nass.png",
-    pathToItemImageB: "assets/pictures/room/Objects/Unterhose_trocken.png",
+    pathToItemImageA: "assets/pictures/room/Objects/Unterhose_nass.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Unterhose.png",
   },
   {
     name: "Bier",

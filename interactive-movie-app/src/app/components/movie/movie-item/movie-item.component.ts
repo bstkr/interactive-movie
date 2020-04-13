@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { InteractionState } from "src/app/_models/InteractionState";
 import { InteractionService } from "src/app/_services/interaction.service";
-import { Interaction } from "src/app/_models/Interactions";
 
 @Component({
   selector: "app-movie-item",
@@ -10,9 +9,9 @@ import { Interaction } from "src/app/_models/Interactions";
 })
 export class MovieItemComponent implements OnInit {
   @Input() interactionState: InteractionState;
-  @Input() interaction: Interaction;
 
   interactionClicked: boolean;
+  interactionDecision: String;
 
   constructor(public interactionService: InteractionService) {}
 
@@ -20,13 +19,19 @@ export class MovieItemComponent implements OnInit {
     this.interactionService
       .isInteractionClicked(this.interactionState.name)
       .subscribe((s) => (this.interactionClicked = s));
+    this.interactionService
+      .getInteractionState(this.interactionState.name)
+      .decision.subscribe((d) => {
+        this.interactionDecision = d;
+      });
   }
+
   clicked() {
-    console.log("Dings Klicked");
-    console.log(this.interactionState.decision);
-    console.log(this.interactionState.clicked);
+    const itemContainerElement = document.getElementById(
+      this.interactionState.name
+    );
     console.log(this.interactionState.name);
 
-    //.classList.replace("show", "hidden");
+    itemContainerElement.classList.replace("show", "hidden");
   }
 }

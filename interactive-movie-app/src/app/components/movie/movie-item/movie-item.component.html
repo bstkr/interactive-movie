@@ -9,12 +9,12 @@
   class="item-container hidden"
 >
   <img
-    *ngIf="interactionState.decision == 'a'"
+    *ngIf="interactionDecision == 'a'"
     class="resize"
     [src]="interactionState.pathToItemImageA"
   />
   <img
-    *ngIf="interactionState.decision == 'b'"
+    *ngIf="interactionDecision == 'b'"
     class="resize"
     [src]="interactionState.pathToItemImageB"
   />
