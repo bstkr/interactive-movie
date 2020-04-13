@@ -429,7 +429,7 @@ export const Interactions: POV[] = [
         ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov1/Object_8_9.svg",
-        sceneId: "pov1_interaction3_scene",
+        sceneId: "pov1_interaction5_scene",
         videoSequence: [
           {
             sequencePosition: "intro",
