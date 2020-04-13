@@ -19,4 +19,13 @@ export class TimelineObjectComponent implements OnInit {
       .isInteractionClicked(this.objectName)
       .subscribe((s) => (this.objectClicked = s));
   }
+
+  ifUnterhose() {
+
+  }
+
+  slide() {
+    const slide = document.getElementById('button');
+     slide.style.opacity = "0";
+  }
 }

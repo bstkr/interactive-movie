@@ -1,9 +1,18 @@
 <div class="timeline-container">
-  <div style="z-index: 1;" class="timeline-wrapper">
+  <div class="timeline-wrapper">
     <div class="bar"></div>
-    <div class="test">
-      <div id="objects" class="objects"></div>
-      <app-timeline-object [objectName]="'Unterhose'"></app-timeline-object>
+      <div id="objects" class="objects">
+        
+      </div>
+      <app-timeline-object id="a" [objectName]="'Unterhose'"></app-timeline-object>
+      <app-timeline-object id="b" [objectName]="'Bier'"></app-timeline-object>
+      <app-timeline-object id="c" [objectName]="'Jacke'"></app-timeline-object>
+      <app-timeline-object id="d" [objectName]="'Einkaufszettel'"></app-timeline-object>
+      <app-timeline-object id="e" [objectName]="'Handy'"></app-timeline-object>
+      <app-timeline-object id="f" [objectName]="'Computer'"></app-timeline-object>
+      <app-timeline-object id="g" [objectName]="'Zeitung'"></app-timeline-object>
+      <app-timeline-object id="h" [objectName]="'Nummer'"></app-timeline-object>
+
       <!--
       <img
         *ngIf="interactionClicked"
@@ -47,5 +56,9 @@
         alt=""
       />-->
     </div>
-  </div>
+    <!--
+    <button style="z-index: 1;" (click)="slide()" class="button" id="button">
+      <p>&lt; Slide</p>
+    </button>
+    />-->
 </div>

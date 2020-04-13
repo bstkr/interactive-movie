@@ -14,64 +14,6 @@
        border-style: none;
     }
 
-    #a{
-        height: 100%;
-        width: calc(100%/8);
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    #b{
-        height: 100%;
-        width: calc(100%/8);
-        position: absolute;
-        top: 0;
-        left: calc(100%/8);
-    }
-    #c{
-        height: 100%;
-        width: calc(100%/8);
-        position: absolute;
-        top: 0;
-        left: calc(2*100%/8);
-    }
-    #d{
-        height: 100%;
-        width: calc(100%/8);
-        position: absolute;
-        top: 0;
-        left: calc(3*100%/8);
-    }
-    #e{
-        height: 100%;
-        width: calc(100%/8);
-        position: absolute;
-        top: 0;
-        left: calc(4*100%/8);
-    }
-    #f{
-        height: 100%;
-        width: calc(100%/8);
-        position: absolute;
-        top: 0;
-        left: calc(5*100%/8);
-    }
-    #g{
-        height: 100%;
-        width: calc(100%/8);
-        position: absolute;
-        top: 0;
-        left: calc(6*100%/8);
-    }
-    #h{
-        height: 100%;
-        width: calc(100%/8);
-        position: absolute;
-        top: 0;
-        left: calc(7*100%/8);
-    }
-    
-
   .timeline-wrapper{
     position: relative;
     height: 20%;
@@ -94,7 +36,7 @@
     }
   }
 
-  .timeline-wrapper:hover{
+  /*.timeline-wrapper:hover{
     position: relative;
     height: 20%;
     width: 60%;
@@ -107,8 +49,31 @@
         opacity: 1;
         transition: visibility 0s, opacity 1s linear;
     }
+  } */
+  .button {
+    position: absolute;
+    height: 20%;
+    width: 60%;
+    left: 20%;
+    top: 96%;
+    transition: top 1s;
+    opacity: 80%;
   }
 
+  .timeline-wrapper:Hover{
+    position: relative;
+    height: 20%;
+    width: 60%;
+    left: 20%;
+    top: 80%;
+    transition: top 1s; 
+
+    .objects{
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 1s linear;
+    }
+  } 
 }
 
 
