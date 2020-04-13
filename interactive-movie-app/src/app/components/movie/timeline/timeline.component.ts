@@ -9,8 +9,13 @@ export class TimelineComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-  acticateTimeline(){
-    const popupTimeline = document.getElementById('pictures');
-    popupTimeline.style.display = 'flex';
+  acticateTimeline() {
+    const popupTimeline = document.getElementById("pictures");
+    popupTimeline.style.display = "flex";
+  }
+
+  slide() {
+    const slide = document.getElementById("bar");
+    slide.style.opacity = "0";
   }
 }

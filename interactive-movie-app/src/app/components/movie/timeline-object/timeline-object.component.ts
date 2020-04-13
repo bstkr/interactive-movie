@@ -20,12 +20,5 @@ export class TimelineObjectComponent implements OnInit {
       .subscribe((s) => (this.objectClicked = s));
   }
 
-  ifUnterhose() {
-
-  }
-
-  slide() {
-    const slide = document.getElementById('button');
-     slide.style.opacity = "0";
-  }
+  ifUnterhose() {}
 }

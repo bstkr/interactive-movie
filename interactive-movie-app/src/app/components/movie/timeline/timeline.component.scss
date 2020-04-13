@@ -1,20 +1,19 @@
 @import "../../../style/palette.scss";
 
+.timeline-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-style: none;
+  overflow: hidden;
 
-.timeline-container{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  div {
     border-style: none;
-    overflow: hidden;
+  }
 
-    div{
-       border-style: none;
-    }
-
-  .timeline-wrapper{
+  .timeline-wrapper {
     position: relative;
     height: 20%;
     width: 60%;
@@ -22,17 +21,17 @@
     top: 96%;
     transition: top 1s;
 
-    .bar{
-        height: 20%;
-        background-color: rgba($color: $white, $alpha: 0.4);
+    .bar {
+      height: 20%;
+      background-color: rgba($color: $white, $alpha: 0.4);
     }
 
-    .objects{
-        position: relative;
-        height: 80%;
-        background-color: rgba($color: $white, $alpha: 0.2);
-        visibility: hidden;
-        opacity: 0;
+    .objects {
+      position: relative;
+      height: 80%;
+      background-color: rgba($color: $white, $alpha: 0.2);
+      visibility: hidden;
+      opacity: 0;
     }
   }
 
@@ -58,7 +57,7 @@
     top: 96%;
     transition: top 1s;
     opacity: 80%;
-  }
+  } /*
 
   .timeline-wrapper:Hover{
     position: relative;
@@ -73,7 +72,5 @@
         opacity: 1;
         transition: visibility 0s, opacity 1s linear;
     }
-  } 
+  } */
 }
-
-
