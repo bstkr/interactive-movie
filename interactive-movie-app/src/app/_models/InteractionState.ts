@@ -35,6 +35,7 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    /*pathToTimelineImage*/
   },
   {
     name: "Bier",

@@ -88,6 +88,10 @@ export class InteractionService {
     }
   }
 
+  getTimelineImagePath(interactionName: string) {
+    // interaction.pathToTimelineImage
+  }
+
   getSceneIdFromInteractionName(interactionName: string) {
     // return die scene id von der interaction mit interactionName = interactionName
   }
