@@ -22,6 +22,8 @@ export class MovieItemComponent implements OnInit {
       .subscribe((s) => (this.interactionClicked = s));
   }
   clicked() {
+    console.log("Dings Klicked");
+
     //.classList.replace("show", "hidden");
   }
 }
