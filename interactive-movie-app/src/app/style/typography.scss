@@ -1,27 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Tomorrow:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Tomorrow:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import "./palette.scss";
 
 html {
-    font-family: 'Tomorrow', sans-serif;
+  font-family: "Tomorrow", sans-serif;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue';
     font-weight: 700;
     margin: 0;
+    font-style: normal;
 }
 
 body {
-    font-weight: 400;
+  font-weight: 400;
 
-    color: $pureWhite;
+  color: $pureWhite;
 }
 
 a {
-    font-style: italic;
+  font-style: italic;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }

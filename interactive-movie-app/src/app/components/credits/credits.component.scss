@@ -1,134 +1,230 @@
-.credits-container{
-  width:100%;
-  margin:auto;
-  
+@import "../../style/palette.scss";
+
+.credits-container {
   overflow-y: scroll;
 
-  ul{
-    margin:0;
-    padding:0;
-  
-    #services {
-      li {
-        list-style: none;
-        padding:20px;
-        border: #cccccc solid 1px;
-        margin-bottom:5px;
-        background:#e6e6e6;
-      }
-    }  
-  }
-    
-  header{
-    padding-top:30px;
-    min-height:70px;
-    border-bottom:#000000 1px solid;
+  background-color: $black;
 
-    a{
-      text-decoration:none;
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+
+  grid-template-columns: auto 60.625vw 9.375vw 25vw;
+  grid-template-rows: 3.125vw 8.75vw 16.25vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw;
+
+  grid-template-areas:
+    " . . . . "
+    " . creditstitle . side-bar "
+    " . . . home "
+    " . team . . "
+    " . . . . "
+    " . docent . . "
+    " . . . . "
+    " . actors . . "
+    " . . . . "
+    " . camera . . "
+    " . . . . "
+    " . sound . . "
+    " . . . . "
+    " . video . . "
+    " . . . . "
+    " . app . . "
+    " . nothing . . ";
+
+  .side-bar {
+    grid-area: side-bar;
+    border-style: none;
+    padding-top: 7vh;
+
+    position: sticky;
+    top: -50vw;
+
+    .logo {
+      border-style: none;
+    }
+  }
+
+  .home-button {
+    grid-area: home;
+
+    padding-top: 24vh;
+    padding-left: 12vw;
+    border-style: none;
+
+    position: sticky;
+    -webkit-position: sticky;
+    top: 12vw;
+
+    a {
+      text-decoration: none;
       text-transform: uppercase;
-    }
+      border-style: solid;
+      border-width: 1px;
+      padding: 2% 10% 5% 12.5%;
 
-    li{
-      display:inline;
-      padding: 0 20px 0 20px;
-    }
+      color: $pureWhite;
+      font-weight: bold;
+      font-size: 1.875vw;
+      font-style: normal;
 
-    nav{
-      float:left;
-      margin-top:10px;
-    }
-
-    .current {
-      a {
-        color:#000000;
-        font-weight:bold;
-        font-size: 30px;
-
-        &:hover {
-          color:#4d4d4d;
-        font-weight:bold;
-        }
+      &:hover {
+        color: $white;
+        font-weight: bold;
       }
     }
   }
 
-  #credits-title{
-    padding:15px;
-    text-align: center;
-    margin-top:50px;
+  #credits-title {
+    grid-area: creditstitle;
 
-    min-height:100px;
+    border-style: none;
 
+    h1 {
+      border-style: solid;
+      border-width: 1px;
+      padding: 0.625vw 4.375vw 0.625vw 4.375vw;
+      font-size: 10.9375vh;
+    }
   }
 
-  #team{
-    margin-top:100px;
-    text-align: center;
+  .row {
+    display: flex;
+    flex-direction: row;
+    border-style: none;
+  }
 
-    .team-member{
-      float:left;
+  .column {
+    border-style: none;
+  }
+
+  #team {
+    grid-area: team;
+
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+
+    .team-member {
+      align-items: center;
       text-align: center;
-      width:20%;
-      padding:10px;
-      margin-top: 20px;
 
+      margin-top: 10vh;
+      width: 20%;
       border-style: none;
 
-      img{
-        width:90px;
+      p {
+        width: 60%;
+      }
+
+      img {
+        width: 6.25vw;
+        height: 6.25vw;
       }
     }
   }
-    
-  #docent{
-    padding:15px;
-    text-align: center;
-    margin-top:200px;
 
-    min-height:100px;
+  #docent {
+    grid-area: docent;
 
-    .docent-member{
-      margin-top: 50px;
+    text-align: left;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+
+    .docent-member {
+      float: left;
+      text-align: center;
+
+      margin-top: 10vh;
+      width: 20%;
       border-style: none;
     }
-  }
 
-  section {
-    h1{
-      display: inline;
-
-      border-style: solid;
-      border-width: 1px;
-      font-size:  60px;
+    p {
+      width: 60%;
     }
 
-    h2 {
-      border-style: solid;
-      border-width: 1px;
+    img {
+      width: 6.25vw;
+      height: 6.25vw;
     }
 
-    h3{
-      margin-top: 50px;
-      border-style: none; 
+    p {
+      font-size: 0.9375vw;
+      padding-top: 0.625vw;
+      padding-left: 2.6vw;
     }
   }
-    
-  .sectors{
-    padding:15px;
-    text-align: center;
-    margin-top:50px;
-    
-    min-height:100px;
 
-    .sectors-member{
-      margin-top: 25px;
-      border-style: none;  
-    } 
+  div {
+    border-style: solid;
+    border-color: $gray;
+    border-width: 1px;
+  }
 
-    .sectors-member{
-      margin-top: 25px;
-      border-style: none;  
-    } 
+  h1 {
+    display: inline;
+
+    border-style: solid;
+    border-width: 1px;
+    font-size: 1.875vw;
+  }
+
+  h2 {
+    padding-top: 0.625vw;
+    padding-left: 2.6vw;
+    font-size: 1.875vw;
+  }
+
+  h3 {
+    padding-top: 0.625vw;
+    padding-left: 2.6vw;
+    font-size: 1.40625vw;
+  }
+
+  p {
+    font-size: 0.9375vw;
+    padding-top: 0.625vw;
+    padding-left: 2.6vw;
+  }
+
+  #actors {
+    grid-area: actors;
+  }
+
+  #camera {
+    grid-area: camera;
+  }
+
+  #sound {
+    grid-area: sound;
+  }
+
+  #video {
+    grid-area: video;
+  }
+
+  #app {
+    grid-area: app;
+  }
+
+  #nothing {
+    grid-area: nothing;
+
+    border-style: none;
+  }
+
+  .sectors {
+    padding: 0.78125vw;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+    .sectors-member {
+      margin-top: 1.25vw;
+      border-style: none;
+      float: left;
+    }
   }
 }

@@ -1,37 +1,34 @@
 <div [id]="interaction.sceneId + '-decision'" class="hidden">
-    <div id="decision-1" class="decision hidden">
-        <div class="headline-container">
-            <h1>Decision A</h1>
-        </div>
-        <div class="content-container">
-            <p>Explain decision A</p>
-        </div>
-        <div class="arrow-container" (click)="clickDecision(1)">
-            <span>&#10096;</span>
-        </div>
-        <div class="background"></div>
+  <div id="decision-1" class="decision hidden" (click)="clickDecision(1)">
+    <div class="headline-container">
+      <h1>Decision A</h1>
     </div>
-    <div id="decision-2" class="decision hidden">
-        <div class="headline-container">
-            <h1>Decision B</h1>
-        </div>
-        <div class="content-container">
-            <p>Explain decision B</p>
-        </div>
-        <div class="arrow-container" (click)="clickDecision(2)">
-            <span>&#10097;</span>
-        </div>
-        <div class="background"></div>
+    <div class="content-container">
+      <p>Explain decision A</p>
     </div>
-    <div [id]="interaction.sceneId + '-decision-completed'" class="decision-complete hidden">
-        <div class="headline-container">
-            <h1 *ngIf="decision === 'a'">Decision A</h1>
-            <h1 *ngIf="decision === 'b'">Decision B</h1>
-        </div>
-        <div class="content-container">
-            <p *ngIf="decision === 'a'">Explain decision A</p>
-            <p *ngIf="decision === 'b'">Explain decision B</p>
-        </div>
-        <div class="background"></div>
+    <div class="background"></div>
+  </div>
+  <div id="decision-2" class="decision hidden" (click)="clickDecision(2)">
+    <div class="headline-container">
+      <h1>Decision B</h1>
     </div>
+    <div class="content-container">
+      <p>Explain decision B</p>
+    </div>
+    <div class="background"></div>
+  </div>
+  <div
+    [id]="interaction.sceneId + '-decision-completed'"
+    class="decision-complete hidden"
+  >
+    <div class="headline-container">
+      <h1 *ngIf="decision === 'a'">Decision A</h1>
+      <h1 *ngIf="decision === 'b'">Decision B</h1>
+    </div>
+    <div class="content-container">
+      <p *ngIf="decision === 'a'">Explain decision A</p>
+      <p *ngIf="decision === 'b'">Explain decision B</p>
+    </div>
+    <div class="background"></div>
+  </div>
 </div>

@@ -1,15 +1,42 @@
-<div class="interaction" [id]="interaction.interactionId" [ngStyle]="setInteractionStyle()"
-    (click)="clickedInteraction()">
-    <!--Hover Layer-->
-    <img [id]="interaction.interactionId + '_hoverLayer'" class="hoverLayerElement" [src]="interaction.hoverLayerElementPath">
-    <div *ngIf="!interactionClicked">
-        <img *ngFor="let p of interaction.pictureParts" [src]="p.path" alt=""
-        [ngClass]="getStyleClass(p.styleClass, p.visible)">
-    </div>
-    <img *ngIf="interactionClicked" [src]="interactionService.getPathToImageForClickedInteraction(interaction.interactionName, interaction.interactionId, interactionDecision)"
-        class="complete">
-    <!--Click Layer-->
-    <div *ngFor="let cle of interaction.clickLayerElements; index as i" class="clickLayerElement"
-        [id]="interaction.interactionId + '_clickLayer_Object' + i" [ngStyle]="getClickLayerStyle(i)"
-        (click)="clickedInteraction()" (mouseover)="mouseOver()"></div>
+<div
+  class="interaction"
+  [id]="interaction.interactionId"
+  [ngStyle]="setInteractionStyle()"
+  (click)="clickedInteraction()"
+>
+  <!--Hover Layer-->
+  <img
+    [id]="interaction.interactionId + '_hoverLayer'"
+    class="hoverLayerElement"
+    [src]="interaction.hoverLayerElementPath"
+  />
+  <div *ngIf="!interactionClicked">
+    <img
+      *ngFor="let p of interaction.pictureParts"
+      [src]="p.path"
+      alt=""
+      [ngClass]="getStyleClass(p.styleClass, p.visible)"
+    />
+  </div>
+  <img
+    *ngIf="interactionClicked"
+    [src]="
+      interactionService.getPathToImageForClickedInteraction(
+        interaction.interactionName,
+        interaction.interactionId,
+        interactionDecision
+      )
+    "
+    alt=""
+    class="complete"
+  />
+  <!--Click Layer-->
+  <div
+    *ngFor="let cle of interaction.clickLayerElements; index as i"
+    class="clickLayerElement"
+    [id]="interaction.interactionId + '_clickLayer_Object' + i"
+    [ngStyle]="getClickLayerStyle(i)"
+    (click)="clickedInteraction()"
+    (mouseover)="mouseOver()"
+  ></div>
 </div>

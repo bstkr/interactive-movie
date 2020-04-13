@@ -1,0 +1,25 @@
+0 - Update
+
+    Jan:
+        . Credits fertig
+        . Bilder ausgeschnitten
+        . back button angefangen
+        . Nav state bug
+
+    Daniel:
+        . Nichts gemacht
+
+    Tobias:
+        . nicht Daniel
+
+    Benny: 
+        . schickt videos - nicht ganz final
+
+    Benne:
+        . Desing bisschen verändert - feedback von Jens
+
+
+1 - Planning
+
+    Jan:
+        . Timeline
