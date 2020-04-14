@@ -88,6 +88,12 @@ export class InteractionService {
     }
   }
 
+  storeDecision() {
+    for (const interactionState of this.interactionStateArray) {
+    localStorage.setItem('Object', this.getDecisionOfInteractionState(interactionState.decision));
+    }
+  }
+
   private initializeObservableArray() {
     for (const interactionState of this.interactionStateArray) {
       const arrayObject = new InteractionObservable(
