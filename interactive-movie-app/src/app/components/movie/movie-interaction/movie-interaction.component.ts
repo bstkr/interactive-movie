@@ -4,6 +4,7 @@ import {
   InteractionService,
   InteractionObservable,
 } from "src/app/_services/interaction.service";
+import { SceneService } from "src/app/_services/scene.service";
 
 @Component({
   selector: "app-movie-interaction",
@@ -16,7 +17,10 @@ export class MovieInteractionComponent implements OnInit {
   interactionClicked: boolean;
   interactionDecision: string;
 
-  constructor(public interactionService: InteractionService) {}
+  constructor(
+    public interactionService: InteractionService,
+    public sceneService: SceneService
+  ) {}
 
   ngOnInit() {
     this.interactionService
@@ -87,5 +91,7 @@ export class MovieInteractionComponent implements OnInit {
 
     videoElement.classList.remove("hidden");
     videoElement.classList.add("show");
+
+    this.sceneService.setSceneActive(this.interaction.sceneId, true);
   }
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, ElementRef } from "@angular/core";
 import { Interaction, VideoSequence } from "src/app/_models/Interactions";
 import { InteractionService } from "src/app/_services/interaction.service";
+import { BehaviorSubject } from "rxjs";
+import { SceneService } from "src/app/_services/scene.service";
 
 @Component({
   selector: "app-movie-scene",
@@ -10,14 +12,21 @@ import { InteractionService } from "src/app/_services/interaction.service";
 export class MovieSceneComponent implements OnInit {
   @Input() interaction: Interaction;
 
+  sceneActive: boolean;
   decision: string;
 
-  constructor(public interactionService: InteractionService) {}
+  constructor(
+    public interactionService: InteractionService,
+    public sceneService: SceneService
+  ) {}
 
   ngOnInit() {
     this.interactionService
       .getInteractionState(this.interaction.interactionName)
       .decision.subscribe((s) => (this.decision = s));
+    this.sceneService
+      .getSceneActive(this.interaction.sceneId)
+      .subscribe((s) => (this.sceneActive = s));
   }
 
   click(e: Event) {
@@ -251,5 +260,7 @@ export class MovieSceneComponent implements OnInit {
     if (outroElement) {
       outroElement.classList.replace("closeVideo", "hiddenVideo");
     }
+
+    this.sceneService.setSceneActive(this.interaction.sceneId, false);
   }
 }
