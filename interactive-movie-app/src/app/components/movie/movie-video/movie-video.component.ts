@@ -41,8 +41,8 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
 
   videoClick(e: Event) {
     if (this.videoPlayer.nativeElement.paused) {
-      /*Uncomment for development*/ this.videoEnded();
-      /*Uncomment for production*/ // this.videoPlayer.nativeElement.play();
+      /*Uncomment for development*/ // this.videoEnded();
+      /*Uncomment for production*/ this.videoPlayer.nativeElement.play();
     } else {
       this.videoPlayer.nativeElement.pause();
     }
@@ -53,8 +53,6 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
   }
 
   renderVideo(): boolean {
-    console.log(this.interaction.sceneId);
-    console.log(this.video.sequencePosition === "intro" || this.sceneActive);
     return this.video.sequencePosition === "intro" || this.sceneActive;
   }
 }
