@@ -24,6 +24,5 @@ export class MovieDecisionComponent implements OnInit {
 
   clickDecision(dec: number) {
     this.decisionClick.emit(dec);
-    this.interactionService.storeDecision();
   }
 }
