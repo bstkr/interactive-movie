@@ -206,7 +206,7 @@ export class MovieSceneComponent implements OnInit {
     setTimeout(() => {
       decisionElement.classList.add("fade");
       introElement.classList.replace("currentVideo", "closeVideo");
-      if (this.decision === "a") {
+      if (this.decision === "1") {
         alt1Element.classList.replace("hiddenVideo", "currentVideo");
       } else {
         alt2Element.classList.replace("hiddenVideo", "currentVideo");
