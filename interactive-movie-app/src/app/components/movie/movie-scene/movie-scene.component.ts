@@ -179,9 +179,8 @@ export class MovieSceneComponent implements OnInit {
     if (leftNavElement) {
       leftNavElement.classList.remove("hidden");
     }
-
-    videoElement.classList.replace("fade", "hidden");
     itemContainerElement.classList.replace("hidden", "show");
+    videoElement.classList.replace("fade", "hidden");
 
     this.resetVideoForRewatch();
   }

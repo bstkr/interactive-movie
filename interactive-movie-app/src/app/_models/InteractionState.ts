@@ -61,8 +61,8 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
-    pathToItemImageA: "",
-    pathToItemImageB: "",
+    pathToItemImageA: "assets/pictures/room/pov2/object6/complete.png",
+    pathToItemImageB: "assets/pictures/room/pov2/object6/complete.png",
   },
   {
     name: "Jacke",
