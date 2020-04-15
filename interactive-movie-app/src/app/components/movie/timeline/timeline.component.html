@@ -1,17 +1,11 @@
 <div class="timeline-container">
-  <div class="timeline-wrapper">
-    <div id="bar" class="bar" (click)="slide()"></div>
+  <div style="z-index: 1;" id="timeline-wrapper" (click)="slide()" class="timeline-wrapper">
+    <div id="bar" class="bar"></div>
     <div id="objects" class="objects"></div>
-    <app-timeline-object
-      id="a"
-      [objectName]="'Unterhose'"
-    ></app-timeline-object>
+    <app-timeline-object id="a" [objectName]="'Unterhose'"></app-timeline-object>
     <app-timeline-object id="b" [objectName]="'Bier'"></app-timeline-object>
     <app-timeline-object id="c" [objectName]="'Jacke'"></app-timeline-object>
-    <app-timeline-object
-      id="d"
-      [objectName]="'Einkaufszettel'"
-    ></app-timeline-object>
+    <app-timeline-object id="d" [objectName]="'Einkaufszettel'"></app-timeline-object>
     <app-timeline-object id="e" [objectName]="'Handy'"></app-timeline-object>
     <app-timeline-object id="f" [objectName]="'Computer'"></app-timeline-object>
     <app-timeline-object id="g" [objectName]="'Zeitung'"></app-timeline-object>

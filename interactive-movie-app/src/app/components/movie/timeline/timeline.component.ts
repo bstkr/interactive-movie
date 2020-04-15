@@ -15,7 +15,14 @@ export class TimelineComponent implements OnInit {
   }
 
   slide() {
-    const slide = document.getElementById("bar");
-    slide.style.opacity = "0";
+    const slide = document.getElementById("timeline-wrapper");
+    const state = slide.style.top;
+
+    if(state == "80%") {
+      slide.style.top = "96%";
+    }
+    else {
+      slide.style.top = "80%";
+    }
   }
 }
