@@ -1,19 +1,23 @@
-<div [id]="interaction.sceneId + '-decision'" class="hidden">
-  <div id="decision-1" class="decision hidden" (click)="clickDecision(1)">
+<div
+  *ngIf="checkDecisionPos()"
+  [id]="interaction.sceneId + decision.decisionPos + '-decision'"
+  class="hidden"
+>
+  <div id="decision-1" class="decision hidden" (click)="clickDecision('1')">
     <div class="headline-container">
-      <h1>Decision A</h1>
+      <h1>{{ decision.decisionContent.decision1Headline }}</h1>
     </div>
     <div class="content-container">
-      <p>Explain decision A</p>
+      <p>{{ decision.decisionContent.decision1Content }}</p>
     </div>
     <div class="background"></div>
   </div>
-  <div id="decision-2" class="decision hidden" (click)="clickDecision(2)">
+  <div id="decision-2" class="decision hidden" (click)="clickDecision('2')">
     <div class="headline-container">
-      <h1>Decision B</h1>
+      <h1>{{ decision.decisionContent.decision2Headline }}</h1>
     </div>
     <div class="content-container">
-      <p>Explain decision B</p>
+      <p>{{ decision.decisionContent.decision2Content }}</p>
     </div>
     <div class="background"></div>
   </div>

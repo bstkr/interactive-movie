@@ -51,6 +51,12 @@ export class InteractionService {
     );
   }
 
+  getDecisionOfInteractionState(interactionName: string): string {
+    return this.interactionStateObservableArray.find(
+      (interactionState) => interactionState.interactionName === interactionName
+    ).decision.value;
+  }
+
   isInteractionClicked(interactionName: string) {
     return this.interactionStateObservableArray.find(
       (interactionObs) => interactionObs.interactionName === interactionName
@@ -99,7 +105,7 @@ export class InteractionService {
     }
   }
 
-  private getDecisionOfInteractionState(interactionName: string): string {
+  private getDecisionOfInteraction(interactionName: string): string {
     return this.interactionStateArray.find(
       (interactionState) => interactionState.name === interactionName
     ).decision;

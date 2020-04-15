@@ -1,8 +1,9 @@
 import { Injectable } from "@angular/core";
+import { Scene, Scenes, Decision } from "../_models/Scenes";
 import { BehaviorSubject } from "rxjs";
 import { Interactions } from "../_models/Interactions";
 
-export class Scene {
+export class SceneObservable {
   sceneId: string;
   active: BehaviorSubject<boolean>;
 
@@ -17,23 +18,43 @@ export class Scene {
 })
 export class SceneService {
   sceneArray: Scene[];
+  sceneObservableArray: SceneObservable[];
+
+  currentDecistion: BehaviorSubject<string>;
 
   constructor() {
-    this.sceneArray = [];
+    this.sceneArray = Scenes;
+    this.sceneObservableArray = [];
+
+    this.currentDecistion = new BehaviorSubject<string>("0");
 
     for (let pov of Interactions) {
       for (let interaction of pov.interactions) {
-        let scene = new Scene(interaction.sceneId, false);
-        this.sceneArray.push(scene);
+        let scene = new SceneObservable(interaction.sceneId, false);
+        this.sceneObservableArray.push(scene);
       }
     }
   }
 
+  getDecisionsArrayFromSceneName(sceneName: string): Decision[] {
+    return this.sceneArray.find((scene) => scene.sceneName === sceneName)
+      .decisions;
+  }
+
   setSceneActive(sceneId: string, b: boolean) {
-    this.sceneArray.find((s) => s.sceneId === sceneId).active.next(b);
+    this.sceneObservableArray.find((s) => s.sceneId === sceneId).active.next(b);
   }
 
   getSceneActive(sceneId: string) {
-    return this.sceneArray.find((scene) => scene.sceneId === sceneId).active;
+    return this.sceneObservableArray.find((scene) => scene.sceneId === sceneId)
+      .active;
+  }
+
+  setCurrentDecisionObservable(decision: string) {
+    this.currentDecistion.next(decision);
+  }
+
+  getCurrentDecisionObservable(): BehaviorSubject<string> {
+    return this.currentDecistion;
   }
 }

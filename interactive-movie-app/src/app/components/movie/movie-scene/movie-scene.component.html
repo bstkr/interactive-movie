@@ -8,7 +8,10 @@
       (endedVideo)="onVideoEnded($event)"
     ></app-movie-video>
     <app-movie-decision
+      *ngFor="let decision of decisionArray"
       [interaction]="interaction"
+      [decision]="decision"
+      [currentDecision]="currentDecision"
       (decisionClick)="onDecisionClick($event)"
     ></app-movie-decision>
   </div>

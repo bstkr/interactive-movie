@@ -92,6 +92,7 @@ export class MovieInteractionComponent implements OnInit {
     videoElement.classList.remove("hidden");
     videoElement.classList.add("show");
 
+    this.sceneService.setCurrentDecisionObservable("0");
     this.sceneService.setSceneActive(this.interaction.sceneId, true);
   }
 }
