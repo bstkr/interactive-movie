@@ -1,16 +1,9 @@
 <div class="timeline-object-container">
   <div *ngIf= "objectName == 'Unterhose' && objectClicked">
     <img
-    *ngIf= "objectDecision == 'a'"
     id="Handy"
-    src="assets\pictures\room\Timeline_Objects\object_1.png"
+    src="getImagePath()"
     alt=""    
-    />
-    <img
-    *ngIf= "objectDecision == 'b'"
-    id="Handy"
-    src="assets\pictures\room\Timeline_Objects\object_2.png"
-    alt=""
     />
   </div>
   <div *ngIf="objectName == 'Bier' && objectClicked">

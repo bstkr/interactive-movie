@@ -88,8 +88,18 @@ export class InteractionService {
     }
   }
 
-  getTimelineImagePath(interactionName: string) {
-    // interaction.pathToTimelineImage
+  getTimelineImagePath(interactionName: string): string {
+    if (this.getDecisionOfInteractionState(interactionName) === "a") {
+      return this.interactionStateArray
+        .find((interactionState) => interactionState.name === interactionName)
+        .Timeline.pathToTimelineImage.a;
+    } else if (this.getDecisionOfInteractionState(interactionName) === "b") {
+      return this.interactionStateArray
+        .find((interactionState) => interactionState.name === interactionName)
+        .Timeline.pathToTimelineImage.b;
+    } else {
+      return "";
+    }
   }
 
   getSceneIdFromInteractionName(interactionName: string) {

@@ -21,7 +21,6 @@ export class TimelineObjectComponent implements OnInit {
   constructor(public interactionService: InteractionService) {}
 
   ngOnInit() {
-    console.log(this.objectName);
     this.interactionService
       .isInteractionClicked(this.objectName)
       .subscribe((s) => (this.objectClicked = s));
@@ -29,5 +28,12 @@ export class TimelineObjectComponent implements OnInit {
     this.interactionService
       .getInteractionState(this.objectName)
       .decision.subscribe((s) => (this.objectDecision = s));
+
+      this.interactionService.getTimelineImagePath(this.objectName);
+      console.log(this.interactionService.getTimelineImagePath(this.objectName));
+  }
+
+  getImagePath():string {
+    return this.interactionService.getTimelineImagePath(this.objectName);
   }
 }

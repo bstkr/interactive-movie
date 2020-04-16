@@ -1,17 +1,23 @@
 export interface InteractionState {
   name: string;
   // Contains the interactions that are linked to this state
-  Interactions: InteractionLink[];
+  Interactions: InteractionLink[]
 
   // true = interaction has been clicked
   clicked: boolean;
   // Contains decision the user has made ('a' / 'b') ['x' = no decision]
   decision: string;
+  // Contains the timeline Images
+  Timeline: InteractionTimeline;
 }
 
 export interface InteractionLink {
   interactionId: string;
   pathToCompleteObjectImage: { a: string; b: string };
+}
+
+export interface InteractionTimeline {
+  pathToTimelineImage: { a: string; b: string };
 }
 
 export const InteractionStateArray: InteractionState[] = [
@@ -35,7 +41,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
-    /*pathToTimelineImage*/
+    Timeline: {
+        pathToTimelineImage: {
+          a: "assets/pictures/room/Timeline_Objects/object_1.png",
+          b: "assets/pictures/room/Timeline_Objects/object_2.png",
+        }
+      },
   },
   {
     name: "Bier",
@@ -57,6 +68,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/object_1.png",
+        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+      }
+    },
   },
   {
     name: "Jacke",
@@ -78,6 +95,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/object_1.png",
+        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+      }
+    },
   },
   {
     name: "Einkaufszettel",
@@ -99,6 +122,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/object_1.png",
+        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+      }
+    },
   },
   {
     name: "Handy",
@@ -113,6 +142,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/object_1.png",
+        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+      }
+    },
   },
   {
     name: "Computer",
@@ -134,6 +169,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/object_1.png",
+        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+      }
+    },
   },
   {
     name: "Zeitung",
@@ -155,6 +196,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/object_1.png",
+        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+      }
+    },
   },
   {
     name: "Nummer",
@@ -176,5 +223,11 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/object_1.png",
+        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+      }
+    },
   },
 ];
