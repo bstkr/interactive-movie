@@ -11,7 +11,6 @@ export class TimelineObjectComponent implements OnInit {
   @Input() objectName: string;
 
   interaction: Interaction;
-  decision: string;
 
   objectClicked: boolean;
   objectDecision: string;
@@ -28,22 +27,7 @@ export class TimelineObjectComponent implements OnInit {
       .subscribe((s) => (this.objectClicked = s));
 
     this.interactionService
-      .getInteractionState(this.interaction.interactionName)
+      .getInteractionState(this.objectName)
       .decision.subscribe((s) => (this.objectDecision = s));
-  }
-
-  ifUnterhose() {
-    const unterhose = document.getElementById("a");
-
-    if(this.objectName == "Unterhose" && this.objectClicked) {
-      if(this.objectDecision == "a") {
-        this.test = true;
-        return true;
-      }
-      else{
-        this.test2 = true;
-        return true;
-      }
-    }  
   }
 }

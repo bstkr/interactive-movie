@@ -1,58 +1,114 @@
 <div class="timeline-object-container">
-  <div *ngIf= "ifUnterhose()">
+  <div *ngIf= "objectName == 'Unterhose' && objectClicked">
     <img
-    *ngIf= "test"
-    id="a"
+    *ngIf= "objectDecision == 'a'"
+    id="Handy"
     src="assets\pictures\room\Timeline_Objects\object_1.png"
     alt=""    
     />
     <img
-    *ngIf= "test2"
-    id="a"
+    *ngIf= "objectDecision == 'b'"
+    id="Handy"
     src="assets\pictures\room\Timeline_Objects\object_2.png"
     alt=""
     />
   </div>
-  <img
-    *ngIf="objectName == 'Bier' && objectClicked"
+  <div *ngIf="objectName == 'Bier' && objectClicked">
+    <img
+    *ngIf= "objectDecision == 'a'"
     id="b"
     src="assets\pictures\room\Timeline_Objects\object_2.png"
     alt=""
   />
   <img
-    *ngIf="objectName == 'Jacke' && objectClicked"
+    id="b"
+    *ngIf= "objectDecision == 'b'"
+    src="assets\pictures\room\Timeline_Objects\object_3.png"
+    alt=""
+  />
+  </div>
+  <div *ngIf="objectName == 'Jacke' && objectClicked">
+    <img
+    *ngIf= "objectDecision == 'a'"
     id="c"
     src="assets\pictures\room\Timeline_Objects\object_3.png"
     alt=""
   />
   <img
-    *ngIf="objectName == 'Einkaufszettel' && objectClicked"
+    *ngIf= "objectDecision == 'b'"
+    id="c"
+    src="assets\pictures\room\Timeline_Objects\object_4.png"
+    alt=""
+  />
+  </div>
+  <div *ngIf="objectName == 'Einkaufszettel' && objectClicked">
+    <img
+    *ngIf= "objectDecision == 'a'"
     id="d"
     src="assets\pictures\room\Timeline_Objects\object_4.png"
     alt=""
   />
   <img
-    *ngIf="objectName == 'Handy' && objectClicked"
+    *ngIf= "objectDecision == 'b'"
+    id="d"
+    src="assets\pictures\room\Timeline_Objects\object_1.png"
+    alt=""
+  />
+  </div>
+  <div *ngIf="objectName == 'Handy' && objectClicked">
+    <img
+    *ngIf= "objectDecision == 'a'"
     id="e"
     src="assets\pictures\room\Timeline_Objects\object_1.png"
     alt=""
   />
   <img
-    *ngIf="objectName == 'Computer' && objectClicked"
+    *ngIf= "objectDecision == 'b'"
+    id="e"
+    src="assets\pictures\room\Timeline_Objects\object_2.png"
+    alt=""
+  />
+  </div>
+  <div *ngIf="objectName == 'Computer' && objectClicked">
+    <img
+    *ngIf= "objectDecision == 'a'"
     id="f"
     src="assets\pictures\room\Timeline_Objects\object_2.png"
     alt=""
   />
   <img
-    *ngIf="objectName == 'Zeitung' && objectClicked"
+    *ngIf= "objectDecision == 'b'"
+    id="f"
+    src="assets\pictures\room\Timeline_Objects\object_3.png"
+    alt=""
+  />
+  </div>
+  <div *ngIf="objectName == 'Zeitung' && objectClicked">
+    <img
+    *ngIf= "objectDecision == 'a'"
     id="g"
     src="assets\pictures\room\Timeline_Objects\object_3.png"
     alt=""
   />
   <img
-    *ngIf="objectName == 'Nummer' && objectClicked"
+    *ngIf= "objectDecision == 'b'"
+    id="g"
+    src="assets\pictures\room\Timeline_Objects\object_4.png"
+    alt=""
+  />
+  </div>
+  <div *ngIf="objectName == 'Nummer' && objectClicked">
+    <img
+    *ngIf= "objectDecision == 'a'"
     id="h"
     src="assets\pictures\room\Timeline_Objects\object_4.png"
     alt=""
   />
+  <img
+   *ngIf= "objectDecision == 'b'"
+    id="h"
+    src="assets\pictures\room\Timeline_Objects\object_1.png"
+    alt=""
+  />
+  </div>
 </div>
