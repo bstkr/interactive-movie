@@ -1,48 +1,56 @@
 <div class="timeline-object-container">
-  <img
-    *ngIf= "ifUnterhose()"
+  <div *ngIf= "ifUnterhose()">
+    <img
+    *ngIf= "test"
     id="a"
     src="assets\pictures\room\Timeline_Objects\object_1.png"
+    alt=""    
+    />
+    <img
+    *ngIf= "test2"
+    id="a"
+    src="assets\pictures\room\Timeline_Objects\object_2.png"
     alt=""
-  />
+    />
+  </div>
   <img
-    *ngIf="ifBier()"
+    *ngIf="objectName == 'Bier' && objectClicked"
     id="b"
     src="assets\pictures\room\Timeline_Objects\object_2.png"
     alt=""
   />
   <img
-    *ngIf="ifJacke()"
+    *ngIf="objectName == 'Jacke' && objectClicked"
     id="c"
     src="assets\pictures\room\Timeline_Objects\object_3.png"
     alt=""
   />
   <img
-    *ngIf="ifEinkaufszettel()"
+    *ngIf="objectName == 'Einkaufszettel' && objectClicked"
     id="d"
     src="assets\pictures\room\Timeline_Objects\object_4.png"
     alt=""
   />
   <img
-    *ngIf="ifHandy()"
+    *ngIf="objectName == 'Handy' && objectClicked"
     id="e"
     src="assets\pictures\room\Timeline_Objects\object_1.png"
     alt=""
   />
   <img
-    *ngIf="ifComputer()"
+    *ngIf="objectName == 'Computer' && objectClicked"
     id="f"
     src="assets\pictures\room\Timeline_Objects\object_2.png"
     alt=""
   />
   <img
-    *ngIf="ifZeitung()"
+    *ngIf="objectName == 'Zeitung' && objectClicked"
     id="g"
     src="assets\pictures\room\Timeline_Objects\object_3.png"
     alt=""
   />
   <img
-    *ngIf="ifNummer()"
+    *ngIf="objectName == 'Nummer' && objectClicked"
     id="h"
     src="assets\pictures\room\Timeline_Objects\object_4.png"
     alt=""

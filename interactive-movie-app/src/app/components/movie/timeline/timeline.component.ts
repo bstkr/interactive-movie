@@ -15,7 +15,7 @@ export class TimelineComponent implements OnInit {
   }
 
   slide() {
-    const slide = document.getElementById("timeline-wrapper");
+    const slide = document.getElementById("timeline-container");
     const state = slide.style.top;
 
     if(state == "80%") {
