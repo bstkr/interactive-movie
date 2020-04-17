@@ -10,13 +10,8 @@ import { Interaction } from "src/app/_models/Interactions";
 export class TimelineObjectComponent implements OnInit {
   @Input() objectName: string;
 
-  interaction: Interaction;
-
   objectClicked: boolean;
   objectDecision: string;
-
-  test: boolean;
-  test2: boolean;
 
   constructor(public interactionService: InteractionService) {}
 
@@ -29,11 +24,7 @@ export class TimelineObjectComponent implements OnInit {
       .getInteractionState(this.objectName)
       .decision.subscribe((s) => (this.objectDecision = s));
 
-      this.interactionService.getTimelineImagePath(this.objectName);
-      console.log(this.interactionService.getTimelineImagePath(this.objectName));
-  }
-
-  getImagePath():string {
-    return this.interactionService.getTimelineImagePath(this.objectName);
+      this.interactionService.getTimelineImagePath(this.objectName, this.objectDecision);
+      console.log(this.interactionService.getTimelineImagePath(this.objectName, this.objectDecision));
   }
 }

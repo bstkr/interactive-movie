@@ -88,12 +88,12 @@ export class InteractionService {
     }
   }
 
-  getTimelineImagePath(interactionName: string): string {
-    if (this.getDecisionOfInteractionState(interactionName) === "a") {
+  getTimelineImagePath(interactionName: string, decision: string): string {
+    if (decision === "a") {
       return this.interactionStateArray
         .find((interactionState) => interactionState.name === interactionName)
         .Timeline.pathToTimelineImage.a;
-    } else if (this.getDecisionOfInteractionState(interactionName) === "b") {
+    } else if (decision === "b") {
       return this.interactionStateArray
         .find((interactionState) => interactionState.name === interactionName)
         .Timeline.pathToTimelineImage.b;

@@ -2,105 +2,56 @@
   <div *ngIf= "objectName == 'Unterhose' && objectClicked">
     <img
     id="Handy"
-    src="getImagePath()"
+    [src]="interactionService.getTimelineImagePath(objectName, objectDecision)"
     alt=""    
     />
   </div>
   <div *ngIf="objectName == 'Bier' && objectClicked">
     <img
-    *ngIf= "objectDecision == 'a'"
     id="b"
-    src="assets\pictures\room\Timeline_Objects\object_2.png"
-    alt=""
-  />
-  <img
-    id="b"
-    *ngIf= "objectDecision == 'b'"
-    src="assets\pictures\room\Timeline_Objects\object_3.png"
+    [src]="interactionService.getTimelineImagePath(objectName, objectDecision)"
     alt=""
   />
   </div>
   <div *ngIf="objectName == 'Jacke' && objectClicked">
     <img
-    *ngIf= "objectDecision == 'a'"
     id="c"
-    src="assets\pictures\room\Timeline_Objects\object_3.png"
-    alt=""
-  />
-  <img
-    *ngIf= "objectDecision == 'b'"
-    id="c"
-    src="assets\pictures\room\Timeline_Objects\object_4.png"
+    [src]="interactionService.getTimelineImagePath(objectName, objectDecision)"
     alt=""
   />
   </div>
   <div *ngIf="objectName == 'Einkaufszettel' && objectClicked">
     <img
-    *ngIf= "objectDecision == 'a'"
     id="d"
-    src="assets\pictures\room\Timeline_Objects\object_4.png"
-    alt=""
-  />
-  <img
-    *ngIf= "objectDecision == 'b'"
-    id="d"
-    src="assets\pictures\room\Timeline_Objects\object_1.png"
+    [src]="interactionService.getTimelineImagePath(objectName, objectDecision)"
     alt=""
   />
   </div>
   <div *ngIf="objectName == 'Handy' && objectClicked">
     <img
-    *ngIf= "objectDecision == 'a'"
     id="e"
-    src="assets\pictures\room\Timeline_Objects\object_1.png"
-    alt=""
-  />
-  <img
-    *ngIf= "objectDecision == 'b'"
-    id="e"
-    src="assets\pictures\room\Timeline_Objects\object_2.png"
+    [src]="interactionService.getTimelineImagePath(objectName, objectDecision)"
     alt=""
   />
   </div>
   <div *ngIf="objectName == 'Computer' && objectClicked">
     <img
-    *ngIf= "objectDecision == 'a'"
     id="f"
-    src="assets\pictures\room\Timeline_Objects\object_2.png"
-    alt=""
-  />
-  <img
-    *ngIf= "objectDecision == 'b'"
-    id="f"
-    src="assets\pictures\room\Timeline_Objects\object_3.png"
+    [src]="interactionService.getTimelineImagePath(objectName, objectDecision)"
     alt=""
   />
   </div>
   <div *ngIf="objectName == 'Zeitung' && objectClicked">
     <img
-    *ngIf= "objectDecision == 'a'"
     id="g"
-    src="assets\pictures\room\Timeline_Objects\object_3.png"
-    alt=""
-  />
-  <img
-    *ngIf= "objectDecision == 'b'"
-    id="g"
-    src="assets\pictures\room\Timeline_Objects\object_4.png"
+    [src]="interactionService.getTimelineImagePath(objectName, objectDecision)"
     alt=""
   />
   </div>
   <div *ngIf="objectName == 'Nummer' && objectClicked">
     <img
-    *ngIf= "objectDecision == 'a'"
     id="h"
-    src="assets\pictures\room\Timeline_Objects\object_4.png"
-    alt=""
-  />
-  <img
-   *ngIf= "objectDecision == 'b'"
-    id="h"
-    src="assets\pictures\room\Timeline_Objects\object_1.png"
+    [src]="interactionService.getTimelineImagePath(objectName, objectDecision)"
     alt=""
   />
   </div>

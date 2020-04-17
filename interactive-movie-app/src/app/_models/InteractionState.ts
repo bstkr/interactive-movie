@@ -70,8 +70,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/object_1.png",
-        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+        a: "assets/pictures/room/Timeline_Objects/object_2.png",
+        b: "assets/pictures/room/Timeline_Objects/object_3.png",
       }
     },
   },
@@ -97,8 +97,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/object_1.png",
-        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+        a: "assets/pictures/room/Timeline_Objects/object_3.png",
+        b: "assets/pictures/room/Timeline_Objects/object_4.png",
       }
     },
   },
@@ -124,7 +124,7 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/object_1.png",
+        a: "assets/pictures/room/Timeline_Objects/object_4.png",
         b: "assets/pictures/room/Timeline_Objects/object_1.png",
       }
     },
@@ -145,7 +145,7 @@ export const InteractionStateArray: InteractionState[] = [
     Timeline: {
       pathToTimelineImage: {
         a: "assets/pictures/room/Timeline_Objects/object_1.png",
-        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+        b: "assets/pictures/room/Timeline_Objects/object_2.png",
       }
     },
   },
@@ -171,8 +171,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/object_1.png",
-        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+        a: "assets/pictures/room/Timeline_Objects/object_2.png",
+        b: "assets/pictures/room/Timeline_Objects/object_3.png",
       }
     },
   },
@@ -198,8 +198,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/object_1.png",
-        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+        a: "assets/pictures/room/Timeline_Objects/object_3.png",
+        b: "assets/pictures/room/Timeline_Objects/object_4.png",
       }
     },
   },
@@ -225,7 +225,7 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/object_1.png",
+        a: "assets/pictures/room/Timeline_Objects/object_4.png",
         b: "assets/pictures/room/Timeline_Objects/object_1.png",
       }
     },
