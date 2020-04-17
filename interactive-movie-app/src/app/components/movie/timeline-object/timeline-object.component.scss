@@ -1,63 +1,61 @@
 .timeline-object-container {
   width: auto;
   height: auto;
-
   
-  #Handy{
+  .Handy{
     height: 100%;
     width: calc(100%/8);
     position: absolute;
     top: 0;
     left: 0;
   }
-  #b{
+  .Einkaufszettel{
     height: 100%;
     width: calc(100%/8);
     position: absolute;
     top: 0;
     left: calc(100%/8);
   }
-  #c{
+  .Bier{
     height: 100%;
     width: calc(100%/8);
     position: absolute;
     top: 0;
     left: calc(2*100%/8);
   }
-  #d{
+  .Jacke{
     height: 100%;
     width: calc(100%/8);
     position: absolute;
     top: 0;
     left: calc(3*100%/8);
   }
-  #e{
+  .Computer{
     height: 100%;
     width: calc(100%/8);
     position: absolute;
     top: 0;
     left: calc(4*100%/8);
   }
-  #f{
+  .Nummer{
     height: 100%;
     width: calc(100%/8);
     position: absolute;
     top: 0;
     left: calc(5*100%/8);
   }
-  #g{
+  .Unterhose{
     height: 100%;
     width: calc(100%/8);
     position: absolute;
     top: 0;
     left: calc(6*100%/8);
   }
-  #h{
+  .Zeitung{
     height: 100%;
     width: calc(100%/8);
     position: absolute;
     top: 0;
     left: calc(7*100%/8);
   }
-
 }

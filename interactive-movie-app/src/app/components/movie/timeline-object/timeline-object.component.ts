@@ -27,4 +27,8 @@ export class TimelineObjectComponent implements OnInit {
       this.interactionService.getTimelineImagePath(this.objectName, this.objectDecision);
       console.log(this.interactionService.getTimelineImagePath(this.objectName, this.objectDecision));
   }
+
+  getObjectName(): string {
+    return this.objectName;
+  }
 }
