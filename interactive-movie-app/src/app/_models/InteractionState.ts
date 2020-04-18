@@ -43,8 +43,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
         pathToTimelineImage: {
-          a: "assets/pictures/room/Timeline_Objects/object_1.png",
-          b: "assets/pictures/room/Timeline_Objects/object_2.png",
+          a: "assets/pictures/room/Timeline_Objects/Unterhose_nass.png",
+          b: "assets/pictures/room/Timeline_Objects/Unterhose.png",
         }
       },
   },
@@ -70,8 +70,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/object_2.png",
-        b: "assets/pictures/room/Timeline_Objects/object_3.png",
+        a: "assets/pictures/room/Timeline_Objects/Computer.png",
+        b: "assets/pictures/room/Timeline_Objects/Computer.png",
       }
     },
   },
@@ -97,8 +97,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/object_3.png",
-        b: "assets/pictures/room/Timeline_Objects/object_4.png",
+        a: "assets/pictures/room/Timeline_Objects/Jacke.png",
+        b: "assets/pictures/room/Timeline_Objects/Jacke.png",
       }
     },
   },
@@ -124,8 +124,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/object_4.png",
-        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+        a: "assets/pictures/room/Timeline_Objects/Computer.png",
+        b: "assets/pictures/room/Timeline_Objects/Computer.png",
       }
     },
   },
@@ -144,8 +144,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/object_1.png",
-        b: "assets/pictures/room/Timeline_Objects/object_2.png",
+        a: "assets/pictures/room/Timeline_Objects/Computer.png",
+        b: "assets/pictures/room/Timeline_Objects/Computer.png",
       }
     },
   },
@@ -171,8 +171,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/object_2.png",
-        b: "assets/pictures/room/Timeline_Objects/object_3.png",
+        a: "assets/pictures/room/Timeline_Objects/Computer.png",
+        b: "assets/pictures/room/Timeline_Objects/Computer.png",
       }
     },
   },
@@ -198,8 +198,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/object_3.png",
-        b: "assets/pictures/room/Timeline_Objects/object_4.png",
+        a: "assets/pictures/room/Timeline_Objects/Zeitung.png",
+        b: "assets/pictures/room/Timeline_Objects/Vorladung.png",
       }
     },
   },
@@ -225,8 +225,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/object_4.png",
-        b: "assets/pictures/room/Timeline_Objects/object_1.png",
+        a: "assets/pictures/room/Timeline_Objects/Serviette.png",
+        b: "assets/pictures/room/Timeline_Objects/Blatt.png",
       }
     },
   },
