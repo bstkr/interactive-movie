@@ -227,7 +227,7 @@ export const Interactions: POV[] = [
             pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-2-1.mp4",
           },
           {
-            sequencePosition: "alt-2-1",
+            sequencePosition: "alt-2-2",
             visible: false,
             pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-2-2.mp4",
           },

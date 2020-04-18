@@ -4,6 +4,7 @@ import { InteractionService } from "src/app/_services/interaction.service";
 import { BehaviorSubject } from "rxjs";
 import { SceneService } from "src/app/_services/scene.service";
 import { Decision } from "src/app/_models/Scenes";
+import { sequenceEqual } from "rxjs/operators";
 
 @Component({
   selector: "app-movie-scene",
@@ -17,7 +18,7 @@ export class MovieSceneComponent implements OnInit {
   currentDecision: string;
 
   sceneActive: boolean;
-  decision: string;
+  userDecision: string[];
 
   constructor(
     public interactionService: InteractionService,
@@ -27,7 +28,7 @@ export class MovieSceneComponent implements OnInit {
   ngOnInit() {
     this.interactionService
       .getInteractionState(this.interaction.interactionName)
-      .decision.subscribe((s) => (this.decision = s));
+      .decision.subscribe((s) => (this.userDecision = s.split(",")));
     this.sceneService
       .getSceneActive(this.interaction.sceneId)
       .subscribe((s) => (this.sceneActive = s));
@@ -46,16 +47,17 @@ export class MovieSceneComponent implements OnInit {
   }
 
   onVideoEnded(video: VideoSequence) {
+    const videoElement = document.getElementById(this.interaction.sceneId);
+
     if (video.sequencePosition === "intro") {
       this.handleIntroEnd();
     }
 
-    if (video.sequencePosition === "alt-1") {
-      this.handleAlt1End();
-    }
-
-    if (video.sequencePosition === "alt-2") {
-      this.handleAlt2End();
+    if (
+      video.sequencePosition === "alt-1" ||
+      video.sequencePosition === "alt-2"
+    ) {
+      this.handleFirstPartEnd(video.sequencePosition, videoElement);
     }
 
     if (
@@ -77,8 +79,22 @@ export class MovieSceneComponent implements OnInit {
       this.interaction.sceneId + "0-decision"
     );
 
-    if (this.decision !== "x") {
-      this.handleVideoEndWithNoDecision();
+    if (this.userDecision[0] !== "x") {
+      const introElement = document.getElementById(
+        this.interaction.sceneId + "-intro"
+      );
+      const alt1Element = document.getElementById(
+        this.interaction.sceneId + "-alt-1"
+      );
+      const alt2Element = document.getElementById(
+        this.interaction.sceneId + "-alt-2"
+      );
+      this.handleVideoEndWithNoDecision(
+        introElement,
+        alt1Element,
+        alt2Element,
+        "0"
+      );
     } else {
       decisionContainer.classList.remove("hidden");
       for (let i = 0; i < decisionContainer.children.length - 1; i++) {
@@ -87,63 +103,42 @@ export class MovieSceneComponent implements OnInit {
     }
   }
 
-  handleAlt1End() {
-    const videoElement = document.getElementById(this.interaction.sceneId);
-    const alt1Element = document.getElementById(
-      this.interaction.sceneId + "-alt-1"
+  handleFirstPartEnd(videoSequencePosition: string, videoElement: HTMLElement) {
+    const altElement = document.getElementById(
+      this.interaction.sceneId + "-" + videoSequencePosition
     );
-    const alt1alt1Element = document.getElementById(
-      this.interaction.sceneId + "-alt-1-1"
+    const secondAlt1Element = document.getElementById(
+      this.interaction.sceneId + "-" + videoSequencePosition + "-1"
     );
-    const alt1alt2Element = document.getElementById(
-      this.interaction.sceneId + "-alt-1-2"
+    const secondAlt2Element = document.getElementById(
+      this.interaction.sceneId + "-" + videoSequencePosition + "-2"
     );
+
     const outroElement = document.getElementById(
       this.interaction.sceneId + "-outro"
     );
 
-    alt1Element.classList.replace("currentVideo", "closeVideo");
-    if (alt1alt1Element && alt1alt2Element) {
-      const decisionContainer = document.getElementById(
-        this.interaction.sceneId + "1-decision"
-      );
-      decisionContainer.classList.remove("hidden");
-      for (let i = 0; i < decisionContainer.children.length - 1; i++) {
-        decisionContainer.children[i].classList.remove("hidden");
-      }
-    } else if (outroElement) {
-      outroElement.classList.replace("hiddenVideo", "currentVideo");
-    } else {
-      videoElement.classList.replace("show", "fade");
-      setTimeout(() => {
-        this.closeVideo();
-      }, 2000);
-    }
-  }
+    altElement.classList.replace("currentVideo", "closeVideo");
 
-  handleAlt2End() {
-    const videoElement = document.getElementById(this.interaction.sceneId);
-    const alt2Element = document.getElementById(
-      this.interaction.sceneId + "-alt-2"
-    );
-    const alt2alt1Element = document.getElementById(
-      this.interaction.sceneId + "-alt-2-1"
-    );
-    const alt2alt2Element = document.getElementById(
-      this.interaction.sceneId + "-alt-2-2"
-    );
-    const outroElement = document.getElementById(
-      this.interaction.sceneId + "-outro"
-    );
-
-    alt2Element.classList.replace("currentVideo", "closeVideo");
-    if (alt2alt1Element && alt2alt2Element) {
-      const decisionContainer = document.getElementById(
-        this.interaction.sceneId + "2-decision"
-      );
-      decisionContainer.classList.remove("hidden");
-      for (let i = 0; i < decisionContainer.children.length - 1; i++) {
-        decisionContainer.children[i].classList.remove("hidden");
+    if (secondAlt1Element && secondAlt2Element) {
+      if (this.userDecision.length > 1) {
+        this.sceneService.setCurrentDecisionObservable(this.userDecision[1]);
+        setTimeout(() => {
+          this.handleVideoEndWithNoDecision(
+            altElement,
+            secondAlt2Element,
+            secondAlt2Element,
+            this.userDecision[1]
+          );
+        }, 1000);
+      } else {
+        const decisionContainer = document.getElementById(
+          this.interaction.sceneId + this.userDecision[0] + "-decision"
+        );
+        decisionContainer.classList.remove("hidden");
+        for (let i = 0; i < decisionContainer.children.length - 1; i++) {
+          decisionContainer.children[i].classList.remove("hidden");
+        }
       }
     } else if (outroElement) {
       outroElement.classList.replace("hiddenVideo", "currentVideo");
@@ -184,29 +179,26 @@ export class MovieSceneComponent implements OnInit {
     }, 2000);
   }
 
-  handleVideoEndWithNoDecision() {
-    const introElement = document.getElementById(
-      this.interaction.sceneId + "-intro"
-    );
-    const alt1Element = document.getElementById(
-      this.interaction.sceneId + "-alt-1"
-    );
-    const alt2Element = document.getElementById(
-      this.interaction.sceneId + "-alt-2"
-    );
+  handleVideoEndWithNoDecision(
+    endedElement: HTMLElement,
+    alt1Element: HTMLElement,
+    alt2Element: HTMLElement,
+    decisionIndex: string
+  ) {
+    setTimeout(() => {}, 1000);
     const decisionContainer = document.getElementById(
-      this.interaction.sceneId + "-decision"
+      this.interaction.sceneId + decisionIndex + "-decision"
     );
     const decisionElement = document.getElementById(
-      this.interaction.sceneId + "-decision-completed"
+      this.interaction.sceneId + decisionIndex + "-decision-completed"
     );
 
     decisionContainer.classList.remove("hidden");
     decisionElement.classList.remove("hidden");
     setTimeout(() => {
       decisionElement.classList.add("fade");
-      introElement.classList.replace("currentVideo", "closeVideo");
-      if (this.decision === "1") {
+      endedElement.classList.replace("currentVideo", "closeVideo");
+      if (this.userDecision[0] === "1") {
         alt1Element.classList.replace("hiddenVideo", "currentVideo");
       } else {
         alt2Element.classList.replace("hiddenVideo", "currentVideo");
@@ -231,10 +223,13 @@ export class MovieSceneComponent implements OnInit {
     let userDecision: string;
 
     if (this.currentDecision !== "0") {
+      userDecision = this.currentDecision;
       userDecision += "," + this.handleSecondDecision(dec, decisionPos);
     } else {
       userDecision = this.handleFirstDecision(dec, decisionPos);
     }
+
+    this.sceneService.setCurrentDecisionObservable(dec);
 
     this.interactionService.setDecisionOfInteractionState(
       this.interaction.interactionName,
@@ -256,8 +251,6 @@ export class MovieSceneComponent implements OnInit {
     const decisionContainerChildren = document.getElementById(
       this.interaction.sceneId + decisionPos + "-decision"
     ).children as HTMLCollection;
-
-    this.sceneService.setCurrentDecisionObservable(dec);
 
     return this.handleDecision(
       dec,
@@ -351,12 +344,6 @@ export class MovieSceneComponent implements OnInit {
     const introElement = document.getElementById(
       this.interaction.sceneId + "-intro"
     );
-    const alt1Element = document.getElementById(
-      this.interaction.sceneId + "-alt-1"
-    );
-    const alt2Element = document.getElementById(
-      this.interaction.sceneId + "-alt-2"
-    );
     const outroElement = document.getElementById(
       this.interaction.sceneId + "-outro"
     );
@@ -365,16 +352,46 @@ export class MovieSceneComponent implements OnInit {
     );
 
     introElement.classList.replace("closeVideo", "currentVideo");
-    if (this.decision === "a") {
-      alt1Element.classList.replace("closeVideo", "hiddenVideo");
-    }
-    if (this.decision === "b") {
-      alt2Element.classList.replace("closeVideo", "hiddenVideo");
+    if (this.userDecision[0] === "1") {
+      document
+        .getElementById(this.interaction.sceneId + "-alt-1")
+        .classList.replace("closeVideo", "hiddenVideo");
+      if (this.userDecision.length > 1) {
+        if (this.userDecision[1] === "1") {
+          document
+            .getElementById(this.interaction.sceneId + "-alt-1-1")
+            .classList.replace("closeVideo", "hiddenVideo");
+        } else {
+          {
+            document
+              .getElementById(this.interaction.sceneId + "-alt-1-2")
+              .classList.replace("closeVideo", "hiddenVideo");
+          }
+        }
+      }
+    } else {
+      document
+        .getElementById(this.interaction.sceneId + "-alt-2")
+        .classList.replace("closeVideo", "hiddenVideo");
+      if (this.userDecision.length > 1) {
+        if (this.userDecision[1] === "1") {
+          document
+            .getElementById(this.interaction.sceneId + "-alt-2-1")
+            .classList.replace("closeVideo", "hiddenVideo");
+        } else {
+          {
+            document
+              .getElementById(this.interaction.sceneId + "-alt-2-2")
+              .classList.replace("closeVideo", "hiddenVideo");
+          }
+        }
+      }
     }
     if (outroElement) {
       outroElement.classList.replace("closeVideo", "hiddenVideo");
     }
 
+    this.sceneService.setCurrentDecisionObservable("0");
     this.sceneService.setSceneActive(this.interaction.sceneId, false);
   }
 }
