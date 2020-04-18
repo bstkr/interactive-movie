@@ -102,8 +102,10 @@ export class InteractionService {
     }
   }
 
-  getSceneIdFromInteractionName(interactionName: string) {
-    // return die scene id von der interaction mit interactionName = interactionName
+  getSceneIdFromInteractionName(interactionName: string, povType: string){
+    return this.interactions.find((p) => p.id === povType).interactions.find(  
+      (interaction) => interaction.interactionName === interactionName
+        ).sceneId;
   }
 
   private initializeObservableArray() {

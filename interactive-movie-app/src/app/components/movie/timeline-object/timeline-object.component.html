@@ -1,7 +1,9 @@
 <div class="timeline-object-container">
   <div *ngIf= "objectClicked">
     <img
-    [class]="getObjectName()"
+    (click)="clickedInteraction()"
+    [class]="objectName"
+    id="hover"
     [src]="interactionService.getTimelineImagePath(objectName, objectDecision)"
     alt=""    
     />

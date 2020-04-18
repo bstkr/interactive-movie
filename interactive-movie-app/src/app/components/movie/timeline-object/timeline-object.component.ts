@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { InteractionService } from "src/app/_services/interaction.service";
-import { Interaction } from "src/app/_models/Interactions";
+import { Interaction, PovType } from "src/app/_models/Interactions";
+import { ActivatedRoute, Router, ParamMap } from "@angular/router";
 
 @Component({
   selector: "app-timeline-object",
@@ -13,7 +14,10 @@ export class TimelineObjectComponent implements OnInit {
   objectClicked: boolean;
   objectDecision: string;
 
-  constructor(public interactionService: InteractionService) {}
+  sceneId: string;
+  currentPov: string;
+
+  constructor(public interactionService: InteractionService, public route: ActivatedRoute, public router: Router) {}
 
   ngOnInit() {
     this.interactionService
@@ -23,12 +27,24 @@ export class TimelineObjectComponent implements OnInit {
     this.interactionService
       .getInteractionState(this.objectName)
       .decision.subscribe((s) => (this.objectDecision = s));
-
-      this.interactionService.getTimelineImagePath(this.objectName, this.objectDecision);
-      console.log(this.interactionService.getTimelineImagePath(this.objectName, this.objectDecision));
   }
 
-  getObjectName(): string {
-    return this.objectName;
+  clickedInteraction() {
+    this.currentPov = this.route.snapshot.paramMap.get("pov");
+    this.sceneId = this.interactionService.getSceneIdFromInteractionName(this.objectName, this.currentPov);
+
+    const videoElement = document.getElementById(this.sceneId);
+    const rightNavElement = document.getElementById("rightNav");
+    const leftNavElement = document.getElementById("leftNav");
+
+    if (rightNavElement) {
+      rightNavElement.classList.add("hidden");
+    }
+    if (leftNavElement) {
+      leftNavElement.classList.add("hidden");
+    }
+
+    videoElement.classList.remove("hidden");
+    videoElement.classList.add("show")
   }
 }

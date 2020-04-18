@@ -1,61 +1,39 @@
+@import "../../../style/palette.scss";
+
 .timeline-object-container {
   width: auto;
   height: auto;
-  
-  .Handy{
+
+  img {
     height: 100%;
     width: calc(100%/8);
     position: absolute;
     top: 0;
-    left: 0;
-  }
-  .Einkaufszettel{
-    height: 100%;
-    width: calc(100%/8);
-    position: absolute;
-    top: 0;
-    left: calc(100%/8);
-  }
-  .Bier{
-    height: 100%;
-    width: calc(100%/8);
-    position: absolute;
-    top: 0;
-    left: calc(2*100%/8);
-  }
-  .Jacke{
-    height: 100%;
-    width: calc(100%/8);
-    position: absolute;
-    top: 0;
-    left: calc(3*100%/8);
-  }
-  .Computer{
-    height: 100%;
-    width: calc(100%/8);
-    position: absolute;
-    top: 0;
-    left: calc(4*100%/8);
-  }
-  .Nummer{
-    height: 100%;
-    width: calc(100%/8);
-    position: absolute;
-    top: 0;
-    left: calc(5*100%/8);
-  }
-  .Unterhose{
-    height: 100%;
-    width: calc(100%/8);
-    position: absolute;
-    top: 0;
-    left: calc(6*100%/8);
-  }
-  .Zeitung{
-    height: 100%;
-    width: calc(100%/8);
-    position: absolute;
-    top: 0;
-    left: calc(7*100%/8);
+    cursor: pointer;
+
+    &.Handy{
+      left: 0;
+    }
+    &.Einkaufszettel{
+      left: calc(100%/8);
+    }
+    &.Bier{
+      left: calc(2*100%/8);
+    }
+    &.Jacke{
+      left: calc(3*100%/8);
+    }
+    &.Computer{
+      left: calc(4*100%/8);
+    }
+    &.Nummer{
+      left: calc(5*100%/8);
+    }
+    &.Unterhose{
+      left: calc(6*100%/8);
+    }
+    &.Zeitung{
+      left: calc(7*100%/8);
+    }
   }
 }
