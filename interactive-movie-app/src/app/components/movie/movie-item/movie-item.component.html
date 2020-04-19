@@ -1,0 +1,19 @@
+<div
+  *ngIf="interactionClicked"
+  [id]="interactionState.name"
+  class="item-home-container hidden"
+  (click)="clicked()"
+>
+  <div class="item-container">
+    <img
+      *ngIf="interactionDecision == 'a'"
+      class="resize"
+      [src]="interactionState.pathToItemImageA"
+    />
+    <img
+      *ngIf="interactionDecision == 'b'"
+      class="resize"
+      [src]="interactionState.pathToItemImageB"
+    />
+  </div>
+</div>
