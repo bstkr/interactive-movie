@@ -34,8 +34,14 @@ export class InteractionService {
 
   constructor() {
     this.interactions = Interactions;
-    // check localStorage if there already exists a interactionStateArray
-    this.interactionStateArray = InteractionStateArray;
+
+    if (localStorage.length > 0) {
+      this.interactionStateArray = JSON.parse(
+        localStorage.getItem("interactionStateArray")
+      );
+    } else {
+      this.interactionStateArray = InteractionStateArray;
+    }
     this.interactionStateObservableArray = [];
 
     this.initializeObservableArray();
@@ -45,10 +51,20 @@ export class InteractionService {
     return this.interactions.find((p) => p.id === povType).interactions;
   }
 
+  getInteractionStateArray(): InteractionState[] {
+    return this.interactionStateArray;
+  }
+
   getInteractionState(interactionName: string) {
     return this.interactionStateObservableArray.find(
       (interactionObs) => interactionObs.interactionName === interactionName
     );
+  }
+
+  getDecisionOfInteractionState(interactionName: string): string {
+    return this.interactionStateObservableArray.find(
+      (interactionState) => interactionState.interactionName === interactionName
+    ).decision.value;
   }
 
   isInteractionClicked(interactionName: string) {
@@ -64,6 +80,16 @@ export class InteractionService {
         interactionState.decision.next(decision);
       }
     }
+    for (let interactionState of this.interactionStateArray) {
+      if (interactionState.name === interactionName) {
+        interactionState.clicked = true;
+        interactionState.decision = decision;
+      }
+    }
+    localStorage.setItem(
+      "interactionStateArray",
+      JSON.stringify(this.interactionStateArray)
+    );
   }
 
   getPathToImageForClickedInteraction(
@@ -71,13 +97,13 @@ export class InteractionService {
     interactionId: string,
     decision: string
   ): string {
-    if (decision === "a") {
+    if (decision.split(",")[0] === "1") {
       return this.interactionStateArray
         .find((interactionState) => interactionState.name === interactionName)
         .Interactions.find(
           (interaction) => interaction.interactionId === interactionId
         ).pathToCompleteObjectImage.a;
-    } else if (decision === "b") {
+    } else if (decision.split(",")[0] === "2") {
       return this.interactionStateArray
         .find((interactionState) => interactionState.name === interactionName)
         .Interactions.find(
@@ -119,7 +145,7 @@ export class InteractionService {
     }
   }
 
-  private getDecisionOfInteractionState(interactionName: string): string {
+  private getDecisionOfInteraction(interactionName: string): string {
     return this.interactionStateArray.find(
       (interactionState) => interactionState.name === interactionName
     ).decision;

@@ -1,7 +1,7 @@
 export interface InteractionState {
   name: string;
   // Contains the interactions that are linked to this state
-  Interactions: InteractionLink[]
+  Interactions: InteractionLink[];
 
   // true = interaction has been clicked
   clicked: boolean;
@@ -9,6 +9,9 @@ export interface InteractionState {
   decision: string;
   // Contains the timeline Images
   Timeline: InteractionTimeline;
+  // Path to item image
+  pathToItemImageA: string;
+  pathToItemImageB: string;
 }
 
 export interface InteractionLink {
@@ -27,8 +30,8 @@ export const InteractionStateArray: InteractionState[] = [
       {
         interactionId: "pov1_interaction1",
         pathToCompleteObjectImage: {
-          a: "assets/pictures/room/pov1/object1/complete.png",
-          b: "assets/pictures/room/pov1/object2/complete.png",
+          a: "assets/pictures/room/pov1/object2/complete.png",
+          b: "assets/pictures/room/pov1/object1/complete.png",
         },
       },
       {
@@ -42,11 +45,13 @@ export const InteractionStateArray: InteractionState[] = [
     clicked: false,
     decision: "x",
     Timeline: {
-        pathToTimelineImage: {
-          a: "assets/pictures/room/Timeline_Objects/Unterhose_nass.png",
-          b: "assets/pictures/room/Timeline_Objects/Unterhose.png",
-        }
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/Unterhose_nass.png",
+        b: "assets/pictures/room/Timeline_Objects/Unterhose.png",
       },
+    },
+    pathToItemImageA: "assets/pictures/room/Objects/Unterhose_nass.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Unterhose.png",
   },
   {
     name: "Bier",
@@ -72,8 +77,10 @@ export const InteractionStateArray: InteractionState[] = [
       pathToTimelineImage: {
         a: "assets/pictures/room/Timeline_Objects/Computer.png",
         b: "assets/pictures/room/Timeline_Objects/Computer.png",
-      }
+      },
     },
+    pathToItemImageA: "assets/pictures/room/pov2/object6/complete.png",
+    pathToItemImageB: "assets/pictures/room/pov2/object6/complete.png",
   },
   {
     name: "Jacke",
@@ -99,8 +106,10 @@ export const InteractionStateArray: InteractionState[] = [
       pathToTimelineImage: {
         a: "assets/pictures/room/Timeline_Objects/Jacke.png",
         b: "assets/pictures/room/Timeline_Objects/Jacke.png",
-      }
+      },
     },
+    pathToItemImageA: "assets/pictures/room/Objects/Jacke.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Jacke.png",
   },
   {
     name: "Einkaufszettel",
@@ -109,14 +118,14 @@ export const InteractionStateArray: InteractionState[] = [
         interactionId: "pov1_interaction4",
         pathToCompleteObjectImage: {
           a: "assets/pictures/room/pov1/object7/complete.png",
-          b: "assets/pictures/room/pov1/object7/complete.png",
+          b: "",
         },
       },
       {
         interactionId: "pov2_interaction5",
         pathToCompleteObjectImage: {
           a: "assets/pictures/room/pov2/object7/complete.png",
-          b: "assets/pictures/room/pov2/object7/complete.png",
+          b: "",
         },
       },
     ],
@@ -126,8 +135,10 @@ export const InteractionStateArray: InteractionState[] = [
       pathToTimelineImage: {
         a: "assets/pictures/room/Timeline_Objects/Computer.png",
         b: "assets/pictures/room/Timeline_Objects/Computer.png",
-      }
+      },
     },
+    pathToItemImageA: "assets/pictures/room/Objects/Einkaufszettel.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Einkaufszettel.png",
   },
   {
     name: "Handy",
@@ -135,7 +146,7 @@ export const InteractionStateArray: InteractionState[] = [
       {
         interactionId: "pov1_interaction6",
         pathToCompleteObjectImage: {
-          a: "assets/pictures/room/pov1/object10/complete2.png",
+          a: "assets/pictures/room/pov1/object10/complete.png",
           b: "assets/pictures/room/pov1/object10/complete.png",
         },
       },
@@ -146,8 +157,10 @@ export const InteractionStateArray: InteractionState[] = [
       pathToTimelineImage: {
         a: "assets/pictures/room/Timeline_Objects/Computer.png",
         b: "assets/pictures/room/Timeline_Objects/Computer.png",
-      }
+      },
     },
+    pathToItemImageA: "assets/pictures/room/Objects/Handy.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Handy.png",
   },
   {
     name: "Computer",
@@ -173,8 +186,10 @@ export const InteractionStateArray: InteractionState[] = [
       pathToTimelineImage: {
         a: "assets/pictures/room/Timeline_Objects/Computer.png",
         b: "assets/pictures/room/Timeline_Objects/Computer.png",
-      }
+      },
     },
+    pathToItemImageA: "assets/pictures/room/Objects/Laptop_1.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Laptop_2.png",
   },
   {
     name: "Zeitung",
@@ -200,8 +215,10 @@ export const InteractionStateArray: InteractionState[] = [
       pathToTimelineImage: {
         a: "assets/pictures/room/Timeline_Objects/Zeitung.png",
         b: "assets/pictures/room/Timeline_Objects/Vorladung.png",
-      }
+      },
     },
+    pathToItemImageA: "assets/pictures/room/Objects/Zeitung.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Vorladung.png",
   },
   {
     name: "Nummer",
@@ -227,7 +244,9 @@ export const InteractionStateArray: InteractionState[] = [
       pathToTimelineImage: {
         a: "assets/pictures/room/Timeline_Objects/Serviette.png",
         b: "assets/pictures/room/Timeline_Objects/Blatt.png",
-      }
+      },
     },
+    pathToItemImageA: "assets/pictures/room/Objects/Nummer_2.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Nummer_1.png",
   },
 ];

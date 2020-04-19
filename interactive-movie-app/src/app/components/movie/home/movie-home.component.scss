@@ -29,7 +29,7 @@
     cursor: pointer;
 
     &.hidden {
-      opacity: 0;
+      display: none;
     }
   }
 
@@ -41,7 +41,7 @@
     cursor: pointer;
 
     &.hidden {
-      opacity: 0;
+      display: none;
     }
   }
 }

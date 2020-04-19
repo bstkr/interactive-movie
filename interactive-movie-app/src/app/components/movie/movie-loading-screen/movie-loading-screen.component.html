@@ -1,6 +1,15 @@
 <div class="loading-screen-container">
-  <div class="background" (click)="continue()"></div>
-  <div class="content-container" (click)="continue()">
-    <h1>This will be a loading screen</h1>
+  <div class="background"></div>
+  <div class="content">
+    <div *ngIf="allLoaded" class="startButton" (click)="continue()">
+      <h1>Start</h1>
+    </div>
+    <h1>{{ loadingPercentage }}</h1>
   </div>
 </div>
+
+<app-movie-loading-item
+  *ngFor="let item of loadingArray"
+  [loadingItem]="item"
+  class="loadingItem"
+></app-movie-loading-item>
