@@ -1,6 +1,9 @@
 @import "../../../style/palette.scss";
 
 .loading-screen-container {
+  display: grid;
+  place-content: center;
+
   .background {
     position: absolute;
     top: 0;
@@ -11,12 +14,8 @@
 
     background-color: $black;
   }
-
-  .content-container {
-    position: relative;
-
-    h1 {
-      color: $white;
-    }
+  h1 {
+    z-index: 1;
+    color: $white;
   }
 }

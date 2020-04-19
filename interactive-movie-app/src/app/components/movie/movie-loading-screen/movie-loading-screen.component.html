@@ -1,6 +1,10 @@
 <div class="loading-screen-container">
   <div class="background" (click)="continue()"></div>
-  <div class="content-container" (click)="continue()">
-    <h1>This will be a loading screen</h1>
-  </div>
+  <h1>{{ loadingPercentage }}</h1>
 </div>
+
+<app-movie-loading-item
+  *ngFor="let item of loadingArray"
+  [loadingItem]="item"
+  class="loadingItem"
+></app-movie-loading-item>

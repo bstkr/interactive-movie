@@ -15,6 +15,7 @@ import { MovieVideoComponent } from './components/movie/movie-video/movie-video.
 import { MovieDecisionComponent } from './components/movie/movie-decision/movie-decision.component';
 import { MovieLoadingScreenComponent } from './components/movie/movie-loading-screen/movie-loading-screen.component';
 import { BackButtonComponent } from './components/movie/back-button/back-button.component';
+import { MovieLoadingItemComponent } from './components/movie/movie-loading-item/movie-loading-item.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BackButtonComponent } from './components/movie/back-button/back-button.
     MovieVideoComponent,
     MovieDecisionComponent,
     MovieLoadingScreenComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    MovieLoadingItemComponent
   ],
   imports: [
     BrowserModule,

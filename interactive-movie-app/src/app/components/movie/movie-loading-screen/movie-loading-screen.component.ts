@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { LoadingService, LoadingItem } from "src/app/_services/loading.service";
 
 @Component({
   selector: "app-movie-loading-screen",
@@ -7,9 +8,18 @@ import { Router } from "@angular/router";
   styleUrls: ["./movie-loading-screen.component.scss"],
 })
 export class MovieLoadingScreenComponent implements OnInit {
-  constructor(public router: Router) {}
+  loadingArray: LoadingItem[];
 
-  ngOnInit() {}
+  loadingPercentage: string;
+
+  constructor(public router: Router, public loadingService: LoadingService) {}
+
+  ngOnInit() {
+    this.loadingArray = this.loadingService.loadingArray;
+    this.loadingService.loadingPercentage.subscribe(
+      (s) => (this.loadingPercentage = s)
+    );
+  }
 
   continue() {
     this.router.navigate(["/movie", "pov1"]);

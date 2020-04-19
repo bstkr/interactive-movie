@@ -1,0 +1,14 @@
+<img
+  *ngIf="loadingItem.itemType === 'picture'"
+  [src]="loadingItem.itemPath"
+  width="10px"
+  height="10px"
+/>
+<video
+  *ngIf="loadingItem.itemType === 'video'"
+  preload="auto"
+  width="10px"
+  height="10px"
+>
+  <source [src]="loadingItem.itemPath" type="video/mp4" />
+</video>
