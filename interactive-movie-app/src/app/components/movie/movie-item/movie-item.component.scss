@@ -21,6 +21,8 @@
 
   .item-container {
     grid-area: content;
+    width: auto;
+    height: auto;
     background-color: rgba(46, 53, 50, 0.8);
 
     transition: opacity 0.5s ease-in-out;
