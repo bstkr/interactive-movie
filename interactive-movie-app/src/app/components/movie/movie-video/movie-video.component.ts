@@ -18,6 +18,7 @@ import { VideoSequence, Interaction } from "src/app/_models/Interactions";
 export class MovieVideoComponent implements OnInit, AfterViewInit {
   @Input() interaction: Interaction;
   @Input() video: VideoSequence;
+  @Input() sceneActive: boolean;
 
   @Output() endedVideo = new EventEmitter<VideoSequence>();
 
@@ -40,8 +41,8 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
 
   videoClick(e: Event) {
     if (this.videoPlayer.nativeElement.paused) {
-      /*Uncomment for development*/ this.videoEnded();
-      /*Uncomment for production*/ // this.videoPlayer.nativeElement.play();
+      /*Uncomment for development*/ // this.videoEnded();
+      /*Uncomment for production*/ this.videoPlayer.nativeElement.play();
     } else {
       this.videoPlayer.nativeElement.pause();
     }
@@ -49,5 +50,9 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
 
   videoEnded() {
     this.endedVideo.emit(this.video);
+  }
+
+  renderVideo(): boolean {
+    return this.video.sequencePosition === "intro" || this.sceneActive;
   }
 }

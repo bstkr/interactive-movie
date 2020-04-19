@@ -29,6 +29,7 @@ export interface Interaction {
 
 export interface VideoSequence {
   sequencePosition: string;
+  visible: boolean;
   pathToVideo: string;
 }
 
@@ -117,19 +118,18 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester/video-1.mp4",
+            visible: true,
+            pathToVideo: "assets/video/6_Pool_UNTERHOSE/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/6_Pool_UNTERHOSE/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester/alt-2.mp4",
-          },
-          {
-            sequencePosition: "outro",
-            pathToVideo: "assets/video/tester/video-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/6_Pool_UNTERHOSE/alt-2.mp4",
           },
         ],
       },
@@ -198,19 +198,43 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester2/video-1.mp4",
+            visible: true,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester2/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester2/alt-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-2.mp4",
+          },
+          {
+            sequencePosition: "alt-1-1",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-1-1.mp4",
+          },
+          {
+            sequencePosition: "alt-1-2",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-1-2.mp4",
+          },
+          {
+            sequencePosition: "alt-2-1",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-2-1.mp4",
+          },
+          {
+            sequencePosition: "alt-2-2",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-2-2.mp4",
           },
           {
             sequencePosition: "outro",
-            pathToVideo: "assets/video/tester2/video-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/video-2.mp4",
           },
         ],
       },
@@ -282,19 +306,23 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester/video-1.mp4",
+            visible: true,
+            pathToVideo: "assets/video/3_Autofahrt_JACKE/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/3_Autofahrt_JACKE/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester/alt-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/3_Autofahrt_JACKE/alt-2.mp4",
           },
           {
             sequencePosition: "outro",
-            pathToVideo: "assets/video/tester/video-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/3_Autofahrt_JACKE/video-2.mp4",
           },
         ],
       },
@@ -338,19 +366,25 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester/video-1.mp4",
+            visible: true,
+            pathToVideo:
+              "assets/video/1_Vorbereitung_EINKAUFSZETTEL/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/1_Vorbereitung_EINKAUFSZETTEL/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester/alt-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/1_Vorbereitung_EINKAUFSZETTEL/alt-2.mp4",
           },
           {
             sequencePosition: "outro",
-            pathToVideo: "assets/video/tester/video-2.mp4",
+            visible: false,
+            pathToVideo:
+              "assets/video/1_Vorbereitung_EINKAUFSZETTEL/video-2.mp4",
           },
         ],
       },
@@ -415,23 +449,22 @@ export const Interactions: POV[] = [
         ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov1/Object_8_9.svg",
-        sceneId: "pov1_interaction3_scene",
+        sceneId: "pov1_interaction5_scene",
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester/video-1.mp4",
+            visible: true,
+            pathToVideo: "assets/video/4_Party_COMPUTER/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/4_Party_COMPUTER/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester/alt-2.mp4",
-          },
-          {
-            sequencePosition: "outro",
-            pathToVideo: "assets/video/tester/video-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/4_Party_COMPUTER/alt-2.mp4",
           },
         ],
       },
@@ -475,15 +508,18 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/handy/video-1.mp4",
+            visible: true,
+            pathToVideo: "assets/video/0_Intro_HANDY/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/handy/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/0_Intro_HANDY/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/handy/alt-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/0_Intro_HANDY/alt-2.mp4",
           },
         ],
       },
@@ -557,19 +593,18 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester/video-1.mp4",
+            visible: true,
+            pathToVideo: "assets/video/6_Pool_UNTERHOSE/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/6_Pool_UNTERHOSE/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester/alt-2.mp4",
-          },
-          {
-            sequencePosition: "outro",
-            pathToVideo: "assets/video/tester/video-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/6_Pool_UNTERHOSE/alt-2.mp4",
           },
         ],
       },
@@ -638,19 +673,43 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester/video-1.mp4",
+            visible: true,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester/alt-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-2.mp4",
+          },
+          {
+            sequencePosition: "alt-1-1",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-1-1.mp4",
+          },
+          {
+            sequencePosition: "alt-1-2",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-1-2.mp4",
+          },
+          {
+            sequencePosition: "alt-2-1",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-2-1.mp4",
+          },
+          {
+            sequencePosition: "alt-2-1",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/alt-2-2.mp4",
           },
           {
             sequencePosition: "outro",
-            pathToVideo: "assets/video/tester/video-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/2_Vorglühen_BIERFLASCHE/video-2.mp4",
           },
         ],
       },
@@ -719,19 +778,18 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester/video-1.mp4",
+            visible: true,
+            pathToVideo: "assets/video/7_End_ZEITUNG/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/7_End_ZEITUNG/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester/alt-2.mp4",
-          },
-          {
-            sequencePosition: "outro",
-            pathToVideo: "assets/video/tester/video-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/7_End_ZEITUNG/alt-2.mp4",
           },
         ],
       },
@@ -800,19 +858,23 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester/video-1.mp4",
+            visible: true,
+            pathToVideo: "assets/video/5_Nummer_NUMMER/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/5_Nummer_NUMMER/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester/alt-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/5_Nummer_NUMMER/alt-2.mp4",
           },
           {
             sequencePosition: "outro",
-            pathToVideo: "assets/video/tester/video-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/5_Nummer_NUMMER/video-2.mp4",
           },
         ],
       },
@@ -856,19 +918,25 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester/video-1.mp4",
+            visible: true,
+            pathToVideo:
+              "assets/video/1_Vorbereitung_EINKAUFSZETTEL/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/1_Vorbereitung_EINKAUFSZETTEL/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester/alt-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/1_Vorbereitung_EINKAUFSZETTEL/alt-2.mp4",
           },
           {
             sequencePosition: "outro",
-            pathToVideo: "assets/video/tester/video-2.mp4",
+            visible: false,
+            pathToVideo:
+              "assets/video/1_Vorbereitung_EINKAUFSZETTEL/video-2.mp4",
           },
         ],
       },
@@ -937,19 +1005,18 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester/video-1.mp4",
+            visible: true,
+            pathToVideo: "assets/video/4_Party_COMPUTER/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/4_Party_COMPUTER/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester/alt-2.mp4",
-          },
-          {
-            sequencePosition: "outro",
-            pathToVideo: "assets/video/tester/video-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/4_Party_COMPUTER/alt-2.mp4",
           },
         ],
       },
@@ -1021,19 +1088,23 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester/video-1.mp4",
+            visible: true,
+            pathToVideo: "assets/video/3_Autofahrt_JACKE/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/3_Autofahrt_JACKE/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester/alt-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/3_Autofahrt_JACKE/alt-2.mp4",
           },
           {
             sequencePosition: "outro",
-            pathToVideo: "assets/video/tester/video-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/3_Autofahrt_JACKE/video-2.mp4",
           },
         ],
       },
@@ -1107,19 +1178,18 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester/video-1.mp4",
+            visible: true,
+            pathToVideo: "assets/video/7_End_ZEITUNG/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/7_End_ZEITUNG/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester/alt-2.mp4",
-          },
-          {
-            sequencePosition: "outro",
-            pathToVideo: "assets/video/tester/video-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/7_End_ZEITUNG/alt-2.mp4",
           },
         ],
       },
@@ -1188,19 +1258,23 @@ export const Interactions: POV[] = [
         videoSequence: [
           {
             sequencePosition: "intro",
-            pathToVideo: "assets/video/tester/video-1.mp4",
+            visible: true,
+            pathToVideo: "assets/video/5_Nummer_NUMMER/video-1.mp4",
           },
           {
             sequencePosition: "alt-1",
-            pathToVideo: "assets/video/tester/alt-1.mp4",
+            visible: false,
+            pathToVideo: "assets/video/5_Nummer_NUMMER/alt-1.mp4",
           },
           {
             sequencePosition: "alt-2",
-            pathToVideo: "assets/video/tester/alt-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/5_Nummer_NUMMER/alt-2.mp4",
           },
           {
             sequencePosition: "outro",
-            pathToVideo: "assets/video/tester/video-2.mp4",
+            visible: false,
+            pathToVideo: "assets/video/5_Nummer_NUMMER/video-2.mp4",
           },
         ],
       },
