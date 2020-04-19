@@ -34,8 +34,14 @@ export class InteractionService {
 
   constructor() {
     this.interactions = Interactions;
-    // check localStorage if there already exists a interactionStateArray
-    this.interactionStateArray = InteractionStateArray;
+
+    if (localStorage.length > 0) {
+      this.interactionStateArray = JSON.parse(
+        localStorage.getItem("interactionStateArray")
+      );
+    } else {
+      this.interactionStateArray = InteractionStateArray;
+    }
     this.interactionStateObservableArray = [];
 
     this.initializeObservableArray();
@@ -70,6 +76,16 @@ export class InteractionService {
         interactionState.decision.next(decision);
       }
     }
+    for (let interactionState of this.interactionStateArray) {
+      if (interactionState.name === interactionName) {
+        interactionState.clicked = true;
+        interactionState.decision = decision;
+      }
+    }
+    localStorage.setItem(
+      "interactionStateArray",
+      JSON.stringify(this.interactionStateArray)
+    );
   }
 
   getPathToImageForClickedInteraction(

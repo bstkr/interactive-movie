@@ -25,4 +25,8 @@ export class BackButtonComponent implements OnInit {
     const popupElement = document.getElementById('popup');
      popupElement.style.display = 'none';
   }
+
+  resetData(){
+    localStorage.clear();
+  }
 }
