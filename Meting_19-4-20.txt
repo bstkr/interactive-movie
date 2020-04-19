@@ -2,6 +2,23 @@
 
     Timeline nicht fertig aber fast
 
-    Itemcomponent kleines detail
+    Itemcomponent funktioniert
 
-    
+    Storage funktioniert
+
+    Video content geadded
+
+    loading beta
+
+
+1 - Planing
+
+    Tobias: autoplay funktion 
+
+    Daniel: slide animations
+
+    Jan: Bug & nav items
+
+    Benne: perforamce und loading
+
+    Benny: Headlines und erklärungen
