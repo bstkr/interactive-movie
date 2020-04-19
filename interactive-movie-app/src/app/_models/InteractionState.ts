@@ -7,6 +7,8 @@ export interface InteractionState {
   clicked: boolean;
   // Contains decision the user has made ('a' / 'b') ['x' = no decision]
   decision: string;
+  // Contains the timeline Images
+  Timeline: InteractionTimeline;
   // Path to item image
   pathToItemImageA: string;
   pathToItemImageB: string;
@@ -15,6 +17,10 @@ export interface InteractionState {
 export interface InteractionLink {
   interactionId: string;
   pathToCompleteObjectImage: { a: string; b: string };
+}
+
+export interface InteractionTimeline {
+  pathToTimelineImage: { a: string; b: string };
 }
 
 export const InteractionStateArray: InteractionState[] = [
@@ -38,6 +44,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/Unterhose_nass.png",
+        b: "assets/pictures/room/Timeline_Objects/Unterhose.png",
+      },
+    },
     pathToItemImageA: "assets/pictures/room/Objects/Unterhose_nass.png",
     pathToItemImageB: "assets/pictures/room/Objects/Unterhose.png",
   },
@@ -61,6 +73,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/Computer.png",
+        b: "assets/pictures/room/Timeline_Objects/Computer.png",
+      },
+    },
     pathToItemImageA: "assets/pictures/room/pov2/object6/complete.png",
     pathToItemImageB: "assets/pictures/room/pov2/object6/complete.png",
   },
@@ -84,6 +102,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/Jacke.png",
+        b: "assets/pictures/room/Timeline_Objects/Jacke.png",
+      },
+    },
     pathToItemImageA: "assets/pictures/room/Objects/Jacke.png",
     pathToItemImageB: "assets/pictures/room/Objects/Jacke.png",
   },
@@ -107,6 +131,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/Computer.png",
+        b: "assets/pictures/room/Timeline_Objects/Computer.png",
+      },
+    },
     pathToItemImageA: "assets/pictures/room/Objects/Einkaufszettel.png",
     pathToItemImageB: "assets/pictures/room/Objects/Einkaufszettel.png",
   },
@@ -123,6 +153,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/Computer.png",
+        b: "assets/pictures/room/Timeline_Objects/Computer.png",
+      },
+    },
     pathToItemImageA: "assets/pictures/room/Objects/Handy.png",
     pathToItemImageB: "assets/pictures/room/Objects/Handy.png",
   },
@@ -146,6 +182,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/Computer.png",
+        b: "assets/pictures/room/Timeline_Objects/Computer.png",
+      },
+    },
     pathToItemImageA: "assets/pictures/room/Objects/Laptop_1.png",
     pathToItemImageB: "assets/pictures/room/Objects/Laptop_2.png",
   },
@@ -169,6 +211,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/Zeitung.png",
+        b: "assets/pictures/room/Timeline_Objects/Vorladung.png",
+      },
+    },
     pathToItemImageA: "assets/pictures/room/Objects/Zeitung.png",
     pathToItemImageB: "assets/pictures/room/Objects/Vorladung.png",
   },
@@ -192,6 +240,12 @@ export const InteractionStateArray: InteractionState[] = [
     ],
     clicked: false,
     decision: "x",
+    Timeline: {
+      pathToTimelineImage: {
+        a: "assets/pictures/room/Timeline_Objects/Serviette.png",
+        b: "assets/pictures/room/Timeline_Objects/Blatt.png",
+      },
+    },
     pathToItemImageA: "assets/pictures/room/Objects/Nummer_2.png",
     pathToItemImageB: "assets/pictures/room/Objects/Nummer_1.png",
   },

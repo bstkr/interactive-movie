@@ -14,9 +14,10 @@ import { MovieSceneComponent } from "./components/movie/movie-scene/movie-scene.
 import { MovieVideoComponent } from "./components/movie/movie-video/movie-video.component";
 import { MovieDecisionComponent } from "./components/movie/movie-decision/movie-decision.component";
 import { MovieLoadingScreenComponent } from "./components/movie/movie-loading-screen/movie-loading-screen.component";
+import { TimelineObjectComponent } from "./components/movie/timeline-object/timeline-object.component";
 import { MovieItemComponent } from "./components/movie/movie-item/movie-item.component";
-import { BackButtonComponent } from './components/movie/back-button/back-button.component';
-import { MovieLoadingItemComponent } from './components/movie/movie-loading-item/movie-loading-item.component';
+import { BackButtonComponent } from "./components/movie/back-button/back-button.component";
+import { MovieLoadingItemComponent } from "./components/movie/movie-loading-item/movie-loading-item.component";
 
 @NgModule({
   declarations: [
@@ -32,14 +33,12 @@ import { MovieLoadingItemComponent } from './components/movie/movie-loading-item
     MovieVideoComponent,
     MovieDecisionComponent,
     MovieLoadingScreenComponent,
+    TimelineObjectComponent,
     MovieLoadingItemComponent,
     MovieItemComponent,
-    BackButtonComponent
+    BackButtonComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,39 @@
+@import "../../../style/palette.scss";
+
+.timeline-object-container {
+  width: auto;
+  height: auto;
+
+  img {
+    height: 100%;
+    width: calc(100%/8);
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+
+    &.Handy{
+      left: 0;
+    }
+    &.Einkaufszettel{
+      left: calc(100%/8);
+    }
+    &.Bier{
+      left: calc(2*100%/8);
+    }
+    &.Jacke{
+      left: calc(3*100%/8);
+    }
+    &.Computer{
+      left: calc(4*100%/8);
+    }
+    &.Nummer{
+      left: calc(5*100%/8);
+    }
+    &.Unterhose{
+      left: calc(6*100%/8);
+    }
+    &.Zeitung{
+      left: calc(7*100%/8);
+    }
+  }
+}
