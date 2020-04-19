@@ -12,6 +12,7 @@ export class LoadingService {
 
   totalItems: number;
   itemsLoaded: number;
+  allLoaded: BehaviorSubject<boolean>;
 
   loadingPercentage: BehaviorSubject<string>;
 
@@ -40,11 +41,15 @@ export class LoadingService {
     }
 
     this.loadingPercentage = new BehaviorSubject<string>("0%");
+    this.allLoaded = new BehaviorSubject<boolean>(false);
   }
 
   itemLoaded() {
     this.itemsLoaded += 1;
     let perc = (this.itemsLoaded / this.totalItems) * 100;
+    if (perc === 100) {
+      this.allLoaded.next(true);
+    }
     this.loadingPercentage.next(perc + "%");
   }
 }

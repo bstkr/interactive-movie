@@ -14,8 +14,39 @@
 
     background-color: $black;
   }
-  h1 {
+
+  .content {
+    display: grid;
+    place-content: center;
     z-index: 1;
-    color: $white;
+
+    .startButton {
+      display: grid;
+      place-content: center;
+      padding: 15px 30px;
+      background-color: rgba($white, 0.5);
+      color: $black;
+      border: 2px solid $white;
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: $black;
+        h1 {
+          color: $white;
+        }
+      }
+      h1 {
+        color: $black;
+        letter-spacing: 15px;
+        padding-left: 10px;
+        font-size: 3em;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      color: $white;
+    }
   }
 }

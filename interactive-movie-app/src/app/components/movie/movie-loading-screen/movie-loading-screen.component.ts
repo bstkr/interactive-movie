@@ -11,6 +11,7 @@ export class MovieLoadingScreenComponent implements OnInit {
   loadingArray: LoadingItem[];
 
   loadingPercentage: string;
+  allLoaded = false;
 
   constructor(public router: Router, public loadingService: LoadingService) {}
 
@@ -19,6 +20,11 @@ export class MovieLoadingScreenComponent implements OnInit {
     this.loadingService.loadingPercentage.subscribe(
       (s) => (this.loadingPercentage = s)
     );
+    this.loadingService.allLoaded.subscribe((s) => {
+      setTimeout((_) => {
+        this.allLoaded = s;
+      }, 2000);
+    });
   }
 
   continue() {
