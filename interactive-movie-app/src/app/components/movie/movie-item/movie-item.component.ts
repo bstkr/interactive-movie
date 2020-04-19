@@ -30,8 +30,6 @@ export class MovieItemComponent implements OnInit {
     const itemContainerElement = document.getElementById(
       this.interactionState.name
     );
-    console.log(this.interactionState.name);
-
     itemContainerElement.classList.replace("show", "hidden");
   }
 }
