@@ -18,6 +18,7 @@ import { VideoSequence, Interaction } from "src/app/_models/Interactions";
 export class MovieVideoComponent implements OnInit, AfterViewInit {
   @Input() interaction: Interaction;
   @Input() video: VideoSequence;
+  @Input() sceneActive: boolean;
 
   @Output() endedVideo = new EventEmitter<VideoSequence>();
 
@@ -49,5 +50,9 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
 
   videoEnded() {
     this.endedVideo.emit(this.video);
+  }
+
+  renderVideo(): boolean {
+    return this.video.sequencePosition === "intro" || this.sceneActive;
   }
 }

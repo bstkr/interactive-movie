@@ -1,0 +1,34 @@
+0 - Update
+
+    Tobias:
+        . Item compontent exisitert 
+        . geht noch nicht wieder weg
+
+    Jan:
+        . Back button gemerged
+        . Timeline existiert, sehr grop
+
+    Daniel:
+        . local storage init
+
+    Benny:
+        . Videos fertig -> geschickt an Benne
+        (. Kleine Änderungen werden nach und nach folgen)
+
+    Benne:
+        . 
+
+1 - Planning
+
+    Tobias:
+        . Item component fertig
+        . Video automatisch abspielen
+
+    Jan:
+        . Timeline fertig
+
+    Daniel:
+        . local storage (mit Benne)
+
+    Benne:
+        . Szenen einbinden

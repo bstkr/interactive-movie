@@ -24,8 +24,8 @@ export const InteractionStateArray: InteractionState[] = [
       {
         interactionId: "pov1_interaction1",
         pathToCompleteObjectImage: {
-          a: "assets/pictures/room/pov1/object1/complete.png",
-          b: "assets/pictures/room/pov1/object2/complete.png",
+          a: "assets/pictures/room/pov1/object2/complete.png",
+          b: "assets/pictures/room/pov1/object1/complete.png",
         },
       },
       {
@@ -94,14 +94,14 @@ export const InteractionStateArray: InteractionState[] = [
         interactionId: "pov1_interaction4",
         pathToCompleteObjectImage: {
           a: "assets/pictures/room/pov1/object7/complete.png",
-          b: "assets/pictures/room/pov1/object7/complete.png",
+          b: "",
         },
       },
       {
         interactionId: "pov2_interaction5",
         pathToCompleteObjectImage: {
           a: "assets/pictures/room/pov2/object7/complete.png",
-          b: "assets/pictures/room/pov2/object7/complete.png",
+          b: "",
         },
       },
     ],
@@ -116,7 +116,7 @@ export const InteractionStateArray: InteractionState[] = [
       {
         interactionId: "pov1_interaction6",
         pathToCompleteObjectImage: {
-          a: "assets/pictures/room/pov1/object10/complete2.png",
+          a: "assets/pictures/room/pov1/object10/complete.png",
           b: "assets/pictures/room/pov1/object10/complete.png",
         },
       },
