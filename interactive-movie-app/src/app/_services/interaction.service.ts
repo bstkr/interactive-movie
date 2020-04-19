@@ -115,23 +115,25 @@ export class InteractionService {
   }
 
   getTimelineImagePath(interactionName: string, decision: string): string {
-    if (decision === "a") {
-      return this.interactionStateArray
-        .find((interactionState) => interactionState.name === interactionName)
-        .Timeline.pathToTimelineImage.a;
-    } else if (decision === "b") {
-      return this.interactionStateArray
-        .find((interactionState) => interactionState.name === interactionName)
-        .Timeline.pathToTimelineImage.b;
+    if (decision === "0") {
+      return this.interactionStateArray.find(
+        (interactionState) => interactionState.name === interactionName
+      ).Timeline.pathToTimelineImage.a;
+    } else if (decision === "1") {
+      return this.interactionStateArray.find(
+        (interactionState) => interactionState.name === interactionName
+      ).Timeline.pathToTimelineImage.b;
     } else {
       return "";
     }
   }
 
-  getSceneIdFromInteractionName(interactionName: string, povType: string){
-    return this.interactions.find((p) => p.id === povType).interactions.find(  
-      (interaction) => interaction.interactionName === interactionName
-        ).sceneId;
+  getSceneIdFromInteractionName(interactionName: string, povType: string) {
+    return this.interactions
+      .find((p) => p.id === povType)
+      .interactions.find(
+        (interaction) => interaction.interactionName === interactionName
+      ).sceneId;
   }
 
   private initializeObservableArray() {
