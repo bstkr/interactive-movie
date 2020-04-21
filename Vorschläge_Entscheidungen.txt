@@ -5,58 +5,56 @@ Flashbacks: - "Ich bin dabei!"
 Lernen/Ende: - "Lernen geht vor!"
 	     - "Ich hab noch echt viel für die Uni zu tun!"
 
-Einkaufszettel (Vorbereitung):
+EINKAUFSZETTEL (Vorbereitung):
 Einkaufszettel: - "Alkohol ist da!"
 		- "Wir müssen nicht noch extra los!"
 
 Einkaufszettel nicht da: - "Habe nichts da!"
 			 - "Wir müssen unbedingt noch Alkohol besorgen!"
 
-Bierflasche (Vorglühen):         
-Ganz: - "Dem sollte ich lieber nicht aufmachen"
-    - "Der Typ ist ziemlich verrückt, wer weiß, was der so anstellt wenn ich ihn reinlasse"
+BIERFLASCHE (Vorglühen):         
+Ganz: - "Ich mache nicht auf!"
+      - "Verrückter Typ, nicht, dass er etwas anstellt!"
 
-Kaputt: - "Mach ich halt mal auf und schaue, was er möchte"
-	- "Hab den Kerl zwar ziemlich schlecht in Erinnerung aber ich sollte vielleicht trotzdem aufmachen"
-								(was soll schon groß passieren)
-
-
-Jacke (Autofahrt): 		 
-Trocken: - "Fahren wir links"
-	- "Geradeaus müssen wir nicht durch diese komische Gegend"
-
-Nass: - "Fahren wir rechts rum"
-	- "Rechts passieren immer irgendwelche komischen Dinge, da hat man bestimmt was zu lachen"
+Kaputt: - "Ich mache auf!"
+	- "Der Typ ist zwar echt verrückt, aber kann ja lustig werden!"
 
 
+JACKE (Autofahrt): 		 
+Trocken: - "Lass nach Links!"
+	 - "Dann müssen wir nicht durch diese komische Gegend!"
 
-LaptopVideo (Party1):		 
-Dance-Battle: - "Oh Tanzen, genau mein Ding!" 
-		- "Im Tanzen bin ich unschlagbar, da kann ich den Leuten meine coolen Moves zeigen"
-
-Drink-Battle: - "Eher nicht, ich schlage mal Trichtern vor"
-		- "Trichtern hebt die Stimmung sicherlich gewaltig. Außerdem bin ich immer noch viel zu nüchtern"
-
-
-Nummer (Party2):			 
-Serviette: - "Dieses Mal geh ich hin!"
-	- "Jetzt oder Nie. Das ist der Moment"
-
-Zettel: - "Lieber ein anderes Mal"
-	- "Ich weiß gar nicht was ich sagen soll, das wird doch sowieso nichts"
+Nass: - "Lass nach Rechts"
+      - "Rechts geht es schneller!"
 
 
-Unterhose (Pool):		 
-Nass: - "Dann geh ich schonmal rein"
-	- "Chad wollte ja gleich wieder kommen. Außerdem ist mir kalt"
+VIDEO (Party1):		 
+Dance-Battle: - "TANZEN, LOS!" 
+	      - "Tanzen, da bin ich unschlagbar!"
 
-Trocken: - "Ich warte besser mal"
-	- "Wer weiß, ob Chad den Schalter wirklich findet oder sogar nicht zurück kommt"
+Drink-Battle: - "AUF KEINEN FALL!"
+	      - "Lass lieber etwas anderes machen!"
 
 
-Endsequenz (Mitfahren):		 
-Vorladung: - "Ich werde einfach einsteigen"
-	- "Nick sieht zwar aus, als hätte er zu viel getrunken aber mir ist kalt und ich möchte einfach so schnell es geht nach Hause"
+NUMMER (Party2):			 
+Serviette: - "JAP, ICH MACHS!"
+	   - "Jetzt oder Nie. Das ist dein Moment"
 
-Zeitung: - "Ich laufe besser nach Hause"
-	- "Nick sieht man an, dass er zu viel getrunken hat, da wird sicherlich noch irgendetwas passieren"
+Zettel: - "LIEBER NICHT!"
+	- "Ich weiß nicht was ich sagen soll, das wird nichts!"
+
+
+UNTERHOSE (Pool):		 
+Nass: - "Pool ruft mich!"
+      - "Sieht viel zu einladend aus. Außerdem ist mir kalt!"
+
+Trocken: - "Erstmal abwarten!"
+	 - "Die Bewohner werden doch sicher wach!"
+
+
+ENDSEQUENZ (Mitfahren):		 
+Vorladung: - "LASS HEIM!"
+	   - "Die zwei werden schon wissen, was sie machen!"
+
+Zeitung: - "SICHER NICHT!"
+	- "Heim laufen ist vermutlich die sicherere Variante!"
