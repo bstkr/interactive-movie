@@ -1,6 +1,7 @@
 <div class="movie-point-of-view-container">
     <img [src]="getImageUrl()" width="100%" alt="">
     <!-- BUTTON -->
+    <!--<app-timeline class="interaction-wrapper"></app-timeline> -->
     <div class="interaction-wrapper">
         <app-movie-interaction *ngFor="let i of interactions" [interaction]="i"></app-movie-interaction>
         <app-movie-scene *ngFor="let i of interactions" [interaction]="i"></app-movie-scene>

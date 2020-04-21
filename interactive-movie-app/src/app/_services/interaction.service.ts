@@ -128,12 +128,20 @@ export class InteractionService {
     }
   }
 
-  getSceneIdFromInteractionName(interactionName: string, povType: string) {
-    return this.interactions
-      .find((p) => p.id === povType)
-      .interactions.find(
-        (interaction) => interaction.interactionName === interactionName
-      ).sceneId;
+  getSceneIdFromInteractionName(interactionName: string) {
+    for(let pov of this.interactions) {
+      if(this.interactions
+        .find((p) =>  p.id === pov.id)
+        .interactions.find(
+          (interaction) => interaction.interactionName === interactionName
+        )) {
+          return this.interactions
+            .find((p) =>  p.id === pov.id)
+            .interactions.find(
+              (interaction) => interaction.interactionName === interactionName
+            ).sceneId;
+      }
+    }
   }
 
   private initializeObservableArray() {
