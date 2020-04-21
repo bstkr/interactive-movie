@@ -1,3 +1,17 @@
+INTRO
+Flashbacks: - "Ich bin dabei!"
+	    - "Ich hab richtig Lust mit euch feiern zu gehen!"
+	    
+Lernen/Ende: - "Lernen geht vor!"
+	     - "Ich hab noch echt viel für die Uni zu tun!"
+
+Einkaufszettel (Vorbereitung):
+Einkaufszettel: - "Alkohol ist da!"
+		- "Wir müssen nicht noch extra los!"
+
+Einkaufszettel nicht da: - "Habe nichts da!"
+			 - "Wir müssen unbedingt noch Alkohol besorgen!"
+
 Bierflasche (Vorglühen):         
 Ganz: - "Dem sollte ich lieber nicht aufmachen"
     - "Der Typ ist ziemlich verrückt, wer weiß, was der so anstellt wenn ich ihn reinlasse"
@@ -16,7 +30,7 @@ Nass: - "Fahren wir rechts rum"
 
 
 
-LaptopVideo (Party):		 
+LaptopVideo (Party1):		 
 Dance-Battle: - "Oh Tanzen, genau mein Ding!" 
 		- "Im Tanzen bin ich unschlagbar, da kann ich den Leuten meine coolen Moves zeigen"
 
@@ -24,7 +38,7 @@ Drink-Battle: - "Eher nicht, ich schlage mal Trichtern vor"
 		- "Trichtern hebt die Stimmung sicherlich gewaltig. Außerdem bin ich immer noch viel zu nüchtern"
 
 
-Nummer (Party):			 
+Nummer (Party2):			 
 Serviette: - "Dieses Mal geh ich hin!"
 	- "Jetzt oder Nie. Das ist der Moment"
 
@@ -40,7 +54,7 @@ Trocken: - "Ich warte besser mal"
 	- "Wer weiß, ob Chad den Schalter wirklich findet oder sogar nicht zurück kommt"
 
 
-Bericht (Straße/Autofahrt 2):		 
+Endsequenz (Mitfahren):		 
 Vorladung: - "Ich werde einfach einsteigen"
 	- "Nick sieht zwar aus, als hätte er zu viel getrunken aber mir ist kalt und ich möchte einfach so schnell es geht nach Hause"
 
