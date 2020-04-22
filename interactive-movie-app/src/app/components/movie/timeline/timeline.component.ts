@@ -11,7 +11,7 @@ export class TimelineComponent implements OnInit {
   ngOnInit() {}
 
   slide() {
-    const slide = document.getElementById("timeline-container");
+    const slide = document.getElementById("timeline");
     const state = slide.style.top;
 
     if(state == "80%") {
@@ -19,6 +19,15 @@ export class TimelineComponent implements OnInit {
     }
     else {
       slide.style.top = "80%";
+    }
+  }
+
+  close() {
+    const slide = document.getElementById("timeline");
+    const state = slide.style.top;
+
+    if(state == "80%") {
+      slide.style.top = "96%";
     }
   }
 }
