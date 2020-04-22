@@ -1,30 +1,30 @@
 INTRO
-Flashbacks: - "Ich bin dabei!"
+Flashbacks: - "BIN DABEI!"
 	    - "Ich hab richtig Lust mit euch feiern zu gehen!"
 	    
-Lernen/Ende: - "Lernen geht vor!"
+Lernen/Ende: - "LERNEN GEHT VOR!"
 	     - "Ich hab noch echt viel für die Uni zu tun!"
 
 EINKAUFSZETTEL (Vorbereitung):
-Einkaufszettel: - "Alkohol ist da!"
+Einkaufszettel: - "ALKOHOL IST DA!"
 		- "Wir müssen nicht noch extra los!"
 
-Einkaufszettel nicht da: - "Habe nichts da!"
+Einkaufszettel nicht da: - "HABE NICHTS DA!"
 			 - "Wir müssen unbedingt noch Alkohol besorgen!"
 
 BIERFLASCHE (Vorglühen):         
-Ganz: - "Ich mache nicht auf!"
+Ganz: - "MACHE NICHT AUF!"
       - "Verrückter Typ, nicht, dass er etwas anstellt!"
 
-Kaputt: - "Ich mache auf!"
+Kaputt: - "MACHE AUF!"
 	- "Der Typ ist zwar echt verrückt, aber kann ja lustig werden!"
 
 
 JACKE (Autofahrt): 		 
-Trocken: - "Lass nach Links!"
+Trocken: - "NACH LINKS!"
 	 - "Dann müssen wir nicht durch diese komische Gegend!"
 
-Nass: - "Lass nach Rechts"
+Nass: - "NACH RECHTS!"
       - "Rechts geht es schneller!"
 
 
@@ -37,7 +37,7 @@ Drink-Battle: - "AUF KEINEN FALL!"
 
 
 NUMMER (Party2):			 
-Serviette: - "JAP, ICH MACHS!"
+Serviette: - "ICH MACHS!"
 	   - "Jetzt oder Nie. Das ist dein Moment"
 
 Zettel: - "LIEBER NICHT!"
@@ -45,10 +45,10 @@ Zettel: - "LIEBER NICHT!"
 
 
 UNTERHOSE (Pool):		 
-Nass: - "Pool ruft mich!"
+Nass: - "ZUM POOL!"
       - "Sieht viel zu einladend aus. Außerdem ist mir kalt!"
 
-Trocken: - "Erstmal abwarten!"
+Trocken: - "ERST ABWARTEN!"
 	 - "Die Bewohner werden doch sicher wach!"
 
 
