@@ -1,0 +1,18 @@
+0 - Update
+
+-> Benne: Meeting mit Jens erklären
+
+1 - Planning:
+
+    . Familien die App zeigen und Feedback einholen
+    . Introsequenz machen
+        - Click "OUT OF IT"
+        - [Ladebildschirm]
+        - Handyszene mit Alt-1 automatisch abspielen
+        - Kurzer Text mit Erklärung der Situation und Animation für den User "Rekreiere letzte Nacht mit Tim zusammen"
+        - Tutorial über der Raum UI 
+            * Handy clicken um nochmal die Szene zu sehen
+            * timeline clicken um sie zu öffnen
+            * andere Objekte clicken um neue Szene zu sehen
+    . Textart bei zurück overlay
+    
