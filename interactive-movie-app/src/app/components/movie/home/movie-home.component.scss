@@ -35,6 +35,14 @@
     }
   }
 
+  #leftNav:hover {
+    background-image: linear-gradient(-120deg, $bronze, $brown);
+  }
+
+  #rightNav:hover {
+    background-image: linear-gradient(-120deg, $bronze, $brown);
+  }
+
   .right-navigation {
     grid-area: rightNav;
 
@@ -48,6 +56,9 @@
   }
    
   .arrow {
+    height: 100%;
+    width: 100%;
+    position: relative;
     margin-left: 15px;
     width: 30px;
     height: 30px;
