@@ -4,4 +4,6 @@
   <img src="/assets/pictures/room/room-pov2.jpg" alt="" />
   <img src="/assets/pictures/room/room-pov3.jpg" alt="" />
 </div>
-<router-outlet></router-outlet>
+<div [@routeAnimations]="prepareRoute(outlet)" >
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
