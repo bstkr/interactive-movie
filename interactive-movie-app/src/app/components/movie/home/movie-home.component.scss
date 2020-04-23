@@ -24,7 +24,9 @@
   .left-navigation {
     grid-area: leftNav;
 
-    background-color: orange;
+    background-image: linear-gradient(-90deg, $bronze, $brown);
+    display: flex;
+    align-items: center;
 
     cursor: pointer;
 
@@ -36,12 +38,20 @@
   .right-navigation {
     grid-area: rightNav;
 
-    background-color: orange;
+    background-image: linear-gradient(90deg, $bronze, $brown);
 
     cursor: pointer;
 
     &.hidden {
       display: none;
     }
+  }
+   
+  .arrow {
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    transform: rotate(90deg);
   }
 }
