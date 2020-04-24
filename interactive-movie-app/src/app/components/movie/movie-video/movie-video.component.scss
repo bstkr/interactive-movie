@@ -19,8 +19,27 @@
       opacity: 0;
     }
   }
-
   .closeVideo {
     opacity: 0;
+  }
+  .playButton {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 15%;
+    width: auto;
+    pointer-events: none;
+
+    &.hidden {
+      z-index: 0;
+      opacity: 0;
+    }
+    &.show {
+      z-index: 300000;
+      opacity: 1;
+    }
   }
 }
