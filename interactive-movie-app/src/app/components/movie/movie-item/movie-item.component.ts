@@ -28,7 +28,7 @@ export class MovieItemComponent implements OnInit {
 
   clicked() {
     const itemContainerElement = document.getElementById(
-      this.interactionState.name
+      this.interactionState.name + "-item-component"
     );
     itemContainerElement.classList.replace("show", "hidden");
   }

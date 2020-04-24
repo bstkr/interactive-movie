@@ -3,7 +3,7 @@
   [id]="scene.sceneId + decision.decisionPos + '-decision'"
   class="hidden"
 >
-  <div id="decision-1" class="decision hidden" (click)="clickDecision('1')">
+  <div id="decision-1" class="decision hidden" (click)="clickDecision('0')">
     <div class="headline-container">
       <h1>{{ decision.decisionContent.decision1Headline }}</h1>
     </div>
@@ -12,7 +12,7 @@
     </div>
     <div class="background"></div>
   </div>
-  <div id="decision-2" class="decision hidden" (click)="clickDecision('2')">
+  <div id="decision-2" class="decision hidden" (click)="clickDecision('1')">
     <div class="headline-container">
       <h1>{{ decision.decisionContent.decision2Headline }}</h1>
     </div>
@@ -26,18 +26,18 @@
     class="decision-complete hidden"
   >
     <div class="headline-container">
-      <h1 *ngIf="checkCompletedDecision('1')">
+      <h1 *ngIf="checkCompletedDecision('0')">
         {{ decision.decisionContent.decision1Headline }}
       </h1>
-      <h1 *ngIf="checkCompletedDecision('2')">
+      <h1 *ngIf="checkCompletedDecision('1')">
         {{ decision.decisionContent.decision2Headline }}
       </h1>
     </div>
     <div class="content-container">
-      <p *ngIf="checkCompletedDecision('1')">
+      <p *ngIf="checkCompletedDecision('0')">
         {{ decision.decisionContent.decision1Content }}
       </p>
-      <p *ngIf="checkCompletedDecision('2')">
+      <p *ngIf="checkCompletedDecision('1')">
         {{ decision.decisionContent.decision2Content }}
       </p>
     </div>

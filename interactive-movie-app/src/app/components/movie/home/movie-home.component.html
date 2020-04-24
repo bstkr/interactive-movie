@@ -12,10 +12,10 @@
       *ngIf="currentPov === 'pov3'"
       [id]="currentPov"
     ></app-movie-point-of-view>
-    <!--<app-movie-item
+    <app-movie-item
       *ngFor="let interactionState of interactionStateArray"
       [interactionState]="interactionState"
-    ></app-movie-item>-->
+    ></app-movie-item>
     <app-movie-scene *ngFor="let s of sceneArray" [scene]="s"></app-movie-scene>
     <app-timeline></app-timeline>
   </div>

@@ -316,7 +316,9 @@ export class MovieSceneComponent implements OnInit {
     const videoElement = document.getElementById(this.scene.sceneId);
     const rightNavElement = document.getElementById("rightNav");
     const leftNavElement = document.getElementById("leftNav");
-    //const itemContainerElement = document.getElementById(this.scene.sceneName);
+    const itemContainerElement = document.getElementById(
+      this.scene.sceneName + "-item-component"
+    );
 
     if (rightNavElement) {
       rightNavElement.classList.remove("hidden");
@@ -324,7 +326,7 @@ export class MovieSceneComponent implements OnInit {
     if (leftNavElement) {
       leftNavElement.classList.remove("hidden");
     }
-    //itemContainerElement.classList.replace("hidden", "show");
+    itemContainerElement.classList.replace("hidden", "show");
     videoElement.classList.replace("fade", "hidden");
 
     this.resetVideoForRewatch();
