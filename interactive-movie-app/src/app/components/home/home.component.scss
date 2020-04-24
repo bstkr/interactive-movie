@@ -20,10 +20,20 @@
       ". Headline ."
       ". Menu ."
       ". . .";
+
+    background: url(../../../assets/pictures/Homepage_Watermark.svg) no-repeat;
+    background-size: 64vw auto;
+    background-position: bottom left;
+
+    &.hide {
+      background: none;
+      background-color: black;
+    }
   }
 
   .headline,
   .menu {
+    cursor: pointer;
     .background {
       position: absolute;
       top: 0;
@@ -33,6 +43,11 @@
       background-color: $white;
       opacity: 0.6;
       z-index: 0;
+
+      &.hide {
+        background-color: black;
+        color: $white;
+      }
     }
     h1,
     h2 {
@@ -44,6 +59,16 @@
     }
     a {
       text-decoration: none;
+    }
+
+    &.hide {
+      display: none;
+    }
+
+    &.start {
+      h1 {
+        color: $white;
+      }
     }
   }
 
@@ -61,6 +86,10 @@
       .background {
         background-color: $black;
         opacity: 1;
+
+        &.hide {
+          background-color: black;
+        }
       }
       h1 {
         color: $white;

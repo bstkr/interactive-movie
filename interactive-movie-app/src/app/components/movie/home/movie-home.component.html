@@ -12,10 +12,12 @@
       *ngIf="currentPov === 'pov3'"
       [id]="currentPov"
     ></app-movie-point-of-view>
-    <app-movie-item
+    <!--<app-movie-item
       *ngFor="let interactionState of interactionStateArray"
       [interactionState]="interactionState"
-    ></app-movie-item>
+    ></app-movie-item>-->
+    <app-movie-scene *ngFor="let s of sceneArray" [scene]="s"></app-movie-scene>
+    <app-timeline></app-timeline>
   </div>
   <div
     *ngIf="currentPov === 'pov1' || currentPov === 'pov2'"
@@ -29,5 +31,16 @@
     class="left-navigation"
     (click)="leftNavigation()"
   ></div>
-  <app-timeline class="movie-pov-wrapper"></app-timeline>
+</div>
+
+<div *ngIf="showIntro" class="intro" id="intro">
+  <div id="production" class="production-cont hidden">
+    <p>A</p>
+    <h1>Sleepless nights</h1>
+    <p>Production</p>
+  </div>
+  <div id="coop" class="coop hidden">
+    <p>In cooperation with</p>
+    <h1>Caffine cinematic</h1>
+  </div>
 </div>

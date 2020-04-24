@@ -19,6 +19,8 @@
   .movie-pov-wrapper {
     grid-area: content;
     overflow: hidden;
+
+    position: relative;
   }
 
   .left-navigation {
@@ -43,5 +45,61 @@
     &.hidden {
       display: none;
     }
+  }
+}
+
+.intro {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: black;
+
+  z-index: 3;
+  color: $white;
+
+  display: grid;
+  grid-template:
+    "production    .   " 1fr
+    ".             coop" 1fr
+    /1fr 1fr;
+
+  transition: opacity 2s;
+  opacity: 1;
+
+  .production-cont {
+    grid-area: production;
+    display: grid;
+    place-content: center;
+
+    transition: opacity 1s;
+  }
+
+  .coop {
+    grid-area: coop;
+    display: grid;
+    place-content: center;
+
+    transition: opacity 1s;
+  }
+
+  p {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 5em;
+    letter-spacing: 2px;
+  }
+
+  &.hide,
+  .hidden {
+    opacity: 0;
   }
 }

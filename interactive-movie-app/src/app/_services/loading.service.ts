@@ -22,7 +22,7 @@ export class LoadingService {
     this.itemsLoaded = 0;
     // all interactions from POV1
     this.allPovs = Interactions;
-
+    /*
     for (let pov of this.allPovs) {
       for (let int of pov.interactions) {
         for (let picturePart of int.pictureParts) {
@@ -41,7 +41,7 @@ export class LoadingService {
     }
 
     this.loadingPercentage = new BehaviorSubject<string>("0%");
-    this.allLoaded = new BehaviorSubject<boolean>(false);
+    this.allLoaded = new BehaviorSubject<boolean>(false);*/
   }
 
   itemLoaded() {

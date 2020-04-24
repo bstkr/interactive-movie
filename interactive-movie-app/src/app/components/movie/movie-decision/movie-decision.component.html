@@ -1,6 +1,6 @@
 <div
   *ngIf="checkDecisionPos()"
-  [id]="interaction.sceneId + decision.decisionPos + '-decision'"
+  [id]="scene.sceneId + decision.decisionPos + '-decision'"
   class="hidden"
 >
   <div id="decision-1" class="decision hidden" (click)="clickDecision('1')">
@@ -22,7 +22,7 @@
     <div class="background"></div>
   </div>
   <div
-    [id]="interaction.sceneId + decision.decisionPos + '-decision-completed'"
+    [id]="scene.sceneId + decision.decisionPos + '-decision-completed'"
     class="decision-complete hidden"
   >
     <div class="headline-container">

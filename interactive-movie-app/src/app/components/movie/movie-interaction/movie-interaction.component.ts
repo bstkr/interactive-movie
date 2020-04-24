@@ -16,6 +16,7 @@ export class MovieInteractionComponent implements OnInit {
 
   interactionClicked: boolean;
   interactionDecision: string;
+  sceneId: string;
 
   constructor(
     public interactionService: InteractionService,
@@ -33,6 +34,9 @@ export class MovieInteractionComponent implements OnInit {
       .decision.subscribe((s) => {
         this.interactionDecision = s;
       });
+    this.sceneId = this.sceneService.getSceneIdFromInteractionName(
+      this.interaction.interactionName
+    );
   }
 
   setInteractionStyle() {
@@ -78,7 +82,7 @@ export class MovieInteractionComponent implements OnInit {
   }
 
   clickedInteraction() {
-    const videoElement = document.getElementById(this.interaction.sceneId);
+    const videoElement = document.getElementById(this.sceneId);
     const rightNavElement = document.getElementById("rightNav");
     const leftNavElement = document.getElementById("leftNav");
 
@@ -93,6 +97,6 @@ export class MovieInteractionComponent implements OnInit {
     videoElement.classList.add("show");
 
     this.sceneService.setCurrentDecisionObservable("0");
-    this.sceneService.setSceneActive(this.interaction.sceneId, true);
+    this.sceneService.setSceneActive(this.sceneId, true);
   }
 }

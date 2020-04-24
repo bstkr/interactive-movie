@@ -35,12 +35,16 @@ export class InteractionService {
   constructor() {
     this.interactions = Interactions;
 
-    if (localStorage.length > 0) {
+    if (localStorage.getItem("interactionStateArray")) {
       this.interactionStateArray = JSON.parse(
         localStorage.getItem("interactionStateArray")
       );
     } else {
       this.interactionStateArray = InteractionStateArray;
+      localStorage.setItem(
+        "interactionStateArray",
+        JSON.stringify(this.interactionStateArray)
+      );
     }
     this.interactionStateObservableArray = [];
 
@@ -127,14 +131,14 @@ export class InteractionService {
       return "";
     }
   }
-
+  /*
   getSceneIdFromInteractionName(interactionName: string, povType: string) {
     return this.interactions
       .find((p) => p.id === povType)
       .interactions.find(
         (interaction) => interaction.interactionName === interactionName
       ).sceneId;
-  }
+  }*/
 
   private initializeObservableArray() {
     for (const interactionState of this.interactionStateArray) {
