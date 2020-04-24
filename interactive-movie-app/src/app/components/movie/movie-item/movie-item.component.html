@@ -6,12 +6,12 @@
 >
   <div class="item-container">
     <img
-      *ngIf="interactionDecision == 'a'"
+      *ngIf="interactionDecision === '0'"
       class="resize"
       [src]="interactionState.pathToItemImageA"
     />
     <img
-      *ngIf="interactionDecision == 'b'"
+      *ngIf="interactionDecision === '1'"
       class="resize"
       [src]="interactionState.pathToItemImageB"
     />

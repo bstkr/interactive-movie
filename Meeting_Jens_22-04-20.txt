@@ -1,0 +1,31 @@
+. Source code
+    Am liebsten in ner ZIP
+
+. IMM Seite gestalten
+    . http://www.imm-ulm.de/#!/Lehre/interaktives-storytelling
+
+. Roger fragen bzgl. Projekt auf IMM Server hosten
+
+. Präsentation mit ???
+    . Vorstellung für Rukzio
+        - Folien ?
+        - Interessante Präsentation
+        - Trailer ?
+
+. Datenschutzerklärungen
+    . mit Bild
+
+REVIEW APP
+
+ - Qualität Passt 
+    . Jens: H264 -> Variable bildrate (VBR 2 Durchgänge) Ziel: 1 - 2 MAX: 8 
+ - Homepage center buttons
+ - Kein start click
+ - Schriftart beim zurück Layover
+ - Bevor man in die app kommt noch ein "Intro" | Erste interaktion weg? | Direkt rausgeworfen werden ist schlecht 
+ - MIT HANDY ALT 2 STARTEN , Sprecher Text? "Schlüpf in die Rolle von Tim"
+ - Smartphone?
+
+ * PROBLEM: Zurück taste im browser
+
+ FAMILIE ZEIGEN

@@ -22,7 +22,7 @@ export class MovieItemComponent implements OnInit {
     this.interactionService
       .getInteractionState(this.interactionState.name)
       .decision.subscribe((d) => {
-        this.interactionDecision = d;
+        this.interactionDecision = d.split(",")[0];
       });
   }
 
@@ -30,8 +30,6 @@ export class MovieItemComponent implements OnInit {
     const itemContainerElement = document.getElementById(
       this.interactionState.name
     );
-    console.log(this.interactionState.name);
-
     itemContainerElement.classList.replace("show", "hidden");
   }
 }
