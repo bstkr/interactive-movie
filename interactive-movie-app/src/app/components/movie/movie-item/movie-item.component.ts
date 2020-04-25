@@ -32,13 +32,22 @@ export class MovieItemComponent implements OnInit {
       });
   }
 
-  clicked() {
+  close() {
+    const tutorialContainer = document.getElementById("tutorial");
     let itemContainerElement: HTMLElement;
-    const closerElement = document.getElementById("closer");
-    if (!this.userService.hasUserSeenIntro()) {
-      itemContainerElement = document.getElementById(
-        this.interactionState.name + "-item-object"
-      );
+
+    if (tutorialContainer) {
+      if (this.userService.hasUserSeenIntro()) {
+        itemContainerElement = document.getElementById(
+          this.interactionState.name + "-item-component"
+        );
+      } else {
+        itemContainerElement = document.getElementById(
+          this.interactionState.name + "-item-object"
+        );
+
+        this.userService.setUserState(true);
+      }
     } else {
       itemContainerElement = document.getElementById(
         this.interactionState.name + "-item-component"
@@ -50,15 +59,5 @@ export class MovieItemComponent implements OnInit {
     } else {
       itemContainerElement.classList.add("hidden");
     }
-    closerElement.classList.remove("hide");
-  }
-
-  closeTutorial() {
-    const itemContainerElement = document.getElementById(
-      this.interactionState.name + "-item-component"
-    );
-
-    itemContainerElement.classList.replace("show", "hidden");
-    this.userService.setUserState(true);
   }
 }

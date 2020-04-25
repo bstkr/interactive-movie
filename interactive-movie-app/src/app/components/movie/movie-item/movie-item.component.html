@@ -2,7 +2,6 @@
   *ngIf="interactionClicked"
   [id]="interactionState.name + '-item-component'"
   class="item-home-container hidden"
-  (click)="clicked()"
 >
   <div class="item-container" [id]="interactionState.name + '-item-object'">
     <img
@@ -16,7 +15,7 @@
       [src]="interactionState.pathToItemImageB"
     />
   </div>
-  <div *ngIf="interactionState.name === 'Handy'" class="tutorial">
+  <div *ngIf="interactionState.name === 'Handy'" class="tutorial" id="tutorial">
     <div class="tutorial-object" id="rewatch">
       <p>Du kannst das Object nochmal klicken und die Szene erneut ansehen</p>
     </div>
@@ -29,8 +28,8 @@
         chronologischer Reihenfolge angezeigt
       </p>
     </div>
-    <div class="closer hide" id="closer" (click)="closeTutorial()">
-      <span class="symbol">&#10005;</span>
-    </div>
+  </div>
+  <div class="closer" (click)="close()">
+    <span class="symbol">&#10005;</span>
   </div>
 </div>

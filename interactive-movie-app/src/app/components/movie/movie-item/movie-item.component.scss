@@ -80,42 +80,38 @@
       top: 96%;
       left: 30%;
     }
+  }
 
-    .closer {
-      position: absolute;
-      top: 5%;
-      left: 50%;
-      transform: translateX(-50%);
+  .closer {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
 
-      z-index: 2;
+    z-index: 2;
 
-      width: 4vw;
-      height: 4vw;
+    width: 4vw;
+    height: 4vw;
 
-      display: grid;
-      place-content: center;
+    display: grid;
+    place-content: center;
 
-      border-radius: 50%;
-      border: 1px solid $white;
+    border-radius: 50%;
+    border: 1px solid $white;
 
-      background-color: $black;
-      color: $white;
+    background-color: $black;
+    color: $white;
 
-      cursor: pointer;
+    cursor: pointer;
 
-      .symbol {
-        font-size: 40px;
-        padding: 0 10px;
-      }
+    .symbol {
+      font-size: 40px;
+      padding: 0 10px;
+    }
 
-      &:hover {
-        background-color: $white;
-        color: $black;
-      }
-
-      &.hide {
-        display: none;
-      }
+    &:hover {
+      background-color: $white;
+      color: $black;
     }
   }
 }
