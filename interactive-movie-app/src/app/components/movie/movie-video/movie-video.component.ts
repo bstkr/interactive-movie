@@ -41,15 +41,12 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
 
   videoClick(e: Event, id: string) {
     const videoElement = document.getElementById(id);
-    console.log(id);
     if (this.videoPlayer.nativeElement.paused) {
       videoElement.classList.replace("show", "hidden"); //this.videoEnded();
       /*Uncomment for development*/ /*Uncomment for production*/ this.videoPlayer.nativeElement.play();
-      console.log("1");
     } else {
       videoElement.classList.replace("hidden", "show");
       this.videoPlayer.nativeElement.pause();
-      console.log("2");
     }
   }
 

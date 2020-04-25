@@ -32,6 +32,7 @@
     height: 15%;
     width: auto;
     pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
 
     &.hidden {
       z-index: 0;
