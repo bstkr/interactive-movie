@@ -22,14 +22,20 @@
     id="rightNav"
     class="right-navigation"
     (click)="rightNavigation()"
-  ></div>
+  >
+  <div class="arrow" id="right">
+    <img class="animated bounce" src="assets\pictures\room\Navbar\nav-arrow.svg"
+  /></div>
+  </div>
   <div
     *ngIf="currentPov === 'pov2' || currentPov === 'pov3'"
     id="leftNav"
     class="left-navigation"
     (click)="leftNavigation()"
-  ><div class="arrow"><img
-    src="assets\pictures\room\pov1\Object_1_2.svg"
-  /></div></div>
+  >
+    <div class="arrow" id="left">
+      <img class="animated bounce" src="assets\pictures\room\Navbar\nav-arrow.svg"
+    /></div>
+  </div>
   <app-timeline class="movie-pov-wrapper"></app-timeline>
 </div>
