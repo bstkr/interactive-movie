@@ -1,6 +1,5 @@
 <div class="video-container">
   <video
-    *ngIf="renderVideo()"
     [id]="scene.sceneId + '-' + video.sequencePosition"
     [class]="getVideoClass(video.sequencePosition)"
     (click)="videoClick($event)"

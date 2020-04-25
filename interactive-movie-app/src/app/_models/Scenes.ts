@@ -41,12 +41,12 @@ export const Scenes: Scene[] = [
       {
         sequencePosition: "alt-1",
         visible: false,
-        pathToVideo: "assets/video/0_Intro_HANDY/alt-1.mp4",
+        pathToVideo: "assets/video/0_Intro_HANDY/alt-2.mp4",
       },
       {
         sequencePosition: "alt-2",
         visible: false,
-        pathToVideo: "assets/video/0_Intro_HANDY/alt-1.mp4",
+        pathToVideo: "assets/video/0_Intro_HANDY/alt-2.mp4",
       },
     ],
   },

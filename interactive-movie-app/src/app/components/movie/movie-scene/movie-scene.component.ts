@@ -155,7 +155,6 @@ export class MovieSceneComponent implements OnInit {
     if (outroElement) {
       outroElement.classList.replace("hiddenVideo", "currentVideo");
     } else {
-      videoElement.classList.replace("show", "fade");
       setTimeout(() => {
         this.closeVideo();
       }, 2000);
@@ -163,12 +162,10 @@ export class MovieSceneComponent implements OnInit {
   }
 
   handleOutroEnd() {
-    const videoElement = document.getElementById(this.scene.sceneId);
     const outroElement = document.getElementById(this.scene.sceneId + "-outro");
 
-    outroElement.classList.replace("currentVideo", "closeVideo");
-    videoElement.classList.replace("show", "fade");
     setTimeout(() => {
+      outroElement.classList.replace("currentVideo", "closeVideo");
       this.closeVideo();
     }, 2000);
   }
@@ -344,12 +341,12 @@ export class MovieSceneComponent implements OnInit {
     );
 
     introElement.classList.replace("closeVideo", "currentVideo");
-    if (this.userDecision[0] === "1") {
+    if (this.userDecision[0] === "0") {
       document
         .getElementById(this.scene.sceneId + "-alt-1")
         .classList.replace("closeVideo", "hiddenVideo");
       if (this.userDecision.length > 1) {
-        if (this.userDecision[1] === "1") {
+        if (this.userDecision[1] === "0") {
           document
             .getElementById(this.scene.sceneId + "-alt-1-1")
             .classList.replace("closeVideo", "hiddenVideo");
@@ -366,7 +363,7 @@ export class MovieSceneComponent implements OnInit {
         .getElementById(this.scene.sceneId + "-alt-2")
         .classList.replace("closeVideo", "hiddenVideo");
       if (this.userDecision.length > 1) {
-        if (this.userDecision[1] === "1") {
+        if (this.userDecision[1] === "0") {
           document
             .getElementById(this.scene.sceneId + "-alt-2-1")
             .classList.replace("closeVideo", "hiddenVideo");
