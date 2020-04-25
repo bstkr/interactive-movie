@@ -19,4 +19,9 @@ export class UserService {
   hasUserSeenIntro(): boolean {
     return this.userState.hasSeenIntro;
   }
+
+  setUserState(intro: boolean) {
+    this.userState.hasSeenIntro = intro;
+    localStorage.setItem("userState", JSON.stringify(this.userState));
+  }
 }

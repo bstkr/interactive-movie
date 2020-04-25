@@ -50,7 +50,6 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
   }
 
   videoEnded() {
-    console.log("hello");
     this.endedVideo.emit(this.video);
   }
 
