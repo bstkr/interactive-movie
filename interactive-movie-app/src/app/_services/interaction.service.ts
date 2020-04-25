@@ -10,6 +10,7 @@ import {
   InteractionStateArray,
 } from "../_models/InteractionState";
 import { Observable, BehaviorSubject } from "rxjs";
+import { jsonCopy } from "../_models/UserState";
 
 export class InteractionObservable {
   interactionName: string;
@@ -33,19 +34,31 @@ export class InteractionService {
   private interactionStateObservableArray: InteractionObservable[];
 
   constructor() {
-    this.interactions = Interactions;
+    this.interactions = Object.create(Interactions);
 
     if (localStorage.getItem("interactionStateArray")) {
       this.interactionStateArray = JSON.parse(
         localStorage.getItem("interactionStateArray")
       );
     } else {
-      this.interactionStateArray = InteractionStateArray;
+      this.interactionStateArray = jsonCopy(InteractionStateArray);
       localStorage.setItem(
         "interactionStateArray",
         JSON.stringify(this.interactionStateArray)
       );
     }
+    this.interactionStateObservableArray = [];
+
+    this.initializeObservableArray();
+  }
+
+  resetInteractionStateArray() {
+    this.interactionStateArray = jsonCopy(InteractionStateArray);
+    console.log(this.interactionStateArray);
+    localStorage.setItem(
+      "interactionStateArray",
+      JSON.stringify(this.interactionStateArray)
+    );
     this.interactionStateObservableArray = [];
 
     this.initializeObservableArray();
@@ -131,14 +144,6 @@ export class InteractionService {
       return "";
     }
   }
-  /*
-  getSceneIdFromInteractionName(interactionName: string, povType: string) {
-    return this.interactions
-      .find((p) => p.id === povType)
-      .interactions.find(
-        (interaction) => interaction.interactionName === interactionName
-      ).sceneId;
-  }*/
 
   private initializeObservableArray() {
     for (const interactionState of this.interactionStateArray) {

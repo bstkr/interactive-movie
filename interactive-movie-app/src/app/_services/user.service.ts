@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { UserState, InitialUserState } from "../_models/UserState";
+import { UserState, InitialUserState, jsonCopy } from "../_models/UserState";
 
 @Injectable({
   providedIn: "root",
@@ -11,9 +11,15 @@ export class UserService {
     if (localStorage.getItem("userState")) {
       this.userState = JSON.parse(localStorage.getItem("userState"));
     } else {
-      this.userState = InitialUserState;
+      this.userState = jsonCopy(InitialUserState);
       localStorage.setItem("userState", JSON.stringify(this.userState));
     }
+  }
+
+  resetUserState() {
+    this.userState = jsonCopy(InitialUserState);
+    console.log(this.userState);
+    localStorage.setItem("userState", JSON.stringify(this.userState));
   }
 
   hasUserSeenIntro(): boolean {

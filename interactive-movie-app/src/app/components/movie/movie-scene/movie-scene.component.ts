@@ -295,14 +295,14 @@ export class MovieSceneComponent implements OnInit {
   ): string {
     let d: string;
 
-    if (userDecision === "1") {
-      d = "1";
+    if (userDecision === "0") {
+      d = "0";
       for (let i = 0; i < decisionContainerChildren.length - 1; i++) {
         decisionContainerChildren[i].classList.add("close-left");
       }
       alt1Element.classList.replace("hiddenVideo", "currentVideo");
     } else {
-      d = "2";
+      d = "1";
       for (let i = 0; i < decisionContainerChildren.length - 1; i++) {
         decisionContainerChildren[i].classList.add("close-right");
       }
