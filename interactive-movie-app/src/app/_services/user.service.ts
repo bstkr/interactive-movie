@@ -18,7 +18,6 @@ export class UserService {
 
   resetUserState() {
     this.userState = jsonCopy(InitialUserState);
-    console.log(this.userState);
     localStorage.setItem("userState", JSON.stringify(this.userState));
   }
 

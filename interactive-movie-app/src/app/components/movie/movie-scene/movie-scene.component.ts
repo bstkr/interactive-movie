@@ -292,14 +292,14 @@ export class MovieSceneComponent implements OnInit {
   ): string {
     let d: string;
 
-    if (userDecision === "0") {
-      d = "0";
+    if (userDecision === "1") {
+      d = "1";
       for (let i = 0; i < decisionContainerChildren.length - 1; i++) {
         decisionContainerChildren[i].classList.add("close-left");
       }
       alt1Element.classList.replace("hiddenVideo", "currentVideo");
     } else {
-      d = "1";
+      d = "2";
       for (let i = 0; i < decisionContainerChildren.length - 1; i++) {
         decisionContainerChildren[i].classList.add("close-right");
       }
@@ -341,12 +341,12 @@ export class MovieSceneComponent implements OnInit {
     );
 
     introElement.classList.replace("closeVideo", "currentVideo");
-    if (this.userDecision[0] === "0") {
+    if (this.userDecision[0] === "1") {
       document
         .getElementById(this.scene.sceneId + "-alt-1")
         .classList.replace("closeVideo", "hiddenVideo");
       if (this.userDecision.length > 1) {
-        if (this.userDecision[1] === "0") {
+        if (this.userDecision[1] === "1") {
           document
             .getElementById(this.scene.sceneId + "-alt-1-1")
             .classList.replace("closeVideo", "hiddenVideo");
@@ -363,7 +363,7 @@ export class MovieSceneComponent implements OnInit {
         .getElementById(this.scene.sceneId + "-alt-2")
         .classList.replace("closeVideo", "hiddenVideo");
       if (this.userDecision.length > 1) {
-        if (this.userDecision[1] === "0") {
+        if (this.userDecision[1] === "1") {
           document
             .getElementById(this.scene.sceneId + "-alt-2-1")
             .classList.replace("closeVideo", "hiddenVideo");

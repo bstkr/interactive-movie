@@ -54,7 +54,6 @@ export class InteractionService {
 
   resetInteractionStateArray() {
     this.interactionStateArray = jsonCopy(InteractionStateArray);
-    console.log(this.interactionStateArray);
     localStorage.setItem(
       "interactionStateArray",
       JSON.stringify(this.interactionStateArray)
@@ -114,13 +113,13 @@ export class InteractionService {
     interactionId: string,
     decision: string
   ): string {
-    if (decision.split(",")[0] === "0") {
+    if (decision.split(",")[0] === "1") {
       return this.interactionStateArray
         .find((interactionState) => interactionState.name === interactionName)
         .Interactions.find(
           (interaction) => interaction.interactionId === interactionId
         ).pathToCompleteObjectImage.a;
-    } else if (decision.split(",")[0] === "1") {
+    } else if (decision.split(",")[0] === "2") {
       return this.interactionStateArray
         .find((interactionState) => interactionState.name === interactionName)
         .Interactions.find(
@@ -132,11 +131,11 @@ export class InteractionService {
   }
 
   getTimelineImagePath(interactionName: string, decision: string): string {
-    if (decision === "0") {
+    if (decision === "1") {
       return this.interactionStateArray.find(
         (interactionState) => interactionState.name === interactionName
       ).Timeline.pathToTimelineImage.a;
-    } else if (decision === "1") {
+    } else if (decision === "2") {
       return this.interactionStateArray.find(
         (interactionState) => interactionState.name === interactionName
       ).Timeline.pathToTimelineImage.b;

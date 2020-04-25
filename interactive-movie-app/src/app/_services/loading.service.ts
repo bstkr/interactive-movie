@@ -22,26 +22,6 @@ export class LoadingService {
     this.itemsLoaded = 0;
     // all interactions from POV1
     this.allPovs = Interactions;
-    /*
-    for (let pov of this.allPovs) {
-      for (let int of pov.interactions) {
-        for (let picturePart of int.pictureParts) {
-          this.loadingArray.push(new LoadingItem(picturePart.path, "picture"));
-          this.totalItems += 1;
-          //console.log("picture: " + picturePart.path);
-        }
-        for (let video of int.videoSequence) {
-          if (video.sequencePosition === "intro") {
-            this.loadingArray.push(new LoadingItem(video.pathToVideo, "video"));
-            this.totalItems += 1;
-            //console.log("video: " + video.pathToVideo);
-          }
-        }
-      }
-    }
-
-    this.loadingPercentage = new BehaviorSubject<string>("0%");
-    this.allLoaded = new BehaviorSubject<boolean>(false);*/
   }
 
   itemLoaded() {

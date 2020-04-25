@@ -26,8 +26,8 @@ export const Scenes: Scene[] = [
         decisionContent: {
           decision1Headline: "BIN DABEI!",
           decision1Content: "Ich hab richtig Lust mit euch feiern zu gehen!",
-          decision2Headline: "LERNEN GEHT VOR!",
-          decision2Content: "Ich hab noch echt viel für die Uni zu tun!",
+          decision2Headline: "PARTY? JA LOGO!",
+          decision2Content: "Ich hab richtig Bock die Jungs zu sehen!",
         },
       },
     ],
@@ -105,7 +105,8 @@ export const Scenes: Scene[] = [
           decision1Headline: "MACHE NICHT AUF!",
           decision1Content: "Verrückter Typ, nicht, dass er etwas anstellt!",
           decision2Headline: "MACHE AUF!",
-          decision2Content: "Der Typ ist zwar echt verrückt, aber kann ja lustig werden!",
+          decision2Content:
+            "Der Typ ist zwar echt verrückt, aber kann ja lustig werden!",
         },
       },
       {
@@ -114,7 +115,8 @@ export const Scenes: Scene[] = [
           decision1Headline: "MACHE NICHT AUF!",
           decision1Content: "Verrückter Typ, nicht, dass er etwas anstellt!",
           decision2Headline: "MACHE AUF!",
-          decision2Content: "Der Typ ist zwar echt verrückt, aber kann ja lustig werden!",
+          decision2Content:
+            "Der Typ ist zwar echt verrückt, aber kann ja lustig werden!",
         },
       },
     ],
@@ -169,7 +171,8 @@ export const Scenes: Scene[] = [
         decisionPos: "0",
         decisionContent: {
           decision1Headline: "NACH LINKS!",
-          decision1Content: "Dann müssen wir nicht durch diese komische Gegend!",
+          decision1Content:
+            "Dann müssen wir nicht durch diese komische Gegend!",
           decision2Headline: "NACH RECHTS!",
           decision2Content: "Rechts geht es schneller!",
         },
@@ -205,10 +208,10 @@ export const Scenes: Scene[] = [
       {
         decisionPos: "0",
         decisionContent: {
-          decision1Headline: "LASS TANZEN!",
-          decision1Content: "Tanzen, da bin ich unschlagbar!",
-          decision2Headline: "AUF KEINEN FALL!",
-          decision2Content: "Lass lieber etwas anderes machen!",
+          decision1Headline: "AUF KEINEN FALL!",
+          decision1Content: "Lass lieber etwas anderes machen!",
+          decision2Headline: "LASS TANZEN!",
+          decision2Content: "Tanzen, da bin ich unschlagbar!",
         },
       },
     ],
@@ -240,7 +243,8 @@ export const Scenes: Scene[] = [
           decision1Headline: "ICH MACHS!",
           decision1Content: "Jetzt oder nie. Das ist dein Moment",
           decision2Headline: "LIEBER NICHT!",
-          decision2Content: "Ich weiß nicht was ich sagen soll, das wird nichts!",
+          decision2Content:
+            "Ich weiß nicht was ich sagen soll, das wird nichts!",
         },
       },
     ],
@@ -275,7 +279,8 @@ export const Scenes: Scene[] = [
         decisionPos: "0",
         decisionContent: {
           decision1Headline: "ZUM POOL!",
-          decision1Content: "Sieht viel zu einladend aus. Außerdem ist mir kalt!",
+          decision1Content:
+            "Sieht viel zu einladend aus. Außerdem ist mir kalt!",
           decision2Headline: "ERST ABWARTEN!",
           decision2Content: "Die Bewohner werden doch sicher wach!",
         },
@@ -306,10 +311,11 @@ export const Scenes: Scene[] = [
       {
         decisionPos: "0",
         decisionContent: {
-          decision1Headline: "LASS HEIM!",
-          decision1Content: "Die zwei werden schon wissen, was sie machen!",
-          decision2Headline: "SICHER NICHT!",
-          decision2Content: "Heim laufen ist vermutlich die sicherere Variante!",
+          decision1Headline: "SICHER NICHT!",
+          decision1Content:
+            "Heim laufen ist vermutlich die sicherere Variante!",
+          decision2Headline: "LASS HEIM!",
+          decision2Content: "Die zwei werden schon wissen, was sie machen!",
         },
       },
     ],

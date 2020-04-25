@@ -3,7 +3,7 @@ export interface UserState {
 }
 
 export const InitialUserState: UserState = {
-  hasSeenIntro: false,
+  hasSeenIntro: true,
 };
 
 export function jsonCopy(src) {

@@ -5,12 +5,12 @@
 >
   <div class="item-container" [id]="interactionState.name + '-item-object'">
     <img
-      *ngIf="interactionDecision === '0'"
+      *ngIf="interactionDecision === '1'"
       class="resize"
       [src]="interactionState.pathToItemImageA"
     />
     <img
-      *ngIf="interactionDecision === '1'"
+      *ngIf="interactionDecision === '2'"
       class="resize"
       [src]="interactionState.pathToItemImageB"
     />
