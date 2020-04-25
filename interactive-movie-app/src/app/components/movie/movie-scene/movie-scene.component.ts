@@ -142,7 +142,7 @@ export class MovieSceneComponent implements OnInit {
       }
     } else if (outroElement) {
       outroElement.classList.replace("hiddenVideo", "currentVideo");
-      this.startVideo(outroElement, 500);
+      this.startVideo(outroElement, 0);
     } else {
       videoElement.classList.replace("show", "fade");
       setTimeout(() => {
@@ -159,7 +159,7 @@ export class MovieSceneComponent implements OnInit {
 
     if (outroElement) {
       outroElement.classList.replace("hiddenVideo", "currentVideo");
-      this.startVideo(outroElement, 500);
+      this.startVideo(outroElement, 0);
     } else {
       videoElement.classList.replace("show", "fade");
       setTimeout(() => {
