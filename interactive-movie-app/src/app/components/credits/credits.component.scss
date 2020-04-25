@@ -11,7 +11,7 @@
   display: grid;
 
   grid-template-columns: auto 60.625vw 9.375vw 25vw;
-  grid-template-rows: 3.125vw 8.75vw 16.25vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw;
+  grid-template-rows: 3.125vw 8.75vw 16.25vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw;
 
   grid-template-areas:
     " . . . . "
@@ -22,14 +22,6 @@
     " . docent . . "
     " . . . . "
     " . actors . . "
-    " . . . . "
-    " . camera . . "
-    " . . . . "
-    " . sound . . "
-    " . . . . "
-    " . video . . "
-    " . . . . "
-    " . app . . "
     " . nothing . . ";
 
   .side-bar {
@@ -191,22 +183,6 @@
 
   #actors {
     grid-area: actors;
-  }
-
-  #camera {
-    grid-area: camera;
-  }
-
-  #sound {
-    grid-area: sound;
-  }
-
-  #video {
-    grid-area: video;
-  }
-
-  #app {
-    grid-area: app;
   }
 
   #nothing {
