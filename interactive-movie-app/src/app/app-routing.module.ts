@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: "movie", component: MovieLoadingScreenComponent },
   { path: "movie/:pov", component: MovieHomeComponent },
   { path: "credits", component: CreditsComponent, data: { animation: 'isLeft' } },
-  { path: "impressum", component: ImpressumComponent },
+  { path: "impressum", component: ImpressumComponent, data: { animation: 'isBottom' } },
 ];
 
 @NgModule({
