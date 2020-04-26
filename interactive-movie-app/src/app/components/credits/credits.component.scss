@@ -11,7 +11,7 @@
   display: grid;
 
   grid-template-columns: auto 60.625vw 9.375vw 25vw;
-  grid-template-rows: 3.125vw 8.75vw 16.25vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw;
+  grid-template-rows: 3.125vw 8.75vw 16.25vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw;
 
   grid-template-areas:
     " . . . . "
@@ -22,20 +22,12 @@
     " . docent . . "
     " . . . . "
     " . actors . . "
-    " . . . . "
-    " . camera . . "
-    " . . . . "
-    " . sound . . "
-    " . . . . "
-    " . video . . "
-    " . . . . "
-    " . app . . "
     " . nothing . . ";
 
   .side-bar {
     grid-area: side-bar;
     border-style: none;
-    padding-top: 7vh;
+    padding-top: 3vh;
 
     position: sticky;
     top: -50vw;
@@ -48,43 +40,77 @@
   .home-button {
     grid-area: home;
 
-    padding-top: 24vh;
+    padding-top: 27.5vh;
     padding-left: 12vw;
     border-style: none;
 
     position: sticky;
-    -webkit-position: sticky;
     top: 12vw;
 
     a {
       text-decoration: none;
       text-transform: uppercase;
       border-style: solid;
-      border-width: 1px;
-      padding: 2% 10% 5% 12.5%;
+      border-width: 3px;
+      padding: 0 16% 0 16%;
 
-      color: $pureWhite;
-      font-weight: bold;
+      color: $white;
       font-size: 1.875vw;
       font-style: normal;
 
-      &:hover {
+      h1 {
         color: $white;
-        font-weight: bold;
+        border-style: none;
+        letter-spacing: 0.4vw;
+      }
+
+      &:hover {
+
+        background-color: rgba($color: $white, $alpha: 0.6);
+
+        h1 {
+          color: $black;
+        }
       }
     }
   }
 
   #credits-title {
+    position: relative;
+    top: 20%;
+    left: -19%;
     grid-area: creditstitle;
-
     border-style: none;
+    padding: 1.5% 9% 1.5% 9%;
+    justify-self: center;
+    align-self: center;
 
     h1 {
-      border-style: solid;
-      border-width: 1px;
-      padding: 0.625vw 4.375vw 0.625vw 4.375vw;
-      font-size: 10.9375vh;
+      border-style: none;
+      //border-width: 1px;
+      //padding: 0.625vw 4.375vw 0.625vw 4.375vw;
+      //font-size: 10.9375vh;
+    }
+  }
+
+  #credits-title {
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      opacity: 0.6;
+      z-index: 0;
+    }
+    h1,
+    h2 {
+      position: relative;
+      z-index: 1;
+      font-size: 7.8125vw;
+      letter-spacing: 1.04vw;
+      color: $black;
     }
   }
 
@@ -106,18 +132,21 @@
     flex-direction: column;
 
     .team-member {
+      position: relative;
       align-items: center;
       text-align: center;
 
-      margin-top: 10vh;
+      margin-top: 5.625vw;
       width: 20%;
       border-style: none;
 
       p {
+        position: absolute;
         width: 60%;
       }
 
       img {
+        position: relative;
         width: 6.25vw;
         height: 6.25vw;
       }
@@ -136,7 +165,7 @@
       float: left;
       text-align: center;
 
-      margin-top: 10vh;
+      margin-top: 5.625vw;
       width: 20%;
       border-style: none;
     }
@@ -191,22 +220,6 @@
 
   #actors {
     grid-area: actors;
-  }
-
-  #camera {
-    grid-area: camera;
-  }
-
-  #sound {
-    grid-area: sound;
-  }
-
-  #video {
-    grid-area: video;
-  }
-
-  #app {
-    grid-area: app;
   }
 
   #nothing {

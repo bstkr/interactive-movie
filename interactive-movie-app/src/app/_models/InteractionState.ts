@@ -64,7 +64,7 @@ export const InteractionStateArray: InteractionState[] = [
         },
       },
       {
-        interactionId: "pov2_interaction1",
+        interactionId: "pov2_interaction2",
         pathToCompleteObjectImage: {
           a: "assets/pictures/room/pov2/object5/complete.png",
           b: "assets/pictures/room/pov2/object6/complete.png",
@@ -75,8 +75,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/Computer.png",
-        b: "assets/pictures/room/Timeline_Objects/Computer.png",
+        a: "assets/pictures/room/Timeline_Objects/Bier_kaputt.png",
+        b: "assets/pictures/room/Timeline_Objects/Bier.png",
       },
     },
     pathToItemImageA: "assets/pictures/room/pov2/object6/complete.png",
@@ -117,15 +117,15 @@ export const InteractionStateArray: InteractionState[] = [
       {
         interactionId: "pov1_interaction4",
         pathToCompleteObjectImage: {
-          a: "assets/pictures/room/pov1/object7/complete.png",
-          b: "",
+          a: "",
+          b: "assets/pictures/room/pov1/object7/complete.png",
         },
       },
       {
         interactionId: "pov2_interaction5",
         pathToCompleteObjectImage: {
-          a: "assets/pictures/room/pov2/object7/complete.png",
-          b: "",
+          a: "",
+          b: "assets/pictures/room/pov2/object7/complete.png",
         },
       },
     ],
@@ -133,8 +133,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/Computer.png",
-        b: "assets/pictures/room/Timeline_Objects/Computer.png",
+        a: "assets/pictures/room/Timeline_Objects/Einkaufszettel.png",
+        b: "assets/pictures/room/Timeline_Objects/Einkaufszettel.png",
       },
     },
     pathToItemImageA: "assets/pictures/room/Objects/Einkaufszettel.png",
@@ -155,8 +155,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/Computer.png",
-        b: "assets/pictures/room/Timeline_Objects/Computer.png",
+        a: "assets/pictures/room/Timeline_Objects/Handy.png",
+        b: "assets/pictures/room/Timeline_Objects/Handy.png",
       },
     },
     pathToItemImageA: "assets/pictures/room/Objects/Handy.png",
@@ -184,8 +184,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/Computer.png",
-        b: "assets/pictures/room/Timeline_Objects/Computer.png",
+        a: "assets/pictures/room/Timeline_Objects/Laptop_1.png",
+        b: "assets/pictures/room/Timeline_Objects/Laptop_2.png",
       },
     },
     pathToItemImageA: "assets/pictures/room/Objects/Laptop_1.png",
@@ -213,8 +213,8 @@ export const InteractionStateArray: InteractionState[] = [
     decision: "x",
     Timeline: {
       pathToTimelineImage: {
-        a: "assets/pictures/room/Timeline_Objects/Zeitung.png",
-        b: "assets/pictures/room/Timeline_Objects/Vorladung.png",
+        a: "assets/pictures/room/Timeline_Objects/Vorladung.png",
+        b: "assets/pictures/room/Timeline_Objects/Zeitung.png",
       },
     },
     pathToItemImageA: "assets/pictures/room/Objects/Zeitung.png",
