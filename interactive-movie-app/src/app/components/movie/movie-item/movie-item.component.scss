@@ -9,6 +9,8 @@
 
   z-index: 2;
 
+  z-index: 1;
+
   transition: opacity 0.5s ease-in-out;
   &.hidden {
     display: none;
@@ -76,7 +78,7 @@
       width: 25%;
     }
 
-    #timeline {
+    #tutorial-timeline {
       top: 96%;
       left: 30%;
     }

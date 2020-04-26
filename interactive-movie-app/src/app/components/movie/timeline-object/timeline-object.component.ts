@@ -40,6 +40,7 @@ export class TimelineObjectComponent implements OnInit {
     this.sceneId = this.sceneService.getSceneIdFromInteractionName(
       this.objectName
     );
+    console.log(this.sceneId);
 
     const videoElement = document.getElementById(this.sceneId);
     const rightNavElement = document.getElementById("rightNav");
