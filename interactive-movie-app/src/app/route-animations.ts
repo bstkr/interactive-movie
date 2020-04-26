@@ -10,41 +10,49 @@ import {
 } from "@angular/animations";
 
 export const slider = trigger("routeAnimations", [
-  transition("* => isLeft", slideTo("left")),
-  transition("isLeft => *", slideTo("right")),
-  transition("isBottom => *", slideToB()),
-  transition("* => isBottom", slideToT()),
-]);
-
-export function slideTo(direction) {
-  const optional = { optional: true };
-  return [
+  transition("* => isLeft", [
     query(
       ":enter, :leave",
       [
         style({
           position: "absolute",
           top: 0,
-          [direction]: 0,
+          left: 0,
           width: "100%",
         }),
       ],
-      optional
+      { optional: true }
     ),
-    query(":enter", [style({ [direction]: "-100%" })]),
+    query(":enter", [style({ left: "-100%" })]),
     group([
-      query(
-        ":leave",
-        [animate("1200ms ease", style({ [direction]: "100%" }))],
-        optional
-      ),
-      query(":enter", [animate("1200ms ease", style({ [direction]: "0%" }))]),
+      query(":leave", [animate("1200ms ease", style({ left: "100%" }))], {
+        optional: true,
+      }),
+      query(":enter", [animate("1200ms ease", style({ left: "0%" }))]),
     ]),
-  ];
-}
-
-export function slideToB() {
-  return [
+  ]),
+  transition("isLeft => *", [
+    query(
+      ":enter, :leave",
+      [
+        style({
+          position: "absolute",
+          top: 0,
+          right: 0,
+          width: "100%",
+        }),
+      ],
+      { optional: true }
+    ),
+    query(":enter", [style({ right: "-100%" })]),
+    group([
+      query(":leave", [animate("1200ms ease", style({ right: "100%" }))], {
+        optional: true,
+      }),
+      query(":enter", [animate("1200ms ease", style({ right: "0%" }))]),
+    ]),
+  ]),
+  transition("isBottom => *", [
     query(
       ":enter, :leave",
       style({ position: "fixed", left: 0, right: 0, top: 0, bottom: 0 }),
@@ -66,11 +74,8 @@ export function slideToB() {
         { optional: true }
       ),
     ]),
-  ];
-}
-
-export function slideToT() {
-  return [
+  ]),
+  transition("* => isBottom", [
     query(
       ":enter, :leave",
       style({ position: "fixed", left: 0, right: 0, top: 0, bottom: 0 }),
@@ -92,5 +97,5 @@ export function slideToT() {
         { optional: true }
       ),
     ]),
-  ];
-}
+  ]),
+]);
