@@ -2,12 +2,7 @@
   <video
     [id]="scene.sceneId + '-' + video.sequencePosition"
     [class]="getVideoClass(video.sequencePosition)"
-    (click)="
-      videoClick(
-        $event,
-        interaction.sceneId + '-' + video.sequencePosition + '-button'
-      )
-    "
+    (click)="videoClick($event)"
     (ended)="videoEnded()"
     #videoPlayer
   >
@@ -15,7 +10,7 @@
   </video>
   <img
     class="playButton hidden"
-    [id]="interaction.sceneId + '-' + video.sequencePosition + '-button'"
+    [id]="scene.sceneId + '-' + video.sequencePosition + '-button'"
     src="assets/pictures/Play_Button.png"
   />
 </div>

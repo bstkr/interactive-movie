@@ -40,12 +40,12 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
     }
   }
 
-  videoClick(e: Event, id: string) {
+  videoClick(e: Event) {
+    let id = this.scene.sceneId + "-" + this.video.sequencePosition + "-button";
     const videoElement = document.getElementById(id);
     if (this.videoPlayer.nativeElement.paused) {
-      videoElement.classList.replace("show", "hidden"); 
-      /*Uncomment for development*/ //this.videoEnded();
-      /*Uncomment for production*/ this.videoPlayer.nativeElement.play();
+      videoElement.classList.replace("show", "hidden"); //this.videoEnded();
+      /*Uncomment for development*/ /*Uncomment for production*/ this.videoPlayer.nativeElement.play();
     } else {
       videoElement.classList.replace("hidden", "show");
       this.videoPlayer.nativeElement.pause();
