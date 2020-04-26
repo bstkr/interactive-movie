@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit() {}
-
+  
   startMovie() {
     document.getElementById("background").classList.add("hide");
     document.getElementById("button-background").classList.add("hide");

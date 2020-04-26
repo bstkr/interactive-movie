@@ -8,5 +8,11 @@ import { Component, OnInit } from "@angular/core";
 export class ImpressumComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    setTimeout(function(){ document.getElementById("scrolling").style.overflowY = "scroll";}, 1200);
+  }
+
+  hideScrollbar(){
+    document.getElementById("scrolling").style.overflowY = "hidden";
+  }
 }

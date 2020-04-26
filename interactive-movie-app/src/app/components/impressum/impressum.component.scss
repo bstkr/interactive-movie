@@ -33,7 +33,7 @@ section {
 .impressum-container {
   width: 100%;
   margin: auto;
-  overflow-y: scroll;
+  overflow-y: hidden;
   color: white;
   background-color: rgba(46, 53, 50, 1);
   background-image: url("watermark.svg");

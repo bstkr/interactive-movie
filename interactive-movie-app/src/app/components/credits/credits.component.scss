@@ -1,7 +1,7 @@
 @import "../../style/palette.scss";
 
 .credits-container {
-  overflow-y: scroll;
+  overflow-y: hidden;
 
   background-color: $black;
 

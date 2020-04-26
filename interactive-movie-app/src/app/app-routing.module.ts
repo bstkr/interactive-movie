@@ -11,8 +11,8 @@ const routes: Routes = [
   { path: "", component: HomeComponent, pathMatch: "full" },
   { path: "movie", component: MovieLoadingScreenComponent },
   { path: "movie/:pov", component: MovieHomeComponent },
-  { path: "credits", component: CreditsComponent },
-  { path: "impressum", component: ImpressumComponent },
+  { path: "credits", component: CreditsComponent, data: { animation: 'isLeft' } },
+  { path: "impressum", component: ImpressumComponent, data: { animation: 'isBottom' } },
 ];
 
 @NgModule({

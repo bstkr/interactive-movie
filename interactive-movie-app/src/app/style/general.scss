@@ -7,6 +7,10 @@ body {
   overflow: hidden;
 }
 
+main {
+  position: relative;
+}
+
 div[class$="-container"] {
   width: 100vw;
   height: 100vh;

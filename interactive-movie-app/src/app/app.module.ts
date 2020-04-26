@@ -18,6 +18,7 @@ import { TimelineObjectComponent } from "./components/movie/timeline-object/time
 import { MovieItemComponent } from "./components/movie/movie-item/movie-item.component";
 import { BackButtonComponent } from "./components/movie/back-button/back-button.component";
 import { MovieLoadingItemComponent } from "./components/movie/movie-loading-item/movie-loading-item.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { MovieLoadingItemComponent } from "./components/movie/movie-loading-item
     MovieItemComponent,
     BackButtonComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

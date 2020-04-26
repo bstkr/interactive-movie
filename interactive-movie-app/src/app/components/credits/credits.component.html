@@ -1,4 +1,4 @@
-<div class="credits-container">
+<div class="credits-container" id="scrolling">
   <div id="credits-title">
     <h1>Credits</h1>
     <div class="background"></div>
@@ -80,7 +80,7 @@
     </div>
   </div>
   <div class="home-button">
-    <a style="z-index: 1;" routerLink="/"> <h1>Back</h1></a>
+    <a style="z-index: 1;" routerLink="/" (click)="hideScrollbar()"><h1>Back</h1></a>
   </div>
   <div id="nothing"></div>
 </div>
