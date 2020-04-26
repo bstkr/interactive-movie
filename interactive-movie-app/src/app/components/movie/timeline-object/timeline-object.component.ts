@@ -16,13 +16,13 @@ export class TimelineObjectComponent implements OnInit {
   objectDecision: string;
 
   sceneId: string;
-  //currentPov: string;
+  currentPov: string;
 
   constructor(
     public interactionService: InteractionService,
     public route: ActivatedRoute,
-    public router: Router,
-    public sceneService: SceneService
+    public sceneService: SceneService,
+    public router: Router
   ) {}
 
   ngOnInit() {
@@ -36,9 +36,9 @@ export class TimelineObjectComponent implements OnInit {
   }
 
   clickedInteraction() {
-    //console.log(this.currentPov);
-    this.sceneId = this.interactionService.getSceneIdFromInteractionName(
-      this.objectName,
+    this.currentPov = this.route.snapshot.paramMap.get("pov");
+    this.sceneId = this.sceneService.getSceneIdFromInteractionName(
+      this.objectName
     );
     console.log(this.sceneId);
 
@@ -52,12 +52,11 @@ export class TimelineObjectComponent implements OnInit {
     if (leftNavElement) {
       leftNavElement.classList.add("hidden");
     }
-    
+
     videoElement.classList.remove("hidden");
     videoElement.classList.add("show");
-    
+
     this.sceneService.setCurrentDecisionObservable("0");
     this.sceneService.setSceneActive(this.sceneId, true);
-    
   }
 }

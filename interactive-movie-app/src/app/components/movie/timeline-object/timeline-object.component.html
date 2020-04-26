@@ -1,11 +1,12 @@
 <div class="timeline-object-container">
-  <div *ngIf= "objectClicked">
-    <!-- [id] = "interactionService.getSceneIdFromInteractionName(objectName)" -->
+  <div *ngIf="objectClicked">
     <img
-    (click)="clickedInteraction()"
-    [class]="objectName"
-    [src]="interactionService.getTimelineImagePath(objectName, objectDecision)"
-    alt=""    
+      (click)="clickedInteraction()"
+      [class]="objectName"
+      [src]="
+        interactionService.getTimelineImagePath(objectName, objectDecision)
+      "
+      alt=""
     />
   </div>
 </div>

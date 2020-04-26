@@ -64,7 +64,7 @@ export const InteractionStateArray: InteractionState[] = [
         },
       },
       {
-        interactionId: "pov2_interaction1",
+        interactionId: "pov2_interaction2",
         pathToCompleteObjectImage: {
           a: "assets/pictures/room/pov2/object5/complete.png",
           b: "assets/pictures/room/pov2/object6/complete.png",
@@ -117,15 +117,15 @@ export const InteractionStateArray: InteractionState[] = [
       {
         interactionId: "pov1_interaction4",
         pathToCompleteObjectImage: {
-          a: "assets/pictures/room/pov1/object7/complete.png",
-          b: "",
+          a: "",
+          b: "assets/pictures/room/pov1/object7/complete.png",
         },
       },
       {
         interactionId: "pov2_interaction5",
         pathToCompleteObjectImage: {
-          a: "assets/pictures/room/pov2/object7/complete.png",
-          b: "",
+          a: "",
+          b: "assets/pictures/room/pov2/object7/complete.png",
         },
       },
     ],

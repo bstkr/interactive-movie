@@ -28,11 +28,9 @@ export class SceneService {
 
     this.currentDecistion = new BehaviorSubject<string>("0");
 
-    for (let pov of Interactions) {
-      for (let interaction of pov.interactions) {
-        let scene = new SceneObservable(interaction.sceneId, false);
-        this.sceneObservableArray.push(scene);
-      }
+    for (let scene of this.sceneArray) {
+      let observableScene = new SceneObservable(scene.sceneId, false);
+      this.sceneObservableArray.push(observableScene);
     }
   }
 
@@ -56,5 +54,13 @@ export class SceneService {
 
   getCurrentDecisionObservable(): BehaviorSubject<string> {
     return this.currentDecistion;
+  }
+
+  getSceneIdFromInteractionName(name: string) {
+    for (let scene of this.sceneArray) {
+      if (scene.sceneName === name) {
+        return scene.sceneId;
+      }
+    }
   }
 }
