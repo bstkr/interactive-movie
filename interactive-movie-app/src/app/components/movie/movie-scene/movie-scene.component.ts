@@ -140,6 +140,7 @@ export class MovieSceneComponent implements OnInit {
       }
     } else if (outroElement) {
       outroElement.classList.replace("hiddenVideo", "currentVideo");
+      this.startVideo(outroElement, 0);
     } else {
       //videoElement.classList.replace("show", "fade");
       setTimeout(() => {
@@ -154,6 +155,7 @@ export class MovieSceneComponent implements OnInit {
 
     if (outroElement) {
       outroElement.classList.replace("hiddenVideo", "currentVideo");
+      this.startVideo(outroElement, 0);
     } else {
       setTimeout(() => {
         this.closeVideo();
@@ -298,14 +300,22 @@ export class MovieSceneComponent implements OnInit {
         decisionContainerChildren[i].classList.add("close-left");
       }
       alt1Element.classList.replace("hiddenVideo", "currentVideo");
+      this.startVideo(alt1Element, 500);
     } else {
       d = "2";
       for (let i = 0; i < decisionContainerChildren.length - 1; i++) {
         decisionContainerChildren[i].classList.add("close-right");
       }
       alt2Element.classList.replace("hiddenVideo", "currentVideo");
+      this.startVideo(alt2Element, 500);
     }
     return d;
+  }
+
+  async startVideo(video: HTMLElement, msDelay: number) {
+    await new Promise((resolve) =>
+      setTimeout(() => resolve(), msDelay)
+    ).then(() => video.click());
   }
 
   closeVideo() {
