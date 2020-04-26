@@ -1,31 +1,88 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, AfterViewInit } from "@angular/core";
 import { PovType } from "src/app/_models/Interactions";
 import { ActivatedRoute, Router, ParamMap } from "@angular/router";
 import { Observable } from "rxjs";
 import { switchMap } from "rxjs/operators";
 import { InteractionService } from "src/app/_services/interaction.service";
 import { InteractionState } from "src/app/_models/InteractionState";
+import { UserState } from "src/app/_models/UserState";
+import { UserService } from "src/app/_services/user.service";
+import { Scene } from "src/app/_models/Scenes";
+import { SceneService } from "src/app/_services/scene.service";
 
 @Component({
   selector: "app-movie-home",
   templateUrl: "./movie-home.component.html",
   styleUrls: ["./movie-home.component.scss"],
 })
-export class MovieHomeComponent implements OnInit {
+export class MovieHomeComponent implements OnInit, AfterViewInit {
   pov$: Observable<string>;
   currentPov: string;
 
+  showIntro = true;
+
   interactionStateArray: InteractionState[];
+  sceneArray: Scene[];
 
   constructor(
     public route: ActivatedRoute,
     public router: Router,
-    public interactionService: InteractionService
+    public interactionService: InteractionService,
+    public userService: UserService,
+    public sceneService: SceneService
   ) {}
 
   ngOnInit() {
     this.currentPov = this.route.snapshot.paramMap.get("pov");
     this.interactionStateArray = this.interactionService.getInteractionStateArray();
+    this.sceneArray = this.sceneService.sceneArray;
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      document.getElementById("production").classList.remove("hidden");
+
+      setTimeout(() => {
+        document.getElementById("production").classList.add("hidden");
+        document.getElementById("coop").classList.remove("hidden");
+
+        setTimeout(() => {
+          document.getElementById("coop").classList.add("hidden");
+
+          if (!this.userService.hasUserSeenIntro()) {
+            const videoElement = document.getElementById(
+              this.sceneService.getSceneIdFromInteractionName("Handy")
+            );
+            const rightNavElement = document.getElementById("rightNav");
+            const leftNavElement = document.getElementById("leftNav");
+
+            if (rightNavElement) {
+              rightNavElement.classList.add("hidden");
+            }
+            if (leftNavElement) {
+              leftNavElement.classList.add("hidden");
+            }
+
+            videoElement.classList.remove("hidden");
+            videoElement.classList.add("show");
+
+            this.sceneService.setCurrentDecisionObservable("0");
+            this.sceneService.setSceneActive(
+              this.sceneService.getSceneIdFromInteractionName("Handy"),
+              true
+            );
+
+            document.getElementById("intro").classList.add("hide");
+
+            setTimeout(() => {
+              this.showIntro = false;
+            }, 2000);
+          } else {
+            this.showIntro = false;
+          }
+        }, 2500);
+      }, 2500);
+    }, 1000);
   }
 
   rightNavigation() {

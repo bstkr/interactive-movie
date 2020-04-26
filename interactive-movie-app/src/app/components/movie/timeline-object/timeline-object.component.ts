@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from "@angular/core";
 import { InteractionService } from "src/app/_services/interaction.service";
 import { Interaction, PovType } from "src/app/_models/Interactions";
 import { ActivatedRoute, Router, ParamMap } from "@angular/router";
+import { SceneService } from "src/app/_services/scene.service";
 
 @Component({
   selector: "app-timeline-object",
@@ -20,6 +21,7 @@ export class TimelineObjectComponent implements OnInit {
   constructor(
     public interactionService: InteractionService,
     public route: ActivatedRoute,
+    public sceneService: SceneService,
     public router: Router
   ) {}
 
@@ -35,9 +37,8 @@ export class TimelineObjectComponent implements OnInit {
 
   clickedInteraction() {
     this.currentPov = this.route.snapshot.paramMap.get("pov");
-    this.sceneId = this.interactionService.getSceneIdFromInteractionName(
-      this.objectName,
-      this.currentPov
+    this.sceneId = this.sceneService.getSceneIdFromInteractionName(
+      this.objectName
     );
 
     const videoElement = document.getElementById(this.sceneId);
@@ -53,5 +54,8 @@ export class TimelineObjectComponent implements OnInit {
 
     videoElement.classList.remove("hidden");
     videoElement.classList.add("show");
+
+    this.sceneService.setCurrentDecisionObservable("0");
+    this.sceneService.setSceneActive(this.sceneId, true);
   }
 }
