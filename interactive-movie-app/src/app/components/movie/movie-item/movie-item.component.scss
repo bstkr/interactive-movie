@@ -1,9 +1,15 @@
+@import "../../../style/palette.scss";
+
 .item-home-container {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+
+  z-index: 2;
+
+  z-index: 1;
 
   transition: opacity 0.5s ease-in-out;
   &.hidden {
@@ -20,9 +26,11 @@
     "  . . . ";
 
   .item-container {
+    position: relative;
     grid-area: content;
     width: auto;
     height: auto;
+    z-index: 1;
     background-color: rgba(46, 53, 50, 0.8);
 
     transition: opacity 0.5s ease-in-out;
@@ -36,6 +44,76 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+
+  .tutorial {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba($black, 0.5);
+
+    .tutorial-object {
+      position: absolute;
+      display: grid;
+      place-content: center;
+      text-align: center;
+
+      background-color: $red;
+    }
+
+    #rewatch {
+      top: 84%;
+      left: 6%;
+      width: 25%;
+    }
+
+    #newScene {
+      top: 45%;
+      left: 50%;
+      width: 25%;
+    }
+
+    #tutorial-timeline {
+      top: 96%;
+      left: 30%;
+    }
+  }
+
+  .closer {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 2;
+
+    width: 4vw;
+    height: 4vw;
+
+    display: grid;
+    place-content: center;
+
+    border-radius: 50%;
+    border: 1px solid $white;
+
+    background-color: $black;
+    color: $white;
+
+    cursor: pointer;
+
+    .symbol {
+      font-size: 40px;
+      padding: 0 10px;
+    }
+
+    &:hover {
+      background-color: $white;
+      color: $black;
     }
   }
 }

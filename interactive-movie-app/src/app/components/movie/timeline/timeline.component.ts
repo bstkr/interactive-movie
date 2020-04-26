@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, HostListener } from "@angular/core";
 
 @Component({
   selector: "app-timeline",
@@ -6,19 +6,37 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./timeline.component.scss"],
 })
 export class TimelineComponent implements OnInit {
-  constructor() {}
+  timelineShow: boolean;
+
+  constructor() {
+    this.timelineShow = false;
+  }
 
   ngOnInit() {}
 
   slide() {
-    const slide = document.getElementById("timeline-container");
-    const state = slide.style.top;
+    const timelineElement = document.getElementById("timeline");
 
-    if(state == "80%") {
-      slide.style.top = "96%";
-    }
-    else {
-      slide.style.top = "80%";
+    this.timelineShow = true;
+
+    timelineElement.classList.remove("hidden");
+  }
+
+  @HostListener("document: click", ["$event.target"])
+  close(target: HTMLElement) {
+    if (
+      this.timelineShow &&
+      !(
+        target.classList.contains("bar") ||
+        target.classList.contains("bar-overlay") ||
+        target.classList.contains("objects") ||
+        target.parentElement.classList.contains("timeline")
+      )
+    ) {
+      this.timelineShow = false;
+      const timelineElement = document.getElementById("timeline");
+
+      timelineElement.classList.add("hidden");
     }
   }
 }

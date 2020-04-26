@@ -10,6 +10,7 @@ import {
   InteractionStateArray,
 } from "../_models/InteractionState";
 import { Observable, BehaviorSubject } from "rxjs";
+import { jsonCopy } from "../_models/UserState";
 
 export class InteractionObservable {
   interactionName: string;
@@ -33,15 +34,30 @@ export class InteractionService {
   private interactionStateObservableArray: InteractionObservable[];
 
   constructor() {
-    this.interactions = Interactions;
+    this.interactions = Object.create(Interactions);
 
-    if (localStorage.length > 0) {
+    if (localStorage.getItem("interactionStateArray")) {
       this.interactionStateArray = JSON.parse(
         localStorage.getItem("interactionStateArray")
       );
     } else {
-      this.interactionStateArray = InteractionStateArray;
+      this.interactionStateArray = jsonCopy(InteractionStateArray);
+      localStorage.setItem(
+        "interactionStateArray",
+        JSON.stringify(this.interactionStateArray)
+      );
     }
+    this.interactionStateObservableArray = [];
+
+    this.initializeObservableArray();
+  }
+
+  resetInteractionStateArray() {
+    this.interactionStateArray = jsonCopy(InteractionStateArray);
+    localStorage.setItem(
+      "interactionStateArray",
+      JSON.stringify(this.interactionStateArray)
+    );
     this.interactionStateObservableArray = [];
 
     this.initializeObservableArray();
@@ -115,25 +131,17 @@ export class InteractionService {
   }
 
   getTimelineImagePath(interactionName: string, decision: string): string {
-    if (decision === "0") {
+    if (decision === "1") {
       return this.interactionStateArray.find(
         (interactionState) => interactionState.name === interactionName
       ).Timeline.pathToTimelineImage.a;
-    } else if (decision === "1") {
+    } else if (decision === "2") {
       return this.interactionStateArray.find(
         (interactionState) => interactionState.name === interactionName
       ).Timeline.pathToTimelineImage.b;
     } else {
       return "";
     }
-  }
-
-  getSceneIdFromInteractionName(interactionName: string, povType: string) {
-    return this.interactions
-      .find((p) => p.id === povType)
-      .interactions.find(
-        (interaction) => interaction.interactionName === interactionName
-      ).sceneId;
   }
 
   private initializeObservableArray() {
