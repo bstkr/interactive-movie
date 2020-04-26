@@ -26,7 +26,13 @@
   .left-navigation {
     grid-area: leftNav;
 
-    background-color: orange;
+    background-image: linear-gradient(-90deg, $bronze, $brown);
+    display: flex;
+    align-items: center;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: $brown;
 
     cursor: pointer;
 
@@ -35,15 +41,72 @@
     }
   }
 
+  #leftNav:hover {
+    background-image: linear-gradient(-120deg, $bronze, $brown);
+
+    .bounce {
+      animation-name: bounce;
+    }
+  }
+
+  #rightNav:hover {
+    background-image: linear-gradient(-120deg, $bronze, $brown);
+
+    .bounce {
+      animation-name: bounce;
+    }
+  }
+
   .right-navigation {
     grid-area: rightNav;
 
-    background-color: orange;
+    background-image: linear-gradient(90deg, $bronze, $brown);
+    display: flex;
+    align-items: center;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: $brown;
 
     cursor: pointer;
 
     &.hidden {
       display: none;
+    }
+  }
+   
+  .arrow {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    //margin-left: 15px;
+    padding: 15px;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+
+    &#left {
+      transform: rotate(180deg);
+    }
+    &#right {
+      transform: rotate(0deg);
+    }
+  }
+
+  .animated {
+    filter: invert(17%) sepia(2%) saturate(2354%) hue-rotate(102deg) brightness(99%) contrast(89%); // $black
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateX(+5px);
+    }
+    50% {
+      transform: translateX(-5px);
     }
   }
 }

@@ -24,15 +24,22 @@
     id="rightNav"
     class="right-navigation"
     (click)="rightNavigation()"
-  ></div>
+  >
+  <div class="arrow" id="right">
+    <img class="animated bounce" src="assets\pictures\room\Navbar\nav-arrow.svg"
+  /></div>
+  </div>
   <div
     *ngIf="currentPov === 'pov2' || currentPov === 'pov3'"
     id="leftNav"
     class="left-navigation"
     (click)="leftNavigation()"
-  ></div>
+  >
+    <div class="arrow" id="left">
+      <img class="animated bounce" src="assets\pictures\room\Navbar\nav-arrow.svg"
+    /></div>
+  </div>
 </div>
-
 <div *ngIf="showIntro" class="intro" id="intro">
   <div id="production" class="production-cont hidden">
     <p>Eine</p>
