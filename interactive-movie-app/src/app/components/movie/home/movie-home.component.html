@@ -16,6 +16,8 @@
       *ngFor="let interactionState of interactionStateArray"
       [interactionState]="interactionState"
     ></app-movie-item>
+    <app-movie-scene *ngFor="let s of sceneArray" [scene]="s"></app-movie-scene>
+    <app-timeline></app-timeline>
   </div>
   <div
     *ngIf="currentPov === 'pov1' || currentPov === 'pov2'"
@@ -37,5 +39,15 @@
       <img class="animated bounce" src="assets\pictures\room\Navbar\nav-arrow.svg"
     /></div>
   </div>
-  <app-timeline class="movie-pov-wrapper"></app-timeline>
+</div>
+<div *ngIf="showIntro" class="intro" id="intro">
+  <div id="production" class="production-cont hidden">
+    <p>Eine</p>
+    <h1>Team Pünktlich</h1>
+    <p>Produktion</p>
+  </div>
+  <div id="coop" class="coop hidden">
+    <p>Im Fach</p>
+    <h1>Interaktives Storytelling</h1>
+  </div>
 </div>
