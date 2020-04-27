@@ -26,18 +26,18 @@
     class="decision-complete hidden"
   >
     <div class="headline-container">
-      <h1 *ngIf="checkCompletedDecision('0')">
+      <h1 *ngIf="checkCompletedDecision('1')">
         {{ decision.decisionContent.decision1Headline }}
       </h1>
-      <h1 *ngIf="checkCompletedDecision('1')">
+      <h1 *ngIf="checkCompletedDecision('2')">
         {{ decision.decisionContent.decision2Headline }}
       </h1>
     </div>
     <div class="content-container">
-      <p *ngIf="checkCompletedDecision('0')">
+      <p *ngIf="checkCompletedDecision('1')">
         {{ decision.decisionContent.decision1Content }}
       </p>
-      <p *ngIf="checkCompletedDecision('1')">
+      <p *ngIf="checkCompletedDecision('2')">
         {{ decision.decisionContent.decision2Content }}
       </p>
     </div>
