@@ -193,8 +193,10 @@ export class MovieSceneComponent implements OnInit {
       endedElement.classList.replace("currentVideo", "closeVideo");
       if (this.userDecision[0] === "1") {
         alt1Element.classList.replace("hiddenVideo", "currentVideo");
+        this.startVideo(alt1Element, 500);
       } else {
         alt2Element.classList.replace("hiddenVideo", "currentVideo");
+        this.startVideo(alt2Element, 500);
       }
     }, 3000);
     setTimeout(() => {
