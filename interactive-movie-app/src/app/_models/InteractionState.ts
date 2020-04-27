@@ -188,8 +188,8 @@ export const InteractionStateArray: InteractionState[] = [
         b: "assets/pictures/room/Timeline_Objects/Laptop_2.png",
       },
     },
-    pathToItemImageA: "assets/pictures/room/Objects/Laptop_1.png",
-    pathToItemImageB: "assets/pictures/room/Objects/Laptop_2.png",
+    pathToItemImageA: "assets/pictures/room/Objects/Laptop_2.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Laptop_1.png",
   },
   {
     name: "Zeitung",
