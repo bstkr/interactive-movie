@@ -26,13 +26,9 @@
   .left-navigation {
     grid-area: leftNav;
 
-    background-image: linear-gradient(-90deg, $bronze, $brown);
+    background-image: radial-gradient(at right, $bronze 0%, $black 71%);
     display: flex;
     align-items: center;
-
-    border-style: solid;
-    border-width: 1px;
-    border-color: $brown;
 
     cursor: pointer;
 
@@ -42,7 +38,7 @@
   }
 
   #leftNav:hover {
-    background-image: linear-gradient(-120deg, $bronze, $brown);
+    background-image: radial-gradient(at right, $bronze 0%, $white 100%);
 
     .bounce {
       animation-name: bounce;
@@ -50,7 +46,7 @@
   }
 
   #rightNav:hover {
-    background-image: linear-gradient(-120deg, $bronze, $brown);
+    background-image: radial-gradient(at left, $bronze 0%, $white 100%);
 
     .bounce {
       animation-name: bounce;
@@ -60,13 +56,9 @@
   .right-navigation {
     grid-area: rightNav;
 
-    background-image: linear-gradient(90deg, $bronze, $brown);
+    background-image: radial-gradient(at left, $bronze 0%, $black 71%);
     display: flex;
     align-items: center;
-
-    border-style: solid;
-    border-width: 1px;
-    border-color: $brown;
 
     cursor: pointer;
 
@@ -79,7 +71,6 @@
     height: 100%;
     width: 100%;
     position: relative;
-    //margin-left: 15px;
     padding: 15px;
     width: 30px;
     height: 30px;
@@ -95,6 +86,7 @@
 
   .animated {
     filter: invert(17%) sepia(2%) saturate(2354%) hue-rotate(102deg) brightness(99%) contrast(89%); // $black
+    //filter: invert(92%) sepia(70%) saturate(2574%) hue-rotate(181deg) brightness(100%) contrast(106%); //white
     animation-duration: .5s;
     animation-fill-mode: both;
     animation-timing-function: linear;
