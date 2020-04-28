@@ -33,6 +33,9 @@ export class MovieSceneComponent implements OnInit {
       .getSceneActive(this.scene.sceneId)
       .subscribe((s) => (this.sceneActive = s));
     this.sceneService
+      .getSceneActive(this.scene.sceneId)
+      .subscribe((s) => this.handleIntroStart());
+    this.sceneService
       .getCurrentDecisionObservable()
       .subscribe((s) => (this.currentDecision = s));
     this.decisionArray = this.sceneService.getDecisionsArrayFromSceneName(
@@ -312,6 +315,15 @@ export class MovieSceneComponent implements OnInit {
       this.startVideo(alt2Element, 500);
     }
     return d;
+  }
+
+  handleIntroStart() {
+    if (this.sceneActive === true) {
+      const introElement = document.getElementById(
+        this.scene.sceneId + "-intro"
+      );
+      introElement.click();
+    }
   }
 
   async startVideo(video: HTMLElement, msDelay: number) {
