@@ -1,3 +1,126 @@
+@import "../../style/palette.scss";
+
+.impressum-container {
+  overflow-y: hidden;
+  position: relative;
+
+  background-color: $black;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+
+  overflow-y: hidden;
+  background-color: $black;
+
+  grid-template-columns: 100px auto 69% 100px;
+  grid-template-rows: 50px 25% auto 46% 50px;
+
+  grid-template-areas:
+    " logo . . . "
+    " . home impressum . "
+    " . . . . "
+    " . . infos . "
+    " . nothing . . ";
+
+    #title-impressum {
+      grid-area: impressum;
+
+      padding-right: 10%;
+      margin-top: 0px;
+      text-align: right;
+    }
+    
+    #home-button {
+      grid-area: home;
+
+      padding-top: 3%;
+      padding-left: 5%;
+      text-align: left;
+
+      z-index: 1;
+    }
+    
+    #operators {
+      margin-top: 100px;
+      text-align: center;
+      color: white;
+      border-style: solid;
+    }
+
+    .logo {
+      grid-area: logo;
+
+      #logo {
+        position: sticky;
+      }
+
+      img {
+        top: 0;
+        left: 0;
+        width: 75vw;
+        height: 95vh;
+      }
+    }
+
+    #site {
+      grid-area: infos;
+      z-index: 1;
+
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    #nothing {
+      grid-area: nothing;
+  
+      border-style: none;
+    }
+    
+    /**
+    #site {
+      grid-area: infos;
+    
+      margin-top: 10%;
+      margin-right: 5%;
+      margin-left: 25%;
+      margin-bottom: 2%;
+      text-align: center;
+      color: white;
+      border-style: solid;
+      border-width: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+      .op-name {
+        margin-top: 10px;
+        border: none;
+        p {
+          font-size: 15px;
+        }
+      }
+      .op-tp {
+        margin-top: 15px;
+        border: none;
+        p {
+          font-size: 15px;
+          color: white;
+          font-style: normal;
+        }
+      }
+      .op-disc {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border: none;
+        p {
+          font-size: 12px;
+          text-align: justify;
+        }
+      }
+    } **/
+}
+
+/**
 section {
   h1 {
     display: inline;
@@ -28,72 +151,4 @@ section {
     padding-top: 5px;
     padding-bottom: 5px;
   }
-}
-
-.impressum-container {
-  width: 100%;
-  margin: auto;
-  overflow-y: hidden;
-  color: white;
-  background-color: rgba(46, 53, 50, 1);
-  background-image: url("watermark.svg");
-  background-size: 66%;
-  background-repeat: no-repeat;
-}
-
-#title-impressum {
-  padding-right: 10%;
-  margin-top: 0px;
-  text-align: right;
-}
-
-#home-button {
-  padding-top: 3%;
-  padding-left: 5%;
-  text-align: left;
-}
-
-#operators {
-  margin-top: 100px;
-  text-align: center;
-  color: white;
-  border-style: solid;
-}
-
-#site {
-  margin-top: 10%;
-  margin-right: 5%;
-  margin-left: 25%;
-  margin-bottom: 2%;
-  text-align: center;
-  color: white;
-  border-style: solid;
-  border-width: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  .op-name {
-    margin-top: 10px;
-    border: none;
-    p {
-      font-size: 15px;
-    }
-  }
-  .op-tp {
-    margin-top: 15px;
-    border: none;
-    p {
-      font-size: 15px;
-      color: white;
-      font-style: normal;
-    }
-  }
-  .op-disc {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: none;
-    p {
-      font-size: 12px;
-      text-align: justify;
-    }
-  }
-}
+} **/
