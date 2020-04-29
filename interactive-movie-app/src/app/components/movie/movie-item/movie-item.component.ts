@@ -16,6 +16,8 @@ export class MovieItemComponent implements OnInit {
   interactionClicked: boolean;
   interactionDecision: String;
 
+  userState: UserState;
+
   constructor(
     public interactionService: InteractionService,
     public userService: UserService
@@ -30,6 +32,7 @@ export class MovieItemComponent implements OnInit {
       .decision.subscribe((d) => {
         this.interactionDecision = d.split(",")[0];
       });
+    this.userService.getUserState().subscribe((s) => (this.userState = s));
   }
 
   close() {
@@ -37,7 +40,7 @@ export class MovieItemComponent implements OnInit {
     let itemContainerElement: HTMLElement;
 
     if (tutorialContainer) {
-      if (this.userService.hasUserSeenIntro()) {
+      if (this.userState.hasSeenIntro) {
         itemContainerElement = document.getElementById(
           this.interactionState.name + "-item-component"
         );
