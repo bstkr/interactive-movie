@@ -14,8 +14,8 @@
   overflow-y: hidden;
   background-color: $black;
 
-  grid-template-columns: 100px auto 69% 100px;
-  grid-template-rows: 50px 25% auto 46% 50px;
+  grid-template-columns: 5% auto 69% 5%;
+  grid-template-rows: 2.5% 25% auto 46% 2.5%;
 
   grid-template-areas:
     " logo . . . "
@@ -29,21 +29,15 @@
     #impressum-title {
       grid-area: impressum;
 
-      top: -15%;
-      right: -13.8%;
+      top: 0;
+      right: 0;
 
-      position: relative;
+      position: absolute;
       border-style: none;
       padding: 1.5% 9% 1.5% 9%;
       justify-self: center;
       align-self: center;
   
-      h1 {
-        border-style: none;
-      }
-    }
-  
-    #impressum-title {
       .background {
         position: absolute;
         top: 0;
@@ -57,70 +51,68 @@
       h1,
       h2 {
         position: relative;
+        border-style: none;
         z-index: 1;
         font-size: 7.8125vw;
         letter-spacing: 1.04vw;
         color: $black;
       }
     }
-    
-    #home-button {
+
+    .home-button {
       grid-area: home;
-  
-      //text-align: left;
-      z-index: 1;
-      border-style: none;
-  
-      position: sticky;
-      top: 12vw;
-  
-      a {
-        text-decoration: none;
-        text-transform: uppercase;
-        border-style: solid;
-        border-width: 3px;
-        //padding: 0 16% 0 16%;
-  
-        color: $white;
-        font-size: 1.875vw;
-        font-style: normal;
-  
-        h1 {
-          color: $white;
-          border-style: none;
-          letter-spacing: 0.4vw;
-        }
-  
-        &:hover {
-  
-          background-color: rgba($color: $white, $alpha: 0.6);
-  
+
+      position: absolute;
+      width: 8.5vw;
+      height: 2.4vw;
+
+      border: 3px solid $white;
+      background-color: none;
+      
+
+      &:hover {
+        background-color: rgba($color: $white, $alpha: 0.6);
+
+        a {
           h1 {
             color: $black;
+            position: relative;
           }
+        }
+     }
+
+      a {
+        text-decoration: none;
+        position: absolute;
+        text-align: center;
+
+        width: 100%;
+        height: 100%;
+
+        h1 {
+          position: relative;
+          letter-spacing: 0.3vw;
+          font-size: 2.2vw;
+          font-style: normal;
+          color: $white;
         }
       }
     }
-    
+    /*
     #operators {
       margin-top: 100px;
       text-align: center;
       color: white;
       border-style: solid;
-    }
+    } */
 
     .logo {
       grid-area: logo;
 
       #logo {
-        position: sticky;
-      }
-
-      img {
-        top: 0;
-        left: 0;
-        width: 75vw;
-        height: 95vh;
+        position: absolute;
+        width: 100%;
+        height: 100%;
       }
     }
 
@@ -128,8 +120,57 @@
       grid-area: infos;
       z-index: 1;
 
+      position: absolute;
+
+      width: 98%;
+      height: 96%;
+
       border-style: solid;
       border-width: 1px;
+
+      font-size:  0.7vw;
+
+      text-align: center;
+      padding: 1% 1% 1% 1%;
+
+      display: row;
+      align-content: center;
+
+      .op-name {
+        position: relative;
+        margin-top: 1vw;
+        border: none;
+
+        p {
+          font-size:  0.7vw;
+        }
+        h3 {
+          padding-top: 1vw;
+        }
+      }
+      .op-tp {
+        position: relative;
+        margin-top: 1vw;
+        margin-left: 1vw;
+        border: none;
+
+        p {
+          font-size:   0.7vw;
+          color: white;
+          font-style: normal;
+        }
+      }
+      .op-disc {
+        position: relative;
+        margin-top: 1vw;
+        margin-bottom: 1%;
+        border: none;
+        float: right;
+
+        p {
+          font-size:   0.7vw;
+          text-align: justify;
+        }
     }
 
     #nothing {
@@ -137,78 +178,5 @@
   
       border-style: none;
     }
-    
-    /**
-    #site {
-      grid-area: infos;
-    
-      margin-top: 10%;
-      margin-right: 5%;
-      margin-left: 25%;
-      margin-bottom: 2%;
-      text-align: center;
-      color: white;
-      border-style: solid;
-      border-width: 1px;
-      padding-right: 15px;
-      padding-left: 15px;
-      .op-name {
-        margin-top: 10px;
-        border: none;
-        p {
-          font-size: 15px;
-        }
-      }
-      .op-tp {
-        margin-top: 15px;
-        border: none;
-        p {
-          font-size: 15px;
-          color: white;
-          font-style: normal;
-        }
-      }
-      .op-disc {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        border: none;
-        p {
-          font-size: 12px;
-          text-align: justify;
-        }
-      }
-    } **/
+  }   
 }
-
-/**
-section {
-  h1 {
-    display: inline;
-    border-style: solid;
-    border-width: 1px;
-    font-size: 80px;
-    padding: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  h2 {
-    border: none;
-    border-width: 1px;
-  }
-  h3 {
-    border: none;
-    text-decoration: unset;
-    font-size: 20px;
-  }
-  h4 {
-    display: inline;
-    border-style: solid;
-    border-width: 1px;
-    font-size: 40px;
-    color: white;
-    font-style: normal;
-    padding: 25px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-} **/
