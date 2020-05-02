@@ -12,19 +12,22 @@
   display: grid;
 
   overflow-y: hidden;
-  background-color: $black;
 
   grid-template-columns: 5.208vw auto 69vw 5.208vw;
   grid-template-rows: 2.604vw 14.0625vw auto minmax(170px, 25.875vw) 2.604vw;
 
   grid-template-areas:
-    " logo . . . "
+    " . . . . "
     " . home impressum . "
     " . . . . "
     " . . infos . "
     " . nothing . . ";
 
-  
+    background: url(../../../assets/pictures/watermark_impressum.svg) no-repeat;
+    background-size: 71vw;
+    background-position: top left;
+
+    background-color: $black;
 
     #impressum-title {
       grid-area: impressum;
@@ -106,16 +109,6 @@
       border-style: solid;
     } */
 
-    .logo {
-      grid-area: logo;
-
-      #logo {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
     #site {
       grid-area: infos;
       z-index: 1;
@@ -135,6 +128,8 @@
 
       display: row;
       align-content: center;
+
+      color: $pureWhite;
 
       .flex {
         display: flex;
@@ -161,8 +156,12 @@
 
         p {
           font-size: 0.9vw;
-          color: white;
+          color: $pureWhite;
           font-style: normal;
+        }
+
+        a {
+          text-decoration-color: $pureWhite;
         }
       }
       .op-disc {
