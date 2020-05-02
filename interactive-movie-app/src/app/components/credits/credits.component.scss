@@ -11,11 +11,11 @@
   display: grid;
 
   grid-template-columns: auto 60.625vw 9.375vw 25vw;
-  grid-template-rows: 3.125vw 8.75vw 16.25vw 25vw 3.125vw 25vw 3.125vw 25vw 3.125vw;
+  grid-template-rows: 2.604vw 8.75vw 17.3vw 25vw 2.604vw 25vw 2.604vw 25vw 2.604vw;
 
   grid-template-areas:
     " . . . . "
-    " . creditstitle . side-bar "
+    " . creditstitle . . "
     " . . . home "
     " . team . . "
     " . . . . "
@@ -24,18 +24,11 @@
     " . actors . . "
     " . nothing . . ";
 
-  .side-bar {
-    grid-area: side-bar;
-    border-style: none;
-    padding-top: 3vh;
+    background: url(../../../assets/pictures/credits_watermark.svg) no-repeat;
+    background-size: 25vw;
+    background-position: bottom right;
 
-    position: sticky;
-    top: -50vw;
-
-    .logo {
-      border-style: none;
-    }
-  }
+    background-color: $black;
 
   .home-button {
     grid-area: home;
