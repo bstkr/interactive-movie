@@ -22,10 +22,9 @@
       ". Menu ."
       ". . .";
 
-    background: url(../../../assets/pictures/watermark_home.svg) no-repeat;
+    background: url(../../../assets/pictures/Homepage_Watermark.svg) no-repeat;
     background-size: 71vw;
-    //background-position: bottom left;
-    background-position: 0 100%;
+    background-position: bottom left;
 
     &.hide {
       background: none;
