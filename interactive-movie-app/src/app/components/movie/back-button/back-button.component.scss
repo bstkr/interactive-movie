@@ -17,6 +17,20 @@
         text-align: center;
         top: 2.22%;
         left: 2.8125%;
+
+        .button {
+            padding-left: 1.2vw;
+            padding-right: 1vw;
+            padding-top: 0.2vw;
+            padding-bottom: 0vw;
+
+            h1 {
+                color: $white;
+                border-style: none;
+                letter-spacing: 0.3vw;
+                font-size: 2.2vw;        
+            }
+        }
     } 
 
     .button {
