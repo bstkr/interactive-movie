@@ -1,10 +1,11 @@
 import { Component, OnInit, Input, ElementRef } from "@angular/core";
 import { Interaction, VideoSequence } from "src/app/_models/Interactions";
 import { InteractionService } from "src/app/_services/interaction.service";
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject, Subscription, Observable, from } from "rxjs";
 import { SceneService } from "src/app/_services/scene.service";
 import { Decision, Scene } from "src/app/_models/Scenes";
-import { sequenceEqual } from "rxjs/operators";
+import { interval } from "rxjs";
+import { SceneDecision, Decisions } from "src/app/_models/Decisions";
 
 @Component({
   selector: "app-movie-scene",
@@ -14,11 +15,15 @@ import { sequenceEqual } from "rxjs/operators";
 export class MovieSceneComponent implements OnInit {
   @Input() scene: Scene;
 
+  decisionTimer;
+
   decisionArray: Decision[];
   currentDecision: string;
 
   sceneActive: boolean;
   userDecision: string[];
+
+  perSetDecisions: SceneDecision[];
 
   constructor(
     public interactionService: InteractionService,
@@ -26,15 +31,18 @@ export class MovieSceneComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.perSetDecisions = Decisions;
+
     this.interactionService
       .getInteractionState(this.scene.sceneName)
       .decision.subscribe((s) => (this.userDecision = s.split(",")));
-    this.sceneService
+    this.sceneService.getSceneActive(this.scene.sceneId).subscribe((s) => {
+      this.sceneActive = s;
+      this.handleIntroStart();
+    });
+    /*this.sceneService
       .getSceneActive(this.scene.sceneId)
-      .subscribe((s) => (this.sceneActive = s));
-    this.sceneService
-      .getSceneActive(this.scene.sceneId)
-      .subscribe((s) => this.handleIntroStart());
+      .subscribe((s) => this.handleIntroStart());*/
     this.sceneService
       .getCurrentDecisionObservable()
       .subscribe((s) => (this.currentDecision = s));
@@ -103,6 +111,13 @@ export class MovieSceneComponent implements OnInit {
       for (let i = 0; i < decisionContainer.children.length - 1; i++) {
         decisionContainer.children[i].classList.remove("hidden");
       }
+
+      document.getElementById("sound-player").innerHTML =
+        "<audio autoplay='autoplay'><source src='/assets/sound/decision_sound.mp3' type='audio/mpeg'></audio>";
+
+      this.decisionTimer = setTimeout((_) => {
+        this.automaticClickDecision(0);
+      }, 10000);
     }
   }
 
@@ -140,6 +155,13 @@ export class MovieSceneComponent implements OnInit {
         for (let i = 0; i < decisionContainer.children.length - 1; i++) {
           decisionContainer.children[i].classList.remove("hidden");
         }
+
+        document.getElementById("sound-player").innerHTML =
+          "<audio autoplay='autoplay'><source src='/assets/sound/decision_sound.mp3' type='audio/mpeg'></audio>";
+
+        this.decisionTimer = setTimeout((_) => {
+          this.automaticClickDecision(0);
+        }, 8000);
       }
     } else if (outroElement) {
       outroElement.classList.replace("hiddenVideo", "currentVideo");
@@ -158,7 +180,7 @@ export class MovieSceneComponent implements OnInit {
 
     if (outroElement) {
       outroElement.classList.replace("hiddenVideo", "currentVideo");
-      this.startVideo(outroElement, 0);
+      this.startVideo(outroElement, 500);
     } else {
       setTimeout(() => {
         this.closeVideo();
@@ -209,32 +231,42 @@ export class MovieSceneComponent implements OnInit {
   }
 
   onDecisionClick({ dec, decisionPos }) {
+    if (this.decisionTimer) {
+      clearTimeout(this.decisionTimer);
+    }
+
     const introElement = document.getElementById(this.scene.sceneId + "-intro");
     const decisionContainer = document.getElementById(
       this.scene.sceneId + decisionPos + "-decision"
     );
 
-    introElement.classList.replace("currentVideo", "closeVideo");
-
-    let userDecision: string;
-
-    if (this.currentDecision !== "0") {
-      userDecision = this.currentDecision;
-      userDecision += "," + this.handleSecondDecision(dec, decisionPos);
-    } else {
-      userDecision = this.handleFirstDecision(dec, decisionPos);
-    }
-
-    this.sceneService.setCurrentDecisionObservable(dec);
-
-    this.interactionService.setDecisionOfInteractionState(
-      this.scene.sceneName,
-      userDecision
-    );
+    decisionContainer.children
+      .namedItem("decision-" + dec)
+      .classList.add("clicked");
+    decisionContainer.classList.add("fade");
 
     setTimeout(() => {
-      decisionContainer.classList.add("hidden");
-    }, 2000);
+      introElement.classList.replace("currentVideo", "closeVideo");
+
+      let userDecision: string;
+
+      if (this.currentDecision !== "0") {
+        userDecision = this.currentDecision;
+        userDecision += "," + this.handleSecondDecision(dec, decisionPos);
+      } else {
+        userDecision = this.handleFirstDecision(dec, decisionPos);
+      }
+
+      setTimeout(() => {
+        decisionContainer.classList.replace("fade", "hidden");
+        this.sceneService.setCurrentDecisionObservable(dec);
+
+        this.interactionService.setDecisionOfInteractionState(
+          this.scene.sceneName,
+          userDecision
+        );
+      }, 1000);
+    }, 500);
   }
 
   handleFirstDecision(dec: string, decisionPos: string): string {
@@ -301,20 +333,21 @@ export class MovieSceneComponent implements OnInit {
 
     if (userDecision === "1") {
       d = "1";
-      for (let i = 0; i < decisionContainerChildren.length - 1; i++) {
-        decisionContainerChildren[i].classList.add("close-left");
-      }
       alt1Element.classList.replace("hiddenVideo", "currentVideo");
-      this.startVideo(alt1Element, 500);
+      this.startVideo(alt1Element, 2000);
     } else {
       d = "2";
-      for (let i = 0; i < decisionContainerChildren.length - 1; i++) {
-        decisionContainerChildren[i].classList.add("close-right");
-      }
       alt2Element.classList.replace("hiddenVideo", "currentVideo");
-      this.startVideo(alt2Element, 500);
+      this.startVideo(alt2Element, 2000);
     }
     return d;
+  }
+
+  automaticClickDecision(currentPos: number) {
+    let autoDecision = this.perSetDecisions.find(
+      (dec) => this.scene.sceneId === dec.sceneId
+    );
+    this.onDecisionClick(autoDecision.decision[currentPos]);
   }
 
   handleIntroStart() {
@@ -322,7 +355,9 @@ export class MovieSceneComponent implements OnInit {
       const introElement = document.getElementById(
         this.scene.sceneId + "-intro"
       );
-      introElement.click();
+      setTimeout(() => {
+        introElement.click();
+      }, 1000);
     }
   }
 

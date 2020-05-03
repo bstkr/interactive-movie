@@ -13,14 +13,14 @@ export class UserService {
       let userState = JSON.parse(localStorage.getItem("userState"));
       this.userState = new BehaviorSubject<UserState>(userState);
     } else {
-      let userState = new UserState();
+      let userState = new UserState(false);
       localStorage.setItem("userState", JSON.stringify(userState));
       this.userState = new BehaviorSubject<UserState>(userState);
     }
   }
 
   resetUserState() {
-    let userState = new UserState();
+    let userState = new UserState(false);
     localStorage.setItem("userState", JSON.stringify(userState));
     this.userState.next(userState);
   }

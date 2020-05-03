@@ -17,6 +17,7 @@ export class MovieItemComponent implements OnInit {
   interactionDecision: String;
 
   userState: UserState;
+  intorChecker = false;
 
   constructor(
     public interactionService: InteractionService,
@@ -36,20 +37,22 @@ export class MovieItemComponent implements OnInit {
   }
 
   close() {
-    const tutorialContainer = document.getElementById("tutorial");
+    const tutorialContainer = document.getElementById(
+      this.interactionState.name + "-tutorial"
+    );
     let itemContainerElement: HTMLElement;
 
     if (tutorialContainer) {
-      if (this.userState.hasSeenIntro) {
+      if (this.intorChecker) {
         itemContainerElement = document.getElementById(
           this.interactionState.name + "-item-component"
         );
+        this.userService.setUserState(true);
       } else {
         itemContainerElement = document.getElementById(
           this.interactionState.name + "-item-object"
         );
-
-        this.userService.setUserState(true);
+        this.intorChecker = true;
       }
     } else {
       itemContainerElement = document.getElementById(

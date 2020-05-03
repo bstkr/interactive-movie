@@ -1,99 +1,188 @@
-section {
-  h1 {
-    display: inline;
-    border-style: solid;
-    border-width: 1px;
-    font-size: 80px;
-    padding: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  h2 {
-    border: none;
-    border-width: 1px;
-  }
-  h3 {
-    border: none;
-    text-decoration: unset;
-    font-size: 20px;
-  }
-  h4 {
-    display: inline;
-    border-style: solid;
-    border-width: 1px;
-    font-size: 40px;
-    color: white;
-    font-style: normal;
-    padding: 25px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-}
+@import "../../style/palette.scss";
 
 .impressum-container {
-  width: 100%;
-  margin: auto;
   overflow-y: hidden;
-  color: white;
-  background-color: rgba(46, 53, 50, 1);
-  background-image: url("watermark.svg");
-  background-size: 66%;
-  background-repeat: no-repeat;
-}
+  position: relative;
 
-#title-impressum {
-  padding-right: 10%;
-  margin-top: 0px;
-  text-align: right;
-}
+  background-color: $black;
 
-#home-button {
-  padding-top: 3%;
-  padding-left: 5%;
-  text-align: left;
-}
+  width: 100vw;
+  height: 100vh;
 
-#operators {
-  margin-top: 100px;
-  text-align: center;
-  color: white;
-  border-style: solid;
-}
+  display: grid;
 
-#site {
-  margin-top: 10%;
-  margin-right: 5%;
-  margin-left: 25%;
-  margin-bottom: 2%;
-  text-align: center;
-  color: white;
-  border-style: solid;
-  border-width: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  .op-name {
-    margin-top: 10px;
-    border: none;
-    p {
-      font-size: 15px;
+  overflow-y: hidden;
+
+  grid-template-columns: 5.208vw auto 69vw 5.208vw;
+  grid-template-rows: 2.604vw 14.0625vw auto minmax(170px, 25.875vw) 2.604vw;
+
+  grid-template-areas:
+    " . . . . "
+    " . home impressum . "
+    " . . . . "
+    " . . infos . "
+    " . nothing . . ";
+
+    background: url(../../../assets/pictures/watermark_impressum.svg) no-repeat;
+    background-size: 71vw;
+    background-position: top left;
+
+    background-color: $black;
+
+    #impressum-title {
+      grid-area: impressum;
+
+      top: 0;
+      right: 0;
+
+      position: absolute;
+      border-style: none;
+      padding: 1.5% 9% 1.5% 9%;
+      justify-self: center;
+      align-self: center;
+  
+      .background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        opacity: 0.6;
+        z-index: 0;
+      }
+      h1,
+      h2 {
+        position: relative;
+        border-style: none;
+        z-index: 1;
+        font-size: 7.8125vw;
+        letter-spacing: 1.04vw;
+        color: $black;
+      }
     }
-  }
-  .op-tp {
-    margin-top: 15px;
-    border: none;
-    p {
-      font-size: 15px;
+
+    .home-button {
+      grid-area: home;
+
+      position: absolute;
+      width: 8.5vw;
+      height: 2.4vw;
+
+      border: 3px solid $white;
+      background-color: none;
+      
+
+      &:hover {
+        background-color: rgba($color: $white, $alpha: 0.6);
+
+        a {
+          h1 {
+            color: $black;
+            position: relative;
+          }
+        }
+     }
+
+      a {
+        text-decoration: none;
+        position: absolute;
+        text-align: center;
+
+        width: 100%;
+        height: 100%;
+        
+        padding-left: 1%;
+
+        h1 {
+          position: relative;
+          letter-spacing: 0.3vw;
+          font-size: 2.2vw;
+          font-style: normal;
+          color: $white;
+        }
+      }
+    }
+    /*
+    #operators {
+      margin-top: 100px;
+      text-align: center;
       color: white;
-      font-style: normal;
+      border-style: solid;
+    } */
+
+    #site {
+      grid-area: infos;
+      z-index: 1;
+
+      position: absolute;
+
+      width: 98%;
+      height: 96%;
+
+      border-style: solid;
+      border-width: 1px;
+
+      font-size:   0.9vw;
+
+      text-align: center;
+      padding: 1% 1% 1% 1%;
+
+      display: row;
+      align-content: center;
+
+      color: $pureWhite;
+
+      .flex {
+        display: flex;
+        justify-content: center;
+      }
+
+      .op-name {
+        position: relative;
+        margin-top: 1vw;
+        border: none;
+
+        p {
+          font-size:   0.9vw;
+        }
+        h3 {
+          padding-top: 1vw;
+        }
+      }
+      .op-tp {
+        position: relative;
+        margin-top: 1vw;
+        margin-left: 7vw;
+        border: none;
+
+        p {
+          font-size: 0.9vw;
+          color: $pureWhite;
+          font-style: normal;
+        }
+
+        a {
+          text-decoration-color: $pureWhite;
+        }
+      }
+      .op-disc {
+        position: relative;
+        margin-top: 3vw;
+        margin-bottom: 1%;
+        border: none;
+        float: right;
+
+        p {
+          font-size:   0.9vw;
+          text-align: justify;
+        }
     }
-  }
-  .op-disc {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: none;
-    p {
-      font-size: 12px;
-      text-align: justify;
+
+    #nothing {
+      grid-area: nothing;
+  
+      border-style: none;
     }
-  }
+  }   
 }

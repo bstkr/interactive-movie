@@ -11,6 +11,12 @@
 
   z-index: 3;
 
+  transition: opacity 3s ease-out;
+
+  &.fade {
+    opacity: 0;
+  }
+
   &.hidden {
     z-index: -1;
   }
@@ -43,13 +49,19 @@
       z-index: -1;
     }
 
+    &.clicked {
+      .background {
+        background-color: $white;
+      }
+    }
+
     &#decision-1 {
       border-right: $black 3px solid;
 
       grid-template-areas:
         ". . ."
         ". headline ."
-        "arrow content content"
+        "arrow content ."
         ". . .";
 
       &.hidden {
@@ -83,7 +95,7 @@
       grid-template-areas:
         ". . ."
         ". headline ."
-        "content content arrow"
+        ". content arrow"
         ". . .";
 
       &.hidden {
@@ -148,7 +160,19 @@
       justify-self: start;
 
       h1 {
-        font-size: 5em;
+        font-size: 80px;
+      }
+
+      @media screen and (max-width: 1500px) {
+        h1 {
+          font-size: 50px;
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        h1 {
+          font-size: 30px;
+        }
       }
     }
 
@@ -162,7 +186,19 @@
       justify-self: start;
 
       p {
-        font-size: 1.5em;
+        font-size: 25px;
+      }
+
+      @media screen and (max-width: 1500px) {
+        h1 {
+          font-size: 20px;
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        h1 {
+          font-size: 10px;
+        }
       }
     }
 
