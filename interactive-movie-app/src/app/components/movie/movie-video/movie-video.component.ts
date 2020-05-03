@@ -55,4 +55,13 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
   videoEnded() {
     this.endedVideo.emit(this.video);
   }
+
+  resetVideo(){
+    if (this.videoPlayer.nativeElement.paused){
+      this.videoPlayer.nativeElement.currentTime = 0;
+    } else {
+    this.videoPlayer.nativeElement.currentTime = 0;
+    this.videoPlayer.nativeElement.pause();
+    }
+  }
 }

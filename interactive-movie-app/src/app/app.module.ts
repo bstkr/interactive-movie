@@ -19,6 +19,7 @@ import { MovieItemComponent } from "./components/movie/movie-item/movie-item.com
 import { BackButtonComponent } from "./components/movie/back-button/back-button.component";
 import { MovieLoadingItemComponent } from "./components/movie/movie-loading-item/movie-loading-item.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MovieExitButtonComponent } from './components/movie/movie-exit-button/movie-exit-button.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MovieLoadingItemComponent,
     MovieItemComponent,
     BackButtonComponent,
+    MovieExitButtonComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
   providers: [],

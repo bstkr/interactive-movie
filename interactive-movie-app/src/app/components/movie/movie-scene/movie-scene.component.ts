@@ -5,6 +5,7 @@ import { BehaviorSubject } from "rxjs";
 import { SceneService } from "src/app/_services/scene.service";
 import { Decision, Scene } from "src/app/_models/Scenes";
 import { sequenceEqual } from "rxjs/operators";
+import { MovieVideoComponent } from "src/app/components/movie/movie-video/movie-video.component";
 
 @Component({
   selector: "app-movie-scene",
@@ -327,8 +328,17 @@ export class MovieSceneComponent implements OnInit {
     const itemContainerElement = document.getElementById(
       this.scene.sceneName + "-item-component"
     );
+    //let mvc = new MovieVideoComponent();
 
     setTimeout(() => {
+      if (videoElement){
+        //mvc.resetVideo();
+        videoElement.classList.replace("show", "fade");
+        setTimeout(() => {
+          videoElement.classList.replace("fade", "hidden");
+          this.resetVideoForRewatch();
+        }, 2000);
+      }
       if (rightNavElement) {
         rightNavElement.classList.remove("hidden");
       }

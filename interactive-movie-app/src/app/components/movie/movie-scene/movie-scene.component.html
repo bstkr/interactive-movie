@@ -1,4 +1,8 @@
 <div id="{{ scene.sceneId }}" class="hidden">
+  <app-movie-exit-button
+    [id]="exit"
+    (click)="closeVideo()"
+  ></app-movie-exit-button>
   <app-movie-video
     *ngFor="let video of scene.videoSequence"
     [scene]="scene"
