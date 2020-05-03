@@ -159,7 +159,7 @@ export class MovieSceneComponent implements OnInit {
     } else {
       //videoElement.classList.replace("show", "fade");
       setTimeout(() => {
-        this.closeVideo();
+        this.closeVideo(false);
       }, 2000);
     }
   }
@@ -173,7 +173,7 @@ export class MovieSceneComponent implements OnInit {
       this.startVideo(outroElement, 0);
     } else {
       setTimeout(() => {
-        this.closeVideo();
+        this.closeVideo(false);
       }, 2000);
     }
   }
@@ -183,7 +183,7 @@ export class MovieSceneComponent implements OnInit {
 
     setTimeout(() => {
       outroElement.classList.replace("currentVideo", "closeVideo");
-      this.closeVideo();
+      this.closeVideo(false);
     }, 2000);
   }
 
@@ -351,34 +351,27 @@ export class MovieSceneComponent implements OnInit {
         component.videoPlayer.nativeElement.currentTime = 0;
       }
     }
-    this.closeVideo();
+    this.closeVideo(true);
   }
 
-  closeVideo() {
+  closeVideo(b?: boolean) {
     const videoElement = document.getElementById(this.scene.sceneId);
     const rightNavElement = document.getElementById("rightNav");
     const leftNavElement = document.getElementById("leftNav");
     const itemContainerElement = document.getElementById(
       this.scene.sceneName + "-item-component"
     );
-    //let mvc = new MovieVideoComponent();
 
     setTimeout(() => {
-      if (videoElement) {
-        //mvc.resetVideo();
-        videoElement.classList.replace("show", "fade");
-        setTimeout(() => {
-          videoElement.classList.replace("fade", "hidden");
-          this.resetVideoForRewatch();
-        }, 2000);
-      }
       if (rightNavElement) {
         rightNavElement.classList.remove("hidden");
       }
       if (leftNavElement) {
         leftNavElement.classList.remove("hidden");
       }
+      if(!b){
       itemContainerElement.classList.replace("hidden", "show");
+      }
       videoElement.classList.replace("show", "fade");
 
       setTimeout(() => {
