@@ -45,8 +45,8 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
     const videoElement = document.getElementById(id);
     if (this.videoPlayer.nativeElement.paused) {
       videoElement.classList.replace("show", "hidden");
-      this.videoEnded(); /*Uncomment for production*/
-      /*Uncomment for development*/ //this.videoPlayer.nativeElement.play();
+      //this.videoEnded(); /*Uncomment for production*/
+      /*Uncomment for development*/ this.videoPlayer.nativeElement.play();
     } else {
       videoElement.classList.replace("hidden", "show");
       this.videoPlayer.nativeElement.pause();

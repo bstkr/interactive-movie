@@ -21,7 +21,7 @@
   <div
     *ngIf="interactionState.name === 'Handy' && !userState.hasSeenIntro"
     class="tutorial"
-    id="tutorial"
+    [id]="interactionState.name + '-tutorial'"
   >
     <div class="tutorial-object" id="rewatch">
       <p>Du kannst das Object nochmal klicken und die Szene erneut ansehen</p>
@@ -36,7 +36,7 @@
       </p>
     </div>
   </div>
-  <div class="closer" (click)="close()">
+  <div class="closer" (mouseup)="close()">
     <span class="symbol">&#10005;</span>
   </div>
 </div>
