@@ -113,7 +113,7 @@ export class MovieSceneComponent implements OnInit {
       }
 
       document.getElementById("sound-player").innerHTML =
-        "<audio autoplay='autoplay'><source src='/assets/sound/decision_sound.mp3 type='audio/mpeg'></audio>";
+        "<audio autoplay='autoplay'><source src='/assets/sound/decision_sound.mp3' type='audio/mpeg'></audio>";
 
       this.decisionTimer = setTimeout((_) => {
         this.automaticClickDecision(0);
@@ -161,7 +161,7 @@ export class MovieSceneComponent implements OnInit {
 
         this.decisionTimer = setTimeout((_) => {
           this.automaticClickDecision(0);
-        }, 10000);
+        }, 8000);
       }
     } else if (outroElement) {
       outroElement.classList.replace("hiddenVideo", "currentVideo");
