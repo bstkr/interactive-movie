@@ -144,6 +144,15 @@ export class InteractionService {
     }
   }
 
+  getInteractionImages(interactionName: string, interactionId: string) {
+    return Object.values(
+      this.interactionStateArray
+        .find((is) => is.name === interactionName)
+        .Interactions.find((i) => i.interactionId === interactionId)
+        .pathToCompleteObjectImage
+    );
+  }
+
   private initializeObservableArray() {
     for (const interactionState of this.interactionStateArray) {
       const arrayObject = new InteractionObservable(

@@ -3,7 +3,6 @@
 
 . IMM Seite gestalten
     . http://www.imm-ulm.de/#!/Lehre/interaktives-storytelling
-
 . Roger fragen bzgl. Projekt auf IMM Server hosten
 
 . Präsentation mit ???

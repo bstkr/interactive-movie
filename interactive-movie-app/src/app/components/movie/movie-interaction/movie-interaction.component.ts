@@ -18,6 +18,9 @@ export class MovieInteractionComponent implements OnInit {
   interactionDecision: string;
   sceneId: string;
 
+  interactionImages: string[];
+  randomDelay: string;
+
   constructor(
     public interactionService: InteractionService,
     public sceneService: SceneService
@@ -37,6 +40,11 @@ export class MovieInteractionComponent implements OnInit {
     this.sceneId = this.sceneService.getSceneIdFromInteractionName(
       this.interaction.interactionName
     );
+    this.interactionImages = this.interactionService.getInteractionImages(
+      this.interaction.interactionName,
+      this.interaction.interactionId
+    );
+    this.randomDelay = (Math.random() * 5).toPrecision(2);
   }
 
   setInteractionStyle() {
@@ -71,14 +79,20 @@ export class MovieInteractionComponent implements OnInit {
     hoverElement.classList.add("showHoverAnimation");
   }
 
-  getStyleClass(styleClass: string, visible: boolean) {
-    let classes = styleClass;
-    if (!visible) {
-      classes += " invisible";
+  getClass(index: number) {
+    if (index === 0) {
+      return "item visible2";
     } else {
-      classes += " visible";
+      return "item invisible2";
     }
-    return classes;
+  }
+
+  getImageStyle() {
+    return {
+      width: "100%",
+      height: "100%",
+      animationDelay: +this.randomDelay + "s",
+    };
   }
 
   clickedInteraction() {
