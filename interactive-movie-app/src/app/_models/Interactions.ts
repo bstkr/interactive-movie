@@ -13,9 +13,6 @@ export interface Interaction {
   interactionName: string;
   interactionId: string;
 
-  // Path to the parts of the picture
-  pictureParts: PicturePart[];
-
   // Interaction click layer positioning
   clickLayerElements: ClickLayerElement[];
 
@@ -26,12 +23,6 @@ export interface VideoSequence {
   sequencePosition: string;
   visible: boolean;
   pathToVideo: string;
-}
-
-export interface PicturePart {
-  path: string;
-  styleClass: string;
-  visible: boolean;
 }
 
 export interface ClickLayerElement {
@@ -55,58 +46,6 @@ export const Interactions: POV[] = [
         height: 9.5,
         interactionName: "Unterhose",
         interactionId: "pov1_interaction1",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov1/object2/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object2/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object2/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object2/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object2/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object1/top.png",
-            styleClass: "top",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object1/right.png",
-            styleClass: "right",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object1/bottom.png",
-            styleClass: "bottom",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object1/left.png",
-            styleClass: "left",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object1/middle.png",
-            styleClass: "middle",
-            visible: false,
-          },
-        ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov1/Object_1_2.svg",
       },
@@ -117,120 +56,16 @@ export const Interactions: POV[] = [
         height: 10.7,
         interactionName: "Bier",
         interactionId: "pov1_interaction2",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov1/object3/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object3/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object3/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object3/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object3/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object4/top.png",
-            styleClass: "top",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object4/right.png",
-            styleClass: "right",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object4/bottom.png",
-            styleClass: "bottom",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object4/left.png",
-            styleClass: "left",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object4/middle.png",
-            styleClass: "middle",
-            visible: false,
-          },
-        ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov1/Object_3_4.svg",
       },
       {
-        positionX: 55,
-        positionY: 27,
+        positionX: 53,
+        positionY: 26,
         width: 49,
         height: 79,
         interactionName: "Jacke",
         interactionId: "pov1_interaction3",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov1/object5/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object5/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object5/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object5/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object5/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object6/top.png",
-            styleClass: "top",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object6/right.png",
-            styleClass: "right",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object6/bottom.png",
-            styleClass: "bottom",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object6/left.png",
-            styleClass: "left",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object6/middle.png",
-            styleClass: "middle",
-            visible: false,
-          },
-        ],
         clickLayerElements: [
           { posX: 41, posY: 12, width: 45, height: 34 },
           { posX: 12, posY: 62, width: 44, height: 27 },
@@ -244,33 +79,6 @@ export const Interactions: POV[] = [
         height: 2.6,
         interactionName: "Einkaufszettel",
         interactionId: "pov1_interaction4",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov1/object7/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object7/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object7/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object7/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object7/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-        ],
         clickLayerElements: [{ posX: -25, posY: -50, width: 150, height: 200 }],
         hoverLayerElementPath: "assets/pictures/room/pov1/Object_7.svg",
       },
@@ -281,58 +89,6 @@ export const Interactions: POV[] = [
         height: 8.5,
         interactionName: "Computer",
         interactionId: "pov1_interaction5",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov1/object8/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object8/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object8/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object8/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object8/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object9/top.png",
-            styleClass: "top",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object9/right.png",
-            styleClass: "right",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object9/bottom.png",
-            styleClass: "bottom",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object9/left.png",
-            styleClass: "left",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov1/object9/middle.png",
-            styleClass: "middle",
-            visible: false,
-          },
-        ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov1/Object_8_9.svg",
       },
@@ -343,33 +99,6 @@ export const Interactions: POV[] = [
         height: 11.78,
         interactionName: "Handy",
         interactionId: "pov1_interaction6",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov1/object10/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object10/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object10/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object10/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov1/object10/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-        ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov1/Object_10.svg",
       },
@@ -385,58 +114,6 @@ export const Interactions: POV[] = [
         height: 9.5,
         interactionName: "Unterhose",
         interactionId: "pov2_interaction1",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov2/object10/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object10/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object10/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object10/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object10/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object11/top.png",
-            styleClass: "top",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object11/right.png",
-            styleClass: "right",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object11/bottom.png",
-            styleClass: "bottom",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object11/left.png",
-            styleClass: "left",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object11/middle.png",
-            styleClass: "middle",
-            visible: false,
-          },
-        ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov2/Object_10_11.svg",
       },
@@ -447,58 +124,6 @@ export const Interactions: POV[] = [
         height: 8.5,
         interactionName: "Bier",
         interactionId: "pov2_interaction2",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov2/object5/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object5/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object5/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object5/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object5/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object6/top.png",
-            styleClass: "top",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object6/right.png",
-            styleClass: "right",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object6/bottom.png",
-            styleClass: "bottom",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object6/left.png",
-            styleClass: "left",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object6/middle.png",
-            styleClass: "middle",
-            visible: false,
-          },
-        ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov2/Object_5_6.svg",
       },
@@ -509,58 +134,6 @@ export const Interactions: POV[] = [
         height: 22.2,
         interactionName: "Zeitung",
         interactionId: "pov2_interaction3",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov2/object1/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object1/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object1/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object1/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object1/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object2/top.png",
-            styleClass: "top",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object2/right.png",
-            styleClass: "right",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object2/bottom.png",
-            styleClass: "bottom",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object2/left.png",
-            styleClass: "left",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object2/middle.png",
-            styleClass: "middle",
-            visible: false,
-          },
-        ],
         clickLayerElements: [{ posX: 4, posY: 16, width: 78, height: 80 }],
         hoverLayerElementPath: "assets/pictures/room/pov2/Object_1_2.svg",
       },
@@ -571,58 +144,6 @@ export const Interactions: POV[] = [
         height: 4.6,
         interactionName: "Nummer",
         interactionId: "pov2_interaction4",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov2/object3/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object3/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object3/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object3/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object3/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object4/top.png",
-            styleClass: "top",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object4/right.png",
-            styleClass: "right",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object4/bottom.png",
-            styleClass: "bottom",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object4/left.png",
-            styleClass: "left",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object4/middle.png",
-            styleClass: "middle",
-            visible: false,
-          },
-        ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov2/Object_3_4.svg",
       },
@@ -633,33 +154,6 @@ export const Interactions: POV[] = [
         height: 2.6,
         interactionName: "Einkaufszettel",
         interactionId: "pov2_interaction5",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov2/object7/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object7/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object7/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object7/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object7/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-        ],
         clickLayerElements: [{ posX: -15, posY: -10, width: 130, height: 120 }],
         hoverLayerElementPath: "assets/pictures/room/pov2/Object_7.svg",
       },
@@ -670,58 +164,6 @@ export const Interactions: POV[] = [
         height: 7.1,
         interactionName: "Computer",
         interactionId: "pov2_interaction6",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov2/object8/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object8/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object8/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object8/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object8/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object9/top.png",
-            styleClass: "top",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object9/right.png",
-            styleClass: "right",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object9/bottom.png",
-            styleClass: "bottom",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object9/left.png",
-            styleClass: "left",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object9/middle.png",
-            styleClass: "middle",
-            visible: false,
-          },
-        ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov2/Object_8_9.svg",
       },
@@ -732,58 +174,6 @@ export const Interactions: POV[] = [
         height: 41.1,
         interactionName: "Jacke",
         interactionId: "pov2_interaction7",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov2/object12/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object12/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object12/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object12/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object12/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov2/object13/top.png",
-            styleClass: "top",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object13/right.png",
-            styleClass: "right",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object13/bottom.png",
-            styleClass: "bottom",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object13/left.png",
-            styleClass: "left",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov2/object13/middle.png",
-            styleClass: "middle",
-            visible: false,
-          },
-        ],
         clickLayerElements: [
           { posX: 26, posY: 14, width: 59, height: 32 },
           { posX: 11, posY: 52, width: 34, height: 32 },
@@ -802,58 +192,6 @@ export const Interactions: POV[] = [
         height: 18,
         interactionName: "Zeitung",
         interactionId: "pov3_interaction1",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov3/object1/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov3/object1/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov3/object1/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov3/object1/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov3/object1/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov3/object2/top.png",
-            styleClass: "top",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov3/object2/right.png",
-            styleClass: "right",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov3/object2/bottom.png",
-            styleClass: "bottom",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov3/object2/left.png",
-            styleClass: "left",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov3/object2/middle.png",
-            styleClass: "middle",
-            visible: false,
-          },
-        ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov3/Object_1_2.svg",
       },
@@ -864,58 +202,6 @@ export const Interactions: POV[] = [
         height: 12,
         interactionName: "Nummer",
         interactionId: "pov3_interaction2",
-        pictureParts: [
-          {
-            path: "assets/pictures/room/pov3/object3/top.png",
-            styleClass: "top",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov3/object3/right.png",
-            styleClass: "right",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov3/object3/bottom.png",
-            styleClass: "bottom",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov3/object3/left.png",
-            styleClass: "left",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov3/object3/middle.png",
-            styleClass: "middle",
-            visible: true,
-          },
-          {
-            path: "assets/pictures/room/pov3/object4/top.png",
-            styleClass: "top",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov3/object4/right.png",
-            styleClass: "right",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov3/object4/bottom.png",
-            styleClass: "bottom",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov3/object4/left.png",
-            styleClass: "left",
-            visible: false,
-          },
-          {
-            path: "assets/pictures/room/pov3/object4/middle.png",
-            styleClass: "middle",
-            visible: false,
-          },
-        ],
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
         hoverLayerElementPath: "assets/pictures/room/pov3/Object_3_4.svg",
       },
