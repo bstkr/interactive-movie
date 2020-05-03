@@ -45,7 +45,6 @@ export class MovieInteractionComponent implements OnInit {
       this.interaction.interactionId
     );
     this.randomDelay = (Math.random() * 5).toPrecision(2);
-    console.log(this.randomDelay);
   }
 
   setInteractionStyle() {
