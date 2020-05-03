@@ -5,6 +5,7 @@
   height: 100vh;
 
   background-color: $black;
+  overflow: hidden;
 
   .water {
     width: 100vw;
@@ -12,8 +13,8 @@
 
     display: grid;
 
-    grid-template-columns: auto 960px auto;
-    grid-template-rows: auto 390px 390px auto;
+    grid-template-columns: auto 50vw auto;
+    grid-template-rows: auto 20.3125vw 20.3125vw auto;
 
     grid-template-areas:
       ". . ."
@@ -22,7 +23,7 @@
       ". . .";
 
     background: url(../../../assets/pictures/Homepage_Watermark.svg) no-repeat;
-    background-size: 64vw auto;
+    background-size: 71vw;
     background-position: bottom left;
 
     &.hide {
@@ -53,8 +54,8 @@
     h2 {
       position: relative;
       z-index: 1;
-      font-size: 150px;
-      letter-spacing: 30px;
+      font-size: 7.81235vw;
+      letter-spacing: 1.5625vw;
       color: $black;
     }
     a {
@@ -78,7 +79,7 @@
     border: $white;
     border-style: solid;
     border-width: 5px;
-    padding: 0 50px;
+    padding: 0 2.6vw;
     justify-self: center;
     align-self: center;
 
@@ -110,7 +111,7 @@
     .impressum {
       position: relative;
       width: 15vw;
-      height: 5vh;
+      height: 2.81vw;
 
       border: 3px solid $white;
 
@@ -126,8 +127,8 @@
       }
 
       h2 {
-        font-size: 35px;
-        letter-spacing: 8px;
+        font-size: 1.82vw;
+        letter-spacing: 0.41vw;
         color: $white;
       }
 
@@ -142,7 +143,7 @@
     }
 
     .credits {
-      margin-bottom: 20px;
+      margin-bottom: 1vw;
     }
   }
 }
