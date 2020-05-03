@@ -52,16 +52,16 @@
       text-transform: uppercase;
       border-style: solid;
       border-width: 3px;
-      padding: 0 16% 0 16%;
+      padding: 1.2vw 0.8vw 0.2vw 0.9vw;
 
       color: $white;
-      font-size: 1.875vw;
       font-style: normal;
 
       h1 {
         color: $white;
         border-style: none;
-        letter-spacing: 0.4vw;
+        letter-spacing: 0.3vw;
+        font-size: 2.2vw;
       }
 
       &:hover {
