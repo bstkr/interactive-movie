@@ -1,4 +1,12 @@
-import { Component, OnInit, Input, ElementRef } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  Input,
+  ElementRef,
+  ViewChild,
+  ViewChildren,
+  QueryList,
+} from "@angular/core";
 import { Interaction, VideoSequence } from "src/app/_models/Interactions";
 import { InteractionService } from "src/app/_services/interaction.service";
 import { BehaviorSubject } from "rxjs";
@@ -14,6 +22,9 @@ import { MovieVideoComponent } from "src/app/components/movie/movie-video/movie-
 })
 export class MovieSceneComponent implements OnInit {
   @Input() scene: Scene;
+
+  @ViewChildren(MovieVideoComponent)
+  videoPlayers: QueryList<MovieVideoComponent>;
 
   decisionArray: Decision[];
   currentDecision: string;
@@ -333,6 +344,16 @@ export class MovieSceneComponent implements OnInit {
     ).then(() => video.click());
   }
 
+  closeButton() {
+    for (let component of this.videoPlayers.toArray()) {
+      if (!component.videoPlayer.nativeElement.paused) {
+        component.videoPlayer.nativeElement.pause();
+        component.videoPlayer.nativeElement.currentTime = 0;
+      }
+    }
+    this.closeVideo();
+  }
+
   closeVideo() {
     const videoElement = document.getElementById(this.scene.sceneId);
     const rightNavElement = document.getElementById("rightNav");
@@ -343,7 +364,7 @@ export class MovieSceneComponent implements OnInit {
     //let mvc = new MovieVideoComponent();
 
     setTimeout(() => {
-      if (videoElement){
+      if (videoElement) {
         //mvc.resetVideo();
         videoElement.classList.replace("show", "fade");
         setTimeout(() => {

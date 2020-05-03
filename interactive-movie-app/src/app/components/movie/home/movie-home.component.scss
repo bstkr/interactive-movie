@@ -66,7 +66,7 @@
       display: none;
     }
   }
-   
+
   .arrow {
     height: 100%;
     width: 100%;
@@ -85,16 +85,18 @@
   }
 
   .animated {
-    filter: invert(17%) sepia(2%) saturate(2354%) hue-rotate(102deg) brightness(99%) contrast(89%); // $black
+    filter: invert(17%) sepia(2%) saturate(2354%) hue-rotate(102deg)
+      brightness(99%) contrast(89%); // $black
     //filter: invert(92%) sepia(70%) saturate(2574%) hue-rotate(181deg) brightness(100%) contrast(106%); //white
-    animation-duration: .5s;
+    animation-duration: 0.5s;
     animation-fill-mode: both;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
 
   @keyframes bounce {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateX(+5px);
     }
     50% {
