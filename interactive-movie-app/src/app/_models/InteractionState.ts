@@ -79,8 +79,8 @@ export const InteractionStateArray: InteractionState[] = [
         b: "assets/pictures/room/Timeline_Objects/Bier.png",
       },
     },
-    pathToItemImageA: "assets/pictures/room/pov2/object6/complete.png",
-    pathToItemImageB: "assets/pictures/room/pov2/object6/complete.png",
+    pathToItemImageA: "assets/pictures/room/Objects/Bier_Kaputt.png",
+    pathToItemImageB: "assets/pictures/room/Objects/Bier.png",
   },
   {
     name: "Jacke",
