@@ -1,10 +1,14 @@
-export interface UserState {
+export class UserState {
   hasSeenIntro: boolean;
-}
 
-export const InitialUserState: UserState = {
-  hasSeenIntro: false,
-};
+  constructor(intro?: boolean) {
+    if (intro !== null) {
+      this.hasSeenIntro = intro;
+    } else {
+      this.hasSeenIntro = false;
+    }
+  }
+}
 
 export function jsonCopy(src) {
   return JSON.parse(JSON.stringify(src));

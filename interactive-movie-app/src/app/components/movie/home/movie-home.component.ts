@@ -23,6 +23,7 @@ export class MovieHomeComponent implements OnInit, AfterViewInit {
 
   interactionStateArray: InteractionState[];
   sceneArray: Scene[];
+  userState: UserState;
 
   constructor(
     public route: ActivatedRoute,
@@ -36,6 +37,7 @@ export class MovieHomeComponent implements OnInit, AfterViewInit {
     this.currentPov = this.route.snapshot.paramMap.get("pov");
     this.interactionStateArray = this.interactionService.getInteractionStateArray();
     this.sceneArray = this.sceneService.sceneArray;
+    this.userService.getUserState().subscribe((s) => (this.userState = s));
   }
 
   ngAfterViewInit() {
@@ -49,7 +51,7 @@ export class MovieHomeComponent implements OnInit, AfterViewInit {
         setTimeout(() => {
           document.getElementById("coop").classList.add("hidden");
 
-          if (!this.userService.hasUserSeenIntro()) {
+          if (!this.userState.hasSeenIntro) {
             const videoElement = document.getElementById(
               this.sceneService.getSceneIdFromInteractionName("Handy")
             );
