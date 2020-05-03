@@ -9,12 +9,14 @@
     class="hoverLayerElement"
     [src]="interaction.hoverLayerElementPath"
   />
+  <!--Image Layer-->
   <div *ngIf="!interactionClicked">
     <img
-      *ngFor="let p of interaction.pictureParts"
-      [src]="p.path"
+      *ngFor="let image of interactionImages; index as i"
+      [src]="image"
       alt=""
-      [ngClass]="getStyleClass(p.styleClass, p.visible)"
+      [ngClass]="getClass(i)"
+      [ngStyle]="getImageStyle()"
     />
   </div>
   <img

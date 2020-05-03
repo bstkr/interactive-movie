@@ -1,13 +1,13 @@
-import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
-import { Interaction } from "src/app/_models/Interactions";
-import { InteractionService } from "src/app/_services/interaction.service";
-import { Decision, Scene } from "src/app/_models/Scenes";
-import { SceneService } from "src/app/_services/scene.service";
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Interaction } from 'src/app/_models/Interactions';
+import { InteractionService } from 'src/app/_services/interaction.service';
+import { Decision, Scene } from 'src/app/_models/Scenes';
+import { SceneService } from 'src/app/_services/scene.service';
 
 @Component({
-  selector: "app-movie-decision",
-  templateUrl: "./movie-decision.component.html",
-  styleUrls: ["./movie-decision.component.scss"],
+  selector: 'app-movie-decision',
+  templateUrl: './movie-decision.component.html',
+  styleUrls: ['./movie-decision.component.scss'],
 })
 export class MovieDecisionComponent implements OnInit {
   @Input() scene: Scene;
@@ -38,7 +38,7 @@ export class MovieDecisionComponent implements OnInit {
   }
 
   clickDecision(dec: string) {
-    let decisionPos = "" + this.decision.decisionPos;
+    const decisionPos = '' + this.decision.decisionPos;
     this.decisionClick.emit({ dec, decisionPos });
   }
 
@@ -49,7 +49,7 @@ export class MovieDecisionComponent implements OnInit {
   }
 
   checkCompletedDecision(alternative: string) {
-    if (this.decision.decisionPos === "0") {
+    if (this.decision.decisionPos === '0') {
       return this.decisionArray[0] === alternative;
     } else {
       return this.decisionArray[1] === alternative;

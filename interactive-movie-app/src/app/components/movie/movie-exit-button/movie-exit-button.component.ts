@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Scene } from "src/app/_models/Scenes";
-import { VideoSequence } from "src/app/_models/Interactions";
+import { Scene } from 'src/app/_models/Scenes';
+import { VideoSequence } from 'src/app/_models/Interactions';
 
 @Component({
   selector: 'app-movie-exit-button',

@@ -1,10 +1,10 @@
-import { Component, OnInit, Input, AfterViewInit } from "@angular/core";
-import { LoadingItem, LoadingService } from "src/app/_services/loading.service";
+import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
+import { LoadingItem, LoadingService } from 'src/app/_services/loading.service';
 
 @Component({
-  selector: "app-movie-loading-item",
-  templateUrl: "./movie-loading-item.component.html",
-  styleUrls: ["./movie-loading-item.component.scss"],
+  selector: 'app-movie-loading-item',
+  templateUrl: './movie-loading-item.component.html',
+  styleUrls: ['./movie-loading-item.component.scss'],
 })
 export class MovieLoadingItemComponent implements OnInit, AfterViewInit {
   @Input() loadingItem: LoadingItem;

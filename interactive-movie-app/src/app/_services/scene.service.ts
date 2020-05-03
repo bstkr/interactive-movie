@@ -1,7 +1,7 @@
-import { Injectable } from "@angular/core";
-import { Scene, Scenes, Decision } from "../_models/Scenes";
-import { BehaviorSubject } from "rxjs";
-import { Interactions } from "../_models/Interactions";
+import { Injectable } from '@angular/core';
+import { Scene, Scenes, Decision } from '../_models/Scenes';
+import { BehaviorSubject } from 'rxjs';
+import { Interactions } from '../_models/Interactions';
 
 export class SceneObservable {
   sceneId: string;
@@ -14,7 +14,7 @@ export class SceneObservable {
 }
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class SceneService {
   sceneArray: Scene[];
@@ -26,10 +26,10 @@ export class SceneService {
     this.sceneArray = Scenes;
     this.sceneObservableArray = [];
 
-    this.currentDecistion = new BehaviorSubject<string>("0");
+    this.currentDecistion = new BehaviorSubject<string>('0');
 
-    for (let scene of this.sceneArray) {
-      let observableScene = new SceneObservable(scene.sceneId, false);
+    for (const scene of this.sceneArray) {
+      const observableScene = new SceneObservable(scene.sceneId, false);
       this.sceneObservableArray.push(observableScene);
     }
   }
@@ -57,7 +57,7 @@ export class SceneService {
   }
 
   getSceneIdFromInteractionName(name: string) {
-    for (let scene of this.sceneArray) {
+    for (const scene of this.sceneArray) {
       if (scene.sceneName === name) {
         return scene.sceneId;
       }

@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { InteractionService } from "src/app/_services/interaction.service";
-import { UserService } from "src/app/_services/user.service";
+import { Component, OnInit } from '@angular/core';
+import { InteractionService } from 'src/app/_services/interaction.service';
+import { UserService } from 'src/app/_services/user.service';
 
 @Component({
-  selector: "app-back-button",
-  templateUrl: "./back-button.component.html",
-  styleUrls: ["./back-button.component.scss"],
+  selector: 'app-back-button',
+  templateUrl: './back-button.component.html',
+  styleUrls: ['./back-button.component.scss'],
 })
 export class BackButtonComponent implements OnInit {
   showPopup = false;
@@ -18,13 +18,13 @@ export class BackButtonComponent implements OnInit {
   ngOnInit() {}
 
   popup() {
-    const popupElement = document.getElementById("popup");
-    popupElement.style.display = "flex";
+    const popupElement = document.getElementById('popup');
+    popupElement.style.display = 'flex';
   }
 
   close() {
-    const popupElement = document.getElementById("popup");
-    popupElement.style.display = "none";
+    const popupElement = document.getElementById('popup');
+    popupElement.style.display = 'none';
   }
 
   resetData() {

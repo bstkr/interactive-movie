@@ -1,9 +1,9 @@
-import { Injectable } from "@angular/core";
-import { POV, Interaction, Interactions } from "../_models/Interactions";
-import { BehaviorSubject } from "rxjs";
+import { Injectable } from '@angular/core';
+import { POV, Interaction, Interactions } from '../_models/Interactions';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class LoadingService {
   allPovs: POV[];
@@ -26,11 +26,11 @@ export class LoadingService {
 
   itemLoaded() {
     this.itemsLoaded += 1;
-    let perc = (this.itemsLoaded / this.totalItems) * 100;
+    const perc = (this.itemsLoaded / this.totalItems) * 100;
     if (perc === 100) {
       this.allLoaded.next(true);
     }
-    this.loadingPercentage.next(perc + "%");
+    this.loadingPercentage.next(perc + '%');
   }
 }
 

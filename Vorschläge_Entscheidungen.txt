@@ -6,10 +6,10 @@ Lernen/Ende: - "LERNEN GEHT VOR!"
 	     - "Ich hab noch echt viel für die Uni zu tun!"
 
 EINKAUFSZETTEL (Vorbereitung):
-Einkaufszettel: - "ALKOHOL IST DA!"
+Einkaufszettel nicht da: - "ALKOHOL IST DA!"
 		- "Wir müssen nicht noch extra los!"
 
-Einkaufszettel nicht da: - "HABE NICHTS DA!"
+Einkaufszettel: - "HABE NICHTS DA!"
 			 - "Wir müssen unbedingt noch Alkohol besorgen!"
 
 BIERFLASCHE (Vorglühen):         

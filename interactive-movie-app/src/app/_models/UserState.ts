@@ -1,12 +1,8 @@
 export class UserState {
   hasSeenIntro: boolean;
 
-  constructor(intro?: boolean) {
-    if (intro !== null) {
-      this.hasSeenIntro = intro;
-    } else {
-      this.hasSeenIntro = false;
-    }
+  constructor(intro: boolean) {
+    this.hasSeenIntro = intro;
   }
 }
 

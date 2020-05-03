@@ -7,14 +7,14 @@ import {
   AfterViewInit,
   Output,
   EventEmitter,
-} from "@angular/core";
-import { VideoSequence, Interaction } from "src/app/_models/Interactions";
-import { Scene } from "src/app/_models/Scenes";
+} from '@angular/core';
+import { VideoSequence, Interaction } from 'src/app/_models/Interactions';
+import { Scene } from 'src/app/_models/Scenes';
 
 @Component({
-  selector: "app-movie-video",
-  templateUrl: "./movie-video.component.html",
-  styleUrls: ["./movie-video.component.scss"],
+  selector: 'app-movie-video',
+  templateUrl: './movie-video.component.html',
+  styleUrls: ['./movie-video.component.scss'],
 })
 export class MovieVideoComponent implements OnInit, AfterViewInit {
   @Input() scene: Scene;
@@ -23,7 +23,7 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
 
   @Output() endedVideo = new EventEmitter<VideoSequence>();
 
-  @ViewChild("videoPlayer", { static: false })
+  @ViewChild('videoPlayer', { static: false })
   videoPlayer: ElementRef;
 
   constructor() {}
@@ -33,21 +33,22 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {}
 
   getVideoClass(pos: string) {
-    if (pos === "intro") {
-      return pos + " currentVideo";
+    if (pos === 'intro') {
+      return pos + ' currentVideo';
     } else {
-      return pos + " hiddenVideo";
+      return pos + ' hiddenVideo';
     }
   }
 
   videoClick(e: Event) {
-    let id = this.scene.sceneId + "-" + this.video.sequencePosition + "-button";
+    const id =
+      this.scene.sceneId + '-' + this.video.sequencePosition + '-button';
     const videoElement = document.getElementById(id);
     if (this.videoPlayer.nativeElement.paused) {
-      videoElement.classList.replace("show", "hidden"); //this.videoEnded();
-      /*Uncomment for development*/ /*Uncomment for production*/ this.videoPlayer.nativeElement.play();
+      videoElement.classList.replace('show', 'hidden');
+      this.videoPlayer.nativeElement.play();
     } else {
-      videoElement.classList.replace("hidden", "show");
+      videoElement.classList.replace('hidden', 'show');
       this.videoPlayer.nativeElement.pause();
     }
   }
@@ -56,12 +57,12 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
     this.endedVideo.emit(this.video);
   }
 
-  resetVideo(){
-    if (this.videoPlayer.nativeElement.paused){
+  resetVideo() {
+    if (this.videoPlayer.nativeElement.paused) {
       this.videoPlayer.nativeElement.currentTime = 0;
     } else {
-    this.videoPlayer.nativeElement.currentTime = 0;
-    this.videoPlayer.nativeElement.pause();
+      this.videoPlayer.nativeElement.currentTime = 0;
+      this.videoPlayer.nativeElement.pause();
     }
   }
 }
