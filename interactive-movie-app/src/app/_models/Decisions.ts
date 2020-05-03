@@ -10,78 +10,78 @@ export interface Decision {
 
 export const Decisions: SceneDecision[] = [
   {
-    sceneId: "scene0",
+    sceneId: 'scene0',
     decision: [
       {
-        dec: "1",
-        decisionPos: "0",
+        dec: '1',
+        decisionPos: '0',
       },
     ],
   },
   {
-    sceneId: "scene1",
+    sceneId: 'scene1',
     decision: [
       {
-        dec: "2",
-        decisionPos: "0",
+        dec: '2',
+        decisionPos: '0',
       },
     ],
   },
   {
-    sceneId: "scene2",
+    sceneId: 'scene2',
     decision: [
       {
-        dec: "1",
-        decisionPos: "0",
+        dec: '1',
+        decisionPos: '0',
       },
       {
-        dec: "2",
-        decisionPos: "1",
-      },
-    ],
-  },
-  {
-    sceneId: "scene3",
-    decision: [
-      {
-        dec: "2",
-        decisionPos: "0",
+        dec: '2',
+        decisionPos: '1',
       },
     ],
   },
   {
-    sceneId: "scene4",
+    sceneId: 'scene3',
     decision: [
       {
-        dec: "2",
-        decisionPos: "0",
+        dec: '2',
+        decisionPos: '0',
       },
     ],
   },
   {
-    sceneId: "scene5",
+    sceneId: 'scene4',
     decision: [
       {
-        dec: "1",
-        decisionPos: "0",
+        dec: '2',
+        decisionPos: '0',
       },
     ],
   },
   {
-    sceneId: "scene6",
+    sceneId: 'scene5',
     decision: [
       {
-        dec: "1",
-        decisionPos: "0",
+        dec: '1',
+        decisionPos: '0',
       },
     ],
   },
   {
-    sceneId: "scene7",
+    sceneId: 'scene6',
     decision: [
       {
-        dec: "1",
-        decisionPos: "0",
+        dec: '1',
+        decisionPos: '0',
+      },
+    ],
+  },
+  {
+    sceneId: 'scene7',
+    decision: [
+      {
+        dec: '1',
+        decisionPos: '0',
       },
     ],
   },

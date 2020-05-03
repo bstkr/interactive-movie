@@ -1,20 +1,20 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { InteractionState } from "src/app/_models/InteractionState";
-import { InteractionService } from "src/app/_services/interaction.service";
-import { SceneService } from "src/app/_services/scene.service";
-import { UserState } from "src/app/_models/UserState";
-import { UserService } from "src/app/_services/user.service";
+import { Component, OnInit, Input } from '@angular/core';
+import { InteractionState } from 'src/app/_models/InteractionState';
+import { InteractionService } from 'src/app/_services/interaction.service';
+import { SceneService } from 'src/app/_services/scene.service';
+import { UserState } from 'src/app/_models/UserState';
+import { UserService } from 'src/app/_services/user.service';
 
 @Component({
-  selector: "app-movie-item",
-  templateUrl: "./movie-item.component.html",
-  styleUrls: ["./movie-item.component.scss"],
+  selector: 'app-movie-item',
+  templateUrl: './movie-item.component.html',
+  styleUrls: ['./movie-item.component.scss'],
 })
 export class MovieItemComponent implements OnInit {
   @Input() interactionState: InteractionState;
 
   interactionClicked: boolean;
-  interactionDecision: String;
+  interactionDecision: string;
 
   userState: UserState;
   intorChecker = false;
@@ -31,39 +31,39 @@ export class MovieItemComponent implements OnInit {
     this.interactionService
       .getInteractionState(this.interactionState.name)
       .decision.subscribe((d) => {
-        this.interactionDecision = d.split(",")[0];
+        this.interactionDecision = d.split(',')[0];
       });
     this.userService.getUserState().subscribe((s) => (this.userState = s));
   }
 
   close() {
     const tutorialContainer = document.getElementById(
-      this.interactionState.name + "-tutorial"
+      this.interactionState.name + '-tutorial'
     );
     let itemContainerElement: HTMLElement;
 
     if (tutorialContainer) {
       if (this.intorChecker) {
         itemContainerElement = document.getElementById(
-          this.interactionState.name + "-item-component"
+          this.interactionState.name + '-item-component'
         );
         this.userService.setUserState(true);
       } else {
         itemContainerElement = document.getElementById(
-          this.interactionState.name + "-item-object"
+          this.interactionState.name + '-item-object'
         );
         this.intorChecker = true;
       }
     } else {
       itemContainerElement = document.getElementById(
-        this.interactionState.name + "-item-component"
+        this.interactionState.name + '-item-component'
       );
     }
 
-    if (itemContainerElement.classList.contains("show")) {
-      itemContainerElement.classList.replace("show", "hidden");
+    if (itemContainerElement.classList.contains('show')) {
+      itemContainerElement.classList.replace('show', 'hidden');
     } else {
-      itemContainerElement.classList.add("hidden");
+      itemContainerElement.classList.add('hidden');
     }
   }
 }

@@ -1,0 +1,28 @@
+@import "../../../style/palette.scss";
+@import "../../../style/typography.scss";
+
+.movie-exit-button-container{
+
+    width: 100vw;
+    height: 100vh;
+
+    .exit-button{
+        z-index: 2;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        right: 0;
+
+        .movie-button{
+            background: transparent;
+            border: none;
+            text-align: center;
+
+            p{
+                font-size: 30px;
+                color: $white;
+            } 
+        }
+
+    }
+}

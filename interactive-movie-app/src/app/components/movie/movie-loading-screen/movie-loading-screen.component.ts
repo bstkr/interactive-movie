@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
-import { LoadingService, LoadingItem } from "src/app/_services/loading.service";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoadingService, LoadingItem } from 'src/app/_services/loading.service';
 
 @Component({
-  selector: "app-movie-loading-screen",
-  templateUrl: "./movie-loading-screen.component.html",
-  styleUrls: ["./movie-loading-screen.component.scss"],
+  selector: 'app-movie-loading-screen',
+  templateUrl: './movie-loading-screen.component.html',
+  styleUrls: ['./movie-loading-screen.component.scss'],
 })
 export class MovieLoadingScreenComponent implements OnInit {
   loadingArray: LoadingItem[];
@@ -28,6 +28,6 @@ export class MovieLoadingScreenComponent implements OnInit {
   }
 
   continue() {
-    this.router.navigate(["/movie", "pov1"]);
+    this.router.navigate(['/movie', 'pov1']);
   }
 }
