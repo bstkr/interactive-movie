@@ -1,5 +1,5 @@
 <div id="{{ scene.sceneId }}" class="hidden">
-  <div class="closer" (click)="closeButton()">
+  <div *ngIf="userHasSeenIntro" class="closer" (click)="closeButton()">
     <span class="symbol">&#10005;</span>
   </div>
   <app-movie-video

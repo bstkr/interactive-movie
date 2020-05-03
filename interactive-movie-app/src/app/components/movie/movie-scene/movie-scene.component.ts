@@ -14,6 +14,7 @@ import { SceneService } from "src/app/_services/scene.service";
 import { Decision, Scene } from "src/app/_models/Scenes";
 import { sequenceEqual } from "rxjs/operators";
 import { MovieVideoComponent } from "src/app/components/movie/movie-video/movie-video.component";
+import { UserService } from "src/app/_services/user.service";
 
 @Component({
   selector: "app-movie-scene",
@@ -32,9 +33,12 @@ export class MovieSceneComponent implements OnInit {
   sceneActive: boolean;
   userDecision: string[];
 
+  userHasSeenIntro: boolean;
+
   constructor(
     public interactionService: InteractionService,
-    public sceneService: SceneService
+    public sceneService: SceneService,
+    public userService: UserService
   ) {}
 
   ngOnInit() {
@@ -50,6 +54,9 @@ export class MovieSceneComponent implements OnInit {
     this.sceneService
       .getCurrentDecisionObservable()
       .subscribe((s) => (this.currentDecision = s));
+    this.userService
+      .getUserState()
+      .subscribe((s) => (this.userHasSeenIntro = s.hasSeenIntro));
     this.decisionArray = this.sceneService.getDecisionsArrayFromSceneName(
       this.scene.sceneName
     );
@@ -369,8 +376,8 @@ export class MovieSceneComponent implements OnInit {
       if (leftNavElement) {
         leftNavElement.classList.remove("hidden");
       }
-      if(!b){
-      itemContainerElement.classList.replace("hidden", "show");
+      if (!b) {
+        itemContainerElement.classList.replace("hidden", "show");
       }
       videoElement.classList.replace("show", "fade");
 
