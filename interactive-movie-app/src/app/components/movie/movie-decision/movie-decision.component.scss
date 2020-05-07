@@ -11,7 +11,7 @@
 
   z-index: 3;
 
-  transition: opacity 3s ease-out;
+  transition: opacity 2s ease-out;
 
   &.fade {
     opacity: 0;
@@ -27,7 +27,7 @@
     width: 50%;
     height: 100%;
 
-    transition: opacity 2s ease-out;
+    transition: opacity 1s ease-out;
 
     display: grid;
 
@@ -229,7 +229,7 @@
     opacity: 1;
     z-index: 3;
 
-    transition: opacity 2s ease-out;
+    transition: opacity 1s ease-out;
 
     display: grid;
 
