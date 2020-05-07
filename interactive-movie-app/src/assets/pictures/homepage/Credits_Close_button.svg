@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="122.001" height="217" viewBox="0 0 122.001 217">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #394648;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        fill: #98a9ae;
+      }
+
+      .cls-3 {
+        font-size: 50px;
+        font-family: BebasNeue-Regular, Bebas Neue;
+      }
+
+      .cls-4, .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Credits_Close_button" transform="translate(61.001 937) rotate(180)">
+    <g id="Button_Shape" class="cls-1" transform="translate(-612 -499) rotate(-90)">
+      <path class="cls-4" d="M -1221.50048828125 670.5007934570313 L -1416.850463867188 670.5007934570313 L -1433.50048828125 641.6669921875 L -1433.50048828125 614.5 L -1221.50048828125 614.5 L -1221.50048828125 670.5007934570313 Z"/>
+      <path class="cls-5" d="M -1224.00048828125 668.0007934570313 L -1224.00048828125 617 L -1431.00048828125 617 L -1431.00048828125 640.9970092773438 L -1415.4072265625 668.0007934570313 L -1224.00048828125 668.0007934570313 M -1219.00048828125 673.0009765625 L -1219.00048828125 673.0007934570313 L -1418.293701171875 673.0007934570313 L -1435.906127929688 642.5003662109375 L -1436.00048828125 642.6636352539063 L -1436.00048828125 612 L -1219.00048828125 612 L -1219.00048828125 673.0007934570313 L -1219.00048828125 673.0009765625 Z"/>
+    </g>
+    <rect id="Rectangle_15" data-name="Rectangle 15" class="cls-2" width="61" height="217" transform="translate(-61 720)"/>
+    <text id="Credits_Text" class="cls-3" transform="translate(46 829) rotate(-90)"><tspan x="-81.775" y="0">Schließen</tspan></text>
+  </g>
+</svg>

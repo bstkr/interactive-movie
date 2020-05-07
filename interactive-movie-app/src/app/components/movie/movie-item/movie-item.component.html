@@ -17,26 +17,23 @@
       class="resize"
       [src]="interactionState.pathToItemImageB"
     />
+    <div class="close-button" (click)="close()">
+      <!--Add svg-->
+    </div>
   </div>
   <div
     *ngIf="interactionState.name === 'Handy' && !userState.hasSeenIntro"
     class="tutorial"
     [id]="interactionState.name + '-tutorial'"
   >
-    <div class="tutorial-object" id="rewatch">
-      <p>Du kannst das Object nochmal klicken und die Szene erneut ansehen</p>
+    <div class="rewatch-tutorial">
+      <img src="/assets/pictures/homepage/Rewatch_Tutorial.svg" />
     </div>
-    <div class="tutorial-object" id="newScene">
-      <p>Du kannst andere Objekte ankilicken und neue Szenen ansehen</p>
+    <div class="objects-tutorial">
+      <img src="/assets/pictures/homepage/Objects_Tutorial.svg" />
     </div>
-    <div class="tutorial-object" id="tutorial-timeline">
-      <p>
-        Du kannst die Timeline öffnen - Hier werden die Szenen in
-        chronologischer Reihenfolge angezeigt
-      </p>
+    <div class="timeline-tutorial">
+      <img src="/assets/pictures/homepage/Timeline_Tutorial.svg" />
     </div>
-  </div>
-  <div class="closer" (mouseup)="close()">
-    <span class="symbol">&#10005;</span>
   </div>
 </div>

@@ -36,11 +36,12 @@
     transition: opacity 0.5s ease-in-out;
 
     &.hidden {
-      opacity: 0;
+      display: none;
     }
+
     img.resize {
       max-width: auto;
-      max-height: 95%;
+      max-height: 85%;
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -55,6 +56,17 @@
         font-style: normal;
       }
     }
+
+    .close-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 100px;
+      height: 50px;
+
+      background-color: yellow;
+    }
   }
 
   .tutorial {
@@ -67,63 +79,32 @@
 
     background-color: rgba($black, 0.5);
 
-    .tutorial-object {
+    img {
+      width: 100%;
+    }
+
+    .rewatch-tutorial {
       position: absolute;
-      display: grid;
-      place-content: center;
-      text-align: center;
-
-      background-color: $red;
+      top: 54vh;
+      left: 13vw;
+      width: 16.25vw;
+      height: 15vh;
     }
 
-    #rewatch {
-      top: 84%;
-      left: 6%;
-      width: 25%;
+    .objects-tutorial {
+      position: absolute;
+      top: 24vh;
+      left: 41vw;
+      width: 19.5vw;
+      height: 13.8vh;
     }
 
-    #newScene {
-      top: 45%;
-      left: 50%;
-      width: 25%;
-    }
-
-    #tutorial-timeline {
-      top: 96%;
-      left: 30%;
-    }
-  }
-
-  .closer {
-    position: absolute;
-    top: 5%;
-    left: 85%;
-    transform: translateX(-50%);
-
-    z-index: 2;
-
-    width: 4vw;
-    height: 4vw;
-
-    display: grid;
-    place-content: center;
-
-    border-radius: 50%;
-    border: 1px solid $white;
-
-    background-color: $black;
-    color: $white;
-
-    cursor: pointer;
-
-    .symbol {
-      font-size: 40px;
-      padding: 0 10px;
-    }
-
-    &:hover {
-      background-color: $white;
-      color: $black;
+    .timeline-tutorial {
+      position: absolute;
+      top: 58vh;
+      left: 44vw;
+      width: 18.5vw;
+      height: 15.4vh;
     }
   }
 }

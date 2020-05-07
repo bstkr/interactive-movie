@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1158" height="441" viewBox="0 0 1158 441">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(198,119,52,0);
+        stroke-linecap: round;
+      }
+
+      .cls-2 {
+        fill: #e78f17;
+        stroke: #d59018;
+        font-size: 250px;
+        opacity: 0.9;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: BebasNeue-Regular, Bebas Neue;
+      }
+
+      .cls-3 {
+        fill: #cccaca;
+        font-size: 90px;
+        letter-spacing: 0.626em;
+      }
+
+      .cls-4, .cls-5 {
+        stroke: none;
+      }
+
+      .cls-5 {
+        fill: #c67734;
+      }
+
+      .cls-6 {
+        filter: url(#Interactive_text);
+      }
+
+      .cls-7 {
+        filter: url(#Out_Of_It_text);
+      }
+    </style>
+    <filter id="Out_Of_It_text" x="240" y="14" width="718" height="320" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#d59018" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Interactive_text" x="231" y="315" width="927" height="126" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#cccaca" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Logo_button" transform="translate(-768)">
+    <g id="Button_shape" transform="translate(768)">
+      <g id="Subtraction_1" data-name="Subtraction 1" class="cls-1">
+        <path class="cls-4" d="M 1147 318.9990539550781 L 96.88766479492188 318.9990539550781 L 5 159.7930755615234 L 5 4.999969482421875 L 1147 4.999969482421875 L 1147 318.9990539550781 Z"/>
+        <path class="cls-5" d="M 1142 313.9999694824219 L 1142 9.999969482421875 L 10 9.999969482421875 L 10 158.4537353515625 L 99.77486419677734 313.9990539550781 L 1142 313.9999694824219 M 1152 323.9999694824219 L 1152 323.9990539550781 L 94.00045776367188 323.9990539550781 L 0.5004615187644958 161.99951171875 L 0 162.8665924072266 L 0 -3.0517578125e-05 L 1152 -3.0517578125e-05 L 1152 323.9990539550781 L 1152 323.9999694824219 Z"/>
+      </g>
+    </g>
+    <g class="cls-7" transform="matrix(1, 0, 0, 1, 768, 0)">
+      <text id="Out_Of_It_text-2" data-name="Out_Of_It_text" class="cls-2" transform="translate(592 247)"><tspan x="-348.25" y="0">Out of it</tspan></text>
+    </g>
+    <g class="cls-6" transform="matrix(1, 0, 0, 1, 768, 0)">
+      <text id="Interactive_text-2" data-name="Interactive_text" class="cls-3" transform="translate(1142 403)"><tspan x="-908.28" y="0">Interactive</tspan></text>
+    </g>
+  </g>
+</svg>

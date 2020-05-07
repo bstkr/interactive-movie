@@ -1,149 +1,540 @@
 @import "../../style/palette.scss";
 
-.home-container {
+:host {
   width: 100vw;
   height: 100vh;
 
-  background-color: $black;
-  overflow: hidden;
-
-  .water {
-    width: 100vw;
-    height: 100vh;
+  .background {
+    width: 100%;
+    height: 100%;
 
     display: grid;
+    place-items: center;
 
-    grid-template-columns: auto 50vw auto;
-    grid-template-rows: auto 20.3125vw 20.3125vw auto;
+    position: relative;
+    background-color: black;
 
-    grid-template-areas:
-      ". . ."
-      ". Headline ."
-      ". Menu ."
-      ". . .";
-
-    background: url(../../../assets/pictures/Homepage_Watermark.svg) no-repeat;
-    background-size: 71vw;
-    background-position: bottom left;
-
-    &.hide {
-      background: none;
-      background-color: black;
+    video {
+      width: 100%;
+      height: 100%;
     }
-  }
 
-  .headline,
-  .menu {
-    cursor: pointer;
-    .background {
+    .flashback-overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(black, 0.5);
+
       position: absolute;
       top: 0;
       left: 0;
+    }
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    grid-template:
+      ".        .       .           .         logo" 40fr
+      ".        .       .           .         ." 20fr
+      "credits  .       .           .         ." 20fr
+      ".        .       .           .         ." 15fr
+      ".        .       impresssum  .         ." 5fr
+      / 5fr 5fr 20fr 10fr 60fr;
+
+    .logo {
       width: 100%;
-      height: 100%;
-      background-color: $white;
-      opacity: 0.6;
-      z-index: 0;
-
-      &.hide {
-        background-color: black;
-        color: $white;
-      }
-    }
-    h1,
-    h2 {
+      height: 0;
+      padding-top: 37.32%;
       position: relative;
-      z-index: 1;
-      font-size: 7.81235vw;
-      letter-spacing: 1.5625vw;
-      color: $black;
-    }
-    a {
-      text-decoration: none;
-    }
+      grid-area: logo;
 
-    &.hide {
-      display: none;
-    }
+      cursor: pointer;
 
-    &.start {
-      h1 {
-        color: $white;
-      }
-    }
-  }
-
-  .headline {
-    position: relative;
-    grid-area: Headline;
-    border: $white;
-    border-style: solid;
-    border-width: 5px;
-    padding: 0 2.6vw;
-    justify-self: center;
-    align-self: center;
-
-    &:hover {
-      .background {
-        background-color: $black;
-        opacity: 1;
-
-        &.hide {
-          background-color: black;
-        }
-      }
-      h1 {
-        color: $white;
-      }
-    }
-  }
-
-  .menu {
-    position: relative;
-    grid-area: Menu;
-
-    justify-self: center;
-    align-self: center;
-
-    text-align: center;
-
-    .credits,
-    .impressum {
-      position: relative;
-      width: 15vw;
-      height: 2.81vw;
-
-      border: 3px solid $white;
-
-      .background {
+      svg {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        opacity: 0;
-        z-index: 0;
-        background-color: $white;
-      }
 
-      h2 {
-        font-size: 1.82vw;
-        letter-spacing: 0.41vw;
-        color: $white;
+        .cls-1 {
+          fill: rgba(198, 119, 52, 0);
+          stroke-linecap: round;
+
+          transition: fill 0.5s ease;
+        }
+
+        .cls-2 {
+          fill: #e78f17;
+          stroke: #d59018;
+          font-size: 250px;
+          opacity: 0.9;
+
+          transition: fill 0.5s ease;
+        }
+
+        .cls-2,
+        .cls-3 {
+          font-family: BebasNeue-Regular, Bebas Neue;
+        }
+
+        .cls-3 {
+          fill: #cccaca;
+          font-size: 90px;
+          letter-spacing: 0.626em;
+        }
+
+        .cls-4,
+        .cls-5 {
+          stroke: none;
+        }
+
+        .cls-5 {
+          fill: #c67734;
+        }
+
+        .cls-6 {
+          filter: url(#Interactive_text);
+        }
+
+        .cls-7 {
+          filter: url(#Out_Of_It_text);
+        }
       }
 
       &:hover {
-        .background {
-          opacity: 0.6;
-        }
-        h2 {
-          color: $black;
+        svg {
+          .cls-1 {
+            fill: rgba(198, 119, 52, 1);
+          }
+          .cls-2 {
+            fill: #2e3532;
+          }
         }
       }
     }
 
     .credits {
-      margin-bottom: 1vw;
+      width: 150%;
+      height: 0;
+      padding-top: 230%;
+      position: relative;
+      grid-area: credits;
+
+      cursor: pointer;
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        transform: translateX(-50%);
+
+        .cls-1 {
+          fill: #394648;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .cls-2,
+        .cls-3,
+        .cls-5 {
+          fill: #98a9ae;
+        }
+
+        .cls-3 {
+          font-size: 50px;
+          font-family: BebasNeue-Regular, Bebas Neue;
+        }
+
+        .cls-4,
+        .cls-5 {
+          stroke: none;
+        }
+      }
+
+      &:hover {
+        animation: credits-bounce 1s ease;
+      }
+
+      @keyframes credits-bounce {
+        40% {
+          transform: translateX(15%);
+        }
+        60% {
+          transform: translateX(0%);
+        }
+        75% {
+          transform: translateX(7%);
+        }
+        90% {
+          transform: translateX(0%);
+        }
+      }
+    }
+
+    .impressum {
+      width: 70%;
+      height: 0;
+      padding-top: 30%;
+      position: relative;
+      grid-area: impresssum;
+
+      cursor: pointer;
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        transform: translateY(50%);
+
+        .cls-1 {
+          fill: #98a9ae;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .cls-2,
+        .cls-3,
+        .cls-5 {
+          fill: #2e3532;
+        }
+
+        .cls-3 {
+          font-size: 50px;
+          font-family: BebasNeue-Regular, Bebas Neue;
+        }
+
+        .cls-4,
+        .cls-5 {
+          stroke: none;
+        }
+      }
+
+      &:hover {
+        animation: impressum-bounce 1s ease;
+      }
+
+      @keyframes impressum-bounce {
+        40% {
+          transform: translateY(-15%);
+        }
+        60% {
+          transform: translateY(0%);
+        }
+        75% {
+          transform: translateY(-7%);
+        }
+        90% {
+          transform: translateY(0%);
+        }
+      }
+    }
+  }
+
+  .movie-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: $bronze;
+  }
+
+  .impressum-page {
+    position: absolute;
+    top: 0;
+
+    height: 100%;
+
+    background-color: $gray;
+
+    display: grid;
+    grid-template:
+      ".       .        .   " auto
+      ".       content  .   " 800px
+      ".       .        .   " auto
+      / auto 1280px auto;
+
+    .impressum-content {
+      grid-area: content;
+      background-image: url(../../../assets/pictures/homepage/Impressum_Background.svg);
+
+      transition: transform 2s ease;
+      transition-delay: 1s;
+
+      padding: 100px;
+
+      display: grid;
+      grid-template: 200px / 400px repeat(auto-fill, 150px);
+      gap: 15px;
+
+      place-items: start;
+      color: $black;
+
+      h1 {
+        font-size: 4em;
+      }
+
+      h3 {
+        font-size: 2em;
+      }
+
+      .headline {
+        align-self: start;
+        margin-top: -10px;
+      }
+
+      .main-contact {
+        grid-column: 2 / span 2;
+      }
+
+      .team-contanct {
+        grid-column: 4 / span 2;
+      }
+
+      .disclaimer {
+        grid-column: 2 / span 4;
+        align-self: end;
+        text-align: justify;
+      }
+
+      &.hide {
+        transform: translateY(150%);
+        transition: transform 1s ease;
+        transition-delay: 0s;
+      }
+    }
+  }
+
+  .credits-page {
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+
+    background-color: $black;
+
+    display: grid;
+    grid-template:
+      ".       .        .   " auto
+      ".       content  .   " 800px
+      ".       .        .   " auto
+      / auto 1280px auto;
+
+    .credits-content {
+      grid-area: content;
+      background-image: url(../../../assets/pictures/homepage/Impressum_Background.svg);
+
+      transition: transform 2s ease;
+      transition-delay: 1s;
+
+      padding: 25px;
+
+      display: grid;
+      grid-template: 170px 170px / 400px repeat(auto-fill, 150px);
+      gap: 15px;
+
+      place-items: center;
+      color: $black;
+
+      h1 {
+        font-size: 4em;
+      }
+
+      h3 {
+        font-size: 2em;
+      }
+
+      .portrait {
+        width: 150px;
+        height: 170px;
+
+        img {
+          width: 150px;
+          height: 150px;
+        }
+
+        &.dozent {
+          grid-column: 2 / span 5;
+        }
+      }
+
+      .main-cast {
+        padding-top: 70px;
+        grid-column: 2 / span 2;
+        align-self: start;
+      }
+
+      .side-cast {
+        padding-top: 70px;
+        grid-column: 4 / span 3;
+        align-self: start;
+      }
+
+      &.hide {
+        transform: translateX(-150%);
+        transition: transform 1s ease;
+        transition-delay: 0s;
+      }
+    }
+  }
+
+  .credits-close {
+    position: absolute;
+    top: 60vh;
+    right: 0;
+
+    width: 8vw;
+    height: 20vh;
+
+    cursor: pointer;
+
+    transition: transform 1s ease;
+    transition-delay: 2s;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      transform: translateX(50%);
+
+      .cls-1 {
+        fill: #394648;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2,
+      .cls-3,
+      .cls-5 {
+        fill: #98a9ae;
+      }
+
+      .cls-3 {
+        font-size: 50px;
+        font-family: BebasNeue-Regular, Bebas Neue;
+      }
+
+      .cls-4,
+      .cls-5 {
+        stroke: none;
+      }
+    }
+
+    &.show {
+      &:hover {
+        animation: credits-close-bounce 1s ease;
+      }
+
+      @keyframes credits-close-bounce {
+        40% {
+          transform: translateX(-15%);
+        }
+        60% {
+          transform: translateX(0%);
+        }
+        75% {
+          transform: translateX(-7%);
+        }
+        90% {
+          transform: translateX(0%);
+        }
+      }
+    }
+
+    &.hide {
+      transform: translateX(50%);
+      transition: transform 0.5s ease;
+      transition-delay: 0s;
+    }
+  }
+
+  .impressum-close {
+    position: absolute;
+    top: 0;
+    left: 10vw;
+
+    width: 15vw;
+    height: 10vh;
+
+    cursor: pointer;
+
+    transition: transform 1s ease;
+    transition-delay: 2s;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      transform: translateY(-50%);
+
+      .cls-1 {
+        fill: #98a9ae;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2,
+      .cls-3,
+      .cls-5 {
+        fill: #2e3532;
+      }
+
+      .cls-3 {
+        font-size: 50px;
+        font-family: BebasNeue-Regular, Bebas Neue;
+      }
+
+      .cls-4,
+      .cls-5 {
+        stroke: none;
+      }
+    }
+
+    &.show {
+      &:hover {
+        animation: impressum-close-bounce 1s ease;
+      }
+
+      @keyframes impressum-close-bounce {
+        40% {
+          transform: translateY(15%);
+        }
+        60% {
+          transform: translateY(0%);
+        }
+        75% {
+          transform: translateY(7%);
+        }
+        90% {
+          transform: translateY(0%);
+        }
+      }
+    }
+
+    &.hide {
+      transform: translateY(-50%);
+      transition: transform 0.5s ease;
+      transition-delay: 0s;
     }
   }
 }

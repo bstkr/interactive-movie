@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="379.215" height="154.506" viewBox="0 0 379.215 154.506">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ca2e55;
+        stroke: #2e3532;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-size: 25px;
+        font-family: BebasNeue-Regular, Bebas Neue;
+        letter-spacing: 0.005em;
+      }
+    </style>
+  </defs>
+  <g id="Objects_Tutorial" transform="translate(-957.5 -362.5)">
+    <g id="Component_2_1" data-name="Component 2 – 1" transform="translate(960 365)">
+      <path id="Union_1" data-name="Union 1" class="cls-1" d="M-3608.083,733H-3723l21-37.117V612h340v88.905l13.215,40.671-42.15-8.576h-179.17l-31.658,28.506Z" transform="translate(3723 -612)"/>
+    </g>
+    <text id="Du_kannst_andere_Objekte_ankilicken_und_neue_Szenen_ansehen" data-name="Du kannst andere Objekte ankilicken
+ und neue Szenen ansehen" class="cls-2" transform="translate(1147 411)"><tspan x="-156.45" y="0">Du kannst andere Objekte ankilicken</tspan><tspan x="-107.9" y="31" xml:space="preserve"> und neue Szenen ansehen</tspan></text>
+  </g>
+</svg>

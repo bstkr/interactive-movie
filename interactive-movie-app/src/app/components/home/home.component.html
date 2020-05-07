@@ -1,4 +1,366 @@
-<div class="home-container">
+<div class="background">
+  <video class="flashback-video" autoplay loop [muted]="true">
+    <source
+      src="../../../assets/video/Flashback_Homepage/Flashback.mp4"
+      type="video/mp4"
+    />
+  </video>
+  <div class="flashback-overlay"></div>
+</div>
+
+<div class="content">
+  <div class="logo" (click)="showMovie()">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 1152 430"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      <defs>
+        <filter
+          id="Out_Of_It_text"
+          x="240"
+          y="14"
+          width="718"
+          height="320"
+          filterUnits="userSpaceOnUse"
+        >
+          <feOffset dx="7" dy="2" input="SourceAlpha" />
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feFlood flood-color="#d59018" flood-opacity="0.2" />
+          <feComposite operator="in" in2="blur" />
+          <feComposite in="SourceGraphic" />
+        </filter>
+        <filter
+          id="Interactive_text"
+          x="231"
+          y="315"
+          width="927"
+          height="126"
+          filterUnits="userSpaceOnUse"
+        >
+          <feOffset dx="7" dy="2" input="SourceAlpha" />
+          <feGaussianBlur stdDeviation="3" result="blur-2" />
+          <feFlood flood-color="#cccaca" flood-opacity="0.161" />
+          <feComposite operator="in" in2="blur-2" />
+          <feComposite in="SourceGraphic" />
+        </filter>
+      </defs>
+      <g id="Logo_button" transform="translate(-768)">
+        <g id="Button_shape" transform="translate(768)">
+          <g id="Subtraction_1" data-name="Subtraction 1" class="cls-1">
+            <path class="cls-4" d="M1152,324H94L.5,162l-.5.867V0H1152V324Z" />
+            <path
+              class="cls-5"
+              d="M 1142 313.9999694824219 L 1142 9.999969482421875 L 10 9.999969482421875 L 10 158.4537353515625 L 99.77486419677734 313.9990539550781 L 1142 313.9999694824219 M 1152 323.9999694824219 L 1152 323.9990539550781 L 94.00045776367188 323.9990539550781 L 0.5004615187644958 161.99951171875 L 0 162.8665924072266 L 0 -3.0517578125e-05 L 1152 -3.0517578125e-05 L 1152 323.9990539550781 L 1152 323.9999694824219 Z"
+            />
+          </g>
+        </g>
+        <g class="cls-7" transform="matrix(1, 0, 0, 1, 768, 0)">
+          <text
+            id="Out_Of_It_text-2"
+            data-name="Out_Of_It_text"
+            class="cls-2"
+            transform="translate(592 247)"
+          >
+            <tspan x="-348.25" y="0">Out of it</tspan>
+          </text>
+        </g>
+        <g class="cls-6" transform="matrix(1, 0, 0, 1, 768, 0)">
+          <text
+            id="Interactive_text-2"
+            data-name="Interactive_text"
+            class="cls-3"
+            transform="translate(1142 403)"
+          >
+            <tspan x="-908.28" y="0">Interactive</tspan>
+          </text>
+        </g>
+        <g class="cls-6" transform="matrix(1, 0, 0, 1, 768, 0)">
+          <text
+            id="Interactive_text-2"
+            data-name="Interactive_text"
+            class="cls-3"
+            transform="translate(1142 403)"
+          >
+            <tspan x="-908.28" y="0">Interactive</tspan>
+          </text>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div class="credits" (click)="showCredits()">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 122.001 217"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      <g id="Credits_button" transform="translate(61 -720)">
+        <g
+          id="Button_Shape"
+          class="cls-1"
+          transform="translate(-612 -499) rotate(-90)"
+        >
+          <path
+            class="cls-4"
+            d="M -1221.50048828125 670.5007934570313 L -1416.850463867188 670.5007934570313 L -1433.50048828125 641.6669921875 L -1433.50048828125 614.5 L -1221.50048828125 614.5 L -1221.50048828125 670.5007934570313 Z"
+          />
+          <path
+            class="cls-5"
+            d="M -1224.00048828125 668.0007934570313 L -1224.00048828125 617 L -1431.00048828125 617 L -1431.00048828125 640.9970092773438 L -1415.4072265625 668.0007934570313 L -1224.00048828125 668.0007934570313 M -1219.00048828125 673.0009765625 L -1219.00048828125 673.0007934570313 L -1418.293701171875 673.0007934570313 L -1435.906127929688 642.5003662109375 L -1436.00048828125 642.6636352539063 L -1436.00048828125 612 L -1219.00048828125 612 L -1219.00048828125 673.0007934570313 L -1219.00048828125 673.0009765625 Z"
+          />
+        </g>
+        <rect
+          id="Rectangle_15"
+          data-name="Rectangle 15"
+          class="cls-2"
+          width="61"
+          height="217"
+          transform="translate(-61 720)"
+        />
+        <text
+          id="Credits_Text"
+          class="cls-3"
+          transform="translate(13 829) rotate(90)"
+        >
+          <tspan x="-62.075" y="0">Credits</tspan>
+        </text>
+      </g>
+    </svg>
+  </div>
+  <div class="impressum" (click)="showImpressum()">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 283 122"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      <g id="Impressum_button" transform="translate(-687 61) rotate(-90)">
+        <g
+          id="Button_Shape"
+          class="cls-1"
+          transform="translate(-612 -466) rotate(-90)"
+        >
+          <path
+            class="cls-4"
+            d="M -1155.50048828125 670.5007934570313 L -1411.661254882813 670.5007934570313 L -1433.50048828125 641.5009155273438 L -1433.50048828125 614.5 L -1155.50048828125 614.5 L -1155.50048828125 670.5007934570313 Z"
+          />
+          <path
+            class="cls-5"
+            d="M -1158.00048828125 668.0007934570313 L -1158.00048828125 617 L -1431.00048828125 617 L -1431.00048828125 640.6648559570313 L -1410.414306640625 668.0007934570313 L -1158.00048828125 668.0007934570313 M -1153.00048828125 673.0009765625 L -1153.00048828125 673.0007934570313 L -1412.908203125 673.0007934570313 L -1435.87744140625 642.5003662109375 L -1436.00048828125 642.6636352539063 L -1436.00048828125 612 L -1153.00048828125 612 L -1153.00048828125 673.0007934570313 L -1153.00048828125 673.0009765625 Z"
+          />
+        </g>
+        <rect
+          id="Rectangle_16"
+          data-name="Rectangle 16"
+          class="cls-2"
+          width="283"
+          height="61"
+          transform="translate(0 687) rotate(90)"
+        />
+        <text
+          id="Impressum_Text"
+          class="cls-3"
+          transform="translate(12 829) rotate(90)"
+        >
+          <tspan x="-89.2" y="0">Impressum</tspan>
+        </text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div
+  [@movie-animation]="movieOpen ? 'movie-open' : 'movie-closed'"
+  class="movie-page hide"
+></div>
+<div
+  [@impressum-animation]="impressumOpen ? 'impressum-open' : 'impressum-closed'"
+  class="impressum-page hide"
+>
+  <div class="impressum-content" [ngClass]="!impressumOpen ? 'hide' : ''">
+    <div class="headline"><h1>Impressum</h1></div>
+    <div class="main-contact">
+      <h3>Bereitgestellt durch:</h3>
+      <p>Tobias Aescht</p>
+      <p>Holderweg 23</p>
+      <p>89075 Ulm</p>
+      <h3>Kontakt:</h3>
+      <p>tobias@aescht.net</p>
+      <p>+49 179 3660208</p>
+    </div>
+    <div class="team-contanct">
+      <h3>E-Mail's Team Pünktlich:</h3>
+      <a href="mailto:benedikt.stocker@uni-ulm.de"><p>Benedikt Stocker</p></a>
+      <a href="mailto:benjamin.eder@uni-ulm.de"><p>Benjamin Eder</p></a>
+      <a href="mailto:jan.vogel@uni-ulm.de"><p>Jan Vogel</p></a>
+      <a href="mailto:daniel.salzmann@uni-ulm.de"><p>Daniel Salzmann</p></a>
+      <a href="mailto:tobias.aescht@uni-ulm.de"><p>Tobias Aescht</p></a>
+    </div>
+    <div class="disclaimer">
+      <h3>Disclaimer</h3>
+      <p>
+        Die auf unserer Webseite veröffentlichen Inhalte und Werke unterliegen
+        dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung,
+        Verbreitung und jede Art der Verwertung des geistigen Eigentums in
+        ideeller und materieller Sicht des Urhebers außerhalb der Grenzen des
+        Urheberrechtes bedürfen der vorherigen schriftlichen Zustimmung des
+        jeweiligen Urhebers i.S.d. Urhebergesetzes. Downloads und Kopien dieser
+        Seite sind nur für den privaten und nicht kommerziellen Gebrauch
+        erlaubt. Sind die Inhalte auf unserer Webseite nicht von uns erstellt
+        wurden, sind die Urheberrechte Dritter zu beachten. Die Inhalte Dritter
+        werden als solche kenntlich gemacht. Sollten Sie trotzdem auf eine
+        Urheberrechtsverletzung aufmerksam werden, bitten wir um einen
+        entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden
+        wir derartige Inhalte unverzüglich entfernen.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div
+  [@credits-animation]="creditsOpen ? 'credits-open' : 'credits-closed'"
+  class="credits-page"
+>
+  <div class="credits-content" [ngClass]="!creditsOpen ? 'hide' : ''">
+    <h1>Team Pünktlich</h1>
+    <div class="portrait">
+      <img src="assets/pictures/credits/Benne.jpg" alt="a" />
+      <p>Benedikt Stocker</p>
+    </div>
+    <div class="portrait">
+      <img src="assets/pictures/credits/Benny.jpg" alt="a" />
+      <p>Benjamin Eder</p>
+    </div>
+    <div class="portrait">
+      <img src="assets/pictures/credits/Daniel.jpg" alt="a" />
+      <p>Daniel Salzmann</p>
+    </div>
+    <div class="portrait">
+      <img src="assets/pictures/credits/Jan.jpg" alt="a" />
+      <p>Jan Vogel</p>
+    </div>
+    <div class="portrait">
+      <img src="assets/pictures/credits/Tobias.jpg" alt="a" />
+      <p>Tobias Aescht</p>
+    </div>
+    <h1>Dozent</h1>
+    <div class="portrait dozent">
+      <img src="assets/pictures/credits/kramer.jpg" alt="a" />
+      <p>Jens Kramer</p>
+    </div>
+    <h1 style="align-self: start; padding-top: 60px;">Schauspieler</h1>
+    <div class="main-cast">
+      <h3>Hauptrollen</h3>
+      <p>Ahmed Malik als Nick</p>
+      <p>Benedikt Stocker als Steve</p>
+      <p>Benjamin Eder als Chad</p>
+      <p>Daniel Salzmann als Tim</p>
+    </div>
+    <div class="side-cast">
+      <h3>Statisten</h3>
+      <p>Jan Vogel</p>
+      <p>Janina Lohner</p>
+      <p>Jonathan Schneider</p>
+      <p>Jonathan W.</p>
+      <p>Maike Gregersen</p>
+      <p>Onur Özkeles</p>
+      <p>Philip Funk</p>
+      <p>Raphael Reich</p>
+      <p>Teresa Hörmann</p>
+      <p>Tobias Aescht</p>
+    </div>
+  </div>
+</div>
+
+<div
+  class="credits-close"
+  [ngClass]="creditsOpen ? 'show' : 'hide'"
+  (click)="closeCredits()"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 122.001 217"
+    preserveAspectRatio="xMidYMid meet"
+  >
+    <g id="Credits_Close_button" transform="translate(61.001 937) rotate(180)">
+      <g
+        id="Button_Shape"
+        class="cls-1"
+        transform="translate(-612 -499) rotate(-90)"
+      >
+        <path
+          class="cls-4"
+          d="M -1221.50048828125 670.5007934570313 L -1416.850463867188 670.5007934570313 L -1433.50048828125 641.6669921875 L -1433.50048828125 614.5 L -1221.50048828125 614.5 L -1221.50048828125 670.5007934570313 Z"
+        />
+        <path
+          class="cls-5"
+          d="M -1224.00048828125 668.0007934570313 L -1224.00048828125 617 L -1431.00048828125 617 L -1431.00048828125 640.9970092773438 L -1415.4072265625 668.0007934570313 L -1224.00048828125 668.0007934570313 M -1219.00048828125 673.0009765625 L -1219.00048828125 673.0007934570313 L -1418.293701171875 673.0007934570313 L -1435.906127929688 642.5003662109375 L -1436.00048828125 642.6636352539063 L -1436.00048828125 612 L -1219.00048828125 612 L -1219.00048828125 673.0007934570313 L -1219.00048828125 673.0009765625 Z"
+        />
+      </g>
+      <rect
+        id="Rectangle_15"
+        data-name="Rectangle 15"
+        class="cls-2"
+        width="61"
+        height="217"
+        transform="translate(-61 720)"
+      />
+      <text
+        id="Credits_Text"
+        class="cls-3"
+        transform="translate(46 829) rotate(-90)"
+      >
+        <tspan x="-81.775" y="0">Schließen</tspan>
+      </text>
+    </g>
+  </svg>
+</div>
+
+<div
+  class="impressum-close"
+  [ngClass]="impressumOpen ? 'show' : 'hide'"
+  (click)="closeImpressum()"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 283 124"
+    preserveAspectRatio="xMidYMid meet"
+  >
+    <g id="Impressum_close_button" transform="translate(970 61) rotate(90)">
+      <g
+        id="Button_Shape"
+        class="cls-1"
+        transform="translate(-612 -466) rotate(-90)"
+      >
+        <path
+          class="cls-4"
+          d="M -1155.50048828125 670.5007934570313 L -1411.661254882813 670.5007934570313 L -1433.50048828125 641.5009155273438 L -1433.50048828125 614.5 L -1155.50048828125 614.5 L -1155.50048828125 670.5007934570313 Z"
+        />
+        <path
+          class="cls-5"
+          d="M -1158.00048828125 668.0007934570313 L -1158.00048828125 617 L -1431.00048828125 617 L -1431.00048828125 640.6648559570313 L -1410.414306640625 668.0007934570313 L -1158.00048828125 668.0007934570313 M -1153.00048828125 673.0009765625 L -1153.00048828125 673.0007934570313 L -1412.908203125 673.0007934570313 L -1435.87744140625 642.5003662109375 L -1436.00048828125 642.6636352539063 L -1436.00048828125 612 L -1153.00048828125 612 L -1153.00048828125 673.0007934570313 L -1153.00048828125 673.0009765625 Z"
+        />
+      </g>
+      <rect
+        id="Rectangle_16"
+        data-name="Rectangle 16"
+        class="cls-2"
+        width="283"
+        height="61"
+        transform="translate(0 687) rotate(90)"
+      />
+      <text
+        id="Impressum_Text"
+        class="cls-3"
+        transform="translate(48 828) rotate(-90)"
+      >
+        <tspan x="-81.775" y="0">Schließen</tspan>
+      </text>
+    </g>
+  </svg>
+</div>
+
+<!--<div class="home-container">
   <div class="water" id="background">
     <div class="headline" id="healine" (click)="startMovie()">
       <h1>OUT OF IT</h1>
@@ -16,4 +378,4 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
