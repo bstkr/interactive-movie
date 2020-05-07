@@ -37,22 +37,6 @@
     }
   }
 
-  #leftNav:hover {
-    background-image: radial-gradient(at right, $bronze 0%, $white 100%);
-
-    .bounce {
-      animation-name: bounce;
-    }
-  }
-
-  #rightNav:hover {
-    background-image: radial-gradient(at left, $bronze 0%, $white 100%);
-
-    .bounce {
-      animation-name: bounce;
-    }
-  }
-
   .right-navigation {
     grid-area: rightNav;
 
@@ -64,6 +48,22 @@
 
     &.hidden {
       display: none;
+    }
+  }
+
+  #leftNav:hover {
+    background-image: radial-gradient(at right, $bronze 17.5%, $black 72%);
+
+    .bounce {
+      animation-name: bounce;
+    }
+  }
+
+  #rightNav:hover {
+    background-image: radial-gradient(at left, $bronze 17.5%, $black 72%);
+
+    .bounce {
+      animation-name: bounce;
     }
   }
 
