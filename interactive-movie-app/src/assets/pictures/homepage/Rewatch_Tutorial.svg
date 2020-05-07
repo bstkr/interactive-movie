@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="317" height="168.453" viewBox="0 0 317 168.453">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ca2e55;
+        stroke: #2e3532;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-size: 25px;
+        font-family: BebasNeue-Regular, Bebas Neue;
+        letter-spacing: 0.005em;
+      }
+    </style>
+  </defs>
+  <g id="Rewatch_Tutorial" transform="translate(-390.5 -712.5)">
+    <path id="Union_2" data-name="Union 2" class="cls-1" d="M80.5,133.692H0V0H312V133.692H134.641l.859.458-55,29.3Z" transform="translate(393 715)"/>
+    <text id="Du_kannst_das_Objekt_noch_mal_klicken_und_die_Szene_erneut_ansehen" data-name="Du kannst das Objekt noch mal
+ klicken und die Szene erneut
+ ansehen" class="cls-2" transform="translate(549 759.953)"><tspan x="-130.625" y="0">Du kannst das Objekt noch mal</tspan><tspan x="-123.525" y="31" xml:space="preserve"> klicken und die Szene erneut</tspan><tspan x="-37.1" y="62" xml:space="preserve"> ansehen</tspan></text>
+  </g>
+</svg>

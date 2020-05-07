@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="173.328" viewBox="0 0 360 173.328">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ca2e55;
+        stroke: #2e3532;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-size: 25px;
+        font-family: BebasNeue-Regular, Bebas Neue;
+        letter-spacing: 0.005em;
+      }
+    </style>
+  </defs>
+  <g id="Timeline_Tutorial" transform="translate(-913 -816)">
+    <path id="Union_3" data-name="Union 3" class="cls-1" d="M-3534.028,743H-3723V612h355V743h-121.611l-9.414,35Z" transform="translate(4638.5 206.5)"/>
+    <text id="Du_kannst_die_Timeline_öffnen_Hier_werden_die_Szenen_in_chronologischer_Reihenfolge_angezeigt" data-name="Du kannst die Timeline öffnen! 
+Hier werden die Szenen in chronologischer Reihenfolge angezeigt" class="cls-2" transform="translate(916 838)"><tspan x="48.787" y="23">Du kannst die Timeline öffnen! </tspan><tspan x="70.112" y="54">Hier werden die Szenen in </tspan><tspan x="8.763" y="85">chronologischer Reihenfolge angezeigt</tspan></text>
+  </g>
+</svg>
