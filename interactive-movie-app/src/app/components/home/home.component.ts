@@ -51,7 +51,7 @@ import {
       ]),
       transition("credits-open => credits-closed", [
         animate(
-          "2s ease",
+          "2s 1s ease",
           keyframes([
             style({
               top: "50%",
@@ -101,7 +101,7 @@ import {
       ]),
       transition("impressum-open => impressum-closed", [
         animate(
-          "2s ease",
+          "2s 1s ease",
           keyframes([
             style({
               left: "10%",

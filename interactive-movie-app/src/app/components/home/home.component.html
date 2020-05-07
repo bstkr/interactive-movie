@@ -166,12 +166,64 @@
 <div
   [@impressum-animation]="impressumOpen ? 'impressum-open' : 'impressum-closed'"
   class="impressum-page hide"
-></div>
+>
+  <div class="impressum-content" [ngClass]="!impressumOpen ? 'hide' : ''"></div>
+</div>
 
 <div
   [@credits-animation]="creditsOpen ? 'credits-open' : 'credits-closed'"
   class="credits-page"
-></div>
+>
+  <div class="credits-content" [ngClass]="!creditsOpen ? 'hide' : ''">
+    <h1>Team Pünktlich</h1>
+    <div class="portrait">
+      <img src="assets/pictures/credits/Benne.jpg" alt="a" />
+      <p>Benedikt Stocker</p>
+    </div>
+    <div class="portrait">
+      <img src="assets/pictures/credits/Benny.jpg" alt="a" />
+      <p>Benjamin Eder</p>
+    </div>
+    <div class="portrait">
+      <img src="assets/pictures/credits/Daniel.jpg" alt="a" />
+      <p>Daniel Salzmann</p>
+    </div>
+    <div class="portrait">
+      <img src="assets/pictures/credits/Jan.jpg" alt="a" />
+      <p>Jan Vogel</p>
+    </div>
+    <div class="portrait">
+      <img src="assets/pictures/credits/Tobias.jpg" alt="a" />
+      <p>Tobias Aescht</p>
+    </div>
+    <h1>Dozent</h1>
+    <div class="portrait dozent">
+      <img src="assets/pictures/credits/kramer.jpg" alt="a" />
+      <p>Jens Kramer</p>
+    </div>
+    <h1>Schauspieler</h1>
+    <div class="main-cast">
+      <h3>Hauptrollen</h3>
+      <p>Ahmed Malik als Nick</p>
+      <p>Benedikt Stocker als Steve</p>
+      <p>Benjamin Eder als Chad</p>
+      <p>Daniel Salzmann als Tim</p>
+    </div>
+    <div class="side-cast">
+      <h3>Statisten</h3>
+      <p>Jan Vogel</p>
+      <p>Janina Lohner</p>
+      <p>Jonathan Schneider</p>
+      <p>Jonathan W.</p>
+      <p>Maike Gregersen</p>
+      <p>Onur Özkeles</p>
+      <p>Philip Funk</p>
+      <p>Raphael Reich</p>
+      <p>Teresa Hörmann</p>
+      <p>Tobias Aescht</p>
+    </div>
+  </div>
+</div>
 
 <div
   class="credits-close"

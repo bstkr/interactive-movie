@@ -260,6 +260,27 @@
     height: 100%;
 
     background-color: $gray;
+
+    display: grid;
+    grid-template:
+      ".       .        .   " auto
+      ".       content  .   " 800px
+      ".       .        .   " auto
+      / auto 1280px auto;
+
+    .impressum-content {
+      grid-area: content;
+      background-image: url(../../../assets/pictures/homepage/Impressum_Background.svg);
+
+      transition: transform 2s ease;
+      transition-delay: 2.5s;
+
+      &.hide {
+        transform: translateY(150%);
+        transition: transform 1s ease;
+        transition-delay: 0s;
+      }
+    }
   }
 
   .credits-page {
@@ -271,6 +292,64 @@
     background-color: $black;
 
     display: grid;
+    grid-template:
+      ".       .        .   " auto
+      ".       content  .   " 800px
+      ".       .        .   " auto
+      / auto 1280px auto;
+
+    .credits-content {
+      grid-area: content;
+      background-image: url(../../../assets/pictures/homepage/Impressum_Background.svg);
+
+      transition: transform 2s ease;
+      transition-delay: 1.5s;
+
+      padding: 25px;
+
+      display: grid;
+      grid-template: 170px 170px / 400px repeat(auto-fill, 150px);
+      gap: 15px;
+
+      place-items: center;
+      color: $black;
+
+      h1 {
+        font-size: 4em;
+      }
+
+      h3 {
+        font-size: 2em;
+      }
+
+      .portrait {
+        width: 150px;
+        height: 170px;
+
+        img {
+          width: 150px;
+          height: 150px;
+        }
+
+        &.dozent {
+          grid-column: 6;
+        }
+      }
+
+      .main-cast {
+        grid-column: 2 / span 2;
+      }
+
+      .side-cast {
+        grid-column: 4 / span 3;
+      }
+
+      &.hide {
+        transform: translateX(-150%);
+        transition: transform 1s ease;
+        transition-delay: 0s;
+      }
+    }
   }
 
   .credits-close {
