@@ -1,5 +1,5 @@
 <div class="background">
-  <video class="flashback-video" autoplay="autoplay" loop="true">
+  <video class="flashback-video" autoplay loop [muted]="true">
     <source
       src="../../../assets/video/Flashback_Homepage/Flashback.mp4"
       type="video/mp4"
@@ -9,7 +9,7 @@
 </div>
 
 <div class="content">
-  <div class="logo">
+  <div class="logo" (click)="showMovie()">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -159,6 +159,10 @@
   </div>
 </div>
 
+<div
+  [@movie-animation]="movieOpen ? 'movie-open' : 'movie-closed'"
+  class="movie-page hide"
+></div>
 <div
   [@impressum-animation]="impressumOpen ? 'impressum-open' : 'impressum-closed'"
   class="impressum-page hide"

@@ -116,6 +116,53 @@ import {
         ),
       ]),
     ]),
+    trigger("movie-animation", [
+      state(
+        "movie-closed",
+        style({
+          height: "40vh",
+          transform: "translateX(100%)",
+        })
+      ),
+      state(
+        "movie-open",
+        style({
+          height: "100%",
+          transform: "translateX(0)",
+        })
+      ),
+      transition("movie-closed => movie-open", [
+        animate(
+          "2s ease",
+          keyframes([
+            style({
+              transform: "translateX(0)",
+              offset: 0.5,
+            }),
+            style({
+              height: "100%",
+              offset: 1,
+            }),
+          ])
+        ),
+      ]),
+      transition("movie-open => movie-closed", [
+        animate(
+          "2s ease",
+          keyframes([
+            style({
+              left: "10%",
+              width: "15%",
+              offset: 0.5,
+            }),
+            style({
+              transform: "translateY(100%)",
+              offset: 1,
+            }),
+          ])
+        ),
+      ]),
+    ]),
   ],
 })
 export class HomeComponent implements OnInit {
@@ -125,10 +172,12 @@ export class HomeComponent implements OnInit {
     public interactionService: InteractionService
   ) {}
 
+  movieOpen: boolean;
   creditsOpen: boolean;
   impressumOpen: boolean;
 
   ngOnInit() {
+    this.movieOpen = false;
     this.creditsOpen = false;
     this.impressumOpen = false;
   }
@@ -149,6 +198,14 @@ export class HomeComponent implements OnInit {
         this.router.navigate(["movie/pov1"]);
       }, 1000);
     }, 1000);
+  }
+
+  showMovie() {
+    this.movieOpen = true;
+
+    setTimeout(() => {
+      this.router.navigate(["movie/pov1"]);
+    }, 3000);
   }
 
   showCredits() {
