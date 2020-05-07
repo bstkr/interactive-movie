@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="283" height="124" viewBox="0 0 283 124">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #98a9ae;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        fill: #2e3532;
+      }
+
+      .cls-3 {
+        font-size: 50px;
+        font-family: BebasNeue-Regular, Bebas Neue;
+      }
+
+      .cls-4, .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Impressum_close_button" transform="translate(970 61) rotate(90)">
+    <g id="Button_Shape" class="cls-1" transform="translate(-612 -466) rotate(-90)">
+      <path class="cls-4" d="M -1155.50048828125 670.5007934570313 L -1411.661254882813 670.5007934570313 L -1433.50048828125 641.5009155273438 L -1433.50048828125 614.5 L -1155.50048828125 614.5 L -1155.50048828125 670.5007934570313 Z"/>
+      <path class="cls-5" d="M -1158.00048828125 668.0007934570313 L -1158.00048828125 617 L -1431.00048828125 617 L -1431.00048828125 640.6648559570313 L -1410.414306640625 668.0007934570313 L -1158.00048828125 668.0007934570313 M -1153.00048828125 673.0009765625 L -1153.00048828125 673.0007934570313 L -1412.908203125 673.0007934570313 L -1435.87744140625 642.5003662109375 L -1436.00048828125 642.6636352539063 L -1436.00048828125 612 L -1153.00048828125 612 L -1153.00048828125 673.0007934570313 L -1153.00048828125 673.0009765625 Z"/>
+    </g>
+    <rect id="Rectangle_16" data-name="Rectangle 16" class="cls-2" width="283" height="61" transform="translate(0 687) rotate(90)"/>
+    <text id="Impressum_Text" class="cls-3" transform="translate(48 828) rotate(-90)"><tspan x="-81.775" y="0">Schließen</tspan></text>
+  </g>
+</svg>
