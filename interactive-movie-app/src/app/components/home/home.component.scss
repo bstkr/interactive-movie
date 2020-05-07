@@ -273,7 +273,43 @@
       background-image: url(../../../assets/pictures/homepage/Impressum_Background.svg);
 
       transition: transform 2s ease;
-      transition-delay: 2.5s;
+      transition-delay: 1s;
+
+      padding: 100px;
+
+      display: grid;
+      grid-template: 200px / 400px repeat(auto-fill, 150px);
+      gap: 15px;
+
+      place-items: start;
+      color: $black;
+
+      h1 {
+        font-size: 4em;
+      }
+
+      h3 {
+        font-size: 2em;
+      }
+
+      .headline {
+        align-self: start;
+        margin-top: -10px;
+      }
+
+      .main-contact {
+        grid-column: 2 / span 2;
+      }
+
+      .team-contanct {
+        grid-column: 4 / span 2;
+      }
+
+      .disclaimer {
+        grid-column: 2 / span 4;
+        align-self: end;
+        text-align: justify;
+      }
 
       &.hide {
         transform: translateY(150%);
@@ -303,7 +339,7 @@
       background-image: url(../../../assets/pictures/homepage/Impressum_Background.svg);
 
       transition: transform 2s ease;
-      transition-delay: 1.5s;
+      transition-delay: 1s;
 
       padding: 25px;
 
@@ -332,16 +368,20 @@
         }
 
         &.dozent {
-          grid-column: 6;
+          grid-column: 2 / span 5;
         }
       }
 
       .main-cast {
+        padding-top: 70px;
         grid-column: 2 / span 2;
+        align-self: start;
       }
 
       .side-cast {
+        padding-top: 70px;
         grid-column: 4 / span 3;
+        align-self: start;
       }
 
       &.hide {
