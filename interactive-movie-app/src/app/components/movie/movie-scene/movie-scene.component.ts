@@ -51,9 +51,6 @@ export class MovieSceneComponent implements OnInit {
       this.sceneActive = s;
       this.handleIntroStart();
     });
-    /*this.sceneService
-      .getSceneActive(this.scene.sceneId)
-      .subscribe((s) => this.handleIntroStart());*/
     this.sceneService
       .getCurrentDecisionObservable()
       .subscribe((s) => (this.currentDecision = s));
@@ -174,7 +171,7 @@ export class MovieSceneComponent implements OnInit {
           '<audio autoplay=\'autoplay\'><source src=\'/assets/sound/decision_sound.mp3\' type=\'audio/mpeg\'></audio>';
 
         this.decisionTimer = setTimeout((_) => {
-          this.automaticClickDecision(0);
+          this.automaticClickDecision(1);
         }, 8000);
       }
     } else if (outroElement) {
@@ -369,9 +366,7 @@ export class MovieSceneComponent implements OnInit {
       const introElement = document.getElementById(
         this.scene.sceneId + '-intro'
       );
-      setTimeout(() => {
-        introElement.click();
-      }, 1000);
+      this.startVideo(introElement, 500);
     }
   }
 
@@ -415,7 +410,7 @@ export class MovieSceneComponent implements OnInit {
         videoElement.classList.replace('fade', 'hidden');
         this.resetVideoForRewatch();
       }, 2000);
-    }, 1000);
+    }, 200);
   }
 
   resetVideoForRewatch() {

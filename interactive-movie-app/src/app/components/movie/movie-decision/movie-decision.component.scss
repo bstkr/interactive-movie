@@ -11,7 +11,7 @@
 
   z-index: 3;
 
-  transition: opacity 2s ease-out;
+  transition: opacity 1.5s ease-out;
 
   &.fade {
     opacity: 0;
@@ -24,15 +24,17 @@
   .decision {
     position: absolute;
     top: 0;
-    width: 50%;
-    height: 100%;
+    width: 40%;
+    height: 79%;
 
     transition: opacity 1s ease-out;
 
+    padding: 6% 5%;
     display: grid;
-
-    grid-template-columns: 100px auto 100px;
-    grid-template-rows: 100px 30% auto 100px;
+    grid-template: 
+    3fr
+    6fr
+    / auto;
 
     cursor: pointer;
 
@@ -58,25 +60,16 @@
     &#decision-1 {
       border-right: $black 3px solid;
 
-      grid-template-areas:
-        ". . ."
-        ". headline ."
-        "arrow content ."
-        ". . .";
-
       &.hidden {
-        //transform: translateX(-120%);
         z-index: 0;
         opacity: 0;
       }
 
       &.close-right {
-        //transform: translateX(220%);
         z-index: 0;
         opacity: 0;
       }
       &.close-left {
-        //transform: translateX(-220%);
         z-index: 0;
         opacity: 0;
       }
@@ -92,25 +85,16 @@
       left: 50%;
       border-left: $black 3px solid;
 
-      grid-template-areas:
-        ". . ."
-        ". headline ."
-        ". content arrow"
-        ". . .";
-
       &.hidden {
-        //transform: translateX(120%);
         z-index: 0;
         opacity: 0;
       }
 
       &.close-right {
-        //transform: translateX(220%);
         z-index: 0;
         opacity: 0;
       }
       &.close-left {
-        //transform: translateX(-220%);
         z-index: 0;
         opacity: 0;
       }
@@ -127,21 +111,8 @@
       }
 
       .content-container {
-        grid-area: content;
-
-        padding: 20px;
-        border: $white 1px solid;
-
         align-self: end;
         justify-self: end;
-      }
-
-      .arrow-container {
-        margin-left: 50px;
-        margin-right: 0;
-
-        align-self: center;
-        justify-self: center;
       }
     }
 
@@ -151,25 +122,26 @@
     }
 
     .headline-container {
-      grid-area: headline;
-
-      padding: 20px;
-      border: $white 1px solid;
-
       align-self: start;
       justify-self: start;
 
       h1 {
-        font-size: 80px;
+        font-size: 110px;
       }
 
-      @media screen and (max-width: 1500px) {
+      @media screen and (max-width: 1800px) {
+        h1 {
+          font-size: 80px;
+        }
+      }
+
+      @media screen and (max-width: 1300px) {
         h1 {
           font-size: 50px;
         }
       }
 
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 900px) {
         h1 {
           font-size: 30px;
         }
@@ -177,8 +149,6 @@
     }
 
     .content-container {
-      grid-area: content;
-
       padding: 20px;
       border: $white 1px solid;
 
@@ -188,35 +158,23 @@
       p {
         font-size: 25px;
       }
-
-      @media screen and (max-width: 1500px) {
-        h1 {
+      
+      @media screen and (max-width: 1800px) {
+        p {
           font-size: 20px;
         }
       }
 
-      @media screen and (max-width: 1000px) {
-        h1 {
-          font-size: 10px;
+      @media screen and (max-width: 1300px) {
+        p {
+          font-size: 15px;
         }
       }
-    }
 
-    .arrow-container {
-      grid-area: arrow;
-
-      margin-right: 50px;
-
-      align-self: center;
-      justify-self: center;
-
-      font-size: 80px;
-      cursor: pointer;
-
-      transition: all 0.3s ease-out;
-
-      &:hover {
-        transform: scale(1.3);
+      @media screen and (max-width: 900px) {
+        p {
+          font-size: 10px;
+        }
       }
     }
   }

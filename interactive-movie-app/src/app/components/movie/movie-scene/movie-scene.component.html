@@ -1,6 +1,30 @@
 <div id="{{ scene.sceneId }}" class="hidden">
-  <div *ngIf="userHasSeenIntro" class="closer" (click)="closeButton()">
-    <span class="symbol">&#10005;</span>
+  <div *ngIf="userHasSeenIntro" class="close-button" (click)="closeButton()">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 226.09 55"
+      preserveAspectRatio="xMidYMid meet"
+      pointer-events="none"
+    >
+      <g
+        id="Item-close-button"
+        transform="translate(909.959 5.999) rotate(90)"
+      >
+        <path
+          id="Button_Shape"
+          class="cls-1"
+          d="M221.09,50H18.041L.1,25l-.1.134V0H221.09V50Z"
+          transform="translate(-3.499 907.459) rotate(-90)"
+        />
+        <text
+          id="Close_Text"
+          class="cls-2"
+          transform="translate(35.001 796.959) rotate(-90)"
+        >
+          <tspan x="-58.16" y="0">Schlißen</tspan>
+        </text>
+      </g>
+    </svg>
   </div>
   <app-movie-video
     *ngFor="let video of scene.videoSequence"
