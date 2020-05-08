@@ -172,7 +172,7 @@ export class MovieSceneComponent implements OnInit {
 
         this.decisionTimer = setTimeout((_) => {
           this.automaticClickDecision(1);
-        }, 8000);
+        }, 10000);
       }
     } else if (outroElement) {
       outroElement.classList.replace('hiddenVideo', 'currentVideo');
