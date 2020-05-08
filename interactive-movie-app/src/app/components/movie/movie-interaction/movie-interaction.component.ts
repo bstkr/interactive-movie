@@ -71,12 +71,7 @@ export class MovieInteractionComponent implements OnInit {
     );
     hoverElement.classList.remove('showHoverAnimation');
 
-    /* tslint:disable */
-    // disbale linting for this line. It needs to be here
-    void hoverElement.offsetWidth;
-    /* tslint:enable */
-
-    hoverElement.classList.add('showHoverAnimation');
+    setTimeout( () => {hoverElement.classList.add('showHoverAnimation');}, 0);
   }
 
   getClass(index: number) {
