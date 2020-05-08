@@ -1,6 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="379.215" height="154.506" viewBox="0 0 379.215 154.506">
   <defs>
-    <style>
+    <style type="text/css">
+      <![CDATA[
+        @font-face {
+          font-family: Bebas Neue;
+          src: url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+        }
+      ]]>
       .cls-1 {
         fill: #ca2e55;
         stroke: #2e3532;
@@ -11,7 +17,7 @@
       .cls-2 {
         fill: #fff;
         font-size: 25px;
-        font-family: BebasNeue-Regular, Bebas Neue;
+        font-family: "Bebas Neue";
         letter-spacing: 0.005em;
       }
     </style>
