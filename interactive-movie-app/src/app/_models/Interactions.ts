@@ -47,7 +47,7 @@ export const Interactions: POV[] = [
         interactionName: 'Unterhose',
         interactionId: 'pov1_interaction1',
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
-        hoverLayerElementPath: '/assets/pictures/room/pov1/Object_1_2.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov1/Object_1_2.svg',
       },
       {
         positionX: 29.5,
@@ -57,7 +57,7 @@ export const Interactions: POV[] = [
         interactionName: 'Bier',
         interactionId: 'pov1_interaction2',
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
-        hoverLayerElementPath: '/assets/pictures/room/pov1/Object_3_4.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov1/Object_3_4.svg',
       },
       {
         positionX: 53,
@@ -70,7 +70,7 @@ export const Interactions: POV[] = [
           { posX: 41, posY: 12, width: 45, height: 34 },
           { posX: 12, posY: 62, width: 44, height: 27 },
         ],
-        hoverLayerElementPath: '/assets/pictures/room/pov1/Object_5_6.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov1/Object_5_6.svg',
       },
       {
         positionX: 53.5,
@@ -80,7 +80,7 @@ export const Interactions: POV[] = [
         interactionName: 'Einkaufszettel',
         interactionId: 'pov1_interaction4',
         clickLayerElements: [{ posX: -25, posY: -50, width: 150, height: 200 }],
-        hoverLayerElementPath: '/assets/pictures/room/pov1/Object_7.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov1/Object_7.svg',
       },
       {
         positionX: 42.2,
@@ -90,7 +90,7 @@ export const Interactions: POV[] = [
         interactionName: 'Computer',
         interactionId: 'pov1_interaction5',
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
-        hoverLayerElementPath: '/assets/pictures/room/pov1/Object_8_9.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov1/Object_8_9.svg',
       },
       {
         positionX: 14.58,
@@ -100,7 +100,7 @@ export const Interactions: POV[] = [
         interactionName: 'Handy',
         interactionId: 'pov1_interaction6',
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
-        hoverLayerElementPath: '/assets/pictures/room/pov1/Object_10.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov1/Object_10.svg',
       },
     ],
   },
@@ -115,7 +115,7 @@ export const Interactions: POV[] = [
         interactionName: 'Unterhose',
         interactionId: 'pov2_interaction1',
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
-        hoverLayerElementPath: '/assets/pictures/room/pov2/Object_10_11.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov2/Object_10_11.svg',
       },
       {
         positionX: 22.7,
@@ -125,7 +125,7 @@ export const Interactions: POV[] = [
         interactionName: 'Bier',
         interactionId: 'pov2_interaction2',
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
-        hoverLayerElementPath: '/assets/pictures/room/pov2/Object_5_6.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov2/Object_5_6.svg',
       },
       {
         positionX: 85.4,
@@ -135,7 +135,7 @@ export const Interactions: POV[] = [
         interactionName: 'Zeitung',
         interactionId: 'pov2_interaction3',
         clickLayerElements: [{ posX: 4, posY: 16, width: 78, height: 80 }],
-        hoverLayerElementPath: '/assets/pictures/room/pov2/Object_1_2.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov2/Object_1_2.svg',
       },
       {
         positionX: 51.6,
@@ -145,7 +145,7 @@ export const Interactions: POV[] = [
         interactionName: 'Nummer',
         interactionId: 'pov2_interaction4',
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
-        hoverLayerElementPath: '/assets/pictures/room/pov2/Object_3_4.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov2/Object_3_4.svg',
       },
       {
         positionX: 34.9,
@@ -155,7 +155,7 @@ export const Interactions: POV[] = [
         interactionName: 'Einkaufszettel',
         interactionId: 'pov2_interaction5',
         clickLayerElements: [{ posX: -15, posY: -10, width: 130, height: 120 }],
-        hoverLayerElementPath: '/assets/pictures/room/pov2/Object_7.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov2/Object_7.svg',
       },
       {
         positionX: 33.7,
@@ -165,7 +165,7 @@ export const Interactions: POV[] = [
         interactionName: 'Computer',
         interactionId: 'pov2_interaction6',
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
-        hoverLayerElementPath: '/assets/pictures/room/pov2/Object_8_9.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov2/Object_8_9.svg',
       },
       {
         positionX: 29.2,
@@ -178,7 +178,7 @@ export const Interactions: POV[] = [
           { posX: 26, posY: 14, width: 59, height: 32 },
           { posX: 11, posY: 52, width: 34, height: 32 },
         ],
-        hoverLayerElementPath: '/assets/pictures/room/pov2/Object_12_13.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov2/Object_12_13.svg',
       },
     ],
   },
@@ -193,7 +193,7 @@ export const Interactions: POV[] = [
         interactionName: 'Zeitung',
         interactionId: 'pov3_interaction1',
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
-        hoverLayerElementPath: '/assets/pictures/room/pov3/Object_1_2.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov3/Object_1_2.svg',
       },
       {
         positionX: 16,
@@ -203,7 +203,7 @@ export const Interactions: POV[] = [
         interactionName: 'Nummer',
         interactionId: 'pov3_interaction2',
         clickLayerElements: [{ posX: 0, posY: 0, width: 100, height: 100 }],
-        hoverLayerElementPath: '/assets/pictures/room/pov3/Object_3_4.svg',
+        hoverLayerElementPath: 'assets/pictures/room/pov3/Object_3_4.svg',
       },
     ],
   },
