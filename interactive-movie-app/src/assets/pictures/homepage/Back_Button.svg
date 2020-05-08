@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="226.09" height="55" viewBox="0 0 226.09 55">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2e3532;
+        stroke: #e3dfff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+      }
+
+      .cls-2 {
+        fill: #e3dfff;
+        font-size: 40px;
+        font-family: BebasNeue-Regular, Bebas Neue;
+      }
+    </style>
+  </defs>
+  <g id="Back_Button" transform="translate(223.59 2.5) rotate(90)">
+    <path id="Button_Shape" class="cls-1" d="M0,50H203.05l17.944-25,.1.134V0H0V50Z" transform="translate(0 221.09) rotate(-90)"/>
+    <text id="Close_Text" class="cls-2" transform="translate(40 110.59) rotate(-90)"><tspan x="-47.32" y="0">Zurück</tspan></text>
+  </g>
+</svg>

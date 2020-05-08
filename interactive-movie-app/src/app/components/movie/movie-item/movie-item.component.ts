@@ -70,6 +70,7 @@ export class MovieItemComponent implements OnInit {
       document
         .getElementById(this.interactionState.name + "-item-component")
         .classList.replace("show", "hidden");
+      this.userService.setUserState(true);
     }
   }
 }

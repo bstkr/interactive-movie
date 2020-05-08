@@ -62,10 +62,45 @@
       top: 0;
       right: 0;
 
-      width: 100px;
+      width: 206px;
       height: 50px;
 
-      background-color: yellow;
+      cursor: pointer;
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        .cls-1 {
+          fill: rgba(46, 53, 50, 0);
+          stroke: rgba(227, 223, 255, 1);
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          stroke-width: 5px;
+
+          transition: fill 0.5s ease;
+        }
+
+        .cls-2 {
+          fill: rgba(227, 223, 255, 1);
+          font-size: 40px;
+          font-family: BebasNeue-Regular, Bebas Neue;
+        }
+      }
+
+      &:hover {
+        svg {
+          .cls-1 {
+            fill: rgba(227, 223, 255, 1);
+          }
+          .cls-2 {
+            fill: rgba(46, 53, 50, 1);
+          }
+        }
+      }
     }
   }
 
@@ -85,26 +120,23 @@
 
     .rewatch-tutorial {
       position: absolute;
-      top: 54vh;
-      left: 13vw;
-      width: 16.25vw;
-      height: 15vh;
+      top: 72%;
+      left: 15%;
+      width: 20%;
     }
 
     .objects-tutorial {
       position: absolute;
-      top: 24vh;
-      left: 41vw;
-      width: 19.5vw;
-      height: 13.8vh;
+      top: 30%;
+      left: 49%;
+      width: 25%;
     }
 
     .timeline-tutorial {
       position: absolute;
-      top: 58vh;
-      left: 44vw;
-      width: 18.5vw;
-      height: 15.4vh;
+      top: 74%;
+      left: 44%;
+      width: 25%;
     }
   }
 }
