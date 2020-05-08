@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="283" height="122" viewBox="0 0 283 122">
   <defs>
     <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap");
       .cls-1 {
         fill: #98a9ae;
         stroke-linecap: round;

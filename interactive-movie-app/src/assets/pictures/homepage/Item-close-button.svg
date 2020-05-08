@@ -18,6 +18,6 @@
   </defs>
   <g id="Item-close-button" transform="translate(909.959 5.999) rotate(90)">
     <path id="Button_Shape" class="cls-1" d="M221.09,50H18.041L.1,25l-.1.134V0H221.09V50Z" transform="translate(-3.499 907.459) rotate(-90)"/>
-    <text id="Close_Text" class="cls-2" transform="translate(35.001 796.959) rotate(-90)"><tspan x="-58.16" y="0">Schlißen</tspan></text>
+    <text id="Close_Text" class="cls-2" transform="translate(35.001 796.959) rotate(-90)"><tspan x="-58.16" y="0">Schließen</tspan></text>
   </g>
 </svg>

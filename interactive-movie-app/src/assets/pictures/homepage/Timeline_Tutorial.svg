@@ -1,12 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="173.328" viewBox="0 0 360 173.328">
   <defs>
     <style>
-      <![CDATA[
-        @font-face {
-          font-family: Bebas Neue;
-          src: url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-        }
-      ]]>
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap");
       .cls-1 {
         fill: #ca2e55;
         stroke: #2e3532;
