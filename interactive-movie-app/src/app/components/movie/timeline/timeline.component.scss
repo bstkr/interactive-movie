@@ -21,7 +21,7 @@
 
     .bar {
       height: 20%;
-      background-color: rgba($color: $white, $alpha: 0.4);
+      background-color: rgba($color: $white, $alpha: 0.9);
     }
 
     .bar-overlay {
@@ -36,7 +36,7 @@
     .objects {
       position: relative;
       height: 80%;
-      background-color: rgba($color: $white, $alpha: 0.2);
+      background-color: rgba($color: $white, $alpha: 0.8);
     }
 
     &.hidden {
