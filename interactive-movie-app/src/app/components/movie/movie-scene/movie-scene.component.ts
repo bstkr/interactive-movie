@@ -128,7 +128,7 @@ export class MovieSceneComponent implements OnInit {
 
       this.decisionTimer = setTimeout((_) => {
         this.automaticClickDecision(0);
-      }, 10000);
+      }, 16000);
     }
   }
 
@@ -172,7 +172,7 @@ export class MovieSceneComponent implements OnInit {
 
         this.decisionTimer = setTimeout((_) => {
           this.automaticClickDecision(1);
-        }, 10000);
+        }, 16000);
       }
     } else if (outroElement) {
       outroElement.classList.replace('hiddenVideo', 'currentVideo');
