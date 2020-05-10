@@ -113,13 +113,20 @@ export class InteractionService {
     interactionId: string,
     decision: string
   ): string {
-    if (decision.split(',')[0] === '1') {
+    let interactionIndex: number;
+    if (interactionName === "Bier") { 
+      interactionIndex = 1;
+    } else { 
+      interactionIndex = 0;
+    }
+    
+    if (decision.split(',')[interactionIndex] === '1') {
       return this.interactionStateArray
         .find((interactionState) => interactionState.name === interactionName)
         .Interactions.find(
           (interaction) => interaction.interactionId === interactionId
         ).pathToCompleteObjectImage.a;
-    } else if (decision.split(',')[0] === '2') {
+    } else if (decision.split(',')[interactionIndex] === '2') {
       return this.interactionStateArray
         .find((interactionState) => interactionState.name === interactionName)
         .Interactions.find(
@@ -128,6 +135,7 @@ export class InteractionService {
     } else {
       return '';
     }
+    
   }
 
   getTimelineImagePath(interactionName: string, decision: string): string {
