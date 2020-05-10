@@ -382,8 +382,15 @@
 
       .side-cast {
         padding-top: 70px;
-        grid-column: 4 / span 3;
+        grid-column: 4 / span 1;
         align-self: start;
+      }
+
+      .music {
+        padding-top: 70px;
+        grid-column: 5 / span 2;
+        align-self: start;
+        text-align: justify;
       }
 
       &.hide {
