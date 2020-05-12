@@ -11,22 +11,23 @@
       </g>
     </svg>
   </div>
-  <div id="popup" class="popup">
-    <button (click)="close()" class="close"></button>
-    <div class="popup-content">
-      <p>Soll der Fortschritt<br /> gespeichert werden?</p>
-      <div id="yesno">
-        <div id="yes">
-          <button routerLink="/" class="button">
-            <p>Ja</p>
-          </button>
-        </div>
-        <div id="no">
-          <button routerLink="/" class="button" (click)="resetData()">
-            <p>Nein</p>
-          </button>
-        </div>
-      </div>
+  <div id="layover" class="layover hidden">
+    <div class="layover-wrapper">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 465.8 220.996" preserveAspectRatio="xMidYMid meet">
+        <g id="home_layover" transform="translate(-189.5 -105.5)">
+          <path id="Subtraction_3" data-name="Subtraction 3" class="cls-1" d="M387,216H0V0H460.8V108.709L387,216Z" transform="translate(192 108)"/>
+          <text id="Soll_der_Fortschritt_gespeichert_werden_" data-name="Soll der Fortschritt gespeichert werden?" class="cls-2" transform="translate(234 120)"><tspan x="27.713" y="41">Soll der Fortschritt </tspan><tspan x="26.034" y="96">gespeichert werden?</tspan></text>
+          <g id="Back_Button" transform="translate(334.5 271.495) rotate(90)" (click)="close('ja')">
+            <path id="Button_Shape" class="cls-3" d="M0,29.784H91.84l8.116-14.892.043.08V0H0V29.784Z" transform="translate(0 100) rotate(-90)"/>
+            <text id="Ja_Text" class="cls-4" transform="translate(22.505 49.5) rotate(-90)"><tspan x="-7.968" y="0">Ja</tspan></text>
+          </g>
+          <g id="Back_Button-2" data-name="Back_Button" transform="translate(563.5 271.495) rotate(90)" (click)="close('nein')">
+            <path id="Button_Shape-2" data-name="Button_Shape" class="cls-3" d="M0,29.784H91.84l8.116-14.892.043.08V0H0V29.784Z" transform="translate(0 100) rotate(-90)"/>
+            <text id="Close_Text" class="cls-4" transform="translate(22.505 49.5) rotate(-90)"><tspan x="-16.908" y="0">Nein</tspan></text>
+          </g>
+        </g>
+      </svg>
+      
     </div>
   </div>
 </div>
