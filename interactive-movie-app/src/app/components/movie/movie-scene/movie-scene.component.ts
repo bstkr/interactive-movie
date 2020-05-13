@@ -88,7 +88,7 @@ export class MovieSceneComponent implements OnInit {
       video.sequencePosition === 'alt-2-1' ||
       video.sequencePosition === 'alt-2-2'
     ) {
-      this.handleSecondPartEnd();
+      this.handleSecondPartEnd(video.sequencePosition);
     }
 
     if (video.sequencePosition === 'outro') {
@@ -185,9 +185,11 @@ export class MovieSceneComponent implements OnInit {
     }
   }
 
-  handleSecondPartEnd() {
-    const videoElement = document.getElementById(this.scene.sceneId);
+  handleSecondPartEnd(sequencePosition: string) {
+    const videoElement = document.getElementById(this.scene.sceneId + '-' + sequencePosition);
     const outroElement = document.getElementById(this.scene.sceneId + '-outro');
+
+    videoElement.classList.replace('currentVideo', 'closeVideo');
 
     if (outroElement) {
       outroElement.classList.replace('hiddenVideo', 'currentVideo');
