@@ -244,6 +244,7 @@ export class MovieSceneComponent implements OnInit {
   onDecisionClick({ dec, decisionPos }) {
     if (this.decisionTimer) {
       clearTimeout(this.decisionTimer);
+      document.getElementById('sound-player').innerHTML = "";
     }
 
     const introElement = document.getElementById(this.scene.sceneId + '-intro');
