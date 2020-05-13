@@ -56,7 +56,6 @@ export class MovieSceneComponent implements OnInit, OnDestroy {
         .decision.subscribe((s) => (this.userDecision = s.split(","))),
       this.sceneService.getSceneActive(this.scene.sceneId).subscribe((s) => {
         this.sceneActive = s;
-        console.log(this.scene.sceneId + ": " + s);
         this.handleIntroStart();
       }),
       this.sceneService

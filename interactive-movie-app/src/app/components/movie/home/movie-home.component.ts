@@ -66,7 +66,6 @@ export class MovieHomeComponent implements OnInit, AfterViewInit, OnDestroy {
         videoElement.classList.add('show');
 
         this.sceneService.setCurrentDecisionObservable('0');
-        console.log("check");
         this.sceneService.setSceneActive(
           this.sceneService.getSceneIdFromInteractionName('Handy'),
           true
