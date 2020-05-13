@@ -2,6 +2,9 @@
 @import "../../../style/typography.scss";
 
 .back-button-container {
+
+  position: relative;
+
   .home-button {
     position: absolute;
     top: 0;
@@ -42,6 +45,80 @@
         }
         .cls-2 {
           fill: rgba(46, 53, 50, 1);
+        }
+      }
+    }
+  }
+
+  .layover {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 33%;
+    height: 25%;
+    z-index: 1;
+
+    transition: transform 1s ease;
+
+    &.hidden {
+      transform: translateY(-100%);
+    }
+
+    .layover-wrapper {
+
+      width: 100%;
+      height: 0;
+      padding-top: 47%;
+      position: relative;
+
+      svg {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        .cls-1, .cls-3 {
+          fill: #2e3532;
+          stroke: #e3dfff;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+  
+        .cls-1 {
+          stroke-width: 5px;
+        }
+  
+        .cls-2, .cls-4 {
+          fill: #e3dfff;
+          font-family: BebasNeue-Regular, Bebas Neue;
+        }
+  
+        .cls-2 {
+          font-size: 46px;
+        }
+  
+        .cls-3 {
+          stroke-width: 2px;
+          cursor: pointer;
+        }
+  
+        .cls-4 {
+          font-size: 24px;
+          cursor: pointer;
+        }
+
+        #Back_Button:hover, #Back_Button-2:hover {
+          transition: fill 0.5s ease;
+
+          .cls-3 {
+            fill: #e3dfff;
+          }
+
+          .cls-4 {
+            fill: #2e3532;
+          }
         }
       }
     }
