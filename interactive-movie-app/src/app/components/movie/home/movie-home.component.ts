@@ -1,7 +1,7 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { PovType } from 'src/app/_models/Interactions';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { InteractionService } from 'src/app/_services/interaction.service';
 import { InteractionState } from 'src/app/_models/InteractionState';
@@ -15,7 +15,7 @@ import { SceneService } from 'src/app/_services/scene.service';
   templateUrl: './movie-home.component.html',
   styleUrls: ['./movie-home.component.scss'],
 })
-export class MovieHomeComponent implements OnInit, AfterViewInit {
+export class MovieHomeComponent implements OnInit, AfterViewInit, OnDestroy {
   pov$: Observable<string>;
   currentPov: string;
 
@@ -24,6 +24,8 @@ export class MovieHomeComponent implements OnInit, AfterViewInit {
   interactionStateArray: InteractionState[];
   sceneArray: Scene[];
   userState: UserState;
+
+  sub: Subscription;
 
   constructor(
     public route: ActivatedRoute,
@@ -37,54 +39,44 @@ export class MovieHomeComponent implements OnInit, AfterViewInit {
     this.currentPov = this.route.snapshot.paramMap.get('pov');
     this.interactionStateArray = this.interactionService.getInteractionStateArray();
     this.sceneArray = this.sceneService.sceneArray;
-    this.userService.getUserState().subscribe((s) => (this.userState = s));
+    this.sub = this.userService.getUserState().subscribe((s) => (this.userState = s));
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
   ngAfterViewInit() {
-    setTimeout(() => {
-      document.getElementById('production').classList.remove('hidden');
+    setTimeout( () => {
+      if (!this.userState.hasSeenIntro) {
+        const videoElement = document.getElementById(
+          this.sceneService.getSceneIdFromInteractionName('Handy')
+        );
+        const rightNavElement = document.getElementById('rightNav');
+        const leftNavElement = document.getElementById('leftNav');
 
-      setTimeout(() => {
-        document.getElementById('production').classList.add('hidden');
-        document.getElementById('coop').classList.remove('hidden');
+        if (rightNavElement) {
+          rightNavElement.classList.add('hidden');
+        }
+        if (leftNavElement) {
+          leftNavElement.classList.add('hidden');
+        }
 
-        setTimeout(() => {
-          document.getElementById('coop').classList.add('hidden');
+        videoElement.classList.remove('hidden');
+        videoElement.classList.add('show');
 
-          if (!this.userState.hasSeenIntro) {
-            const videoElement = document.getElementById(
-              this.sceneService.getSceneIdFromInteractionName('Handy')
-            );
-            const rightNavElement = document.getElementById('rightNav');
-            const leftNavElement = document.getElementById('leftNav');
+        this.sceneService.setCurrentDecisionObservable('0');
+        console.log("check");
+        this.sceneService.setSceneActive(
+          this.sceneService.getSceneIdFromInteractionName('Handy'),
+          true
+        );
 
-            if (rightNavElement) {
-              rightNavElement.classList.add('hidden');
-            }
-            if (leftNavElement) {
-              leftNavElement.classList.add('hidden');
-            }
+        document.getElementById('intro').classList.add('hide');
+      }
 
-            videoElement.classList.remove('hidden');
-            videoElement.classList.add('show');
-
-            this.sceneService.setCurrentDecisionObservable('0');
-            this.sceneService.setSceneActive(
-              this.sceneService.getSceneIdFromInteractionName('Handy'),
-              true
-            );
-
-            document.getElementById('intro').classList.add('hide');
-
-            setTimeout(() => {
-              this.showIntro = false;
-            }, 2000);
-          } else {
-            this.showIntro = false;
-          }
-        }, 2500);
-      }, 2500);
-    }, 1000);
+      this.showIntro = false;
+    }, 5000);
   }
 
   rightNavigation() {

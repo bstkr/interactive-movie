@@ -1,15 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { InteractionService } from 'src/app/_services/interaction.service';
 import { Interaction, PovType } from 'src/app/_models/Interactions';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { SceneService } from 'src/app/_services/scene.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-timeline-object',
   templateUrl: './timeline-object.component.html',
   styleUrls: ['./timeline-object.component.scss'],
 })
-export class TimelineObjectComponent implements OnInit {
+export class TimelineObjectComponent implements OnInit, OnDestroy {
   @Input() objectName: string;
 
   objectClicked: boolean;
@@ -17,6 +18,8 @@ export class TimelineObjectComponent implements OnInit {
 
   sceneId: string;
   currentPov: string;
+
+  subArray: Subscription[];
 
   constructor(
     public interactionService: InteractionService,
@@ -26,13 +29,23 @@ export class TimelineObjectComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.subArray = [];
+
+    this.subArray.push(
     this.interactionService
       .isInteractionClicked(this.objectName)
-      .subscribe((s) => (this.objectClicked = s));
+      .subscribe((s) => (this.objectClicked = s)),
 
     this.interactionService
       .getInteractionState(this.objectName)
-      .decision.subscribe((s) => (this.objectDecision = s.split(',')[0]));
+      .decision.subscribe((s) => (this.objectDecision = s.split(',')[0]))
+    );
+  }
+
+  ngOnDestroy() {
+    for (const sub of this.subArray) {
+      sub.unsubscribe();
+    }
   }
 
   clickedInteraction() {

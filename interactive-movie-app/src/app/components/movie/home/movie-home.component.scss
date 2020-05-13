@@ -133,7 +133,7 @@
     display: grid;
     place-content: center;
 
-    transition: opacity 1s;
+    animation: show-production 5s;
   }
 
   .coop {
@@ -141,7 +141,22 @@
     display: grid;
     place-content: center;
 
-    transition: opacity 1s;
+    animation: show-coop 5s;
+  }
+
+  @keyframes show-production {
+    0%   { opacity: 0;}
+    20%  { opacity: 1;}
+    40%  { opacity: 0;}
+    100% { opacity: 0;}
+  }
+
+  @keyframes show-coop {
+    0%   { opacity: 0;}
+    40%  { opacity: 0;}
+    60%  { opacity: 1;}
+    80%  { opacity: 0;}
+    100% { opacity: 0;}
   }
 
   p {

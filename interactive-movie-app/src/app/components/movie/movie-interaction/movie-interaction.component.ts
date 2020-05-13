@@ -1,17 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Interaction } from 'src/app/_models/Interactions';
 import {
   InteractionService,
   InteractionObservable,
 } from 'src/app/_services/interaction.service';
 import { SceneService } from 'src/app/_services/scene.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-movie-interaction',
   templateUrl: './movie-interaction.component.html',
   styleUrls: ['./movie-interaction.component.scss'],
 })
-export class MovieInteractionComponent implements OnInit {
+export class MovieInteractionComponent implements OnInit, OnDestroy {
   @Input() interaction: Interaction;
 
   interactionClicked: boolean;
@@ -21,22 +22,28 @@ export class MovieInteractionComponent implements OnInit {
   interactionImages: string[];
   randomDelay: string;
 
+  subArray: Subscription[];
+
   constructor(
     public interactionService: InteractionService,
     public sceneService: SceneService
   ) {}
 
   ngOnInit() {
+    this.subArray = [];
+
+    this.subArray.push(
     this.interactionService
       .getInteractionState(this.interaction.interactionName)
       .clicked.subscribe((s) => {
         this.interactionClicked = s;
-      });
+      }),
     this.interactionService
       .getInteractionState(this.interaction.interactionName)
       .decision.subscribe((s) => {
         this.interactionDecision = s;
-      });
+      })
+    );
     this.sceneId = this.sceneService.getSceneIdFromInteractionName(
       this.interaction.interactionName
     );
@@ -45,6 +52,12 @@ export class MovieInteractionComponent implements OnInit {
       this.interaction.interactionId
     );
     this.randomDelay = (Math.random() * 5).toPrecision(2);
+  }
+
+  ngOnDestroy() {
+    for (const sub of this.subArray) {
+      sub.unsubscribe();
+    }
   }
 
   setInteractionStyle() {
