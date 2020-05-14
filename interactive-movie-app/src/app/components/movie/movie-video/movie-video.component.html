@@ -4,6 +4,7 @@
     [class]="getVideoClass(video.sequencePosition)"
     (click)="videoClick($event)"
     (ended)="videoEnded()"
+    playsinline
     #videoPlayer
   >
     <source [src]="video.pathToVideo" type="video/mp4" />
