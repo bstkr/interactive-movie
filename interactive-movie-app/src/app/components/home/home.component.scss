@@ -265,22 +265,23 @@
 
     display: grid;
     grid-template:
-      ".       .        .   " auto
-      ".       content  .   " 800px
-      ".       .        .   " auto
-      / auto 1280px auto;
+      ".       .        .   " 1fr
+      ".       content  .   " 6fr
+      ".       .        .   " 1fr
+      / 1fr    5fr      1fr;
 
     .impressum-content {
       grid-area: content;
       background-image: url(../../../assets/pictures/homepage/Impressum_Background.svg);
+      background-size: cover;
 
       transition: transform 2s ease;
       transition-delay: 1s;
 
-      padding: 100px;
+      padding: 8%;
 
       display: grid;
-      grid-template: 200px / 400px repeat(auto-fill, 150px);
+      grid-template: 1fr 1.8fr / 2.5fr repeat(4, 1fr);
       gap: 15px;
 
       place-items: start;
@@ -311,12 +312,28 @@
         grid-column: 2 / span 4;
         align-self: end;
         text-align: justify;
+
+        font-size: 0.8em;
       }
 
       &.hide {
         transform: translateY(150%);
         transition: transform 1s ease;
         transition-delay: 0s;
+      }
+
+      @media screen and (max-width: 1200px) {
+        h1 {
+          font-size: 2em;
+        }
+    
+        h3 {
+          font-size: 1em;
+        }
+        
+        p {
+          font-size: 0.7em;
+        }
       }
     }
   }
@@ -331,22 +348,23 @@
 
     display: grid;
     grid-template:
-      ".       .        .   " auto
-      ".       content  .   " 800px
-      ".       .        .   " auto
-      / auto 1280px auto;
+      ".       .        .   " 1fr
+      ".       content  .   " 6fr
+      ".       .        .   " 1fr
+      / 1fr    5fr      1fr;
 
     .credits-content {
       grid-area: content;
       background-image: url(../../../assets/pictures/homepage/Impressum_Background.svg);
+      background-size: cover;
 
       transition: transform 2s ease;
       transition-delay: 1s;
 
-      padding: 25px;
+      padding: 2%;
 
       display: grid;
-      grid-template: 170px 170px / 400px repeat(auto-fill, 150px);
+      grid-template: 0.5fr 0.5fr 1fr / 2fr repeat(5, 1fr);
       gap: 15px;
 
       place-items: center;
@@ -361,42 +379,75 @@
       }
 
       .portrait {
-        width: 150px;
-        height: 170px;
 
         img {
-          width: 150px;
-          height: 150px;
+          width: 100%;
+          height: 100%;
+          max-width: 150px;
         }
 
         &.dozent {
-          grid-column: 2 / span 5;
+          grid-column: 4 / span 1;
         }
       }
 
+      .seperator {
+        grid-column: 6;
+      }
+
       .main-cast {
-        padding-top: 70px;
+        padding-top: 50px;
         grid-column: 2 / span 2;
         align-self: start;
+
+        @media screen and (max-width: 1200px) {
+          padding: 0;
+        }
       }
 
       .side-cast {
-        padding-top: 70px;
+        padding-top: 50px;
         grid-column: 4 / span 1;
         align-self: start;
+
+        font-size: 0.8em;
+
+        @media screen and (max-width: 1200px) {
+          padding: 0;
+        }
       }
 
       .music {
-        padding-top: 70px;
+        padding-top: 50px;
         grid-column: 5 / span 2;
         align-self: start;
         text-align: justify;
+
+        font-size: 0.8em;
+
+        @media screen and (max-width: 1200px) {
+          padding: 0;
+        }
       }
 
       &.hide {
         transform: translateX(-150%);
         transition: transform 1s ease;
         transition-delay: 0s;
+      }
+
+      @media screen and (max-width: 1200px) {
+        h1 {
+          font-size: 2em;
+        }
+    
+        h3 {
+          font-size: 1em;
+        }
+        
+        p {
+          font-size: 0.7em;
+        }
       }
     }
   }

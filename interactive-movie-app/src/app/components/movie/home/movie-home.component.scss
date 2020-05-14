@@ -162,12 +162,20 @@
   p {
     text-align: center;
     font-size: 2em;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 0.8em;
+    }
   }
 
   h1 {
     text-align: center;
     font-size: 5em;
     letter-spacing: 2px;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 2em;
+    }
   }
 
   &.hide,
