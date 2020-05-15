@@ -5,6 +5,11 @@
   <img src="/assets/pictures/room/room-pov3.jpg" alt="" />
   <div id="sound-player"></div>
 </div>
-<main [@routeAnimations]="prepareRoute(outlet)">
+<main *ngIf="landscapeModeSubject | async; else elseBlock" [@routeAnimations]="prepareRoute(outlet)">
   <router-outlet #outlet="outlet"></router-outlet>
 </main>
+<ng-template #elseBlock>
+  <div class="portrait-container">
+    <img src="assets/pictures/homepage/Turn-screen.png" alt="" />
+  </div>
+</ng-template>
