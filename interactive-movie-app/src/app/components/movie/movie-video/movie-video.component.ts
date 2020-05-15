@@ -10,6 +10,7 @@ import {
 } from '@angular/core';
 import { VideoSequence, Interaction } from 'src/app/_models/Interactions';
 import { Scene } from 'src/app/_models/Scenes';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-movie-video',
@@ -41,14 +42,9 @@ export class MovieVideoComponent implements OnInit, AfterViewInit {
   }
 
   videoClick(e: Event) {
-    const id =
-      this.scene.sceneId + '-' + this.video.sequencePosition + '-button';
-    const videoElement = document.getElementById(id);
     if (this.videoPlayer.nativeElement.paused) {
-      videoElement.classList.replace('show', 'hidden');
       this.videoPlayer.nativeElement.play();
     } else {
-      videoElement.classList.replace('hidden', 'show');
       this.videoPlayer.nativeElement.pause();
     }
   }

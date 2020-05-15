@@ -23,25 +23,4 @@
   .closeVideo {
     opacity: 0;
   }
-  .playButton {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    height: 15%;
-    width: auto;
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out;
-
-    &.hidden {
-      z-index: -1;
-      opacity: 0;
-    }
-    &.show {
-      z-index: 3;
-      opacity: 1;
-    }
-  }
 }

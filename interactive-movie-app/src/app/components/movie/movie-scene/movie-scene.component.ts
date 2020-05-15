@@ -405,6 +405,18 @@ export class MovieSceneComponent implements OnInit, OnDestroy {
     this.closeVideo(true);
   }
 
+  checkVideoPlaying() {
+    let videoPlaying = false;
+    if (this.videoPlayers) {
+      for (const component of this.videoPlayers.toArray()) {
+        if (!component.videoPlayer.nativeElement.paused) {
+          videoPlaying = true;
+        }
+      }
+    }
+    return this.sceneActive && !videoPlaying;
+  }
+
   closeVideo(b?: boolean) {
     const videoElement = document.getElementById(this.scene.sceneId);
     const rightNavElement = document.getElementById("rightNav");

@@ -26,6 +26,13 @@
       </g>
     </svg>
   </div>
+  <div class="play-button-container">
+    <img
+      *ngIf="checkVideoPlaying()"
+      class="playButton"
+      src="assets/pictures/Play_Button.png"
+    />
+  </div>
   <app-movie-video
     *ngFor="let video of scene.videoSequence"
     [scene]="scene"
