@@ -192,10 +192,9 @@ export class MovieSceneComponent implements OnInit, OnDestroy {
       outroElement.classList.replace("hiddenVideo", "currentVideo");
       this.startVideo(outroElement, 0);
     } else {
-      // videoElement.classList.replace("show", "fade");
       setTimeout(() => {
         this.closeVideo(false);
-      }, 2000);
+      }, 500);
     }
   }
 
@@ -213,17 +212,14 @@ export class MovieSceneComponent implements OnInit, OnDestroy {
     } else {
       setTimeout(() => {
         this.closeVideo(false);
-      }, 2000);
+      }, 500);
     }
   }
 
   handleOutroEnd() {
-    const outroElement = document.getElementById(this.scene.sceneId + "-outro");
-
     setTimeout(() => {
-      outroElement.classList.replace("currentVideo", "closeVideo");
       this.closeVideo(false);
-    }, 2000);
+    }, 500);
   }
 
   handleVideoEndWithNoDecision(
@@ -256,7 +252,7 @@ export class MovieSceneComponent implements OnInit, OnDestroy {
     setTimeout(() => {
       decisionElement.classList.replace("fade", "hidden");
       decisionContainer.classList.add("hidden");
-    }, 6000);
+    }, 3000);
   }
 
   onDecisionClick({ dec, decisionPos }) {
