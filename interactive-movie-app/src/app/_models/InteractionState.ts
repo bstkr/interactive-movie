@@ -133,11 +133,11 @@ export const InteractionStateArray: InteractionState[] = [
     decision: 'x',
     Timeline: {
       pathToTimelineImage: {
-        a: 'assets/pictures/room/Timeline_Objects/Einkaufszettel.png',
+        a: 'assets/pictures/room/Timeline_Objects/Geld.png',
         b: 'assets/pictures/room/Timeline_Objects/Einkaufszettel.png',
       },
     },
-    pathToItemImageA: 'assets/pictures/room/Objects/Einkaufszettel.png',
+    pathToItemImageA: 'assets/pictures/room/Objects/Geld.png',
     pathToItemImageB: 'assets/pictures/room/Objects/Einkaufszettel.png',
   },
   {
